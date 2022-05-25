@@ -1,0 +1,78 @@
+//***************************************
+//*  Сгенерировано: 01/02/2021 15:32:06
+//*  Узел: все
+//***************************************
+
+repTime := 3600;
+IF NOT algGVL.init THEN
+ //------------------------------- аргументы функции инициализации --------------------------------
+ //                                 минимум шкалы канала, ед.изм. Не может быть >= max
+ //                                 |   максимум шкалы канала, ед.изм. Не может быть <= min
+ //                                 |   |   значение АЦП, соответствующее минимуму шкалы канала, б.р.
+ //                                 |   |   |   значение АЦП, соотв. макс. шкалы, б.р. Не может быть равно minADC
+ //                                 |   |   |   |    
+ //                                 |   |   |   |   номер по порядку	
+ //AO_init(UPG_AO_Settings.Pg_in_UPG,0.0,6.0,2.0,10.0,0);
+ //-------------------------------------------------------------------------------------------
+ //Начало сгенерированного кода AO_init
+//[БУ] [A4.4:1] [БУ:внутр.,] Задание положения дозатора. КЦУ
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.Set_DG, min_PV := 0, max_PV :=  100, minDAC := 4, maxDAC := 20, id := 1);
+//[БУ] [A4.4:2] [БУ:внутр.,] Задание положения ВНА. КЦУ
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.Set_VNA, min_PV := 0, max_PV :=  100, minDAC := 4, maxDAC := 20, id := 2);
+//[БУ] [A4.4:3] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv1, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 3);
+//[БУ] [A4.4:4] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv2, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 4);
+//[БУ] [A4.4:5] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv3, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 5);
+//[БУ] [A4.4:6] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv4, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 6);
+//[БУ] [A4.4:7] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv5, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 7);
+//[БУ] [A4.4:8] [БУ:внутр.,] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv6, min_PV := 4, max_PV :=  20, minDAC := 4, maxDAC := 20, id := 8);
+//[ЭС] [А30.9:1] [ЭС:XAO3:1a,XAO3:1b] Управляющий сигнал на регулятор частоты вращения ВОД1
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.Set_VOD1, min_PV := 0, max_PV :=  50, minDAC := 4, maxDAC := 20, id := 9);
+//[ЭС] [А30.9:2] [ЭС:XAO3:2a,XAO3:2b] Управляющий сигнал на регулятор частоты вращения ВОД2
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.Set_VOD2, min_PV := 0, max_PV :=  50, minDAC := 4, maxDAC := 20, id := 10);
+//[ЭС] [А30.10:1] [ЭС:XAO3:3a,XAO3:3b] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv7, min_PV := 0, max_PV :=  50, minDAC := 4, maxDAC := 20, id := 11);
+//[ЭС] [А30.10:2] [ЭС:XAO3:4a,XAO3:4b] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv8, min_PV := 0, max_PV :=  50, minDAC := 4, maxDAC := 20, id := 12);
+//[ЦБК] [A20.13:1] [ЦБК:F10:8,F10:7] Управление рег. клапаном Mokveld
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.Set_APK, min_PV := 0, max_PV :=  100, minDAC := 4, maxDAC := 20, id := 13);
+//[ЦБК] [A20.13:2] [ЦБК:XAO2:1a,XAO2:1b] Резерв
+ VGSig.fnAO_init(setStruct => algGVL.GPA_AO_Setting.AO_Reserv9, min_PV := 0, max_PV :=  100, minDAC := 4, maxDAC := 20, id := 14);
+ //Конец сгенерированного кода
+END_IF;
+
+//Начало сгенерированного кода AO_Processing
+//[БУ] [A4.4:1] [БУ:внутр.,] Задание положения дозатора. КЦУ
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.Set_DG, set := algGVL.GPA_AO_Setting.Set_DG, hmi := algGVL.GPA_AO_FromHMI.Set_DG, plc := algGVL.GPA_AO_ToHMI.Set_DG, out => algGVL.GPA_AO_DRV.Set_DG);
+//[БУ] [A4.4:2] [БУ:внутр.,] Задание положения ВНА. КЦУ
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.Set_VNA, set := algGVL.GPA_AO_Setting.Set_VNA, hmi := algGVL.GPA_AO_FromHMI.Set_VNA, plc := algGVL.GPA_AO_ToHMI.Set_VNA, out => algGVL.GPA_AO_DRV.Set_VNA);
+//[БУ] [A4.4:3] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv1, set := algGVL.GPA_AO_Setting.AO_Reserv1, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv1, plc := algGVL.GPA_AO_ToHMI.AO_Reserv1, out => algGVL.GPA_AO_DRV.AO_Reserv1);
+//[БУ] [A4.4:4] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv2, set := algGVL.GPA_AO_Setting.AO_Reserv2, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv2, plc := algGVL.GPA_AO_ToHMI.AO_Reserv2, out => algGVL.GPA_AO_DRV.AO_Reserv2);
+//[БУ] [A4.4:5] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv3, set := algGVL.GPA_AO_Setting.AO_Reserv3, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv3, plc := algGVL.GPA_AO_ToHMI.AO_Reserv3, out => algGVL.GPA_AO_DRV.AO_Reserv3);
+//[БУ] [A4.4:6] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv4, set := algGVL.GPA_AO_Setting.AO_Reserv4, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv4, plc := algGVL.GPA_AO_ToHMI.AO_Reserv4, out => algGVL.GPA_AO_DRV.AO_Reserv4);
+//[БУ] [A4.4:7] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv5, set := algGVL.GPA_AO_Setting.AO_Reserv5, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv5, plc := algGVL.GPA_AO_ToHMI.AO_Reserv5, out => algGVL.GPA_AO_DRV.AO_Reserv5);
+//[БУ] [A4.4:8] [БУ:внутр.,] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv6, set := algGVL.GPA_AO_Setting.AO_Reserv6, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv6, plc := algGVL.GPA_AO_ToHMI.AO_Reserv6, out => algGVL.GPA_AO_DRV.AO_Reserv6);
+//[ЭС] [А30.9:1] [ЭС:XAO3:1a,XAO3:1b] Управляющий сигнал на регулятор частоты вращения ВОД1
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.Set_VOD1, set := algGVL.GPA_AO_Setting.Set_VOD1, hmi := algGVL.GPA_AO_FromHMI.Set_VOD1, plc := algGVL.GPA_AO_ToHMI.Set_VOD1, out => algGVL.GPA_AO_DRV.Set_VOD1);
+//[ЭС] [А30.9:2] [ЭС:XAO3:2a,XAO3:2b] Управляющий сигнал на регулятор частоты вращения ВОД2
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.Set_VOD2, set := algGVL.GPA_AO_Setting.Set_VOD2, hmi := algGVL.GPA_AO_FromHMI.Set_VOD2, plc := algGVL.GPA_AO_ToHMI.Set_VOD2, out => algGVL.GPA_AO_DRV.Set_VOD2);
+//[ЭС] [А30.10:1] [ЭС:XAO3:3a,XAO3:3b] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv7, set := algGVL.GPA_AO_Setting.AO_Reserv7, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv7, plc := algGVL.GPA_AO_ToHMI.AO_Reserv7, out => algGVL.GPA_AO_DRV.AO_Reserv7);
+//[ЭС] [А30.10:2] [ЭС:XAO3:4a,XAO3:4b] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv8, set := algGVL.GPA_AO_Setting.AO_Reserv8, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv8, plc := algGVL.GPA_AO_ToHMI.AO_Reserv8, out => algGVL.GPA_AO_DRV.AO_Reserv8);
+//[ЦБК] [A20.13:1] [ЦБК:F10:8,F10:7] Управление рег. клапаном Mokveld
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.Set_APK, set := algGVL.GPA_AO_Setting.Set_APK, hmi := algGVL.GPA_AO_FromHMI.Set_APK, plc := algGVL.GPA_AO_ToHMI.Set_APK, out => algGVL.GPA_AO_DRV.Set_APK);
+//[ЦБК] [A20.13:2] [ЦБК:XAO2:1a,XAO2:1b] Резерв
+VGSig.fnAO_Processing(IN := algGVL.GPA_AO.AO_Reserv9, set := algGVL.GPA_AO_Setting.AO_Reserv9, hmi := algGVL.GPA_AO_FromHMI.AO_Reserv9, plc := algGVL.GPA_AO_ToHMI.AO_Reserv9, out => algGVL.GPA_AO_DRV.AO_Reserv9);
+//Конец сгенерированного кода

@@ -1,0 +1,8 @@
+TYPE strSR :
+STRUCT
+    As_SurgeN:BOOL; //Помпаж Н (АПР)
+
+    P_SurgeLow:BOOL; //Низкий запас по помпажу
+
+END_STRUCT
+END_TYPE

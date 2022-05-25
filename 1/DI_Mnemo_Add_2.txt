@@ -1,0 +1,131 @@
+
+<Data>             
+    <GraphicsCompositeFBType Name="T_DI_Mnemo_Add" UUID="0F397E90489C820499255F95C09D4A1E">             
+        <InterfaceList>             
+            <EventOutputs>			  
+                <Event Name="mouseLBPress" Comment="mouse left button press event " UUID="299295AF47A6CCAC26009C964C5B47C5" />			  
+                <Event Name="mouseLBRelease" Comment="mouse left button release event" UUID="8DE6001343803CF639F332B16CC30079" />			  
+                <Event Name="mouseRBPress" Comment="mouse right button press event " UUID="5DE993F543E00267EF077D89D3D01B5B" />             
+                <Event Name="mouseRBRelease" Comment="mouse right button release event" UUID="0AB0718D41E90B02F75425B41E39C1F0" />             
+                <Event Name="mouseEnter" Comment="mouse enter event" UUID="AA1D53154C9D3E9C25B0ADA056F82B5D" />             
+                <Event Name="mouseLeave" Comment="mouse leave event" UUID="C21BC0A24A8E157AF50BC59A1635CD7B" />             
+                <Event Name="mouseLBDblClick" Comment="mouse double click event" UUID="1BD263D2412FA33DA367C5B3480C9F0A" />             
+            </EventOutputs>             
+            <InputVars>             
+                <VarDeclaration Name="pos" Type="TPos" Comment="position of the object" InitialValue="(x:=0,y:=0)" UUID="599604C246641AA6BA0E508C9ABF7EA4" />             
+                <VarDeclaration Name="angle" Type="LREAL" Comment="angle of rotation of the object" InitialValue="0" UUID="00FC1D804A2DE5A83DE85390D640AC3D" />             
+                <VarDeclaration Name="enabled" Type="BOOL" InitialValue="TRUE" UUID="15B097034B9BBE7CCD78E0A466A64239" />             
+                <VarDeclaration Name="moveable" Type="BOOL" InitialValue="FALSE" UUID="6D62810D46DF8C4B27E62DBEBA63194B" />             
+                <VarDeclaration Name="visible" Type="BOOL" Comment="visibility of the object" InitialValue="TRUE" UUID="EAC5288F431A370F7493EF98A2C613D5" />             
+                <VarDeclaration Name="zValue" Type="LREAL" Comment="z-level of the object" InitialValue="0" UUID="29E9E6AD475BD9B49E6F40B0328374A7" />             
+                <VarDeclaration Name="hint" Type="STRING" Comment="hint of the object" InitialValue="&apos;&apos;" UUID="9001F21244C66932FB81B7B021B085BA" />             
+                <VarDeclaration Name="size" Type="TSize" Comment="size of the rectangle" InitialValue="(width:=50,height:=50)" UUID="1555B4384D69683C33FCB4A79B1A0932" />             
+                <VarDeclaration Name="PrefAb" Type="STRING" InitialValue="&apos;&apos;" UUID="BC235C584A1EB6143114E781839D3DE1" />             
+                <VarDeclaration Name="NameRU" Type="STRING" InitialValue="&apos;&apos;" UUID="45D696EE4157CCC32B7D6D9E252868A5" />             
+            </InputVars>             
+        </InterfaceList>             
+        <FBNetwork>             
+<FB Name="DGI_65_I_EMP_Z2A_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="7D9C4802D10249BC8BABDDEC7D118221" X="0.0" Y="32500">
+<VarValue Variable="pos" Value="(x:=60,y:=0)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП Z2A, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП Z2A&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_Z2A_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_Z2A_PvПревышение максимального значения тока ЭМП Z2A&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_66_I_EMP_Z1B_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="E5D4B85816F44CF8A83A93AEEFDE51BB" X="0.0" Y="33000">
+<VarValue Variable="pos" Value="(x:=60,y:=23)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП Z1B, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП Z1B&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_Z1B_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_Z1B_PvПревышение максимального значения тока ЭМП Z1B&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_67_I_EMP_Z2B_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="746C89AECFF84B04A972336FE68D4EE8" X="0.0" Y="33500">
+<VarValue Variable="pos" Value="(x:=60,y:=46)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП Z2B, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП Z2B&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_Z2B_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_Z2B_PvПревышение максимального значения тока ЭМП Z2B&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_68_Ask_AO" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="3028A9AA5B4641DE8E7A364E4B8F7DC6" X="0.0" Y="34000">
+<VarValue Variable="pos" Value="(x:=60,y:=69)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Запрос аварийного останова от САУ ГПА, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Запрос аварийного останова от САУ ГПА&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Ask_AO&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Ask_AOЗапрос аварийного останова от САУ ГПА&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_69_Vibr_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="DA6C3BFA2C744DFF9AC785E610E066CD" X="0.0" Y="34500">
+<VarValue Variable="pos" Value="(x:=60,y:=92)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ датчика виброперемещения ротора, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ датчика виброперемещения ротора&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Vibr_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Vibr_FaultОтказ датчика виброперемещения ротора&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_70_Low_N" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="63A27E6E3AA64650AEEA486CA473FBF1" X="0.0" Y="35000">
+<VarValue Variable="pos" Value="(x:=60,y:=115)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недостаточная скорость вращения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недостаточная скорость вращения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Low_N&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Low_NНедостаточная скорость вращения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_71_U_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="2D928444A89241DEA1306700438191D9" X="0.0" Y="35500">
+<VarValue Variable="pos" Value="(x:=60,y:=138)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Сбой электропитания, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Сбой электропитания&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;U_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;U_FaultСбой электропитания&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+            <DataConnections>
+<Connection Source="PrefAb" Destination="DGI_65_I_EMP_Z2A_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="7D9C4802D10249BC8BABDDEC7D118221.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_65_I_EMP_Z2A_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="7D9C4802D10249BC8BABDDEC7D118221.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_66_I_EMP_Z1B_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="E5D4B85816F44CF8A83A93AEEFDE51BB.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_66_I_EMP_Z1B_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="E5D4B85816F44CF8A83A93AEEFDE51BB.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_67_I_EMP_Z2B_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="746C89AECFF84B04A972336FE68D4EE8.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_67_I_EMP_Z2B_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="746C89AECFF84B04A972336FE68D4EE8.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_68_Ask_AO.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="3028A9AA5B4641DE8E7A364E4B8F7DC6.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_68_Ask_AO.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="3028A9AA5B4641DE8E7A364E4B8F7DC6.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_69_Vibr_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="DA6C3BFA2C744DFF9AC785E610E066CD.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_69_Vibr_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="DA6C3BFA2C744DFF9AC785E610E066CD.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_70_Low_N.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="63A27E6E3AA64650AEEA486CA473FBF1.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_70_Low_N.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="63A27E6E3AA64650AEEA486CA473FBF1.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_71_U_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="2D928444A89241DEA1306700438191D9.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_71_U_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="2D928444A89241DEA1306700438191D9.524F2EBB4524C97C16682CAD9668D4CC" />
+
+            </DataConnections>		
+        </FBNetwork>		
+    </GraphicsCompositeFBType>		
+</Data>		

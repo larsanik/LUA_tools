@@ -1,0 +1,653 @@
+//***************************************
+//*  Сгенерировано: 29/01/2021 14:10:29
+//*  Узел: все
+//***************************************
+
+repTime := 3600;
+IF NOT algGVL.init THEN
+ //------------------------------- аргументы функции инициализации --------------------------------
+ // 1                                минимум шкалы канала, ед.изм. Не может быть >= max
+ // 2                                |   максимум шкалы канала, ед.изм. Не может быть <= min
+ // 3                                |   |   значение АЦП, соответствующее минимуму шкалы канала, б.р.
+ // 4                                |   |   |   значение АЦП, соотв. макс. шкалы, б.р. Не может быть равно minADC
+ // 5                                |   |   |   |     уровень зашкала вниз, ед.изм. Не может быть >= hiLim и < min
+ // 6                                |   |   |   |     |    уровень зашкала вверх, ед.изм. Не может быть <= loLim и > max
+ // 7                                |   |   |   |     |    |   уровень обрыва вниз, ед.изм. Не может быть >= loLim
+ // 8                                |   |   |   |     |    |    |   уровень обрыва вверх, ед.изм. Не может быть <= hiLim
+ // 9                                |   |   |   |     |    |    |   |  макс. допустимая скорость роста, ед.изм./сек. Если «0» - скорость роста не анализируется
+ //10                                |   |   |   |     |    |    |   |   |   время восстановления после неисправности, сек. Не может быть меньше "0"
+ //11                                |   |   |   |     |    |    |   |   |   |   максимальное время в ремонте, сек. Не может быть меньше или равно «0»
+ //12                                |   |   |   |     |    |    |   |   |   |   |    тау фильтра, сек. Если «0» - фильтрация отсутствует
+ //13                                |   |   |   |     |    |    |   |   |   |   |    |  номер по порядку	
+ //AI_init(UPG_AI_Settings.Pg_in_UPG,0.0,6.0,2.0,10.0,-0.5,6.5,-1.0,7.0,0.0,1.0,3600,1.0,0);
+ //-------------------------------------------------------------------------------------------
+ //Начало сгенерированного кода AI_init
+//[БУ] [A2.6:1] [БУ:XAI6:2a,XAI6:2b] Температура газа за СТ 1
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST1, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 1, corrADC := 0.0);
+//[БУ] [A2.6:2] [БУ:XAI6:3a,XAI6:3b] Температура газа за СТ 2
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST2, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 2, corrADC := 0.0);
+//[БУ] [A2.7:1] [БУ:XAI6:4a,XAI6:4b] Температура газа за СТ 3
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST3, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 3, corrADC := 0.0);
+//[БУ] [A2.7:2] [БУ:XAI6:5a,XAI6:5b] Температура газа за СТ 4
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST4, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 4, corrADC := 0.0);
+//[БУ] [A2.8:1] [БУ:XAI6:6a,XAI6:6b] Температура газа за СТ 5
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST5, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 5, corrADC := 0.0);
+//[БУ] [A2.8:2] [БУ:XAI6:7a,XAI6:7b] Температура газа за СТ 6
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST6, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 6, corrADC := 0.0);
+//[БУ] [A2.9:1] [БУ:XAI6:8a,XAI6:8b] Температура газа за СТ 7
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST7, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 7, corrADC := 0.0);
+//[БУ] [A2.9:2] [БУ:XAI6:9a,XAI6:9b] Температура газа за СТ 8
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST8, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 8, corrADC := 0.0);
+//[БУ] [A2.10:1] [БУ:XAI6:10a,XAI6:10b] Температура газа за СТ 9
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST9, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 9, corrADC := 0.0);
+//[БУ] [A2.10:2] [БУ:XAI6:11a,XAI6:11b] Температура газа за СТ 10
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST10, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 10, corrADC := 0.0);
+//[БУ] [A2.11:1] [БУ:XAI6:12a,XAI6:12b] Температура газа за СТ 11
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST11, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 11, corrADC := 0.0);
+//[БУ] [A2.11:2] [БУ:XAI6:13a,XAI6:13b] Температура газа за СТ 12
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_ST12, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 12, corrADC := 0.0);
+//[БУ] [A2.12:1] [БУ:XAI6:1a,XAI6:1b] Т воздуха за компрессором ГГ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tair_GG, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 13, corrADC := 0.0);
+//[БУ] [A2.12:2] [БУ:XAI6:14a,XAI6:14b] Резерв (ХА)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_01, min_PV := 0, max_PV :=  1200, minADC := 0, maxADC := 1200, loLim := -36, hiLim := 1236, loBrk := -72, hiBrk := 1272, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 14, corrADC := 0.0);
+//[БУ] [A2.13:1] [БУ:XAI4:1a,XAI4:1b] Полная температура газа за турбиной газогенератора на запуске (1 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_start1, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 15, corrADC := 0.0);
+//[БУ] [A2.13:2] [БУ:,] Не подключен (модуль с быстродействующим каналом)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_02, min_PV := 0, max_PV :=  0, minADC := 0, maxADC := 0, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 16, corrADC := 0.0);
+//[БУ] [A2.14:1] [БУ:XAI4:2a,XAI4:2b] Полная температура газа за турбиной газогенератора на запуске (2 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_start2, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 17, corrADC := 0.0);
+//[БУ] [A2.14:2] [БУ:,] Не подключен  (модуль с быстродействующим каналом)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_03, min_PV := 0, max_PV :=  0, minADC := 0, maxADC := 0, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 18, corrADC := 0.0);
+//[БУ] [A2.15:1] [БУ:XAI4:3a,XAI4:3b] Полная температура газа за турбиной газогенератора на режимах (канал 1)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode1, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 19, corrADC := 0.0);
+//[БУ] [A2.15:2] [БУ:XAI4:4a,XAI4:4b] Полная температура газа за турбиной газогенератора на режимах (канал 2)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode2, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 20, corrADC := 0.0);
+//[БУ] [A2.16:1] [БУ:XAI4:5a,XAI4:5b] Полная температура газа за турбиной газогенератора на режимах (канал 3)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode3, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 21, corrADC := 0.0);
+//[БУ] [A2.16:2] [БУ:XAI4:6a,XAI4:6b] Полная температура газа за турбиной газогенератора на режимах (канал 4)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode4, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 22, corrADC := 0.0);
+//[БУ] [A2.17:1] [БУ:XAI4:7a,XAI4:7b] Полная температура газа за турбиной газогенератора на режимах (канал 5)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode5, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 23, corrADC := 0.0);
+//[БУ] [A2.17:2] [БУ:XAI4:8a,XAI4:8b] Полная температура газа за турбиной газогенератора на режимах (канал 6)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode6, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 24, corrADC := 0.0);
+//[БУ] [A2.18:1] [БУ:XAI4:9a,XAI4:9b] Полная температура газа за турбиной газогенератора на режимах (канал 7)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode7, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 25, corrADC := 0.0);
+//[БУ] [A2.18:2] [БУ:XAI4:10a,XAI4:10b] Полная температура газа за турбиной газогенератора на режимах (канал 8)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode8, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 26, corrADC := 0.0);
+//[БУ] [A2.19:1] [БУ:XAI4:11a,XAI4:11b] Полная температура газа за турбиной газогенератора на режимах (канал 9)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode9, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 27, corrADC := 0.0);
+//[БУ] [A2.19:2] [БУ:XAI4:12a,XAI4:12b] Полная температура газа за турбиной газогенератора на режимах (канал 10)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode10, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 28, corrADC := 0.0);
+//[БУ] [A2.20:1] [БУ:XAI4:13a,XAI4:13b] Полная температура газа за турбиной газогенератора на режимах (канал 11)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode11, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 29, corrADC := 0.0);
+//[БУ] [A2.20:2] [БУ:XAI4:14a,XAI4:14b] Полная температура газа за турбиной газогенератора на режимах (канал 12)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_GG_mode12, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 30, corrADC := 0.0);
+//[БУ] [A2.21:1] [БУ:XAI4:15a,XAI4:15b] Резерв (ХА)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_04, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 31, corrADC := 0.0);
+//[БУ] [A2.21:2] [БУ:XAI4:16a,XAI4:16b] Резерв (ХА)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_05, min_PV := -60, max_PV :=  1300, minADC := -60, maxADC := 1300, loLim := -100.8, hiLim := 1340.8, loBrk := -141.6, hiBrk := 1381.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 32, corrADC := 0.0);
+//[БУ] [A2.22:1] [БУ:XAI3:1a,XAI3:1b] Т масла на входе Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_inD, min_PV := -98, max_PV :=  98, minADC := -98, maxADC := 98, loLim := -103.88, hiLim := 103.88, loBrk := -109.76, hiBrk := 109.76, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 33, corrADC := 0.0);
+//[БУ] [A2.22:2] [БУ:XAI3:2a,XAI3:2b] Т масла на выходе из опоры ш/п компрессора 
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outShP, min_PV := -49, max_PV :=  344, minADC := -49, maxADC := 344, loLim := -60.79, hiLim := 355.79, loBrk := -72.58, hiBrk := 367.58, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 34, corrADC := 0.0);
+//[БУ] [A2.23:1] [БУ:XAI3:3a,XAI3:3b] Т масла на выходе из опоры р/п компрессора ГГ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outRP, min_PV := -49, max_PV :=  344, minADC := -49, maxADC := 344, loLim := -60.79, hiLim := 355.79, loBrk := -72.58, hiBrk := 367.58, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 35, corrADC := 0.0);
+//[БУ] [A2.23:2] [БУ:XAI3:4a,XAI3:4b] Т масла на выходе из опор СТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outST, min_PV := -49, max_PV :=  344, minADC := -49, maxADC := 344, loLim := -60.79, hiLim := 355.79, loBrk := -72.58, hiBrk := 367.58, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 36, corrADC := 0.0);
+//[БУ] [A2.24:1] [БУ:XAI3:5a,XAI3:5b] Т масла в МБД
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_MBD, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 37, corrADC := 0.0);
+//[БУ] [A2.24:2] [БУ:XAI3:6a,XAI3:6b] Темп. воздуха под КШТ Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_KShT, min_PV := -49, max_PV :=  344, minADC := -49, maxADC := 344, loLim := -60.79, hiLim := 355.79, loBrk := -72.58, hiBrk := 367.58, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 38, corrADC := 0.0);
+//[БУ] [A2.25:1] [БУ:XAI3:7a,XAI3:7b] Полная температура воздуха на входе в двигатель
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_inD, min_PV := -60, max_PV :=  80, minADC := -60, maxADC := 80, loLim := -64.2, hiLim := 84.2, loBrk := -68.4, hiBrk := 88.4, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 39, corrADC := 0.0);
+//[БУ] [A2.25:2] [БУ:XAI3:8a,XAI3:8b] Температура топливного газа перед дозатором
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ttg_inTRK, min_PV := -50, max_PV :=  100, minADC := -50, maxADC := 100, loLim := -54.5, hiLim := 104.5, loBrk := -59, hiBrk := 109, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 40, corrADC := 0.0);
+//[БУ] [A2.26:1] [БУ:XAI3:9a,XAI3:9b] Резерв (100М)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_06, min_PV := -49, max_PV :=  344, minADC := -49, maxADC := 344, loLim := -60.79, hiLim := 355.79, loBrk := -72.58, hiBrk := 367.58, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 41, corrADC := 0.0);
+//[БУ] [A2.26:2] [БУ:XAI3:10a,XAI3:10b] Резерв (100П)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_07, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 42, corrADC := 0.0);
+//[БУ] [A2.27:1] [БУ:внутр,] Положение дозатора
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pos_TRK, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 43, corrADC := 0.0);
+//[БУ] [A2.27:2] [БУ:внутр,] Положение ВНА
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pos_VNA, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 44, corrADC := 0.0);
+//[БУ] [A2.28:1] [БУ:внутр,] Задание положения дозатора. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_TRK_KCU, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 45, corrADC := 0.0);
+//[БУ] [A2.28:2] [БУ:внутр,] Задание положения ВНА. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_VNA_KCU, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 46, corrADC := 0.0);
+//[БУ] [A2.28:3] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_08, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 47, corrADC := 0.0);
+//[БУ] [A2.28:4] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_09, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 48, corrADC := 0.0);
+//[БУ] [A2.29:1] [БУ:XAI1:1a,XAI1:1b] Р масла на входе в Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pm_inD, min_PV := 0, max_PV :=  0.6, minADC := 4, maxADC := 20, loLim := -0.018, hiLim := 0.618, loBrk := -0.036, hiBrk := 0.636, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 49, corrADC := 0.0);
+//[БУ] [A2.29:2] [БУ:XAI1:2a,XAI1:2b] Р масла на выходе из Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pm_outD, min_PV := 0, max_PV :=  160, minADC := 4, maxADC := 20, loLim := -4.8, hiLim := 164.8, loBrk := -9.6, hiBrk := 169.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 50, corrADC := 0.0);
+//[БУ] [A2.29:3] [БУ:XAI1:3a,XAI1:3b] Количество масла в МБД
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Lm_MBD, min_PV := 0, max_PV :=  900, minADC := 4, maxADC := 20, loLim := -27, hiLim := 927, loBrk := -54, hiBrk := 954, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 51, corrADC := 0.0);
+//[БУ] [A2.29:4] [БУ:XAI1:4a,XAI1:4b] Давл. топливн. газа на входе Д (перед СК)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ptg_inSK, min_PV := 0, max_PV :=  4, minADC := 4, maxADC := 20, loLim := -0.12, hiLim := 4.12, loBrk := -0.24, hiBrk := 4.24, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 52, corrADC := 0.0);
+//[БУ] [A2.30:1] [БУ:XAI1:5a,XAI1:5b] Р суфлирования Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Psufl_D, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 53, corrADC := 0.0);
+//[БУ] [A2.30:2] [БУ:XAI1:6a,XAI1:6b] Р пуск. газа перед засл. СтВ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ppg_inStV, min_PV := 0, max_PV :=  1, minADC := 4, maxADC := 20, loLim := -0.03, hiLim := 1.03, loBrk := -0.06, hiBrk := 1.06, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 54, corrADC := 0.0);
+//[БУ] [A2.30:3] [БУ:XAI1:7a,XAI1:7b] Расход воздуха через систему обдува  двигателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Qv_blowD, min_PV := 0.3, max_PV :=  30, minADC := 4, maxADC := 20, loLim := -0.591, hiLim := 30.891, loBrk := -1.482, hiBrk := 31.782, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 55, corrADC := 0.0);
+//[БУ] [A2.30:4] [БУ:XAI1:8a,XAI1:8b] dР воздуха на фильтрах блоке ВОУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPv_filtVOU, min_PV := 0, max_PV :=  0.63, minADC := 4, maxADC := 20, loLim := -0.0189, hiLim := 0.6489, loBrk := -0.0378, hiBrk := 0.6678, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 56, corrADC := 0.0);
+//[БУ] [A2.31:1] [БУ:XAI1:9a,XAI1:9b] Виброскорость, передней подвески Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_PPD, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 57, corrADC := 0.0);
+//[БУ] [A2.31:2] [БУ:XAI1:10a,XAI1:10b] Виброскорость, задней подвески Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_ZPD, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 58, corrADC := 0.0);
+//[БУ] [A2.31:3] [БУ:XAI1:11a,XAI1:11b] dР топл. газа на фильтрах очистки
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPtg_filtClean, min_PV := 0, max_PV :=  63, minADC := 4, maxADC := 20, loLim := -1.89, hiLim := 64.89, loBrk := -3.78, hiBrk := 66.78, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 59, corrADC := 0.0);
+//[БУ] [A2.31:4] [БУ:XAI1:12a,XAI1:12b] Т топл. газа перед измерительной диафрагмой
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ttg_izmDiaphr, min_PV := -50, max_PV :=  50, minADC := 4, maxADC := 20, loLim := -53, hiLim := 53, loBrk := -56, hiBrk := 56, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 60, corrADC := 0.0);
+//[БУ] [A2.32:1] [БУ:XAI1:13a,XAI1:13b] Перепад Р топл. газа на измерительной диафрагме
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPtg_izmDiaphr, min_PV := 0, max_PV :=  63, minADC := 4, maxADC := 20, loLim := -1.89, hiLim := 64.89, loBrk := -3.78, hiBrk := 66.78, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 61, corrADC := 0.0);
+//[БУ] [A2.32:2] [БУ:XAI1:14a,XAI1:14b] Р топл. газа на входе измерительной диаафрагме
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ptg_inIzmDiaphr, min_PV := 0, max_PV :=  4, minADC := 4, maxADC := 20, loLim := -0.12, hiLim := 4.12, loBrk := -0.24, hiBrk := 4.24, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 62, corrADC := 0.0);
+//[БУ] [A2.32:3] [БУ:XAI1:15a,XAI1:15b] Перепад между Ратм.  и полным Рв на вх. в компрессор ГГ 
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dP_Patm_fullPv_inGG, min_PV := 0, max_PV :=  63, minADC := 4, maxADC := 20, loLim := -1.89, hiLim := 64.89, loBrk := -3.78, hiBrk := 66.78, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 63, corrADC := 0.0);
+//[БУ] [A2.32:4] [БУ:XAI1:16a,XAI1:16b] Перепад между Ратм.  и статическим Рв на вх. в компрессор ГГ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dP_Patm_statPv_inGG, min_PV := 0, max_PV :=  16, minADC := 4, maxADC := 20, loLim := -0.48, hiLim := 16.48, loBrk := -0.96, hiBrk := 16.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 64, corrADC := 0.0);
+//[БУ] [A2.33:1] [БУ:XAI2:1a,XAI2:1b] Р воздуха в разгрузочной полости СТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pv_razPolST, min_PV := 0, max_PV :=  600, minADC := 4, maxADC := 20, loLim := -18, hiLim := 618, loBrk := -36, hiBrk := 636, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 65, corrADC := 0.0);
+//[БУ] [A2.33:2] [БУ:XAI2:2a,XAI2:2b] Полное Р газа за турбиной ГГ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pg_bST, min_PV := 0, max_PV :=  600, minADC := 4, maxADC := 20, loLim := -18, hiLim := 618, loBrk := -36, hiBrk := 636, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 66, corrADC := 0.0);
+//[БУ] [A2.33:3] [БУ:XAI2:3a,XAI2:3b] Перепад между атмосферным Р и полным Р газа за СТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dP_Patm_fullPg_bST, min_PV := 0, max_PV :=  16, minADC := 4, maxADC := 20, loLim := -0.48, hiLim := 16.48, loBrk := -0.96, hiBrk := 16.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 67, corrADC := 0.0);
+//[БУ] [A2.33:4] [БУ:XAI2:4a,XAI2:4b] Р воздуха в разгрузочной полости компрессора ГГ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pv_razPolGG, min_PV := 0, max_PV :=  160, minADC := 4, maxADC := 20, loLim := -4.8, hiLim := 164.8, loBrk := -9.6, hiBrk := 169.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 68, corrADC := 0.0);
+//[БУ] [A2.34:1] [БУ:XAI2:5a,XAI2:5b] Атмосферное Р наружного воздуха
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Patm, min_PV := 80, max_PV :=  120, minADC := 4, maxADC := 20, loLim := 78.8, hiLim := 121.2, loBrk := 77.6, hiBrk := 122.4, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 69, corrADC := 0.0);
+//[БУ] [A2.34:2] [БУ:XAI2:6a,XAI2:6b] Полное давление воздуха за компрессором газогенератора
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pv_bGG, min_PV := 0, max_PV :=  4, minADC := 4, maxADC := 20, loLim := -0.12, hiLim := 4.12, loBrk := -0.24, hiBrk := 4.24, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 70, corrADC := 0.0);
+//[БУ] [A2.34:3] [БУ:XAI2:7a,XAI2:7b] Давление топливного газа на входе в САУ (перед дозатором газа)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Ptg_inTRK, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 71, corrADC := 0.0);
+//[БУ] [A2.34:4] [БУ:XAI2:8a,XAI2:8b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_10, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 72, corrADC := 0.0);
+//[БУ] [A2.35:1] [БУ:XAI2:9a,XAI2:9b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_11, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 73, corrADC := 0.0);
+//[БУ] [A2.35:2] [БУ:XAI2:10a,XAI2:10b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_12, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 74, corrADC := 0.0);
+//[БУ] [A2.35:3] [БУ:XAI2:11a,XAI2:11b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_13, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 75, corrADC := 0.0);
+//[БУ] [A2.35:4] [БУ:XAI2:12a,XAI2:12b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_14, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 76, corrADC := 0.0);
+//[БУ] [A4.3:1] [БУ:,] Задание положения дозатора
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_TRK, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 77, corrADC := 0.0);
+//[БУ] [A4.3:2] [БУ:,] Задание положения ВНА
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_VNA, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 78, corrADC := 0.0);
+//[БУ] [A4.3:3] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_15, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 79, corrADC := 0.0);
+//[БУ] [A4.3:4] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_16, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 80, corrADC := 0.0);
+//[БУ] [A4.3:5] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_17, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 81, corrADC := 0.0);
+//[БУ] [A4.3:6] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_18, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 82, corrADC := 0.0);
+//[БУ] [A4.3:7] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_19, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 83, corrADC := 0.0);
+//[БУ] [A4.3:8] [БУ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_20, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 84, corrADC := 0.0);
+//[ЭС] [А30.1:1] [ЭС:XAI10:1a,XAI10:1b] Т воды на входе теплообменника
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tw_inUTO, min_PV := -91, max_PV :=  91, minADC := -91, maxADC := 91, loLim := -96.46, hiLim := 96.46, loBrk := -101.92, hiBrk := 101.92, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 85, corrADC := 0.0);
+//[ЭС] [А30.1:2] [ЭС:XAI10:2a,XAI10:2b] Т воды на выходе теплообменника
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tw_outUTO, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 86, corrADC := 0.0);
+//[ЭС] [А30.2:1] [ЭС:F11:1,F11:2] Т воздуха в отсеке Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_bayN, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 87, corrADC := 0.0);
+//[ЭС] [А30.2:2] [ЭС:XAI10:3a,XAI10:3b] Т воздуха в отсеке ГТУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_bayGTU, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 88, corrADC := 0.0);
+//[ЭС] [А30.3:1] [ЭС:XAI10:4a,XAI10:4b] Т воздуха в отсеке БУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_bayBU, min_PV := -98, max_PV :=  98, minADC := -98, maxADC := 98, loLim := -103.88, hiLim := 103.88, loBrk := -109.76, hiBrk := 109.76, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 89, corrADC := 0.0);
+//[ЭС] [А30.3:2] [ЭС:XAI10:5a,XAI10:5b] Т воздуха в ОМА
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_OMA, min_PV := -98, max_PV :=  98, minADC := -98, maxADC := 98, loLim := -103.88, hiLim := 103.88, loBrk := -109.76, hiBrk := 109.76, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 90, corrADC := 0.0);
+//[ЭС] [А30.4:1] [ЭС:XAI10:6a,XAI10:6b] Т воздуха в ОПТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tv_OPT, min_PV := -98, max_PV :=  98, minADC := -98, maxADC := 98, loLim := -103.88, hiLim := 103.88, loBrk := -109.76, hiBrk := 109.76, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 91, corrADC := 0.0);
+//[ЭС] [А30.4:2] [ЭС:XAI10:7a,XAI10:7b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_21, min_PV := -98, max_PV :=  98, minADC := -98, maxADC := 98, loLim := -103.88, hiLim := 103.88, loBrk := -109.76, hiBrk := 109.76, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 92, corrADC := 0.0);
+//[ЭС] [А30.5:1] [ЭС:XAI9:1a,XAI9:1b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_22, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 93, corrADC := 0.0);
+//[ЭС] [А30.5:2] [ЭС:XAI9:2a,XAI9:2b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_23, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 94, corrADC := 0.0);
+//[ЭС] [А30.5:3] [ЭС:XAI9:3a,XAI9:3b] Частота вращения вентилятора №1 обдува двигателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.F_VOD1, min_PV := 0, max_PV :=  100, minADC := 0, maxADC := 10, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 95, corrADC := 0.0);
+//[ЭС] [А30.5:4] [ЭС:XAI9:4a,XAI9:4b] Частота вращения вентилятора №2 обдува двигателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.F_VOD2, min_PV := 0, max_PV :=  100, minADC := 0, maxADC := 10, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 96, corrADC := 0.0);
+//[ЭС] [А30.6:1] [ЭС:XAI9:5a,XAI9:5b] Т наружного воздуха
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tair, min_PV := -40, max_PV :=  60, minADC := 4, maxADC := 20, loLim := -43, hiLim := 63, loBrk := -46, hiBrk := 66, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 97, corrADC := 0.0);
+//[ЭС] [А30.6:2] [ЭС:XAI9:6a,XAI9:6b] Относительная влажность наружного воздуха
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Wet, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 98, corrADC := 0.0);
+//[ЭС] [А30.6:3] [ЭС:XAI9:7a,XAI9:7b] Перепад давления воздуха между  КШТ и отсеком ГТУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPv_KShT_bayGTU, min_PV := 0, max_PV :=  0.63, minADC := 4, maxADC := 20, loLim := -0.0189, hiLim := 0.6489, loBrk := -0.0378, hiBrk := 0.6678, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 99, corrADC := 0.0);
+//[ЭС] [А30.6:4] [ЭС:XAI9:8a,XAI9:8b] dР воздуха между атмосферой и зоной обдува трансмиссии
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPv_atm_blowTransm, min_PV := 0, max_PV :=  1.6, minADC := 4, maxADC := 20, loLim := -0.048, hiLim := 1.648, loBrk := -0.096, hiBrk := 1.696, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 100, corrADC := 0.0);
+//[ЭС] [А30.7:1] [ЭС:XAI9:9a,XAI9:9b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_24, min_PV := 0, max_PV :=  10, minADC := 0, maxADC := 10, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 101, corrADC := 0.0);
+//[ЭС] [А30.7:2] [ЭС:XAI9:10a,XAI9:10b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_25, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 102, corrADC := 0.0);
+//[ЭС] [А30.7:3] [ЭС:,] Управляющий сигнал на регулятор частоты вращения ВОД1. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_VOD1_KCU, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 103, corrADC := 0.0);
+//[ЭС] [А30.7:4] [ЭС:,] Управляющий сигнал на регулятор частоты вращения ВОД2. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_VOD2_KCU, min_PV := 4, max_PV :=  20, minADC := 0, maxADC := 10, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 104, corrADC := 0.0);
+//[ЭС] [А30.8:1] [ЭС:,] Резерв. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_26, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 105, corrADC := 0.0);
+//[ЭС] [А30.8:2] [ЭС:,] Резерв. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_27, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 106, corrADC := 0.0);
+//[ЭС] [А30.8:3] [ЭС:,] Измерение основного питания САУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.U_main, min_PV := 0, max_PV :=  370, minADC := 4, maxADC := 20, loLim := -11.1, hiLim := 381.1, loBrk := -22.2, hiBrk := 392.2, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 107, corrADC := 0.0);
+//[ЭС] [А30.8:4] [ЭС:,] Измерение резервного питания САУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.U_reserv, min_PV := 0, max_PV :=  370, minADC := 4, maxADC := 20, loLim := -11.1, hiLim := 381.1, loBrk := -22.2, hiBrk := 392.2, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 108, corrADC := 0.0);
+//[ЦБК] [А20.1:1] [ЦБК:F1:1,F1:2] Темпер. переднего опорного подшипника нагнетателя 
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.T_PON, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 109, corrADC := 0.0);
+//[ЦБК] [А20.1:2] [ЦБК:F2:1,F2:2] Темпер. заднего опорного подшипника нагнетателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.T_ZON, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 110, corrADC := 0.0);
+//[ЦБК] [А20.2:1] [ЦБК:F3:1,F3:2] Температура упорного подшипника со стороны привода
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.T_UPP, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 111, corrADC := 0.0);
+//[ЦБК] [А20.2:2] [ЦБК:F4:1,F4:2] Температура упорного подшипника со стороны насоса
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.T_UPN, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 112, corrADC := 0.0);
+//[ЦБК] [А20.3:1] [ЦБК:F5:1,F5:2] Темп. газа на входе Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_inN, min_PV := -91, max_PV :=  70, minADC := -91, maxADC := 70, loLim := -95.83, hiLim := 74.83, loBrk := -100.66, hiBrk := 79.66, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 113, corrADC := 0.0);
+//[ЦБК] [А20.3:2] [ЦБК:F6:1,F6:2] Темп. газа на выходе Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_outN, min_PV := -45, max_PV :=  150, minADC := -45, maxADC := 150, loLim := -50.85, hiLim := 155.85, loBrk := -56.7, hiBrk := 161.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 114, corrADC := 0.0);
+//[ЦБК] [А20.4:1] [ЦБК:F7:1,F7:2] Т масла в МБН
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_MBN, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 115, corrADC := 0.0);
+//[ЦБК] [А20.4:2] [ЦБК:F8:1,F8:2] Т масла на выходе АВОМ Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_inAVOMN, min_PV := -91, max_PV :=  90, minADC := -91, maxADC := 90, loLim := -96.43, hiLim := 95.43, loBrk := -101.86, hiBrk := 100.86, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 116, corrADC := 0.0);
+//[ЦБК] [А20.5:1] [ЦБК:F9:1,F9:2] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_28, min_PV := -45, max_PV :=  200, minADC := -45, maxADC := 200, loLim := -52.35, hiLim := 207.35, loBrk := -59.7, hiBrk := 214.7, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 117, corrADC := 0.0);
+//[ЦБК] [А20.5:2] [ЦБК:,] не подключен
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_29, min_PV := 0, max_PV :=  0, minADC := 0, maxADC := 0, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 118, corrADC := 0.0);
+//[ЦБК] [А20.6:1] [ЦБК:XAI7:1a,XAI7:1b] Перепад P газа на конфузоре Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dP_konfN, min_PV := 0, max_PV :=  16, minADC := 4, maxADC := 20, loLim := -0.48, hiLim := 16.48, loBrk := -0.96, hiBrk := 16.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 119, corrADC := 0.0);
+//[ЦБК] [А20.6:2] [ЦБК:XAI7:2a,XAI7:2b] P газа на входе нагнетателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pg_inN, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 120, corrADC := 0.0);
+//[ЦБК] [А20.7:1] [ЦБК:XAI7:3a,XAI7:3b] P газа на выходе нагнетателя
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pg_outN, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 121, corrADC := 0.0);
+//[ЦБК] [А20.7:2] [ЦБК:XAI7:4a,XAI7:4b] Степень закрытия Mokveld
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pos_APK, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 122, corrADC := 0.0);
+//[ЦБК] [А20.8:1] [ЦБК:XAI7:5a,XAI7:5b] Задание на закрытие Mokveld
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_APK, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 123, corrADC := 0.0);
+//[ЦБК] [А20.8:2] [ЦБК:XAI7:6a,XAI7:6b] Давление после крана 2
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.P_bKr2, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 124, corrADC := 0.0);
+//[ЦБК] [А20.9:1] [ЦБК:XAI7:7a,XAI7:7b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_30, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 125, corrADC := 0.0);
+//[ЦБК] [А20.9:2] [ЦБК:XAI7:16a,XAI7:16b] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_31, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 126, corrADC := 0.0);
+//[ЦБК] [А20.10:1] [ЦБК:внутр.,] Управление рег. клапаном Mokveld. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Set_APK_KCU, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 127, corrADC := 0.0);
+//[ЦБК] [А20.10:2] [ЦБК:внутр.,] Резерв. КЦУ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_32, min_PV := 4, max_PV :=  20, minADC := 4, maxADC := 20, loLim := 3.52, hiLim := 20.48, loBrk := 3.04, hiBrk := 20.96, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 128, corrADC := 0.0);
+//[ЦБК] [А20.11:1] [ЦБК:XAI7:8a,XAI7:8b] dР "масло-газ" в системе уплотнений Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dPmg, min_PV := 0, max_PV :=  0.63, minADC := 4, maxADC := 20, loLim := -0.0189, hiLim := 0.6489, loBrk := -0.0378, hiBrk := 0.6678, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 129, corrADC := 0.0);
+//[ЦБК] [А20.11:2] [ЦБК:XAI7:9a,XAI7:9b] Р масла смазки упорного подшипника Н
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pmsm, min_PV := 0, max_PV :=  0.6, minADC := 4, maxADC := 20, loLim := -0.018, hiLim := 0.618, loBrk := -0.036, hiBrk := 0.636, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 130, corrADC := 0.0);
+//[ЦБК] [А20.11:3] [ЦБК:XAI7:10a,XAI7:10b] Уровень масла в МБН
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Lm_MBN, min_PV := 0, max_PV :=  700, minADC := 4, maxADC := 20, loLim := -21, hiLim := 721, loBrk := -42, hiBrk := 742, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 131, corrADC := 0.0);
+//[ЦБК] [А20.11:4] [ЦБК:XAI7:11a,XAI7:11b] Виброперемещение ротора Н в передней опоре - вертикальная
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_PON_v, min_PV := 0, max_PV :=  250, minADC := 4, maxADC := 20, loLim := -7.5, hiLim := 257.5, loBrk := -15, hiBrk := 265, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 132, corrADC := 0.0);
+//[ЦБК] [А20.12:1] [ЦБК:XAI7:12a,XAI7:12b] Виброперемещение ротора Н в передней опоре - горизонтальная
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_PON_g, min_PV := 0, max_PV :=  250, minADC := 4, maxADC := 20, loLim := -7.5, hiLim := 257.5, loBrk := -15, hiBrk := 265, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 133, corrADC := 0.0);
+//[ЦБК] [А20.12:2] [ЦБК:XAI7:13a,XAI7:13b] Виброперемещение ротора Н в задней опоре - вертикальная
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_ZON_v, min_PV := 0, max_PV :=  250, minADC := 4, maxADC := 20, loLim := -7.5, hiLim := 257.5, loBrk := -15, hiBrk := 265, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 134, corrADC := 0.0);
+//[ЦБК] [А20.12:3] [ЦБК:XAI7:14a,XAI7:14b] Виброперемещение ротора Н в задней опоре - горизонтальная
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.V_ZON_g, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 135, corrADC := 0.0);
+//[ЦБК] [А20.12:4] [ЦБК:XAI7:15a,XAI7:15b] Осевой сдвиг ротора  - в сторону Д (+) -в сторону Н (-)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Os_N, min_PV := -1, max_PV :=  1, minADC := 4, maxADC := 20, loLim := -1.06, hiLim := 1.06, loBrk := -1.12, hiBrk := 1.12, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 136, corrADC := 0.0);
+//[АМГБ] [А40.3:1] [АМГБ:,] Температура газа на входе в АГМБ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_inAGMB, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 137, corrADC := 0.0);
+//[АМГБ] [А40.3:2] [АМГБ:,] Температура масла двигателя на входе в ГМТ Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_inGMTD, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 138, corrADC := 0.0);
+//[АМГБ] [А40.4:1] [АМГБ:,] Температура масла двигателя на выходе из ГМТ Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outGMTD, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 139, corrADC := 0.0);
+//[АМГБ] [А40.4:2] [АМГБ:,] Температура газа на выходе из АГМБ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tg_outAGMB, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 140, corrADC := 0.0);
+//[АМГБ] [А40.5:1] [АМГБ:,] Температура масла двигателя на входе в ГМТ К
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_inGMTN, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 141, corrADC := 0.0);
+//[АМГБ] [А40.5:2] [АМГБ:,] Температура масла двигателя на выходе из ГМТ К
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outGMTN, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 142, corrADC := 0.0);
+//[АМГБ] [А40.6:1] [АМГБ:,] Температура масла компрессора на выходе из секции теплообменной СТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Tm_outSeKTeplST, min_PV := -50, max_PV :=  200, minADC := -50, maxADC := 200, loLim := -57.5, hiLim := 207.5, loBrk := -65, hiBrk := 215, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 143, corrADC := 0.0);
+//[АМГБ] [А40.6:2] [АМГБ:,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_33, min_PV := -60, max_PV :=  150, minADC := -60, maxADC := 150, loLim := -66.3, hiLim := 156.3, loBrk := -72.6, hiBrk := 162.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 144, corrADC := 0.0);
+//[АМГБ] [А40.7:1] [АМГБ:XAI1-1A,XAI1-1C] Давление газа на входе в АГМБ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pg_inAGMB, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 145, corrADC := 0.0);
+//[АМГБ] [А40.7:2] [АМГБ:XAI1-2A,XAI1-2C] Давление масла двигателя на входе в ГМТ Д
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pm_inGMTD, min_PV := 0, max_PV :=  1.6, minADC := 4, maxADC := 20, loLim := -0.048, hiLim := 1.648, loBrk := -0.096, hiBrk := 1.696, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 146, corrADC := 0.0);
+//[АМГБ] [А40.7:3] [АМГБ:XAI1-3A,XAI1-3C] Давление газа на выходе в АГМБ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pg_outAGMB, min_PV := 0, max_PV :=  10, minADC := 4, maxADC := 20, loLim := -0.3, hiLim := 10.3, loBrk := -0.6, hiBrk := 10.6, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 147, corrADC := 0.0);
+//[АМГБ] [А40.7:4] [АМГБ:XAI1-4A,XAI1-4C] Давление масла компрессора на входе в ГМТ К
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Pm_inGMTN, min_PV := 0, max_PV :=  1.6, minADC := 4, maxADC := 20, loLim := -0.048, hiLim := 1.648, loBrk := -0.096, hiBrk := 1.696, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 148, corrADC := 0.0);
+//[АМГБ] [А40.8:1] [АМГБ:XAI1-5A,XAI1-5C] Перепад давления на фильтре газа
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.dP_filtGaz, min_PV := 0, max_PV :=  250, minADC := 4, maxADC := 20, loLim := -7.5, hiLim := 257.5, loBrk := -15, hiBrk := 265, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 149, corrADC := 0.0);
+//[АМГБ] [А40.8:2] [АМГБ:XAI1-6A,XAI1-6C] Температура поверхности секции теплообменной СТ
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.T_povSekTeplST, min_PV := -50, max_PV :=  200, minADC := 4, maxADC := 20, loLim := -57.5, hiLim := 207.5, loBrk := -65, hiBrk := 215, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 150, corrADC := 0.0);
+//[АМГБ] [А40.8:3] [АМГБ:XAI1-7В,XAI1-7C] Степень загазованности воздуха
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Gaz_air, min_PV := 0, max_PV :=  100, minADC := 4, maxADC := 20, loLim := -3, hiLim := 103, loBrk := -6, hiBrk := 106, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 151, corrADC := 0.0);
+//[АМГБ] [А40.8:4] [АМГБ:XAI1-8В,XAI1-8C] Пламя в оборудовании 
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.flameEq, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 152, corrADC := 0.0);
+//[АМГБ] [А40.9:1] [АМГБ:не подкл.,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_34, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 153, corrADC := 0.0);
+//[АМГБ] [А40.9:2] [АМГБ:не подкл.,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_35, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 154, corrADC := 0.0);
+//[АМГБ] [А40.9:3] [АМГБ:не подкл.,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_36, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 155, corrADC := 0.0);
+//[АМГБ] [А40.9:4] [АМГБ:не подкл.,] Резерв
+ VGSig.fnAI_init(setStruct => algGVL.GPA_AI_Setting.Reserv_AI_37, min_PV := 0, max_PV :=  0, minADC := 4, maxADC := 20, loLim := 0, hiLim := 0, loBrk := 0, hiBrk := 0, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 156, corrADC := 0.0);
+ //Конец сгенерированного кода
+END_IF;
+
+//Начало сгенерированного кода AI_Processing
+//[БУ] [A2.6:1] [БУ:XAI6:2a,XAI6:2b] Температура газа за СТ 1
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST1, set := algGVL.GPA_AI_Setting.Tg_ST1, btn := algGVL.GPA_AI_FromHMI.Tg_ST1, out := algGVL.GPA_AI_ToHMI.Tg_ST1, my := algGVL.GPA_AI_Internal.Tg_ST1, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.6:2] [БУ:XAI6:3a,XAI6:3b] Температура газа за СТ 2
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST2, set := algGVL.GPA_AI_Setting.Tg_ST2, btn := algGVL.GPA_AI_FromHMI.Tg_ST2, out := algGVL.GPA_AI_ToHMI.Tg_ST2, my := algGVL.GPA_AI_Internal.Tg_ST2, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.7:1] [БУ:XAI6:4a,XAI6:4b] Температура газа за СТ 3
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST3, set := algGVL.GPA_AI_Setting.Tg_ST3, btn := algGVL.GPA_AI_FromHMI.Tg_ST3, out := algGVL.GPA_AI_ToHMI.Tg_ST3, my := algGVL.GPA_AI_Internal.Tg_ST3, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.7:2] [БУ:XAI6:5a,XAI6:5b] Температура газа за СТ 4
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST4, set := algGVL.GPA_AI_Setting.Tg_ST4, btn := algGVL.GPA_AI_FromHMI.Tg_ST4, out := algGVL.GPA_AI_ToHMI.Tg_ST4, my := algGVL.GPA_AI_Internal.Tg_ST4, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.8:1] [БУ:XAI6:6a,XAI6:6b] Температура газа за СТ 5
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST5, set := algGVL.GPA_AI_Setting.Tg_ST5, btn := algGVL.GPA_AI_FromHMI.Tg_ST5, out := algGVL.GPA_AI_ToHMI.Tg_ST5, my := algGVL.GPA_AI_Internal.Tg_ST5, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.8:2] [БУ:XAI6:7a,XAI6:7b] Температура газа за СТ 6
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST6, set := algGVL.GPA_AI_Setting.Tg_ST6, btn := algGVL.GPA_AI_FromHMI.Tg_ST6, out := algGVL.GPA_AI_ToHMI.Tg_ST6, my := algGVL.GPA_AI_Internal.Tg_ST6, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.9:1] [БУ:XAI6:8a,XAI6:8b] Температура газа за СТ 7
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST7, set := algGVL.GPA_AI_Setting.Tg_ST7, btn := algGVL.GPA_AI_FromHMI.Tg_ST7, out := algGVL.GPA_AI_ToHMI.Tg_ST7, my := algGVL.GPA_AI_Internal.Tg_ST7, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.9:2] [БУ:XAI6:9a,XAI6:9b] Температура газа за СТ 8
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST8, set := algGVL.GPA_AI_Setting.Tg_ST8, btn := algGVL.GPA_AI_FromHMI.Tg_ST8, out := algGVL.GPA_AI_ToHMI.Tg_ST8, my := algGVL.GPA_AI_Internal.Tg_ST8, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.10:1] [БУ:XAI6:10a,XAI6:10b] Температура газа за СТ 9
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST9, set := algGVL.GPA_AI_Setting.Tg_ST9, btn := algGVL.GPA_AI_FromHMI.Tg_ST9, out := algGVL.GPA_AI_ToHMI.Tg_ST9, my := algGVL.GPA_AI_Internal.Tg_ST9, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.10:2] [БУ:XAI6:11a,XAI6:11b] Температура газа за СТ 10
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST10, set := algGVL.GPA_AI_Setting.Tg_ST10, btn := algGVL.GPA_AI_FromHMI.Tg_ST10, out := algGVL.GPA_AI_ToHMI.Tg_ST10, my := algGVL.GPA_AI_Internal.Tg_ST10, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.11:1] [БУ:XAI6:12a,XAI6:12b] Температура газа за СТ 11
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST11, set := algGVL.GPA_AI_Setting.Tg_ST11, btn := algGVL.GPA_AI_FromHMI.Tg_ST11, out := algGVL.GPA_AI_ToHMI.Tg_ST11, my := algGVL.GPA_AI_Internal.Tg_ST11, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.11:2] [БУ:XAI6:13a,XAI6:13b] Температура газа за СТ 12
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_ST12, set := algGVL.GPA_AI_Setting.Tg_ST12, btn := algGVL.GPA_AI_FromHMI.Tg_ST12, out := algGVL.GPA_AI_ToHMI.Tg_ST12, my := algGVL.GPA_AI_Internal.Tg_ST12, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.12:1] [БУ:XAI6:1a,XAI6:1b] Т воздуха за компрессором ГГ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tair_GG, set := algGVL.GPA_AI_Setting.Tair_GG, btn := algGVL.GPA_AI_FromHMI.Tair_GG, out := algGVL.GPA_AI_ToHMI.Tair_GG, my := algGVL.GPA_AI_Internal.Tair_GG, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.12:2] [БУ:XAI6:14a,XAI6:14b] Резерв (ХА)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_01, set := algGVL.GPA_AI_Setting.Reserv_AI_01, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_01, out := algGVL.GPA_AI_ToHMI.Reserv_AI_01, my := algGVL.GPA_AI_Internal.Reserv_AI_01, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.13:1] [БУ:XAI4:1a,XAI4:1b] Полная температура газа за турбиной газогенератора на запуске (1 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_start1, set := algGVL.GPA_AI_Setting.Tg_GG_start1, btn := algGVL.GPA_AI_FromHMI.Tg_GG_start1, out := algGVL.GPA_AI_ToHMI.Tg_GG_start1, my := algGVL.GPA_AI_Internal.Tg_GG_start1, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.13:2] [БУ:,] Не подключен (модуль с быстродействующим каналом)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_02, set := algGVL.GPA_AI_Setting.Reserv_AI_02, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_02, out := algGVL.GPA_AI_ToHMI.Reserv_AI_02, my := algGVL.GPA_AI_Internal.Reserv_AI_02, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.14:1] [БУ:XAI4:2a,XAI4:2b] Полная температура газа за турбиной газогенератора на запуске (2 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_start2, set := algGVL.GPA_AI_Setting.Tg_GG_start2, btn := algGVL.GPA_AI_FromHMI.Tg_GG_start2, out := algGVL.GPA_AI_ToHMI.Tg_GG_start2, my := algGVL.GPA_AI_Internal.Tg_GG_start2, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.14:2] [БУ:,] Не подключен  (модуль с быстродействующим каналом)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_03, set := algGVL.GPA_AI_Setting.Reserv_AI_03, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_03, out := algGVL.GPA_AI_ToHMI.Reserv_AI_03, my := algGVL.GPA_AI_Internal.Reserv_AI_03, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.15:1] [БУ:XAI4:3a,XAI4:3b] Полная температура газа за турбиной газогенератора на режимах (канал 1)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode1, set := algGVL.GPA_AI_Setting.Tg_GG_mode1, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode1, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode1, my := algGVL.GPA_AI_Internal.Tg_GG_mode1, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.15:2] [БУ:XAI4:4a,XAI4:4b] Полная температура газа за турбиной газогенератора на режимах (канал 2)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode2, set := algGVL.GPA_AI_Setting.Tg_GG_mode2, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode2, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode2, my := algGVL.GPA_AI_Internal.Tg_GG_mode2, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.16:1] [БУ:XAI4:5a,XAI4:5b] Полная температура газа за турбиной газогенератора на режимах (канал 3)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode3, set := algGVL.GPA_AI_Setting.Tg_GG_mode3, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode3, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode3, my := algGVL.GPA_AI_Internal.Tg_GG_mode3, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.16:2] [БУ:XAI4:6a,XAI4:6b] Полная температура газа за турбиной газогенератора на режимах (канал 4)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode4, set := algGVL.GPA_AI_Setting.Tg_GG_mode4, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode4, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode4, my := algGVL.GPA_AI_Internal.Tg_GG_mode4, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.17:1] [БУ:XAI4:7a,XAI4:7b] Полная температура газа за турбиной газогенератора на режимах (канал 5)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode5, set := algGVL.GPA_AI_Setting.Tg_GG_mode5, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode5, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode5, my := algGVL.GPA_AI_Internal.Tg_GG_mode5, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.17:2] [БУ:XAI4:8a,XAI4:8b] Полная температура газа за турбиной газогенератора на режимах (канал 6)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode6, set := algGVL.GPA_AI_Setting.Tg_GG_mode6, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode6, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode6, my := algGVL.GPA_AI_Internal.Tg_GG_mode6, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.18:1] [БУ:XAI4:9a,XAI4:9b] Полная температура газа за турбиной газогенератора на режимах (канал 7)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode7, set := algGVL.GPA_AI_Setting.Tg_GG_mode7, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode7, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode7, my := algGVL.GPA_AI_Internal.Tg_GG_mode7, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.18:2] [БУ:XAI4:10a,XAI4:10b] Полная температура газа за турбиной газогенератора на режимах (канал 8)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode8, set := algGVL.GPA_AI_Setting.Tg_GG_mode8, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode8, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode8, my := algGVL.GPA_AI_Internal.Tg_GG_mode8, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.19:1] [БУ:XAI4:11a,XAI4:11b] Полная температура газа за турбиной газогенератора на режимах (канал 9)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode9, set := algGVL.GPA_AI_Setting.Tg_GG_mode9, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode9, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode9, my := algGVL.GPA_AI_Internal.Tg_GG_mode9, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.19:2] [БУ:XAI4:12a,XAI4:12b] Полная температура газа за турбиной газогенератора на режимах (канал 10)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode10, set := algGVL.GPA_AI_Setting.Tg_GG_mode10, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode10, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode10, my := algGVL.GPA_AI_Internal.Tg_GG_mode10, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.20:1] [БУ:XAI4:13a,XAI4:13b] Полная температура газа за турбиной газогенератора на режимах (канал 11)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode11, set := algGVL.GPA_AI_Setting.Tg_GG_mode11, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode11, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode11, my := algGVL.GPA_AI_Internal.Tg_GG_mode11, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.20:2] [БУ:XAI4:14a,XAI4:14b] Полная температура газа за турбиной газогенератора на режимах (канал 12)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_GG_mode12, set := algGVL.GPA_AI_Setting.Tg_GG_mode12, btn := algGVL.GPA_AI_FromHMI.Tg_GG_mode12, out := algGVL.GPA_AI_ToHMI.Tg_GG_mode12, my := algGVL.GPA_AI_Internal.Tg_GG_mode12, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.21:1] [БУ:XAI4:15a,XAI4:15b] Резерв (ХА)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_04, set := algGVL.GPA_AI_Setting.Reserv_AI_04, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_04, out := algGVL.GPA_AI_ToHMI.Reserv_AI_04, my := algGVL.GPA_AI_Internal.Reserv_AI_04, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.21:2] [БУ:XAI4:16a,XAI4:16b] Резерв (ХА)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_05, set := algGVL.GPA_AI_Setting.Reserv_AI_05, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_05, out := algGVL.GPA_AI_ToHMI.Reserv_AI_05, my := algGVL.GPA_AI_Internal.Reserv_AI_05, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.22:1] [БУ:XAI3:1a,XAI3:1b] Т масла на входе Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_inD, set := algGVL.GPA_AI_Setting.Tm_inD, btn := algGVL.GPA_AI_FromHMI.Tm_inD, out := algGVL.GPA_AI_ToHMI.Tm_inD, my := algGVL.GPA_AI_Internal.Tm_inD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.22:2] [БУ:XAI3:2a,XAI3:2b] Т масла на выходе из опоры ш/п компрессора 
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outShP, set := algGVL.GPA_AI_Setting.Tm_outShP, btn := algGVL.GPA_AI_FromHMI.Tm_outShP, out := algGVL.GPA_AI_ToHMI.Tm_outShP, my := algGVL.GPA_AI_Internal.Tm_outShP, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.23:1] [БУ:XAI3:3a,XAI3:3b] Т масла на выходе из опоры р/п компрессора ГГ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outRP, set := algGVL.GPA_AI_Setting.Tm_outRP, btn := algGVL.GPA_AI_FromHMI.Tm_outRP, out := algGVL.GPA_AI_ToHMI.Tm_outRP, my := algGVL.GPA_AI_Internal.Tm_outRP, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.23:2] [БУ:XAI3:4a,XAI3:4b] Т масла на выходе из опор СТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outST, set := algGVL.GPA_AI_Setting.Tm_outST, btn := algGVL.GPA_AI_FromHMI.Tm_outST, out := algGVL.GPA_AI_ToHMI.Tm_outST, my := algGVL.GPA_AI_Internal.Tm_outST, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.24:1] [БУ:XAI3:5a,XAI3:5b] Т масла в МБД
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_MBD, set := algGVL.GPA_AI_Setting.Tm_MBD, btn := algGVL.GPA_AI_FromHMI.Tm_MBD, out := algGVL.GPA_AI_ToHMI.Tm_MBD, my := algGVL.GPA_AI_Internal.Tm_MBD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.24:2] [БУ:XAI3:6a,XAI3:6b] Темп. воздуха под КШТ Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_KShT, set := algGVL.GPA_AI_Setting.Tv_KShT, btn := algGVL.GPA_AI_FromHMI.Tv_KShT, out := algGVL.GPA_AI_ToHMI.Tv_KShT, my := algGVL.GPA_AI_Internal.Tv_KShT, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.25:1] [БУ:XAI3:7a,XAI3:7b] Полная температура воздуха на входе в двигатель
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_inD, set := algGVL.GPA_AI_Setting.Tv_inD, btn := algGVL.GPA_AI_FromHMI.Tv_inD, out := algGVL.GPA_AI_ToHMI.Tv_inD, my := algGVL.GPA_AI_Internal.Tv_inD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.25:2] [БУ:XAI3:8a,XAI3:8b] Температура топливного газа перед дозатором
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ttg_inTRK, set := algGVL.GPA_AI_Setting.Ttg_inTRK, btn := algGVL.GPA_AI_FromHMI.Ttg_inTRK, out := algGVL.GPA_AI_ToHMI.Ttg_inTRK, my := algGVL.GPA_AI_Internal.Ttg_inTRK, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.26:1] [БУ:XAI3:9a,XAI3:9b] Резерв (100М)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_06, set := algGVL.GPA_AI_Setting.Reserv_AI_06, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_06, out := algGVL.GPA_AI_ToHMI.Reserv_AI_06, my := algGVL.GPA_AI_Internal.Reserv_AI_06, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.26:2] [БУ:XAI3:10a,XAI3:10b] Резерв (100П)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_07, set := algGVL.GPA_AI_Setting.Reserv_AI_07, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_07, out := algGVL.GPA_AI_ToHMI.Reserv_AI_07, my := algGVL.GPA_AI_Internal.Reserv_AI_07, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.27:1] [БУ:внутр,] Положение дозатора
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pos_TRK, set := algGVL.GPA_AI_Setting.Pos_TRK, btn := algGVL.GPA_AI_FromHMI.Pos_TRK, out := algGVL.GPA_AI_ToHMI.Pos_TRK, my := algGVL.GPA_AI_Internal.Pos_TRK, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.27:2] [БУ:внутр,] Положение ВНА
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pos_VNA, set := algGVL.GPA_AI_Setting.Pos_VNA, btn := algGVL.GPA_AI_FromHMI.Pos_VNA, out := algGVL.GPA_AI_ToHMI.Pos_VNA, my := algGVL.GPA_AI_Internal.Pos_VNA, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.28:1] [БУ:внутр,] Задание положения дозатора. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_TRK_KCU, set := algGVL.GPA_AI_Setting.Set_TRK_KCU, btn := algGVL.GPA_AI_FromHMI.Set_TRK_KCU, out := algGVL.GPA_AI_ToHMI.Set_TRK_KCU, my := algGVL.GPA_AI_Internal.Set_TRK_KCU, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.28:2] [БУ:внутр,] Задание положения ВНА. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_VNA_KCU, set := algGVL.GPA_AI_Setting.Set_VNA_KCU, btn := algGVL.GPA_AI_FromHMI.Set_VNA_KCU, out := algGVL.GPA_AI_ToHMI.Set_VNA_KCU, my := algGVL.GPA_AI_Internal.Set_VNA_KCU, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.28:3] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_08, set := algGVL.GPA_AI_Setting.Reserv_AI_08, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_08, out := algGVL.GPA_AI_ToHMI.Reserv_AI_08, my := algGVL.GPA_AI_Internal.Reserv_AI_08, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.28:4] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_09, set := algGVL.GPA_AI_Setting.Reserv_AI_09, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_09, out := algGVL.GPA_AI_ToHMI.Reserv_AI_09, my := algGVL.GPA_AI_Internal.Reserv_AI_09, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.29:1] [БУ:XAI1:1a,XAI1:1b] Р масла на входе в Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pm_inD, set := algGVL.GPA_AI_Setting.Pm_inD, btn := algGVL.GPA_AI_FromHMI.Pm_inD, out := algGVL.GPA_AI_ToHMI.Pm_inD, my := algGVL.GPA_AI_Internal.Pm_inD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.29:2] [БУ:XAI1:2a,XAI1:2b] Р масла на выходе из Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pm_outD, set := algGVL.GPA_AI_Setting.Pm_outD, btn := algGVL.GPA_AI_FromHMI.Pm_outD, out := algGVL.GPA_AI_ToHMI.Pm_outD, my := algGVL.GPA_AI_Internal.Pm_outD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.29:3] [БУ:XAI1:3a,XAI1:3b] Количество масла в МБД
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Lm_MBD, set := algGVL.GPA_AI_Setting.Lm_MBD, btn := algGVL.GPA_AI_FromHMI.Lm_MBD, out := algGVL.GPA_AI_ToHMI.Lm_MBD, my := algGVL.GPA_AI_Internal.Lm_MBD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.29:4] [БУ:XAI1:4a,XAI1:4b] Давл. топливн. газа на входе Д (перед СК)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ptg_inSK, set := algGVL.GPA_AI_Setting.Ptg_inSK, btn := algGVL.GPA_AI_FromHMI.Ptg_inSK, out := algGVL.GPA_AI_ToHMI.Ptg_inSK, my := algGVL.GPA_AI_Internal.Ptg_inSK, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.30:1] [БУ:XAI1:5a,XAI1:5b] Р суфлирования Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Psufl_D, set := algGVL.GPA_AI_Setting.Psufl_D, btn := algGVL.GPA_AI_FromHMI.Psufl_D, out := algGVL.GPA_AI_ToHMI.Psufl_D, my := algGVL.GPA_AI_Internal.Psufl_D, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.30:2] [БУ:XAI1:6a,XAI1:6b] Р пуск. газа перед засл. СтВ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ppg_inStV, set := algGVL.GPA_AI_Setting.Ppg_inStV, btn := algGVL.GPA_AI_FromHMI.Ppg_inStV, out := algGVL.GPA_AI_ToHMI.Ppg_inStV, my := algGVL.GPA_AI_Internal.Ppg_inStV, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.30:3] [БУ:XAI1:7a,XAI1:7b] Расход воздуха через систему обдува  двигателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Qv_blowD, set := algGVL.GPA_AI_Setting.Qv_blowD, btn := algGVL.GPA_AI_FromHMI.Qv_blowD, out := algGVL.GPA_AI_ToHMI.Qv_blowD, my := algGVL.GPA_AI_Internal.Qv_blowD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.30:4] [БУ:XAI1:8a,XAI1:8b] dР воздуха на фильтрах блоке ВОУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPv_filtVOU, set := algGVL.GPA_AI_Setting.dPv_filtVOU, btn := algGVL.GPA_AI_FromHMI.dPv_filtVOU, out := algGVL.GPA_AI_ToHMI.dPv_filtVOU, my := algGVL.GPA_AI_Internal.dPv_filtVOU, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.31:1] [БУ:XAI1:9a,XAI1:9b] Виброскорость, передней подвески Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_PPD, set := algGVL.GPA_AI_Setting.V_PPD, btn := algGVL.GPA_AI_FromHMI.V_PPD, out := algGVL.GPA_AI_ToHMI.V_PPD, my := algGVL.GPA_AI_Internal.V_PPD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.31:2] [БУ:XAI1:10a,XAI1:10b] Виброскорость, задней подвески Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_ZPD, set := algGVL.GPA_AI_Setting.V_ZPD, btn := algGVL.GPA_AI_FromHMI.V_ZPD, out := algGVL.GPA_AI_ToHMI.V_ZPD, my := algGVL.GPA_AI_Internal.V_ZPD, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.31:3] [БУ:XAI1:11a,XAI1:11b] dР топл. газа на фильтрах очистки
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPtg_filtClean, set := algGVL.GPA_AI_Setting.dPtg_filtClean, btn := algGVL.GPA_AI_FromHMI.dPtg_filtClean, out := algGVL.GPA_AI_ToHMI.dPtg_filtClean, my := algGVL.GPA_AI_Internal.dPtg_filtClean, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.31:4] [БУ:XAI1:12a,XAI1:12b] Т топл. газа перед измерительной диафрагмой
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ttg_izmDiaphr, set := algGVL.GPA_AI_Setting.Ttg_izmDiaphr, btn := algGVL.GPA_AI_FromHMI.Ttg_izmDiaphr, out := algGVL.GPA_AI_ToHMI.Ttg_izmDiaphr, my := algGVL.GPA_AI_Internal.Ttg_izmDiaphr, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.32:1] [БУ:XAI1:13a,XAI1:13b] Перепад Р топл. газа на измерительной диафрагме
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPtg_izmDiaphr, set := algGVL.GPA_AI_Setting.dPtg_izmDiaphr, btn := algGVL.GPA_AI_FromHMI.dPtg_izmDiaphr, out := algGVL.GPA_AI_ToHMI.dPtg_izmDiaphr, my := algGVL.GPA_AI_Internal.dPtg_izmDiaphr, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.32:2] [БУ:XAI1:14a,XAI1:14b] Р топл. газа на входе измерительной диаафрагме
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ptg_inIzmDiaphr, set := algGVL.GPA_AI_Setting.Ptg_inIzmDiaphr, btn := algGVL.GPA_AI_FromHMI.Ptg_inIzmDiaphr, out := algGVL.GPA_AI_ToHMI.Ptg_inIzmDiaphr, my := algGVL.GPA_AI_Internal.Ptg_inIzmDiaphr, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.32:3] [БУ:XAI1:15a,XAI1:15b] Перепад между Ратм.  и полным Рв на вх. в компрессор ГГ 
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dP_Patm_fullPv_inGG, set := algGVL.GPA_AI_Setting.dP_Patm_fullPv_inGG, btn := algGVL.GPA_AI_FromHMI.dP_Patm_fullPv_inGG, out := algGVL.GPA_AI_ToHMI.dP_Patm_fullPv_inGG, my := algGVL.GPA_AI_Internal.dP_Patm_fullPv_inGG, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.32:4] [БУ:XAI1:16a,XAI1:16b] Перепад между Ратм.  и статическим Рв на вх. в компрессор ГГ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dP_Patm_statPv_inGG, set := algGVL.GPA_AI_Setting.dP_Patm_statPv_inGG, btn := algGVL.GPA_AI_FromHMI.dP_Patm_statPv_inGG, out := algGVL.GPA_AI_ToHMI.dP_Patm_statPv_inGG, my := algGVL.GPA_AI_Internal.dP_Patm_statPv_inGG, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.33:1] [БУ:XAI2:1a,XAI2:1b] Р воздуха в разгрузочной полости СТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pv_razPolST, set := algGVL.GPA_AI_Setting.Pv_razPolST, btn := algGVL.GPA_AI_FromHMI.Pv_razPolST, out := algGVL.GPA_AI_ToHMI.Pv_razPolST, my := algGVL.GPA_AI_Internal.Pv_razPolST, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.33:2] [БУ:XAI2:2a,XAI2:2b] Полное Р газа за турбиной ГГ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pg_bST, set := algGVL.GPA_AI_Setting.Pg_bST, btn := algGVL.GPA_AI_FromHMI.Pg_bST, out := algGVL.GPA_AI_ToHMI.Pg_bST, my := algGVL.GPA_AI_Internal.Pg_bST, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.33:3] [БУ:XAI2:3a,XAI2:3b] Перепад между атмосферным Р и полным Р газа за СТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dP_Patm_fullPg_bST, set := algGVL.GPA_AI_Setting.dP_Patm_fullPg_bST, btn := algGVL.GPA_AI_FromHMI.dP_Patm_fullPg_bST, out := algGVL.GPA_AI_ToHMI.dP_Patm_fullPg_bST, my := algGVL.GPA_AI_Internal.dP_Patm_fullPg_bST, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.33:4] [БУ:XAI2:4a,XAI2:4b] Р воздуха в разгрузочной полости компрессора ГГ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pv_razPolGG, set := algGVL.GPA_AI_Setting.Pv_razPolGG, btn := algGVL.GPA_AI_FromHMI.Pv_razPolGG, out := algGVL.GPA_AI_ToHMI.Pv_razPolGG, my := algGVL.GPA_AI_Internal.Pv_razPolGG, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.34:1] [БУ:XAI2:5a,XAI2:5b] Атмосферное Р наружного воздуха
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Patm, set := algGVL.GPA_AI_Setting.Patm, btn := algGVL.GPA_AI_FromHMI.Patm, out := algGVL.GPA_AI_ToHMI.Patm, my := algGVL.GPA_AI_Internal.Patm, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.34:2] [БУ:XAI2:6a,XAI2:6b] Полное давление воздуха за компрессором газогенератора
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pv_bGG, set := algGVL.GPA_AI_Setting.Pv_bGG, btn := algGVL.GPA_AI_FromHMI.Pv_bGG, out := algGVL.GPA_AI_ToHMI.Pv_bGG, my := algGVL.GPA_AI_Internal.Pv_bGG, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.34:3] [БУ:XAI2:7a,XAI2:7b] Давление топливного газа на входе в САУ (перед дозатором газа)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Ptg_inTRK, set := algGVL.GPA_AI_Setting.Ptg_inTRK, btn := algGVL.GPA_AI_FromHMI.Ptg_inTRK, out := algGVL.GPA_AI_ToHMI.Ptg_inTRK, my := algGVL.GPA_AI_Internal.Ptg_inTRK, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.34:4] [БУ:XAI2:8a,XAI2:8b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_10, set := algGVL.GPA_AI_Setting.Reserv_AI_10, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_10, out := algGVL.GPA_AI_ToHMI.Reserv_AI_10, my := algGVL.GPA_AI_Internal.Reserv_AI_10, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.35:1] [БУ:XAI2:9a,XAI2:9b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_11, set := algGVL.GPA_AI_Setting.Reserv_AI_11, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_11, out := algGVL.GPA_AI_ToHMI.Reserv_AI_11, my := algGVL.GPA_AI_Internal.Reserv_AI_11, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.35:2] [БУ:XAI2:10a,XAI2:10b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_12, set := algGVL.GPA_AI_Setting.Reserv_AI_12, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_12, out := algGVL.GPA_AI_ToHMI.Reserv_AI_12, my := algGVL.GPA_AI_Internal.Reserv_AI_12, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.35:3] [БУ:XAI2:11a,XAI2:11b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_13, set := algGVL.GPA_AI_Setting.Reserv_AI_13, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_13, out := algGVL.GPA_AI_ToHMI.Reserv_AI_13, my := algGVL.GPA_AI_Internal.Reserv_AI_13, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A2.35:4] [БУ:XAI2:12a,XAI2:12b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_14, set := algGVL.GPA_AI_Setting.Reserv_AI_14, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_14, out := algGVL.GPA_AI_ToHMI.Reserv_AI_14, my := algGVL.GPA_AI_Internal.Reserv_AI_14, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:1] [БУ:,] Задание положения дозатора
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_TRK, set := algGVL.GPA_AI_Setting.Set_TRK, btn := algGVL.GPA_AI_FromHMI.Set_TRK, out := algGVL.GPA_AI_ToHMI.Set_TRK, my := algGVL.GPA_AI_Internal.Set_TRK, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:2] [БУ:,] Задание положения ВНА
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_VNA, set := algGVL.GPA_AI_Setting.Set_VNA, btn := algGVL.GPA_AI_FromHMI.Set_VNA, out := algGVL.GPA_AI_ToHMI.Set_VNA, my := algGVL.GPA_AI_Internal.Set_VNA, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:3] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_15, set := algGVL.GPA_AI_Setting.Reserv_AI_15, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_15, out := algGVL.GPA_AI_ToHMI.Reserv_AI_15, my := algGVL.GPA_AI_Internal.Reserv_AI_15, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:4] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_16, set := algGVL.GPA_AI_Setting.Reserv_AI_16, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_16, out := algGVL.GPA_AI_ToHMI.Reserv_AI_16, my := algGVL.GPA_AI_Internal.Reserv_AI_16, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:5] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_17, set := algGVL.GPA_AI_Setting.Reserv_AI_17, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_17, out := algGVL.GPA_AI_ToHMI.Reserv_AI_17, my := algGVL.GPA_AI_Internal.Reserv_AI_17, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:6] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_18, set := algGVL.GPA_AI_Setting.Reserv_AI_18, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_18, out := algGVL.GPA_AI_ToHMI.Reserv_AI_18, my := algGVL.GPA_AI_Internal.Reserv_AI_18, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:7] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_19, set := algGVL.GPA_AI_Setting.Reserv_AI_19, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_19, out := algGVL.GPA_AI_ToHMI.Reserv_AI_19, my := algGVL.GPA_AI_Internal.Reserv_AI_19, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [A4.3:8] [БУ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_20, set := algGVL.GPA_AI_Setting.Reserv_AI_20, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_20, out := algGVL.GPA_AI_ToHMI.Reserv_AI_20, my := algGVL.GPA_AI_Internal.Reserv_AI_20, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.1:1] [ЭС:XAI10:1a,XAI10:1b] Т воды на входе теплообменника
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tw_inUTO, set := algGVL.GPA_AI_Setting.Tw_inUTO, btn := algGVL.GPA_AI_FromHMI.Tw_inUTO, out := algGVL.GPA_AI_ToHMI.Tw_inUTO, my := algGVL.GPA_AI_Internal.Tw_inUTO, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.1:2] [ЭС:XAI10:2a,XAI10:2b] Т воды на выходе теплообменника
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tw_outUTO, set := algGVL.GPA_AI_Setting.Tw_outUTO, btn := algGVL.GPA_AI_FromHMI.Tw_outUTO, out := algGVL.GPA_AI_ToHMI.Tw_outUTO, my := algGVL.GPA_AI_Internal.Tw_outUTO, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.2:1] [ЭС:F11:1,F11:2] Т воздуха в отсеке Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_bayN, set := algGVL.GPA_AI_Setting.Tv_bayN, btn := algGVL.GPA_AI_FromHMI.Tv_bayN, out := algGVL.GPA_AI_ToHMI.Tv_bayN, my := algGVL.GPA_AI_Internal.Tv_bayN, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.2:2] [ЭС:XAI10:3a,XAI10:3b] Т воздуха в отсеке ГТУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_bayGTU, set := algGVL.GPA_AI_Setting.Tv_bayGTU, btn := algGVL.GPA_AI_FromHMI.Tv_bayGTU, out := algGVL.GPA_AI_ToHMI.Tv_bayGTU, my := algGVL.GPA_AI_Internal.Tv_bayGTU, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.3:1] [ЭС:XAI10:4a,XAI10:4b] Т воздуха в отсеке БУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_bayBU, set := algGVL.GPA_AI_Setting.Tv_bayBU, btn := algGVL.GPA_AI_FromHMI.Tv_bayBU, out := algGVL.GPA_AI_ToHMI.Tv_bayBU, my := algGVL.GPA_AI_Internal.Tv_bayBU, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.3:2] [ЭС:XAI10:5a,XAI10:5b] Т воздуха в ОМА
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_OMA, set := algGVL.GPA_AI_Setting.Tv_OMA, btn := algGVL.GPA_AI_FromHMI.Tv_OMA, out := algGVL.GPA_AI_ToHMI.Tv_OMA, my := algGVL.GPA_AI_Internal.Tv_OMA, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.4:1] [ЭС:XAI10:6a,XAI10:6b] Т воздуха в ОПТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tv_OPT, set := algGVL.GPA_AI_Setting.Tv_OPT, btn := algGVL.GPA_AI_FromHMI.Tv_OPT, out := algGVL.GPA_AI_ToHMI.Tv_OPT, my := algGVL.GPA_AI_Internal.Tv_OPT, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.4:2] [ЭС:XAI10:7a,XAI10:7b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_21, set := algGVL.GPA_AI_Setting.Reserv_AI_21, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_21, out := algGVL.GPA_AI_ToHMI.Reserv_AI_21, my := algGVL.GPA_AI_Internal.Reserv_AI_21, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.5:1] [ЭС:XAI9:1a,XAI9:1b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_22, set := algGVL.GPA_AI_Setting.Reserv_AI_22, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_22, out := algGVL.GPA_AI_ToHMI.Reserv_AI_22, my := algGVL.GPA_AI_Internal.Reserv_AI_22, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.5:2] [ЭС:XAI9:2a,XAI9:2b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_23, set := algGVL.GPA_AI_Setting.Reserv_AI_23, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_23, out := algGVL.GPA_AI_ToHMI.Reserv_AI_23, my := algGVL.GPA_AI_Internal.Reserv_AI_23, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.5:3] [ЭС:XAI9:3a,XAI9:3b] Частота вращения вентилятора №1 обдува двигателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.F_VOD1, set := algGVL.GPA_AI_Setting.F_VOD1, btn := algGVL.GPA_AI_FromHMI.F_VOD1, out := algGVL.GPA_AI_ToHMI.F_VOD1, my := algGVL.GPA_AI_Internal.F_VOD1, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.5:4] [ЭС:XAI9:4a,XAI9:4b] Частота вращения вентилятора №2 обдува двигателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.F_VOD2, set := algGVL.GPA_AI_Setting.F_VOD2, btn := algGVL.GPA_AI_FromHMI.F_VOD2, out := algGVL.GPA_AI_ToHMI.F_VOD2, my := algGVL.GPA_AI_Internal.F_VOD2, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.6:1] [ЭС:XAI9:5a,XAI9:5b] Т наружного воздуха
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tair, set := algGVL.GPA_AI_Setting.Tair, btn := algGVL.GPA_AI_FromHMI.Tair, out := algGVL.GPA_AI_ToHMI.Tair, my := algGVL.GPA_AI_Internal.Tair, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.6:2] [ЭС:XAI9:6a,XAI9:6b] Относительная влажность наружного воздуха
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Wet, set := algGVL.GPA_AI_Setting.Wet, btn := algGVL.GPA_AI_FromHMI.Wet, out := algGVL.GPA_AI_ToHMI.Wet, my := algGVL.GPA_AI_Internal.Wet, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.6:3] [ЭС:XAI9:7a,XAI9:7b] Перепад давления воздуха между  КШТ и отсеком ГТУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPv_KShT_bayGTU, set := algGVL.GPA_AI_Setting.dPv_KShT_bayGTU, btn := algGVL.GPA_AI_FromHMI.dPv_KShT_bayGTU, out := algGVL.GPA_AI_ToHMI.dPv_KShT_bayGTU, my := algGVL.GPA_AI_Internal.dPv_KShT_bayGTU, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.6:4] [ЭС:XAI9:8a,XAI9:8b] dР воздуха между атмосферой и зоной обдува трансмиссии
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPv_atm_blowTransm, set := algGVL.GPA_AI_Setting.dPv_atm_blowTransm, btn := algGVL.GPA_AI_FromHMI.dPv_atm_blowTransm, out := algGVL.GPA_AI_ToHMI.dPv_atm_blowTransm, my := algGVL.GPA_AI_Internal.dPv_atm_blowTransm, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.7:1] [ЭС:XAI9:9a,XAI9:9b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_24, set := algGVL.GPA_AI_Setting.Reserv_AI_24, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_24, out := algGVL.GPA_AI_ToHMI.Reserv_AI_24, my := algGVL.GPA_AI_Internal.Reserv_AI_24, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.7:2] [ЭС:XAI9:10a,XAI9:10b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_25, set := algGVL.GPA_AI_Setting.Reserv_AI_25, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_25, out := algGVL.GPA_AI_ToHMI.Reserv_AI_25, my := algGVL.GPA_AI_Internal.Reserv_AI_25, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.7:3] [ЭС:,] Управляющий сигнал на регулятор частоты вращения ВОД1. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_VOD1_KCU, set := algGVL.GPA_AI_Setting.Set_VOD1_KCU, btn := algGVL.GPA_AI_FromHMI.Set_VOD1_KCU, out := algGVL.GPA_AI_ToHMI.Set_VOD1_KCU, my := algGVL.GPA_AI_Internal.Set_VOD1_KCU, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.7:4] [ЭС:,] Управляющий сигнал на регулятор частоты вращения ВОД2. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_VOD2_KCU, set := algGVL.GPA_AI_Setting.Set_VOD2_KCU, btn := algGVL.GPA_AI_FromHMI.Set_VOD2_KCU, out := algGVL.GPA_AI_ToHMI.Set_VOD2_KCU, my := algGVL.GPA_AI_Internal.Set_VOD2_KCU, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.8:1] [ЭС:,] Резерв. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_26, set := algGVL.GPA_AI_Setting.Reserv_AI_26, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_26, out := algGVL.GPA_AI_ToHMI.Reserv_AI_26, my := algGVL.GPA_AI_Internal.Reserv_AI_26, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.8:2] [ЭС:,] Резерв. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_27, set := algGVL.GPA_AI_Setting.Reserv_AI_27, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_27, out := algGVL.GPA_AI_ToHMI.Reserv_AI_27, my := algGVL.GPA_AI_Internal.Reserv_AI_27, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.8:3] [ЭС:,] Измерение основного питания САУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.U_main, set := algGVL.GPA_AI_Setting.U_main, btn := algGVL.GPA_AI_FromHMI.U_main, out := algGVL.GPA_AI_ToHMI.U_main, my := algGVL.GPA_AI_Internal.U_main, nOk :=  algGVL.alg.AI_FLT);
+//[ЭС] [А30.8:4] [ЭС:,] Измерение резервного питания САУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.U_reserv, set := algGVL.GPA_AI_Setting.U_reserv, btn := algGVL.GPA_AI_FromHMI.U_reserv, out := algGVL.GPA_AI_ToHMI.U_reserv, my := algGVL.GPA_AI_Internal.U_reserv, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.1:1] [ЦБК:F1:1,F1:2] Темпер. переднего опорного подшипника нагнетателя 
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.T_PON, set := algGVL.GPA_AI_Setting.T_PON, btn := algGVL.GPA_AI_FromHMI.T_PON, out := algGVL.GPA_AI_ToHMI.T_PON, my := algGVL.GPA_AI_Internal.T_PON, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.1:2] [ЦБК:F2:1,F2:2] Темпер. заднего опорного подшипника нагнетателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.T_ZON, set := algGVL.GPA_AI_Setting.T_ZON, btn := algGVL.GPA_AI_FromHMI.T_ZON, out := algGVL.GPA_AI_ToHMI.T_ZON, my := algGVL.GPA_AI_Internal.T_ZON, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.2:1] [ЦБК:F3:1,F3:2] Температура упорного подшипника со стороны привода
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.T_UPP, set := algGVL.GPA_AI_Setting.T_UPP, btn := algGVL.GPA_AI_FromHMI.T_UPP, out := algGVL.GPA_AI_ToHMI.T_UPP, my := algGVL.GPA_AI_Internal.T_UPP, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.2:2] [ЦБК:F4:1,F4:2] Температура упорного подшипника со стороны насоса
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.T_UPN, set := algGVL.GPA_AI_Setting.T_UPN, btn := algGVL.GPA_AI_FromHMI.T_UPN, out := algGVL.GPA_AI_ToHMI.T_UPN, my := algGVL.GPA_AI_Internal.T_UPN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.3:1] [ЦБК:F5:1,F5:2] Темп. газа на входе Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_inN, set := algGVL.GPA_AI_Setting.Tg_inN, btn := algGVL.GPA_AI_FromHMI.Tg_inN, out := algGVL.GPA_AI_ToHMI.Tg_inN, my := algGVL.GPA_AI_Internal.Tg_inN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.3:2] [ЦБК:F6:1,F6:2] Темп. газа на выходе Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_outN, set := algGVL.GPA_AI_Setting.Tg_outN, btn := algGVL.GPA_AI_FromHMI.Tg_outN, out := algGVL.GPA_AI_ToHMI.Tg_outN, my := algGVL.GPA_AI_Internal.Tg_outN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.4:1] [ЦБК:F7:1,F7:2] Т масла в МБН
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_MBN, set := algGVL.GPA_AI_Setting.Tm_MBN, btn := algGVL.GPA_AI_FromHMI.Tm_MBN, out := algGVL.GPA_AI_ToHMI.Tm_MBN, my := algGVL.GPA_AI_Internal.Tm_MBN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.4:2] [ЦБК:F8:1,F8:2] Т масла на выходе АВОМ Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_inAVOMN, set := algGVL.GPA_AI_Setting.Tm_inAVOMN, btn := algGVL.GPA_AI_FromHMI.Tm_inAVOMN, out := algGVL.GPA_AI_ToHMI.Tm_inAVOMN, my := algGVL.GPA_AI_Internal.Tm_inAVOMN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.5:1] [ЦБК:F9:1,F9:2] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_28, set := algGVL.GPA_AI_Setting.Reserv_AI_28, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_28, out := algGVL.GPA_AI_ToHMI.Reserv_AI_28, my := algGVL.GPA_AI_Internal.Reserv_AI_28, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.5:2] [ЦБК:,] не подключен
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_29, set := algGVL.GPA_AI_Setting.Reserv_AI_29, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_29, out := algGVL.GPA_AI_ToHMI.Reserv_AI_29, my := algGVL.GPA_AI_Internal.Reserv_AI_29, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.6:1] [ЦБК:XAI7:1a,XAI7:1b] Перепад P газа на конфузоре Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dP_konfN, set := algGVL.GPA_AI_Setting.dP_konfN, btn := algGVL.GPA_AI_FromHMI.dP_konfN, out := algGVL.GPA_AI_ToHMI.dP_konfN, my := algGVL.GPA_AI_Internal.dP_konfN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.6:2] [ЦБК:XAI7:2a,XAI7:2b] P газа на входе нагнетателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pg_inN, set := algGVL.GPA_AI_Setting.Pg_inN, btn := algGVL.GPA_AI_FromHMI.Pg_inN, out := algGVL.GPA_AI_ToHMI.Pg_inN, my := algGVL.GPA_AI_Internal.Pg_inN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.7:1] [ЦБК:XAI7:3a,XAI7:3b] P газа на выходе нагнетателя
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pg_outN, set := algGVL.GPA_AI_Setting.Pg_outN, btn := algGVL.GPA_AI_FromHMI.Pg_outN, out := algGVL.GPA_AI_ToHMI.Pg_outN, my := algGVL.GPA_AI_Internal.Pg_outN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.7:2] [ЦБК:XAI7:4a,XAI7:4b] Степень закрытия Mokveld
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pos_APK, set := algGVL.GPA_AI_Setting.Pos_APK, btn := algGVL.GPA_AI_FromHMI.Pos_APK, out := algGVL.GPA_AI_ToHMI.Pos_APK, my := algGVL.GPA_AI_Internal.Pos_APK, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.8:1] [ЦБК:XAI7:5a,XAI7:5b] Задание на закрытие Mokveld
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_APK, set := algGVL.GPA_AI_Setting.Set_APK, btn := algGVL.GPA_AI_FromHMI.Set_APK, out := algGVL.GPA_AI_ToHMI.Set_APK, my := algGVL.GPA_AI_Internal.Set_APK, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.8:2] [ЦБК:XAI7:6a,XAI7:6b] Давление после крана 2
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.P_bKr2, set := algGVL.GPA_AI_Setting.P_bKr2, btn := algGVL.GPA_AI_FromHMI.P_bKr2, out := algGVL.GPA_AI_ToHMI.P_bKr2, my := algGVL.GPA_AI_Internal.P_bKr2, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.9:1] [ЦБК:XAI7:7a,XAI7:7b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_30, set := algGVL.GPA_AI_Setting.Reserv_AI_30, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_30, out := algGVL.GPA_AI_ToHMI.Reserv_AI_30, my := algGVL.GPA_AI_Internal.Reserv_AI_30, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.9:2] [ЦБК:XAI7:16a,XAI7:16b] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_31, set := algGVL.GPA_AI_Setting.Reserv_AI_31, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_31, out := algGVL.GPA_AI_ToHMI.Reserv_AI_31, my := algGVL.GPA_AI_Internal.Reserv_AI_31, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.10:1] [ЦБК:внутр.,] Управление рег. клапаном Mokveld. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Set_APK_KCU, set := algGVL.GPA_AI_Setting.Set_APK_KCU, btn := algGVL.GPA_AI_FromHMI.Set_APK_KCU, out := algGVL.GPA_AI_ToHMI.Set_APK_KCU, my := algGVL.GPA_AI_Internal.Set_APK_KCU, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.10:2] [ЦБК:внутр.,] Резерв. КЦУ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_32, set := algGVL.GPA_AI_Setting.Reserv_AI_32, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_32, out := algGVL.GPA_AI_ToHMI.Reserv_AI_32, my := algGVL.GPA_AI_Internal.Reserv_AI_32, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.11:1] [ЦБК:XAI7:8a,XAI7:8b] dР "масло-газ" в системе уплотнений Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dPmg, set := algGVL.GPA_AI_Setting.dPmg, btn := algGVL.GPA_AI_FromHMI.dPmg, out := algGVL.GPA_AI_ToHMI.dPmg, my := algGVL.GPA_AI_Internal.dPmg, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.11:2] [ЦБК:XAI7:9a,XAI7:9b] Р масла смазки упорного подшипника Н
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pmsm, set := algGVL.GPA_AI_Setting.Pmsm, btn := algGVL.GPA_AI_FromHMI.Pmsm, out := algGVL.GPA_AI_ToHMI.Pmsm, my := algGVL.GPA_AI_Internal.Pmsm, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.11:3] [ЦБК:XAI7:10a,XAI7:10b] Уровень масла в МБН
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Lm_MBN, set := algGVL.GPA_AI_Setting.Lm_MBN, btn := algGVL.GPA_AI_FromHMI.Lm_MBN, out := algGVL.GPA_AI_ToHMI.Lm_MBN, my := algGVL.GPA_AI_Internal.Lm_MBN, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.11:4] [ЦБК:XAI7:11a,XAI7:11b] Виброперемещение ротора Н в передней опоре - вертикальная
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_PON_v, set := algGVL.GPA_AI_Setting.V_PON_v, btn := algGVL.GPA_AI_FromHMI.V_PON_v, out := algGVL.GPA_AI_ToHMI.V_PON_v, my := algGVL.GPA_AI_Internal.V_PON_v, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.12:1] [ЦБК:XAI7:12a,XAI7:12b] Виброперемещение ротора Н в передней опоре - горизонтальная
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_PON_g, set := algGVL.GPA_AI_Setting.V_PON_g, btn := algGVL.GPA_AI_FromHMI.V_PON_g, out := algGVL.GPA_AI_ToHMI.V_PON_g, my := algGVL.GPA_AI_Internal.V_PON_g, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.12:2] [ЦБК:XAI7:13a,XAI7:13b] Виброперемещение ротора Н в задней опоре - вертикальная
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_ZON_v, set := algGVL.GPA_AI_Setting.V_ZON_v, btn := algGVL.GPA_AI_FromHMI.V_ZON_v, out := algGVL.GPA_AI_ToHMI.V_ZON_v, my := algGVL.GPA_AI_Internal.V_ZON_v, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.12:3] [ЦБК:XAI7:14a,XAI7:14b] Виброперемещение ротора Н в задней опоре - горизонтальная
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.V_ZON_g, set := algGVL.GPA_AI_Setting.V_ZON_g, btn := algGVL.GPA_AI_FromHMI.V_ZON_g, out := algGVL.GPA_AI_ToHMI.V_ZON_g, my := algGVL.GPA_AI_Internal.V_ZON_g, nOk :=  algGVL.alg.AI_FLT);
+//[ЦБК] [А20.12:4] [ЦБК:XAI7:15a,XAI7:15b] Осевой сдвиг ротора  - в сторону Д (+) -в сторону Н (-)
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Os_N, set := algGVL.GPA_AI_Setting.Os_N, btn := algGVL.GPA_AI_FromHMI.Os_N, out := algGVL.GPA_AI_ToHMI.Os_N, my := algGVL.GPA_AI_Internal.Os_N, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.3:1] [АМГБ:,] Температура газа на входе в АГМБ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_inAGMB, set := algGVL.GPA_AI_Setting.Tg_inAGMB, btn := algGVL.GPA_AI_FromHMI.Tg_inAGMB, out := algGVL.GPA_AI_ToHMI.Tg_inAGMB, my := algGVL.GPA_AI_Internal.Tg_inAGMB, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.3:2] [АМГБ:,] Температура масла двигателя на входе в ГМТ Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_inGMTD, set := algGVL.GPA_AI_Setting.Tm_inGMTD, btn := algGVL.GPA_AI_FromHMI.Tm_inGMTD, out := algGVL.GPA_AI_ToHMI.Tm_inGMTD, my := algGVL.GPA_AI_Internal.Tm_inGMTD, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.4:1] [АМГБ:,] Температура масла двигателя на выходе из ГМТ Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outGMTD, set := algGVL.GPA_AI_Setting.Tm_outGMTD, btn := algGVL.GPA_AI_FromHMI.Tm_outGMTD, out := algGVL.GPA_AI_ToHMI.Tm_outGMTD, my := algGVL.GPA_AI_Internal.Tm_outGMTD, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.4:2] [АМГБ:,] Температура газа на выходе из АГМБ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tg_outAGMB, set := algGVL.GPA_AI_Setting.Tg_outAGMB, btn := algGVL.GPA_AI_FromHMI.Tg_outAGMB, out := algGVL.GPA_AI_ToHMI.Tg_outAGMB, my := algGVL.GPA_AI_Internal.Tg_outAGMB, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.5:1] [АМГБ:,] Температура масла двигателя на входе в ГМТ К
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_inGMTN, set := algGVL.GPA_AI_Setting.Tm_inGMTN, btn := algGVL.GPA_AI_FromHMI.Tm_inGMTN, out := algGVL.GPA_AI_ToHMI.Tm_inGMTN, my := algGVL.GPA_AI_Internal.Tm_inGMTN, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.5:2] [АМГБ:,] Температура масла двигателя на выходе из ГМТ К
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outGMTN, set := algGVL.GPA_AI_Setting.Tm_outGMTN, btn := algGVL.GPA_AI_FromHMI.Tm_outGMTN, out := algGVL.GPA_AI_ToHMI.Tm_outGMTN, my := algGVL.GPA_AI_Internal.Tm_outGMTN, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.6:1] [АМГБ:,] Температура масла компрессора на выходе из секции теплообменной СТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Tm_outSeKTeplST, set := algGVL.GPA_AI_Setting.Tm_outSeKTeplST, btn := algGVL.GPA_AI_FromHMI.Tm_outSeKTeplST, out := algGVL.GPA_AI_ToHMI.Tm_outSeKTeplST, my := algGVL.GPA_AI_Internal.Tm_outSeKTeplST, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.6:2] [АМГБ:,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_33, set := algGVL.GPA_AI_Setting.Reserv_AI_33, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_33, out := algGVL.GPA_AI_ToHMI.Reserv_AI_33, my := algGVL.GPA_AI_Internal.Reserv_AI_33, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.7:1] [АМГБ:XAI1-1A,XAI1-1C] Давление газа на входе в АГМБ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pg_inAGMB, set := algGVL.GPA_AI_Setting.Pg_inAGMB, btn := algGVL.GPA_AI_FromHMI.Pg_inAGMB, out := algGVL.GPA_AI_ToHMI.Pg_inAGMB, my := algGVL.GPA_AI_Internal.Pg_inAGMB, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.7:2] [АМГБ:XAI1-2A,XAI1-2C] Давление масла двигателя на входе в ГМТ Д
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pm_inGMTD, set := algGVL.GPA_AI_Setting.Pm_inGMTD, btn := algGVL.GPA_AI_FromHMI.Pm_inGMTD, out := algGVL.GPA_AI_ToHMI.Pm_inGMTD, my := algGVL.GPA_AI_Internal.Pm_inGMTD, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.7:3] [АМГБ:XAI1-3A,XAI1-3C] Давление газа на выходе в АГМБ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pg_outAGMB, set := algGVL.GPA_AI_Setting.Pg_outAGMB, btn := algGVL.GPA_AI_FromHMI.Pg_outAGMB, out := algGVL.GPA_AI_ToHMI.Pg_outAGMB, my := algGVL.GPA_AI_Internal.Pg_outAGMB, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.7:4] [АМГБ:XAI1-4A,XAI1-4C] Давление масла компрессора на входе в ГМТ К
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Pm_inGMTN, set := algGVL.GPA_AI_Setting.Pm_inGMTN, btn := algGVL.GPA_AI_FromHMI.Pm_inGMTN, out := algGVL.GPA_AI_ToHMI.Pm_inGMTN, my := algGVL.GPA_AI_Internal.Pm_inGMTN, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.8:1] [АМГБ:XAI1-5A,XAI1-5C] Перепад давления на фильтре газа
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.dP_filtGaz, set := algGVL.GPA_AI_Setting.dP_filtGaz, btn := algGVL.GPA_AI_FromHMI.dP_filtGaz, out := algGVL.GPA_AI_ToHMI.dP_filtGaz, my := algGVL.GPA_AI_Internal.dP_filtGaz, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.8:2] [АМГБ:XAI1-6A,XAI1-6C] Температура поверхности секции теплообменной СТ
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.T_povSekTeplST, set := algGVL.GPA_AI_Setting.T_povSekTeplST, btn := algGVL.GPA_AI_FromHMI.T_povSekTeplST, out := algGVL.GPA_AI_ToHMI.T_povSekTeplST, my := algGVL.GPA_AI_Internal.T_povSekTeplST, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.8:3] [АМГБ:XAI1-7В,XAI1-7C] Степень загазованности воздуха
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Gaz_air, set := algGVL.GPA_AI_Setting.Gaz_air, btn := algGVL.GPA_AI_FromHMI.Gaz_air, out := algGVL.GPA_AI_ToHMI.Gaz_air, my := algGVL.GPA_AI_Internal.Gaz_air, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.8:4] [АМГБ:XAI1-8В,XAI1-8C] Пламя в оборудовании 
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.flameEq, set := algGVL.GPA_AI_Setting.flameEq, btn := algGVL.GPA_AI_FromHMI.flameEq, out := algGVL.GPA_AI_ToHMI.flameEq, my := algGVL.GPA_AI_Internal.flameEq, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.9:1] [АМГБ:не подкл.,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_34, set := algGVL.GPA_AI_Setting.Reserv_AI_34, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_34, out := algGVL.GPA_AI_ToHMI.Reserv_AI_34, my := algGVL.GPA_AI_Internal.Reserv_AI_34, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.9:2] [АМГБ:не подкл.,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_35, set := algGVL.GPA_AI_Setting.Reserv_AI_35, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_35, out := algGVL.GPA_AI_ToHMI.Reserv_AI_35, my := algGVL.GPA_AI_Internal.Reserv_AI_35, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.9:3] [АМГБ:не подкл.,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_36, set := algGVL.GPA_AI_Setting.Reserv_AI_36, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_36, out := algGVL.GPA_AI_ToHMI.Reserv_AI_36, my := algGVL.GPA_AI_Internal.Reserv_AI_36, nOk :=  algGVL.alg.AI_FLT);
+//[АМГБ] [А40.9:4] [АМГБ:не подкл.,] Резерв
+VGSig.fnAI_Processing(IN := algGVL.GPA_AI_DRV.Reserv_AI_37, set := algGVL.GPA_AI_Setting.Reserv_AI_37, btn := algGVL.GPA_AI_FromHMI.Reserv_AI_37, out := algGVL.GPA_AI_ToHMI.Reserv_AI_37, my := algGVL.GPA_AI_Internal.Reserv_AI_37, nOk :=  algGVL.alg.AI_FLT);
+//Конец сгенерированного кода

@@ -1,0 +1,22 @@
+TYPE strLG :
+STRUCT
+    As_ARM_AOss:BOOL; //АОсс по команде оператора
+
+    Ab_ARM_AObs:BOOL; //АОбс по команде оператора
+
+    Ns_ARM_NOss:BOOL; //НОсс по команде оператора
+
+    Nb_ARM_NObs:BOOL; //НОбс по команде оператора
+
+    As_Tm_MB:BOOL; //Низкая температура масла в МБ на резерве с газом
+
+    P_Ppg_inStV_low:BOOL; //Низкое давление газа перед СтВ
+
+    Ab_SK_openStart:BOOL; //Самопроизвольное открытие СК
+
+    Ab_Kr1_fault:BOOL; //Кран 1 самопроизвольное закрытие на режиме
+
+    P_IvDPf_fault:BOOL; //Отказ виброаппаратуры ИВ-Д-ПФ
+
+END_STRUCT
+END_TYPE

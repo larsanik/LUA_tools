@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta charset="utf-8"  name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Arial Narrow'; font-size:12pt; font-weight:400; font-style:normal;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">ООО &quot;Газпром трансгаз Уфа&quot; - </span><span style=" font-family:'Arial'; font-size:14pt; font-weight:600; text-decoration: ;  "><!--RPT SIGNAL:Name_Station() --></span></p>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600; text-decoration: ;  "><!--RPT SIGNAL:Name_KC() --></span></p>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">Сменная ведомость работы ГПА - </span><span style=" font-family:'Arial'; font-size:14pt; font-weight:600; text-decoration: ;  "><!--RPT SIGNAL:GPA_num() --></span><span style=" font-family:'Arial';"> </span></p>
+<p align="center" style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial'; font-size:14pt; font-weight:600;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">	Дата	  </span><span style=" font-family:'Arial'; font-size:14pt; font-weight:600; text-decoration: ;  "><!--RPT DT:TODAY"%d.%m.%Y" --></span><span style=" font-family:'Arial'; font-size:14pt;"> 	Время МСК	</span><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">Сменный инженер _______________________</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt;">	                                     </span><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">		Сменный машинист _______________________</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'Arial'; font-weight:600;"><br /></p>
+<table border="1" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;" width="100%" cellspacing="1" cellpadding="1" bgcolor="#ffffff">
+<tr>
+<td width="38">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">№</span></p></td>
+<td width="341">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">Наименование</span></p></td>
+<td width="65">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">Обознач.</span></p></td>
+<td width="57">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">Ед.изм.</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">9:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">11:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">13:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">15:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">17:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">19:00</span></p></td>
+<td width="2">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'Arial'; font-size:14pt; font-weight:600;">21:00</span></p></td></tr>

@@ -1,0 +1,212 @@
+
+algGVL.alg.GR_nRdy :=  false;
+
+//--------------------------------------------------------------------------------
+//Поз. 74, АО по загазованности
+algGVL.GPA_PPU_GR.GR_AO_gas := algGVL.alg.Chk_GR AND algGVL.GPA_DI.AO_gas AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AO_gas;
+//--------------------------------------------------------------------------------
+//Поз. 84, Темпертатура масла в МБД < 15 °С
+algGVL.GPA_PPU_GR.GR_Tm_MBD := algGVL.alg.Chk_GR AND algGVL.GPA_ANB.GR_Tm_MBD_n AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Tm_MBD;
+//--------------------------------------------------------------------------------
+//Поз. 150, Повышенное давление газа на выходе СтВ
+algGVL.GPA_PPU_GR.GR_PoutStVMax := algGVL.alg.Chk_GR AND algGVL.GPA_DI.StV_Pg_high AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_PoutStVMax;
+//--------------------------------------------------------------------------------
+//Поз. 177, Стружка в масле СтВ
+algGVL.GPA_PPU_GR.GR_StrMStV := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_StV AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_StrMStV;
+//--------------------------------------------------------------------------------
+//Поз. 184, Двери ВОУ открыты
+algGVL.GPA_PPU_GR.GR_Door_VOU_ON := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Door_VOU_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Door_VOU_ON;
+//--------------------------------------------------------------------------------
+//Поз. 185, Двери ГТУ открыты
+algGVL.GPA_PPU_GR.GR_Door_GTU_ON := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Door_GTU_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Door_GTU_ON;
+//--------------------------------------------------------------------------------
+//Поз. 202, Вибрация корпуса двигателя - Опасная (A211)
+algGVL.GPA_PPU_GR.GR_Vibr_D_Av := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Vibr_D_Av AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Vibr_D_Av;
+//--------------------------------------------------------------------------------
+//Поз. 204, Вибрация корпуса двигателя - Повышенная
+algGVL.GPA_PPU_GR.GR_Vibr_D_Pv := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Vibr_D_Pv AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Vibr_D_Pv;
+//--------------------------------------------------------------------------------
+//Поз. 207, Стружка в фильтре-сигнализаторе
+algGVL.GPA_PPU_GR.GR_Nb_StrFS := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_FS AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Nb_StrFS;
+//--------------------------------------------------------------------------------
+//Поз. 210, Стружка в масле коробке приводов
+algGVL.GPA_PPU_GR.GR_StrKP := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_MKB AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_StrKP;
+//--------------------------------------------------------------------------------
+//Поз. 212, Стружка в масле ШП КВД
+algGVL.GPA_PPU_GR.GR_StrSPK := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_ShPK AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_StrSPK;
+//--------------------------------------------------------------------------------
+//Поз. 215, Стружка в масле РП ТВД
+algGVL.GPA_PPU_GR.GR_StrRPT := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_RPT AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_StrRPT;
+//--------------------------------------------------------------------------------
+//Поз. 217, Стружка в масле опор СТ
+algGVL.GPA_PPU_GR.GR_StrST := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Shav_ST AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_StrST;
+//--------------------------------------------------------------------------------
+//Поз. 242, АВОМ Д неготов к пуску
+algGVL.GPA_PPU_GR.GR_AVOMD_ready := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.AVOMD_ready AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AVOMD_ready;
+//--------------------------------------------------------------------------------
+//Поз. 246, Температура масла в МБН < 15 °С
+algGVL.GPA_PPU_GR.GR_Tm_MBN := algGVL.alg.Chk_GR AND algGVL.GPA_ANB.GR_Tm_MBN_n AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Tm_MBN;
+//--------------------------------------------------------------------------------
+//Поз. 252, АВОМ  Н - Напряжение в ЩУ Отсутствует
+algGVL.GPA_PPU_GR.GR_AVOMN_ON := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.AVOMN_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AVOMN_ON;
+//--------------------------------------------------------------------------------
+//Поз. 254, АВОМ Н неготов к пуску
+algGVL.GPA_PPU_GR.GR_AVOMN_ready := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.AVOMN_ready AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AVOMN_ready;
+//--------------------------------------------------------------------------------
+//Поз. 255, Частотный преобразователь АВОМ Н выключен
+algGVL.GPA_PPU_GR.GR_AVOMN_PCh_ON := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.AVOMN_PCh_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AVOMN_PCh_ON;
+//--------------------------------------------------------------------------------
+//Поз. 278, Отказ агрегатной УПС
+algGVL.GPA_PPU_GR.GR_UPS_fault := algGVL.alg.Chk_GR AND algGVL.GPA_DI.UPS_fault AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_UPS_fault;
+//--------------------------------------------------------------------------------
+//Поз. 280, Нет готовности УПС к пуску ГПА
+algGVL.GPA_PPU_GR.GR_UPS_noReady := algGVL.alg.Chk_GR AND algGVL.GPA_DI.UPS_noReady AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_UPS_noReady;
+//--------------------------------------------------------------------------------
+//Поз. 282, Концентрация метана в отсеке Н >0,5% (повышенная)
+algGVL.GPA_PPU_GR.GR_Gas_N_high := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Gas_N_high AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Gas_N_high;
+//--------------------------------------------------------------------------------
+//Поз. 284, Концентрация метана в отсеке ГТУ >0,5% (повышенная)
+algGVL.GPA_PPU_GR.GR_Gas_GTU_high := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Gas_GTU_high AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Gas_GTU_high;
+//--------------------------------------------------------------------------------
+//Поз. 286, Концентрация метана под кожухом Д >0,5% (повышенная)
+algGVL.GPA_PPU_GR.GR_Gas_KShT_high := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Gas_KShT_high AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Gas_KShT_high;
+//--------------------------------------------------------------------------------
+//Поз. 288, Отказ аппаратуры контроля загазованности кожуха ГТУ
+algGVL.GPA_PPU_GR.GR_Fault_AKZ_KShT := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Fault_AKZ_KShT AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Fault_AKZ_KShT;
+//--------------------------------------------------------------------------------
+//Поз. 290, Отказ аппаратуры контроля загазованности отсека ГТУ
+algGVL.GPA_PPU_GR.GR_Fault_AKZ_bayN := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Fault_AKZ_bayN AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Fault_AKZ_bayN;
+//--------------------------------------------------------------------------------
+//Поз. 293, Двери БУ открыты
+algGVL.GPA_PPU_GR.GR_Door_BU_ON := algGVL.alg.Chk_GR AND algGVL.GPA_DI.Door_BU_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Door_BU_ON;
+//--------------------------------------------------------------------------------
+//Поз. 296, Отсутствует напряжения 380 В 50Гц линия 1
+algGVL.GPA_PPU_GR.GR_noU380_line1 := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U380_line1 AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU380_line1;
+//--------------------------------------------------------------------------------
+//Поз. 298, Отсутствует напряжения 380 В 50Гц линия 2
+algGVL.GPA_PPU_GR.GR_noU380_line2 := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U380_line2 AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU380_line2;
+//--------------------------------------------------------------------------------
+//Поз. 302, Напряжение ~220 В < 187 В
+algGVL.GPA_PPU_GR.GR_loU_main := algGVL.alg.Chk_GR AND algGVL.GPA_ANB.GR_loU_main_n AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_loU_main;
+//--------------------------------------------------------------------------------
+//Поз. 305, Напряжение =220 В < 187 В
+algGVL.GPA_PPU_GR.GR_loU_reserv := algGVL.alg.Chk_GR AND algGVL.GPA_ANB.GR_loU_reserv_n AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_loU_reserv;
+//--------------------------------------------------------------------------------
+//Поз. 307, Ручное управление на ЩРУ включено
+algGVL.GPA_PPU_GR.GR_ShRU_manual := algGVL.alg.Chk_GR AND algGVL.GPA_DI.ShRU_manual AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_ShRU_manual;
+//--------------------------------------------------------------------------------
+//Поз. 309, Отсутствует основное питания САУ ГПА ~220 В
+algGVL.GPA_PPU_GR.GR_noU_GPA_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_GPA_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_GPA_main;
+//--------------------------------------------------------------------------------
+//Поз. 310, Отсутствует резервное питания САУ ГПА =220 В
+algGVL.GPA_PPU_GR.GR_noU_GPA_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_GPA_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_GPA_res;
+//--------------------------------------------------------------------------------
+//Поз. 311, Отсутствует основное питания БЭАО  ~220 В
+algGVL.GPA_PPU_GR.GR_noU_BEO_alterMain := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BEO_alterMain AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BEO_alterMain;
+//--------------------------------------------------------------------------------
+//Поз. 312, Отсутствует резервное питания БЭАО  ~220 В
+algGVL.GPA_PPU_GR.GR_noU_BEO_alterRes := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BEO_alterRes AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BEO_alterRes;
+//--------------------------------------------------------------------------------
+//Поз. 313, Отсутствует основное питания сторонних потребителей ~220 В
+algGVL.GPA_PPU_GR.GR_noU_Outside220_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Outside220_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Outside220_main;
+//--------------------------------------------------------------------------------
+//Поз. 314, Отсутствует резервное питания сторонних потребителей =220 В
+algGVL.GPA_PPU_GR.GR_noU_Outside220_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Outside220_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Outside220_res;
+//--------------------------------------------------------------------------------
+//Поз. 315, Отсутствует питание БУШ-96 ~220 В
+algGVL.GPA_PPU_GR.GR_noU_BUSH_alter := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BUSH_alter AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BUSH_alter;
+//--------------------------------------------------------------------------------
+//Поз. 316, Отсутствует питание БУШ-96 =220 В
+algGVL.GPA_PPU_GR.GR_noU_BUSH_const := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BUSH_const AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BUSH_const;
+//--------------------------------------------------------------------------------
+//Поз. 317, Неисправность основного ИП БЭАО
+algGVL.GPA_PPU_GR.GR_noU_BEO_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BEO_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BEO_main;
+//--------------------------------------------------------------------------------
+//Поз. 318, Неисправность резервного ИП БЭАО
+algGVL.GPA_PPU_GR.GR_noU_BEO_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_BEO_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_BEO_res;
+//--------------------------------------------------------------------------------
+//Поз. 319, Неисправность основного ИП =24 В ПЛК
+algGVL.GPA_PPU_GR.GR_noU_PLC_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_PLC_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_PLC_main;
+//--------------------------------------------------------------------------------
+//Поз. 320, Неисправность резервного ИП =24 В ПЛК
+algGVL.GPA_PPU_GR.GR_noU_PLC_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_PLC_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_PLC_res;
+//--------------------------------------------------------------------------------
+//Поз. 321, Неисправность основного ИП =24 В внутренних устройств
+algGVL.GPA_PPU_GR.GR_noU_Intern_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Intern_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Intern_main;
+//--------------------------------------------------------------------------------
+//Поз. 322, Неисправность резервного ИП =24 В внутренних устройств
+algGVL.GPA_PPU_GR.GR_noU_Intern_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Intern_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Intern_res;
+//--------------------------------------------------------------------------------
+//Поз. 323, Неисправность основного ИП =24 В аналоговых входов
+algGVL.GPA_PPU_GR.GR_noU_AI_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_AI_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_AI_main;
+//--------------------------------------------------------------------------------
+//Поз. 324, Неисправность резервного ИП =24 В аналоговых входов
+algGVL.GPA_PPU_GR.GR_noU_AI_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_AI_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_AI_res;
+//--------------------------------------------------------------------------------
+//Поз. 325, Неисправность основного ИП =24 В дискретных входов
+algGVL.GPA_PPU_GR.GR_noU_DI_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_DI_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_DI_main;
+//--------------------------------------------------------------------------------
+//Поз. 326, Неисправность резервного ИП =24 В дискретных входов
+algGVL.GPA_PPU_GR.GR_noU_DI_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_DI_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_DI_res;
+//--------------------------------------------------------------------------------
+//Поз. 327, Неисправность основного ИП =24 В дискретных выходов
+algGVL.GPA_PPU_GR.GR_noU_DO_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_DO_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_DO_main;
+//--------------------------------------------------------------------------------
+//Поз. 328, Неисправность резервного ИП =24 В дискретных выходов
+algGVL.GPA_PPU_GR.GR_noU_DO_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_DO_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_DO_res;
+//--------------------------------------------------------------------------------
+//Поз. 329, Неисправность основного ИП =24 В питания ИМ =27 В
+algGVL.GPA_PPU_GR.GR_noU_AM_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_AM_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_AM_main;
+//--------------------------------------------------------------------------------
+//Поз. 330, Неисправность резервного ИП =24 В питания ИМ =27 В
+algGVL.GPA_PPU_GR.GR_noU_AM_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_AM_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_AM_res;
+//--------------------------------------------------------------------------------
+//Поз. 331, Отсутвие исправности разрядников
+algGVL.GPA_PPU_GR.GR_noU_Arester := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Arester AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Arester;
+//--------------------------------------------------------------------------------
+//Поз. 332, Неисправность основного ИП =24 В сторонних потребителей
+algGVL.GPA_PPU_GR.GR_noU_Outside24_main := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Outside24_main AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Outside24_main;
+//--------------------------------------------------------------------------------
+//Поз. 333, Неисправность резервного ИП =24 В сторонних потребителей
+algGVL.GPA_PPU_GR.GR_noU_Outside24_res := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.U_Outside24_res AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noU_Outside24_res;
+//--------------------------------------------------------------------------------
+//Поз. 334, Отсутствует питание БУШ-96
+algGVL.GPA_PPU_GR.GR_noBUSH_power := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.BUSH_power AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noBUSH_power;
+//--------------------------------------------------------------------------------
+//Поз. 335, БУШ-96 невключен
+algGVL.GPA_PPU_GR.GR_noBUSH_ON := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.BUSH_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_noBUSH_ON;
+//--------------------------------------------------------------------------------
+//Поз. 336, Минимальное количество (уровень) масла в маслобаке Д
+algGVL.GPA_PPU_GR.GR_MBD_Hmin := algGVL.alg.Chk_GR AND algGVL.GPA_DI.MBD_Hmin AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_MBD_Hmin;
+//--------------------------------------------------------------------------------
+//Поз. 337, Неисправность ИП БУ ГПА
+algGVL.GPA_PPU_GR.GR_IPBU_GPA_no_good := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.IPBU_GPA_good AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_IPBU_GPA_no_good;
+//--------------------------------------------------------------------------------
+//Поз. 338, Автомат питания DO выключен
+algGVL.GPA_PPU_GR.GR_QF_DO_noON := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.QF_DO_ON AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_QF_DO_noON;
+//--------------------------------------------------------------------------------
+//Поз. 339, БЭО не готов
+algGVL.GPA_PPU_GR.GR_BEO_no_ready := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.BEO_ready AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_BEO_no_ready;
+//--------------------------------------------------------------------------------
+//Поз. 340, ФУС неисправен
+algGVL.GPA_PPU_GR.GR_FUS_noOK := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.FUS_OK AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_FUS_noOK;
+//--------------------------------------------------------------------------------
+//Поз. 341, Аналоговые параметры неисправны
+algGVL.GPA_PPU_GR.GR_anPar_fault := algGVL.alg.Chk_GR AND NOT algGVL.alg.GR_anPar_fault AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_anPar_fault;
+//--------------------------------------------------------------------------------
+//Поз. 342, Дискртеные датчики неисправны
+algGVL.GPA_PPU_GR.GR_kcd_fault := algGVL.alg.Chk_GR AND NOT algGVL.alg.GR_kcd_fault AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_kcd_fault;
+//--------------------------------------------------------------------------------
+//Поз. 343, Цепи механизмов неисправны
+algGVL.GPA_PPU_GR.GR_kcu_fault := algGVL.alg.Chk_GR AND NOT algGVL.alg.GR_kcu_fault AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_kcu_fault;
+//--------------------------------------------------------------------------------
+//Поз. 344, Есть аварийный сигнал
+algGVL.GPA_PPU_GR.GR_AO_signals := algGVL.alg.Chk_GR AND NOT algGVL.alg.GR_AO_signals AND algGVL.GPA_Mode.GR; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_AO_signals;
+//--------------------------------------------------------------------------------
+//Поз. 346, Кран 5 не закрыт
+algGVL.GPA_PPU_GR.GR_Kr5_noOF := algGVL.alg.Chk_GR AND NOT algGVL.GPA_DI.Kr5_OF AND algGVL.GPA_Mode.GR AND algGVL.GPA_TS.Gas_inK; algGVL.alg.GR_nRdy := algGVL.alg.GR_nRdy or algGVL.GPA_PPU_GR.GR_Kr5_noOF;
+//--------------------------------------------------------------------------------
+
+IF algGVL.ImitOn THEN algGVL.alg.GR_nRdy :=  FALSE; END_IF;
+//---------------------------------------------------------------------
+algGVL.GPA_TS.GR_Rdy := NOT (algGVL.alg.HR_nRdy OR algGVL.alg.GR_nRdy);

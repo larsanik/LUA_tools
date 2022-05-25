@@ -1,0 +1,45 @@
+//***************************************
+//*  Сгенерировано: 29/01/2021 14:41:48
+//*  Узел: все
+//***************************************
+
+repTime := 3600;
+IF NOT algGVL.init THEN
+ //------------------------------- аргументы функции инициализации --------------------------------
+ // 1                                минимум шкалы канала, ед.изм. Не может быть >= max
+ // 2                                |   максимум шкалы канала, ед.изм. Не может быть <= min
+ // 3                                |   |   значение АЦП, соответствующее минимуму шкалы канала, б.р.
+ // 4                                |   |   |   значение АЦП, соотв. макс. шкалы, б.р. Не может быть равно minADC
+ // 5                                |   |   |   |     уровень зашкала вниз, ед.изм. Не может быть >= hiLim и < min
+ // 6                                |   |   |   |     |    уровень зашкала вверх, ед.изм. Не может быть <= loLim и > max
+ // 7                                |   |   |   |     |    |   уровень обрыва вниз, ед.изм. Не может быть >= loLim
+ // 8                                |   |   |   |     |    |    |   уровень обрыва вверх, ед.изм. Не может быть <= hiLim
+ // 9                                |   |   |   |     |    |    |   |  макс. допустимая скорость роста, ед.изм./сек. Если «0» - скорость роста не анализируется
+ //10                                |   |   |   |     |    |    |   |   |   время восстановления после неисправности, сек. Не может быть меньше "0"
+ //11                                |   |   |   |     |    |    |   |   |   |   максимальное время в ремонте, сек. Не может быть меньше или равно «0»
+ //12                                |   |   |   |     |    |    |   |   |   |   |    тау фильтра, сек. Если «0» - фильтрация отсутствует
+ //13                                |   |   |   |     |    |    |   |   |   |   |    |  номер по порядку	
+ //AI_init(UPG_AI_Settings.Pg_in_UPG,0.0,6.0,2.0,10.0,-0.5,6.5,-1.0,7.0,0.0,1.0,3600,1.0,0);
+ //-------------------------------------------------------------------------------------------
+ //Начало сгенерированного кода AI_init
+//[БУ] [А2.2:1] [БУ:XTFI1:1a,XTFI1:1b] Частота вращения ГГ (1 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_FI_Setting.Ngg1, min_PV := 0, max_PV :=  13000, minADC := 0, maxADC := 8892, loLim := -390, hiLim := 13390, loBrk := -780, hiBrk := 13780, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 1, corrADC := 0.0);
+//[БУ] [А2.3:1] [БУ:XTFI1:2a,XTFI1:2b] Частота вращения ГГ (2 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_FI_Setting.Ngg2, min_PV := 0, max_PV :=  13000, minADC := 0, maxADC := 8892, loLim := -390, hiLim := 13390, loBrk := -780, hiBrk := 13780, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 2, corrADC := 0.0);
+//[БУ] [А2.4:1] [БУ:XTFI1:3a,XTFI1:3b] Частота вращения СТ (1 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_FI_Setting.Nst1, min_PV := 0, max_PV :=  9000, minADC := 0, maxADC := 8533, loLim := -270, hiLim := 9270, loBrk := -540, hiBrk := 9540, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 3, corrADC := 0.0);
+//[БУ] [А2.5:1] [БУ:XTFI1:4a,XTFI1:4b] Частота вращения СТ (2 канал)
+ VGSig.fnAI_init(setStruct => algGVL.GPA_FI_Setting.Nst2, min_PV := 0, max_PV :=  9000, minADC := 0, maxADC := 8533, loLim := -270, hiLim := 9270, loBrk := -540, hiBrk := 9540, maxROC:= 0.0, recoveryTime:= 5.0, repairTime :=repTime, tau:= 1.0, id := 4, corrADC := 0.0);
+ //Конец сгенерированного кода
+END_IF;
+
+//Начало сгенерированного кода AI_Processing
+//[БУ] [А2.2:1] [БУ:XTFI1:1a,XTFI1:1b] Частота вращения ГГ (1 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_FI_DRV.Ngg1, set := algGVL.GPA_FI_Setting.Ngg1, btn := algGVL.GPA_FI_FromHMI.Ngg1, out := algGVL.GPA_FI_ToHMI.Ngg1, my := algGVL.GPA_FI_Internal.Ngg1, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [А2.3:1] [БУ:XTFI1:2a,XTFI1:2b] Частота вращения ГГ (2 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_FI_DRV.Ngg2, set := algGVL.GPA_FI_Setting.Ngg2, btn := algGVL.GPA_FI_FromHMI.Ngg2, out := algGVL.GPA_FI_ToHMI.Ngg2, my := algGVL.GPA_FI_Internal.Ngg2, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [А2.4:1] [БУ:XTFI1:3a,XTFI1:3b] Частота вращения СТ (1 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_FI_DRV.Nst1, set := algGVL.GPA_FI_Setting.Nst1, btn := algGVL.GPA_FI_FromHMI.Nst1, out := algGVL.GPA_FI_ToHMI.Nst1, my := algGVL.GPA_FI_Internal.Nst1, nOk :=  algGVL.alg.AI_FLT);
+//[БУ] [А2.5:1] [БУ:XTFI1:4a,XTFI1:4b] Частота вращения СТ (2 канал)
+VGSig.fnAI_Processing(IN := algGVL.GPA_FI_DRV.Nst2, set := algGVL.GPA_FI_Setting.Nst2, btn := algGVL.GPA_FI_FromHMI.Nst2, out := algGVL.GPA_FI_ToHMI.Nst2, my := algGVL.GPA_FI_Internal.Nst2, nOk :=  algGVL.alg.AI_FLT);
+//Конец сгенерированного кода

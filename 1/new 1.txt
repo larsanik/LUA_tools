@@ -1,0 +1,5 @@
+APS_Struct_Name = {
+{Name = 'cntFlt_AVO1', Type = 'PS', Comment = 'АВО1. Неисправность контактора',NameAPS='cntFlt_AVO1'},
+{Name = 'cntFlt_AVO2', Type = 'PS', Comment = 'АВО2. Неисправность контактора',NameAPS='cntFlt_AVO2'},
+{Name = 'cntFlt_AVO3', Type = 'PS', Comment = 'АВО3. Неисправность контактора',NameAPS='cntFlt_AVO3'}
+}

@@ -1,0 +1,800 @@
+//***************************************
+//*  Date: 19/02/2021 10:10:16
+//*  Place: SPB-ERSHOV
+//***************************************
+//--------------------------------------------------------------------------------
+//Поз. 1, Аварийно высокая частота вращения СТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_Nst_v, 0.1, unlock, algGVL.GPA_APS_Internal.As_Nst, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Nst, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 2, Раскрутка ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.As_NstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 3, Отказ всех каналов измерения СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NstBrk, 0.0, unlock, algGVL.GPA_APS_Internal.As_NstBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NstBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 4, Отказ всех каналов измерения СТ, обнаруженный перекрестным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NstDistort, 0.0, unlock, algGVL.GPA_APS_Internal.As_NstDistort, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NstDistort, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 5, Неисправность СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_STbrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_STbrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_STbrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 6, Самопроизвольная раскрутка ротора СТ без смазки
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_ObRaskrST, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_ObRaskrST, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_ObRaskrST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 7, Высокая частота вращения ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_NstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_NstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_NstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 8, Мало время выбега ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_VibegSTMin, 0.0, unlock, algGVL.GPA_APS_Internal.P_VibegSTMin, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_VibegSTMin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 9, Самопроизвольная раскрутка ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_ObRaskrST, 0.0, unlock, algGVL.GPA_APS_Internal.P_ObRaskrST, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_ObRaskrST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 10, Опасная осевая сила ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_osSTHigh, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_osSTHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_osSTHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 11, Повышенная осевая сила ротора СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_osSTHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_osSTHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_osSTHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 12, Аварийно-высокая частота вращения ротора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_Ngg_v, 0.1, unlock, algGVL.GPA_APS_Internal.As_Ngg, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Ngg, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 13, Высокая частота вращения ротора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NggHigh, 0.0, unlock, algGVL.GPA_APS_Internal.As_NggHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NggHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 14, Аварийно-низкая частота вращения ротора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NggLow, 0.0, unlock, algGVL.GPA_APS_Internal.As_NggLow, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NggLow, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 15, Отказ всех каналов измерения ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.As_NvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 16, Отказ всех каналов измерения ГГ , обнаруженный перекрестным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.As_NvdDistort, 0.0, unlock, algGVL.GPA_APS_Internal.As_NvdDistort, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_NvdDistort, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 17, Нет разгона
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_notRateGG, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_notRateGG, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_notRateGG, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 18, Время выбега ротора ГГ мало
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_VibegGGMin, 0.0, unlock, algGVL.GPA_APS_Internal.P_VibegGGMin, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_VibegGGMin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 19, Отказ всех каналов измерения ТТ, обнаруженный перекрестным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TtDistort, 0.0, unlock, algGVL.GPA_APS_Internal.P_TtDistort, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TtDistort, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 20, Отказ всех каналов измерения ТТ, обнаруженный функциональным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TtBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_TtBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TtBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 21, Отказ 1-го канала измерения температуры газа за турбиной ГГ на  режимах, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tt1BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tt1BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tt1BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 22, Отказ 2-го канала измерения температуры газа за турбиной ГГ на  режимах, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tt2BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tt2BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tt2BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 23, Высокая температура газа за турбиной ГГ на запуске
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_Ttzap, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_Ttzap, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_Ttzap, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 24, Отказ 1-го канала измерения ТТЗАП , обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Ttzap1BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Ttzap1BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Ttzap1BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 25, Отказ 2-го канала измерения ТТЗАП , обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Ttzap2BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Ttzap2BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Ttzap2BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 26, Отказ всех каналов измерения ТТЗАП
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TtzapBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_TtzapBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TtzapBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 27, Отказ всех каналов измерения ТТЗАП, обнаруженный перекрестным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TtzapDistort, 0.0, unlock, algGVL.GPA_APS_Internal.P_TtzapDistort, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TtzapDistort, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 28, Погасание КС
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_Pogas, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_Pogas, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_Pogas, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 29, Погасание КС после розжига
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_notRateGGFire, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_notRateGGFire, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_notRateGGFire, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 30, Нет розжига
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_notFire, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_notFire, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_notFire, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 31, Утечка топливного газа в КС
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_UTtgKS, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_UTtgKS, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_UTtgKS, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 32, Утечка топливного газа не контролируется
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_UTtgKSno, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_UTtgKSno, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_UTtgKSno, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 33, Срыв компрессора
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PompazZap, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PompazZap, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PompazZap, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 35, Кнопка "ЭАО" нажата (на ПРУ)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Btn_EAO_PRU, 1, unlock, algGVL.GPA_APS_Internal.As_Btn_EAO_PRU, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Btn_EAO_PRU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 36, Кнопка "АОсс" нажата (на ПРУ)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Btn_AO_PRU, 1, unlock, algGVL.GPA_APS_Internal.As_Btn_AO_PRU, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Btn_AO_PRU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 37, Кнопка "НОсс" нажата (на ПРУ)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Btn_NO_PRU, 1, unlock, algGVL.GPA_APS_Internal.Ns_Btn_NO_PRU, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ns_Btn_NO_PRU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 38, Кнопка "АОсс" нажата (в БУ)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AO_btnBU, 1, unlock, algGVL.GPA_APS_Internal.As_AO_btnBU, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_AO_btnBU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 39, Кнопка "АОсс" нажата (в цеху)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AO_SAUKC, 1, unlock, algGVL.GPA_APS_Internal.As_AO_SAUKC, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_AO_SAUKC, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 40, Кнопка "АО" нажата (в ШТА)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AO_SHTA, 1, unlock, algGVL.GPA_APS_Internal.As_AO_SHTA, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_AO_SHTA, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 41, Аварийно высокая температура ПОП Н 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_T_PON_v, 0, unlock, algGVL.GPA_APS_Internal.As_T_PON, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_T_PON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 42, Повышенная температура ПОП Н 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_T_PON_v, 1, unlock, algGVL.GPA_APS_Internal.P_T_PON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_T_PON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 43, Аварийно высокая температура ЗОП Н 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_T_ZON_v, 0, unlock, algGVL.GPA_APS_Internal.As_T_ZON, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_T_ZON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 44, Повышенная температура ЗОП Н 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_T_ZON_v, 1, unlock, algGVL.GPA_APS_Internal.P_T_ZON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_T_ZON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 45, Аварийно высокая температура УП Н (п.ч.) 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_T_UPP_v, 0, unlock, algGVL.GPA_APS_Internal.As_T_UPP, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_T_UPP, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 46, Повышенная температура УП Н (п.ч.) 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_T_UPP_v, 1, unlock, algGVL.GPA_APS_Internal.P_T_UPP, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_T_UPP, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 47, Аварийно высокая температура УП Н (з.ч.) 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_T_UPN_v, 0, unlock, algGVL.GPA_APS_Internal.As_T_UPN, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_T_UPN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 48, Повышенная температура УП Н (з.ч.) 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_T_UPN_v, 1, unlock, algGVL.GPA_APS_Internal.P_T_UPN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_T_UPN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 49, Аварийно низкое  давление масла смазки УПН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_Pmsm_n AND algGVL.GPA_TS.ZH_Pmsm, 0, unlock, algGVL.GPA_APS_Internal.As_Pmsm, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Pmsm, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 50, Пониженное давление масла смазки УПН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Pmsm_n AND algGVL.GPA_TS.ZH_Pmsm, 0, unlock, algGVL.GPA_APS_Internal.P_Pmsm, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Pmsm, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 51, Аварийно низкий перепад "масло-газ"
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_dPmg_n AND algGVL.GPA_TS.ZH_dPmg, 20, unlock, algGVL.GPA_APS_Internal.As_dPmg, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_dPmg, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 52, Низкий перепад "масло-газ"
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_dPmg_n AND algGVL.GPA_TS.ZH_dPmg, 0, unlock, algGVL.GPA_APS_Internal.P_dPmg, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dPmg, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 53, Опасная вибрация ПОН - вертикальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_V_PON_v_v, 3, unlock, algGVL.GPA_APS_Internal.As_V_PON_v, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_V_PON_v, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 54, Повышенная вибрация ПОН - вертикальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_V_PON_v_v, 0, unlock, algGVL.GPA_APS_Internal.P_V_PON_v, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_V_PON_v, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 55, Опасная вибрация ПОН - горизонтизонтальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_V_PON_g_v, 3, unlock, algGVL.GPA_APS_Internal.As_V_PON_g, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_V_PON_g, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 56, Повышенная вибрация ПОН - горизонтальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_V_PON_g_v, 0, unlock, algGVL.GPA_APS_Internal.P_V_PON_g, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_V_PON_g, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 57, Опасная вибрация ЗОН - вертикальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_V_ZON_v_v, 3, unlock, algGVL.GPA_APS_Internal.As_V_ZON_v, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_V_ZON_v, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 58, Повышенная вибрация ЗОН - вертикальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_V_ZON_v_v, 0, unlock, algGVL.GPA_APS_Internal.P_V_ZON_v, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_V_ZON_v, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 59, Опасная вибрация ЗОН - горизонтальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_V_ZON_g_v, 3, unlock, algGVL.GPA_APS_Internal.As_V_ZON_g, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_V_ZON_g, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 60, Повышенная вибрация ЗОН - горизонтальная
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_V_ZON_g_v, 0, unlock, algGVL.GPA_APS_Internal.P_V_ZON_g, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_V_ZON_g, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 61, Аварийный осевой сдвиг Н вперед
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_OsFw_N_v, 0, unlock, algGVL.GPA_APS_Internal.As_OsFw_N, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_OsFw_N, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 62, Аварийный осевой сдвиг Н назад
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_OsBw_N_n, 0, unlock, algGVL.GPA_APS_Internal.As_OsBw_N, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_OsBw_N, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 63, Аварийны уровень в МБН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_minLm_MBN_n, 5, unlock, algGVL.GPA_APS_Internal.As_minLm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_minLm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 64, Минимальный уровень в МБН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Lm_MBN_n, 3, unlock, algGVL.GPA_APS_Internal.P_Lm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Lm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 65, Блокировка включения ТЭН в МБН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Blck_TEN_Lm_MBN_n, 3, unlock, algGVL.GPA_APS_Internal.P_Blck_TEN_Lm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Blck_TEN_Lm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 66, Максимальный уровень в МБН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_maxLm_MBN_v, 3, unlock, algGVL.GPA_APS_Internal.P_maxLm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_maxLm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 67, Высокая температура газа на выходе Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_Tg_outN_v, 3, unlock, algGVL.GPA_APS_Internal.As_Tg_outN, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Tg_outN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 68, Повышенная температура газа на выходе Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Tg_outN_v, 0, unlock, algGVL.GPA_APS_Internal.P_Tg_outN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tg_outN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 69, Высокое давление газа на выходе Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.As_Pg_outN_v, 0, unlock, algGVL.GPA_APS_Internal.As_Pg_outN, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Pg_outN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 70, Повышенная давление газа на выходе Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Pg_outN_v, 0, unlock, algGVL.GPA_APS_Internal.P_Pg_outN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Pg_outN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 71, Пожар ГПА
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Fire, 0, unlock, algGVL.GPA_APS_Internal.As_Fire, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Fire, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 73, АО по загазованности
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AO_gas, 0, unlock, algGVL.GPA_APS_Internal.As_AO_gas, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_AO_gas, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 75, АОсс по команде оператора
+VGALG.fnAPS_Processing( algGVL.alg.As_ARM_AOss, 0, unlock, algGVL.GPA_APS_Internal.As_ARM_AOss, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_ARM_AOss, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 76, АОбс по команде оператора
+VGALG.fnAPS_Processing( algGVL.alg.Ab_ARM_AObs, 0, unlock, algGVL.GPA_APS_Internal.Ab_ARM_AObs, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_ARM_AObs, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 77, НОсс по команде оператора
+VGALG.fnAPS_Processing( algGVL.alg.Ns_ARM_NOss, 0, unlock, algGVL.GPA_APS_Internal.Ns_ARM_NOss, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ns_ARM_NOss, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 78, НОбс по команде оператора
+VGALG.fnAPS_Processing( algGVL.alg.Nb_ARM_NObs, 0, unlock, algGVL.GPA_APS_Internal.Nb_ARM_NObs, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_ARM_NObs, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 79, Помпаж Н (АПР)
+VGALG.fnAPS_Processing( algGVL.GPA_SR.As_SurgeN, 0, unlock, algGVL.GPA_APS_Internal.As_SurgeN, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_SurgeN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget); //Помпаж Н (АПР)
+//--------------------------------------------------------------------------------
+//Поз. 80, Низкий запас по помпажу
+VGALG.fnAPS_Processing( algGVL.GPA_SR.P_SurgeLow, 0, unlock, algGVL.GPA_APS_Internal.P_SurgeLow, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_SurgeLow, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget); //Низкий запас по помпажу
+//--------------------------------------------------------------------------------
+//Поз. 81, Низкая температура масла в МБ на резерве с газом
+VGALG.fnAPS_Processing( algGVL.alg.As_Tm_MB AND algGVL.GPA_Mode.Reserv AND algGVL.GPA_TS.Gas_inK, 10, unlock, algGVL.GPA_APS_Internal.As_Tm_MB, GPA_FirstOutIndex, i, algGVL.GPA_APS.As_Tm_MB, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 82, Низкая температура масла в МБД 
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTm_MBD_n AND (algGVL.GPA_Mode.GR OR algGVL.GPA_Mode.Work) AND NOT algGVL.GPA_Mode.Stop, 1, unlock, algGVL.GPA_APS_Internal.P_loTm_MBD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTm_MBD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 83, Высокая температура масла в МБД
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTm_MBD_v AND (algGVL.GPA_Mode.GR OR algGVL.GPA_Mode.Work) AND NOT algGVL.GPA_Mode.Stop, 1, unlock, algGVL.GPA_APS_Internal.P_hiTm_MBD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTm_MBD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 86, Нет давления масла на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PmvhDno, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PmvhDno, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PmvhDno, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 87, Аварийно-низкое давление масла на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PmvhDmin, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PmvhDmin, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PmvhDmin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 88, Отказ датчика измерения давления масла на входе в двигатель давление масладвх
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PmvhBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PmvhBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PmvhBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 89, Низкое давление масла на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_PmvhDmin, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_PmvhDmin, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_PmvhDmin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 90, НО: «Отказ датчика измерения давления масла на входе  в двигатель давление масладвх»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_PmvhBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_PmvhBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_PmvhBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 91, Пониженное давление масла на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PmvhDlow, 0.0, unlock, algGVL.GPA_APS_Internal.P_PmvhDlow, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PmvhDlow, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 92, Аварийная температура газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.Ab_avTg_ST_v AND (algGVL.GPA_CalcPar.Ngg.PV > 8000.0) AND NOT algGVL.GPA_DI.SK_OF, 0, unlock, algGVL.GPA_APS_Internal.Ab_avTg_ST, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_avTg_ST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 93, Аварийно-высокая температура газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 94, Отказ более 9-ти каналов измерения Тст
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TstBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TstBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TstBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 95, Высокая температура газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.Nb_hiTg_ST_v AND (algGVL.GPA_CalcPar.Ngg.PV > 8000.0) AND NOT algGVL.GPA_DI.SK_OF, 0, unlock, algGVL.GPA_APS_Internal.Nb_hiTg_ST, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_hiTg_ST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 96, Высокая температура газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 97, Отказ 9-ти каналов измерения Тст
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TstBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TstBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TstBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 98, Повышенная температура газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Tg_ST_v AND (algGVL.GPA_CalcPar.Ngg.PV > 8000.0) AND NOT algGVL.GPA_DI.SK_OF, 0, unlock, algGVL.GPA_APS_Internal.P_Tg_ST, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tg_ST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 99, Температура газа за СТ повышенная
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_TstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 100, Высокая неравномерность температуры газа за СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_deltaTstHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_deltaTstHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_deltaTstHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 101, Отказ 1-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst1BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst1BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst1BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 102, Отказ 1-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst1BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst1BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst1BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 103, Отказ 2-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst2BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst2BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst2BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 104, Отказ 2-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst2BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst2BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst2BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 105, Отказ 3-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst3BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst3BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst3BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 106, Отказ 3-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst3BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst3BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst3BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 107, Отказ 4-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst4BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst4BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst4BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 108, Отказ 4-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst4BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst4BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst4BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 109, Отказ 5-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst5BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst5BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst5BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 110, Отказ 5-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst5BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst5BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst5BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 111, Отказ 6-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst6BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst6BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst6BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 112, Отказ 6-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst6BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst6BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst6BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 113, Отказ 7-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst7BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst7BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst7BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 114, Отказ 7-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst7BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst7BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst7BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 115, Отказ 8-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst8BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst8BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst8BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 116, Отказ 8-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst8BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst8BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst8BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 117, Отказ 9-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst9BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst9BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst9BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 118, Отказ 9-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst9BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst9BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst9BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 119, Отказ 10-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst10BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst10BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst10BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 120, Отказ 10-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst10BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst10BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst10BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 121, Отказ 11-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst11BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst11BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst11BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 122, Отказ 11-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst11BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst11BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst11BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 123, Отказ 12-го канала измерения Тст, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst21BrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst21BrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst21BrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 124, Отказ 12-го канала измерения Тст, по отклонению от среднего
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_Tst12BrkOtkl, 0.0, unlock, algGVL.GPA_APS_Internal.P_Tst12BrkOtkl, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tst12BrkOtkl, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 125, Аварийно-высокая температура масла опоры ШП компрессора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmspKvdMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmspKvdMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmspKvdMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 126, АО: «Отказ датчика измерения температуры масла опоры ШП компрессора ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmspKvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmspKvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmspKvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 127, Высокая температура масла опоры ШП компрессора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmspKvdMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmspKvdMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmspKvdMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 128, НО: «Отказ датчика измерения температуры масла опоры ШП компрессора ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmspKvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmspKvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmspKvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 129, Повышенная температура масла опоры ШП компрессора ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmspKvdHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmspKvdHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmspKvdHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 130, ПС: «Отказ датчика измерения температуры масла опоры ШП компрессора ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmspKvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmspKvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmspKvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 131, Аварийно-высокая температура масла опоры РП турбины ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmrpTvdMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmrpTvdMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmrpTvdMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 132, АО: «Отказ датчика температуры масла опоры РП турбины ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmrpTvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmrpTvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmrpTvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 133, Высокая температура масла опоры РП турбины ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmrpTvdMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmrpTvdMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmrpTvdMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 134, НО: «Отказ датчика температуры масла опоры РП турбины ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmrpTvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmrpTvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmrpTvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 135, Повышенная температура масла опоры РП турбины ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmrpTvdHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmrpTvdHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmrpTvdHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 136, ПС: «Отказ датчика температуры масла опоры РП турбины ГГ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmrpTvdBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmrpTvdBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmrpTvdBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 137, Аварийно-высокая температура масла от подшипн. СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmopStMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmopStMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmopStMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 138, АО: «Отказ датчика температуры масла от подшипн. СТ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmopStBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmopStBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmopStBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 139, Высокая температура масла от подшипн.СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmopStMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmopStMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmopStMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 140, НО: «Отказ датчика температуры масла от подшипн. СТ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TmopStBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TmopStBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TmopStBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 141, Повышенная температура масла от подшипн.СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmopStHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmopStHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmopStHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 142, ПС: «Отказ датчика температуры масла от подшипн. СТ»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmopStBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmopStBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmopStBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 143, Аварийно-высокое давление пускового газа перед СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PgInStVav, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PgInStVav, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PgInStVav, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 144, Низкое давление пускового газа перед СтВ (Провал давления < 0.16 МПа)
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PgInStVmin_proval, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PgInStVmin_proval, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PgInStVmin_proval, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 145, Низкое давление пускового газа перед СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PgInStVmin, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PgInStVmin, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PgInStVmin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 146, Повышенное давление газа перед СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.Ab_PgInStVmax_v, 0, unlock, algGVL.GPA_APS_Internal.Ab_PgInStVmax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PgInStVmax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 147, Низкое давление газа перед СтВ
+VGALG.fnAPS_Processing( algGVL.alg.P_Ppg_inStV_low AND algGVL.alg.Kr11_30s_after_opening AND (algGVL.GPA_Mode.Pusk OR algGVL.GPA_Mode.HP) AND NOT (algGVL.GPA_CalcPar.Ngg.PV > 7200.0), 0, unlock, algGVL.GPA_APS_Internal.P_Ppg_inStV_low, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Ppg_inStV_low, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 148, Повышенное давление газа на выходе из СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PoutStVMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PoutStVMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PoutStVMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 149, Повышенное давление газа на выходе из СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PoutStVMax, 0.0, unlock, algGVL.GPA_APS_Internal.P_PoutStVMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PoutStVMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 151, Высокие обороты стартёра (ЦВ СтВ)
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_StV_CV, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_StV_CV, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_StV_CV, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 152, Высокие обороты стартера (ЦВ СтВ)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.StV_CV, 0, unlock, algGVL.GPA_APS_Internal.P_CVStVMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_CVStVMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 153, Аварийно-низкое давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PtgMin, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PtgMin, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PtgMin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 154, Аварийно-высокое давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_PtgMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_PtgMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_PtgMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 155, Высокое давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_PtgHigh, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_PtgHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_PtgHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 156, Низкое давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PtgMin, 0.0, unlock, algGVL.GPA_APS_Internal.P_PtgMin, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PtgMin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 157, Пониженное давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PtgLow, 0.0, unlock, algGVL.GPA_APS_Internal.P_PtgLow, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PtgLow, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 158, Повышенное давление топливного газа перед СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PtgHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_PtgHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PtgHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 159, Время запуска велико
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TimeZapHigh, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TimeZapHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TimeZapHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 160, Отказ канала положения  ВНА допусковый контроль
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_VNABrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_VNABrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_VNABrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 161, Неисправность ВНА (ВНА_зад – ВНА) < -7°
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_VNABrk_Neg, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_VNABrk_Neg, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_VNABrk_Neg, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 162, Неисправность ВНА (ВНА_зад – ВНА) > 20°
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_VNABrk_Pos, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_VNABrk_Pos, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_VNABrk_Pos, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 163, Отказ электрической части канала управления КПВ - АО на запуске
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_KPVIMBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_KPVIMBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_KPVIMBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 164, Отказ гидравлико-механической части канала управления ИМ КПВ или отказ сигнализатора давления
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_KPVBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_KPVBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_KPVBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 165, Отказ электрической части канала управления КПВ - ПС на режиме и на останове
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_KPVIMBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_KPVIMBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_KPVIMBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 166, Отказ электрической части канала управления КПГ, КПВЗ - АО на запуске
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_KPGIMBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_KPGIMBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_KPGIMBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 167, Отказ гидравлико-механической части канала управления ИМ КПВЗ, КПГ или отказ сигнализатора давления
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_KPGBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_KPGBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_KPGBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 168, Отказ электрической части канала управления КПГ, КПВЗ - ПС на режиме и на останове
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_KPGIMBrk, 0.0, unlock, algGVL.GPA_APS_Internal.P_KPGIMBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_KPGIMBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 169, Самопроизвольное открытие СК
+VGALG.fnAPS_Processing( algGVL.alg.Ab_SK_openStart AND algGVL.GPA_DI.Kr12_ON AND NOT algGVL.GPA_TS.StartD, 0, unlock, algGVL.GPA_APS_Internal.Ab_SK_openStart, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_SK_openStart, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 170, Отказ пневмо-механической части канала управления СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_SKBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_SKBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_SKBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 171, Отказ электр. части канала управления СК
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_SKIMBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_SKIMBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_SKIMBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 173, Отказ ДГ, обнаруженный функциональным контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_DozBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_DozBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_DozBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 174, Отказ канала измерения положения ДГ, обнаруженный допусковым контролем
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_DozBrkDop, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_DozBrkDop, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_DozBrkDop, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 175, Стружка в масле СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Shav_StV AND algGVL.alg.ExMode_for120s_WarmUp, 2, unlock, algGVL.GPA_APS_Internal.Ab_StrMStV, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_StrMStV, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 176, Стружка в масле СтВ
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Shav_StV, 0, unlock, algGVL.GPA_APS_Internal.P_StrMStV, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrMStV, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 178, Аварийно высокая температура воздуха под КШТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.Ab_Tv_KShT_v, 1, unlock, algGVL.GPA_APS_Internal.Ab_Tv_KShT, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_Tv_KShT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 179, Повышеннаятемпература воздуха под КШТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_KShT_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_KShT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_KShT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 180, Низкая температура воздуха под КШТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_KShT_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_KShT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_KShT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 181, Кран 1 самопроизвольное закрытие на режиме
+VGALG.fnAPS_Processing( algGVL.alg.Ab_Kr1_fault AND (algGVL.GPA_Mode.K OR algGVL.GPA_Mode.K_M OR algGVL.GPA_Mode.M OR algGVL.GPA_Mode.M_K) AND algGVL.GPA_DI.Kr4_OF AND NOT (algGVL.GPA_DI.SK_OF AND algGVL.GPA_Mode.Stop), 5, unlock, algGVL.GPA_APS_Internal.Ab_Kr1_fault, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_Kr1_fault, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 183, Двери ВОУ открыты
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Door_VOU_ON AND algGVL.GPA_TS.ActiveMode, 0, unlock, algGVL.GPA_APS_Internal.P_Door_VOU_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Door_VOU_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 186, Входной тракт двигателя засорен
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_deltaPvxMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_deltaPvxMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_deltaPvxMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 187, Повышенный перепад давления на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_deltaPvxHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_deltaPvxHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_deltaPvxHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 188, Повышенное давление воздуха за компрессором ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PkvdHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_PkvdHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PkvdHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 189, Кран 6р(АПК) не открылся
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.KrAPK_ON AND algGVL.GPA_TS.StartD, 0, unlock, algGVL.GPA_APS_Internal.Ab_KrAPK_noON, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_KrAPK_noON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 191, Высокое давление суфлирования
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_PSufMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_PSufMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_PSufMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 192, Повышенное давление суфлирования
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PSufHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_PSufHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PSufHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 193, Высокий рост виброскорости ПП
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_RateVibPpMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_RateVibPpMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_RateVibPpMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 194, АО: «Отказ канала измерения виброскорость двигателя в зоне ПП»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_VibPpBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_VibPpBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_VibPpBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 195, Опасная виброскорость двигателя в зоне ПП
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_VibPpMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_VibPpMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_VibPpMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 196, Виброскорость двигателя в зоне ПП  повышенная
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_VibPpHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_VibPpHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_VibPpHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 197, Высокий рост виброскорости ЗП
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_RateVibZpMax, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_RateVibZpMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_RateVibZpMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 198, АО: «Отказ канала измерения виброскорость двигателя в зоне ЗП»
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_VibZpBrk, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_VibZpBrk, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_VibZpBrk, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 199, Опасная виброскорость двигателя в зоне ЗП
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_VibZpMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_VibZpMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_VibZpMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 200, Повышенная вибрация ЗПД
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_VibZpHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_VibZpHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_VibZpHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 201, Опасная вибрация двигателя (Дискр.)
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_VibDMax, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_VibDMax, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_VibDMax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 203, Повышенная вибрация двигателя (Дискр.)
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_VibDHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_VibDHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_VibDHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 205, Стружка в фильтре-сигнализаторе
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_StrFS, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_StrFS, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_StrFS, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 206, Стружка в фильтре-сигнализаторе
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Shav_FS, 0, unlock, algGVL.GPA_APS_Internal.P_StrFS, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrFS, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 208, Стружка в масле коробке приводов
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_StrKP, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_StrKP, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_StrKP, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 209, Стружка в масле коробке приводов
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Shav_MKB, 0, unlock, algGVL.GPA_APS_Internal.P_StrKP, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrKP, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 211, Стружка в масле ШП КВД
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_StrSPK, 0.0, unlock, algGVL.GPA_APS_Internal.P_StrSPK, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrSPK, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 213, Стружка в масле РП ТВД
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_StrRPT, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_StrRPT, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_StrRPT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 214, Стружка в масле РП ТВД
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Shav_RPT, 5, unlock, algGVL.GPA_APS_Internal.P_StrRPT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrRPT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 216, Стружка в масле опор СТ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_StrST, 0.0, unlock, algGVL.GPA_APS_Internal.P_StrST, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_StrST, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 218, Низкий перепад м/у КШТ и отсеком  ГТУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_dPv_KShT_bayGTU_n AND algGVL.alg.VOD_ON_for120s, 0, unlock, algGVL.GPA_APS_Internal.P_dPv_KShT_bayGTU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dPv_KShT_bayGTU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 219, Двери КШТ открыты
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Door_KShT AND algGVL.GPA_Mode.GR, 0, unlock, algGVL.GPA_APS_Internal.P_Door_KShT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Door_KShT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 220, АО: Пониженная температура масла на входе в двигатель
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TmvhDmin, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TmvhDmin, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TmvhDmin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 221, Пониженная температура масла на входе в двигатель 
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmvhDmin, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmvhDmin, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmvhDmin, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 222, Повышенная температура масла на входе в двигатель 
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_TmvhDmax, 0.0, unlock, algGVL.GPA_APS_Internal.P_TmvhDmax, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_TmvhDmax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 223, Отказ канала измерения Твх на запуске
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Ab_TvhBrkzap, 0.0, unlock, algGVL.GPA_APS_Internal.Ab_TvhBrkzap, GPA_FirstOutIndex, i, algGVL.GPA_APS.Ab_TvhBrkzap, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 224, Отказ канала Твх Д
+VGALG.fnAPS_Processing( algGVL.GPA_FR.Nb_TvhBrkRezhim, 0.0, unlock, algGVL.GPA_APS_Internal.Nb_TvhBrkRezhim, GPA_FirstOutIndex, i, algGVL.GPA_APS.Nb_TvhBrkRezhim, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 225, Повышенная температура топливного газа перед дозатором
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTtg_inTRK_v, 1, unlock, algGVL.GPA_APS_Internal.P_hiTtg_inTRK, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTtg_inTRK, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 226, Пониженная температура топливного газа перед дозатором
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTtg_inTRK_n, 1, unlock, algGVL.GPA_APS_Internal.P_loTtg_inTRK, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTtg_inTRK, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 227, Повышенное давление воздуха за компрессором ГГ
+VGALG.fnAPS_Processing( algGVL.GPA_FR.P_PvrpkHigh, 0.0, unlock, algGVL.GPA_APS_Internal.P_PvrpkHigh, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_PvrpkHigh, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 228, Высокая температура масла на выходе АВОМД
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AVOMD_TmOut_max, 0, unlock, algGVL.GPA_APS_Internal.P_AVOMD_TmOut_max, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMD_TmOut_max, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 229, Высокое давление масла на выходе ГТУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Pm_outD_v AND (algGVL.GPA_CalcPar.Ngg.PV > 8000.0), 1, unlock, algGVL.GPA_APS_Internal.P_Pm_outD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Pm_outD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 230, Повышенный перепад на блоке выносных МФ-84
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dP_BVMF84_high, 1, unlock, algGVL.GPA_APS_Internal.P_dP_BVMF84_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_BVMF84_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 231, Повышенный перепад масла на БФ (Ф3)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dP_F3_high, 1, unlock, algGVL.GPA_APS_Internal.P_dP_F3_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_F3_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 232, Повышенный перепад масла на БФ (Ф4)
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dP_F4_high, 1, unlock, algGVL.GPA_APS_Internal.P_dP_F4_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_F4_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 233, Повышенный перепад на масляном фильтре МФС-94
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dP_MFS94_high, 1, unlock, algGVL.GPA_APS_Internal.P_dP_MFS94_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_MFS94_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 234, МБД полный
+VGALG.fnAPS_Processing( algGVL.GPA_DI.MBD_Hmax, 0, unlock, algGVL.GPA_APS_Internal.P_MBD_Hmax, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_MBD_Hmax, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 236, Минимальное количество масла в МБД
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Lm_MBD_n, 1, unlock, algGVL.GPA_APS_Internal.P_Lm_MBD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Lm_MBD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 237, Блокировка включения ТЭН в МБД
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Blck_TEN_Lm_MBD_n, 1, unlock, algGVL.GPA_APS_Internal.P_Blck_TEN_Lm_MBD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Blck_TEN_Lm_MBD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 238, Фильтр пускового газа засорен
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dPg_FO, 1, unlock, algGVL.GPA_APS_Internal.P_dPg_FO, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dPg_FO, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 239, Повышенный перепад давления топливного газа на фильтрах очистки
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_dP_filtGaz_v, 1, unlock, algGVL.GPA_APS_Internal.P_dP_filtGaz, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_filtGaz, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 240, Нет напряжения на ЩУ АВОМД 
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.AVOMD_ON, 1, unlock, algGVL.GPA_APS_Internal.P_AVOMD_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMD_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 241, АВОМД не готов к пуску
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.AVOMD_ready, 1, unlock, algGVL.GPA_APS_Internal.P_AVOMD_ready, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMD_ready, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 243, Фильтр заправки МБД засорен
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dP_MBDdozap_high, 1, unlock, algGVL.GPA_APS_Internal.P_dP_MBDdozap_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dP_MBDdozap_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 244, Масло в МБН не разогрето
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTm_MBN_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 245, Повышенная температура масла в МБН
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTm_MBN_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTm_MBN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTm_MBN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 248, Высокая температура масла на выходе АВОМ Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_Tm_inAVOMN_v AND algGVL.GPA_DO.AVOMN_ON, 1, unlock, algGVL.GPA_APS_Internal.P_Tm_inAVOMN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Tm_inAVOMN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 249, Высокая температура масла на выходе АВОМ Н
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AVOMN_TmOut_max AND algGVL.GPA_DO.AVOMN_ON, 1, unlock, algGVL.GPA_APS_Internal.P_AVOMN_TmOut_max, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMN_TmOut_max, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 250, Повышенная перепад на сетке перед Н
+VGALG.fnAPS_Processing( algGVL.GPA_DI.dPg_protGridN, 0, unlock, algGVL.GPA_APS_Internal.P_dPg_protGridN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dPg_protGridN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 251, Нет напряжения АВОМ Н
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.AVOMN_ON AND algGVL.GPA_DO.AVOMN_ON, 0, unlock, algGVL.GPA_APS_Internal.P_AVOMN_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMN_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 253, АВОМН не готов к пуску
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.AVOMN_ready AND algGVL.GPA_DO.AVOMN_ON, 0, unlock, algGVL.GPA_APS_Internal.P_AVOMN_ready, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVOMN_ready, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 256, Повышенная температура воды на выходе УТО
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTw_outUTO_v, 3, unlock, algGVL.GPA_APS_Internal.P_hiTw_outUTO, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTw_outUTO, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 257, Низкое давление воды на входе УТО
+VGALG.fnAPS_Processing( algGVL.GPA_DI.UTO_PvOut_low, 0, unlock, algGVL.GPA_APS_Internal.P_UTO_PvOut_low, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_UTO_PvOut_low, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 258, Высокое давление воды на выходе УТО
+VGALG.fnAPS_Processing( algGVL.GPA_DI.UTO_PvOut_high, 0, unlock, algGVL.GPA_APS_Internal.P_UTO_PvOut_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_UTO_PvOut_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 259, БК1 ВОУ открыт
+VGALG.fnAPS_Processing( algGVL.GPA_DI.BK1_ON, 0, unlock, algGVL.GPA_APS_Internal.P_BK1_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_BK1_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 261, БК2 ВОУ открыт
+VGALG.fnAPS_Processing( algGVL.GPA_DI.BK2_ON, 0, unlock, algGVL.GPA_APS_Internal.P_BK2_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_BK2_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 263, Засорение блока фильтров ВОУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_dPv_filtVOU_v, 0, unlock, algGVL.GPA_APS_Internal.P_dPv_filtVOU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_dPv_filtVOU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 264, Низкий расход воздуха обдува двигателя
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loQv_blowD_n AND algGVL.alg.VOT_ON_for120s, 0, unlock, algGVL.GPA_APS_Internal.P_loQv_blowD, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loQv_blowD, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 265, Высокая температура в отсеке Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_bayN_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_bayN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_bayN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 266, Низкая температура в отсеке Н
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_bayN_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_bayN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_bayN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 268, Высокая температура в отсеке ГТУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_bayGTU_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_bayGTU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_bayGTU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 269, Низкаятемпературав отсеке ГТУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_bayGTU_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_bayGTU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_bayGTU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 271, Высокая температура в БУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_bayBU_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_bayBU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_bayBU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 272, Низкаятемпературав БУ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_bayBU_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_bayBU, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_bayBU, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 273, Высокая температура в отсеке МА
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_OMA_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_OMA, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_OMA, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 274, Низкая температура в отсеке МА
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_OMA_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_OMA, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_OMA, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 275, Высокая температура в отсеке ПТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiTv_OPT_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiTv_OPT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiTv_OPT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 276, Низкая температура в отсеке ПТ
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loTv_OPT_n, 0, unlock, algGVL.GPA_APS_Internal.P_loTv_OPT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loTv_OPT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 277, УПС неисправна
+VGALG.fnAPS_Processing( algGVL.GPA_DI.UPS_fault, 0, unlock, algGVL.GPA_APS_Internal.P_UPS_fault, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_UPS_fault, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 279, УПС не готова к пуску ГПА
+VGALG.fnAPS_Processing( algGVL.GPA_DI.UPS_noReady, 0, unlock, algGVL.GPA_APS_Internal.P_UPS_noReady, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_UPS_noReady, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 281, Концентрация метана в отсеке Н > 0.5%
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Gas_N_high, 0, unlock, algGVL.GPA_APS_Internal.P_Gas_N_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Gas_N_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 283, Концентрация метана в отсеке ГТУ > 0.5%
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Gas_GTU_high, 0, unlock, algGVL.GPA_APS_Internal.P_Gas_GTU_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Gas_GTU_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 285, Концентрация метана  под КШТ  > 0.5%
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Gas_KShT_high, 0, unlock, algGVL.GPA_APS_Internal.P_Gas_KShT_high, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Gas_KShT_high, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 287, Неисправность АКЗ под КШТ
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Fault_AKZ_KShT AND algGVL.GPA_TS.ActiveMode, 0, unlock, algGVL.GPA_APS_Internal.P_Fault_AKZ_KShT, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Fault_AKZ_KShT, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 289, Неисправность АКЗ в отсеке ГТУ
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Fault_AKZ_bayN AND algGVL.GPA_TS.ActiveMode, 0, unlock, algGVL.GPA_APS_Internal.P_Fault_AKZ_bayN, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Fault_AKZ_bayN, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 291, Обогрев Крана 6р(АПК) не включен 
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.KrAPK_heat_ON, 0, unlock, algGVL.GPA_APS_Internal.P_KrAPK_heat_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_KrAPK_heat_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 292, Двери БУ открыты
+VGALG.fnAPS_Processing( algGVL.GPA_DI.Door_BU_ON, 0, unlock, algGVL.GPA_APS_Internal.P_Door_BU_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_Door_BU_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 294, Система АВР не включена 
+VGALG.fnAPS_Processing( algGVL.GPA_DI.AVR_ON, 0, unlock, algGVL.GPA_APS_Internal.P_AVR_ON, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_AVR_ON, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 295, Отсутствует напряжения 380 В 50Гц линия 1
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.U380_line1, 0, unlock, algGVL.GPA_APS_Internal.P_noU380_line1, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_noU380_line1, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 297, Отсутствует напряжения 380 В 50Гц линия 2
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.U380_line2, 0, unlock, algGVL.GPA_APS_Internal.P_noU380_line2, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_noU380_line2, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 299, Нет напряжения питания кранов
+VGALG.fnAPS_Processing( NOT algGVL.GPA_DI.U220_EPUU_Kr, 0, unlock, algGVL.GPA_APS_Internal.P_noU220_EPUU_Kr, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_noU220_EPUU_Kr, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 300, Контроль ~220 (<187 В)
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loU_main_n, 0, unlock, algGVL.GPA_APS_Internal.P_loU_main, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loU_main, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 301, Контроль ~220 (>242 В)
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiU_main_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiU_main, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiU_main, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 303, Контроль =220 (<187 В)
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_loU_reserv_n, 0, unlock, algGVL.GPA_APS_Internal.P_loU_reserv, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_loU_reserv, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 304, Контроль =220 (>242 В)
+VGALG.fnAPS_Processing( algGVL.GPA_ANB.P_hiU_reserv_v, 0, unlock, algGVL.GPA_APS_Internal.P_hiU_reserv, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_hiU_reserv, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 306, Ручное управление на ЩРУ включено
+VGALG.fnAPS_Processing( algGVL.GPA_DI.ShRU_manual, 0, unlock, algGVL.GPA_APS_Internal.P_ShRU_manual, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_ShRU_manual, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------
+//Поз. 308, Отказ виброаппаратуры ИВ-Д-ПФ
+VGALG.fnAPS_Processing( algGVL.alg.P_IvDPf_fault, 0, unlock, algGVL.GPA_APS_Internal.P_IvDPf_fault, GPA_FirstOutIndex, i, algGVL.GPA_APS.P_IvDPf_fault, new_wrn, new_crs, algGVL.GPA_Alarms, AlarmTarget);
+//--------------------------------------------------------------------------------

@@ -1,0 +1,263 @@
+//***************************************
+//*  Сгенерировано: 01/02/2021 16:58:32
+//*  Узел: все
+//***************************************
+
+//----------- Обработка дискретных выходов ---------------//Начало сгенерированного кода DO_Processing
+//[БУ] [А3.19:1] [БУ:XDO1:1 a,XDO1:1b] Контроль ИВ-Д-ПФ - Включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Check_IVDPF, fromHMI := algGVL.GPA_DO_FromHMI.Check_IVDPF, toHMI := algGVL.GPA_DO_ToHMI.Check_IVDPF, drv =>  algGVL.GPA_DO_DRV.Check_IVDPF);
+//[БУ] [А3.19:2] [БУ:XDO2:1a,XDO2:1b] Задвижку подогрева циклового воздуха открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZPCV_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZPCV_ON, toHMI := algGVL.GPA_DO_ToHMI.ZPCV_ON, drv =>  algGVL.GPA_DO_DRV.ZPCV_ON);
+//[БУ] [А3.19:3] [БУ:XDO2:2a,XDO2:2b] Задвижку подогрева циклового воздуха закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZPCV_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZPCV_OF, toHMI := algGVL.GPA_DO_ToHMI.ZPCV_OF, drv =>  algGVL.GPA_DO_DRV.ZPCV_OF);
+//[БУ] [А3.19:4] [БУ:XDO2:3a,XDO2:3b] Задв. отбора воздуха от 7 ступени ГТУ открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZOV7_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZOV7_ON, toHMI := algGVL.GPA_DO_ToHMI.ZOV7_ON, drv =>  algGVL.GPA_DO_DRV.ZOV7_ON);
+//[БУ] [А3.19:5] [БУ:XDO2:4a,XDO2:4b] Задв. отбора воздуха от 7 ступени ГТУ закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZOV7_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZOV7_OF, toHMI := algGVL.GPA_DO_ToHMI.ZOV7_OF, drv =>  algGVL.GPA_DO_DRV.ZOV7_OF);
+//[БУ] [А3.19:6] [БУ:XDO2:5a,XDO2:5b] Заслонку 1 системы обдува Д открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsVOD1_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZsVOD1_ON, toHMI := algGVL.GPA_DO_ToHMI.ZsVOD1_ON, drv =>  algGVL.GPA_DO_DRV.ZsVOD1_ON);
+//[БУ] [А3.19:7] [БУ:XDO2:6a,XDO2:6b] Заслонку 1 системы обдува Д закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsVOD1_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZsVOD1_OF, toHMI := algGVL.GPA_DO_ToHMI.ZsVOD1_OF, drv =>  algGVL.GPA_DO_DRV.ZsVOD1_OF);
+//[БУ] [А3.19:8] [БУ:XDO2:7a,XDO2:7b] Заслонку 3 на выхлопе сист. ВОД   и трансмиссии открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsVOD3_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZsVOD3_ON, toHMI := algGVL.GPA_DO_ToHMI.ZsVOD3_ON, drv =>  algGVL.GPA_DO_DRV.ZsVOD3_ON);
+//[БУ] [А3.20:1] [БУ:XDO2:8a,XDO2:8b] Заслонку 3 на выхлопе сист. ВОД   и трансмиссии закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsVOD3_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZsVOD3_OF, toHMI := algGVL.GPA_DO_ToHMI.ZsVOD3_OF, drv =>  algGVL.GPA_DO_DRV.ZsVOD3_OF);
+//[БУ] [А3.20:2] [БУ:XDO3:1a,XDO3:1b] Кран N9 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr9_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr9_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr9_ON, drv =>  algGVL.GPA_DO_DRV.Kr9_ON);
+//[БУ] [А3.20:3] [БУ:XDO3:2a,XDO3:2b] Кран N10 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr10_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr10_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr10_ON, drv =>  algGVL.GPA_DO_DRV.Kr10_ON);
+//[БУ] [А3.20:4] [БУ:XDO3:3a,XDO3:3b] Кран N11 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr11_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr11_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr11_OF, drv =>  algGVL.GPA_DO_DRV.Kr11_OF);
+//[БУ] [А3.20:5] [БУ:XDO3:4a,XDO3:4b] Кран N12 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr12_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr12_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr12_OF, drv =>  algGVL.GPA_DO_DRV.Kr12_OF);
+//[БУ] [А3.20:6] [БУ:XDO3:5a,XDO3:5b] Кран N10 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr10_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr10_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr10_OF, drv =>  algGVL.GPA_DO_DRV.Kr10_OF);
+//[БУ] [А3.20:7] [БУ:XDO3:6a,XDO3:6b] Кран N11 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr11_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr11_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr11_ON, drv =>  algGVL.GPA_DO_DRV.Kr11_ON);
+//[БУ] [А3.20:8] [БУ:XDO3:7a,XDO3:7b] Кран N12 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr12_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr12_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr12_ON, drv =>  algGVL.GPA_DO_DRV.Kr12_ON);
+//[БУ] [А3.21:1] [БУ:XDO1:2a,XDO1:2b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv1, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv1, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv1, drv =>  algGVL.GPA_DO_DRV.DO_Reserv1);
+//[БУ] [А3.21:2] [БУ:XDO1:3a,XDO1:3b] ПОС ГТУ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.POS_ON, fromHMI := algGVL.GPA_DO_FromHMI.POS_ON, toHMI := algGVL.GPA_DO_ToHMI.POS_ON, drv =>  algGVL.GPA_DO_DRV.POS_ON);
+//[БУ] [А3.21:3] [БУ:XDO2:9a,XDO2:9b] Заслонку 2 системы обдува Д открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZVOD2_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZVOD2_ON, toHMI := algGVL.GPA_DO_ToHMI.ZVOD2_ON, drv =>  algGVL.GPA_DO_DRV.ZVOD2_ON);
+//[БУ] [А3.21:4] [БУ:XDO2:10a,XDO2:10b] Заслонку 2 системы обдува Д закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZVOD2_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZVOD2_OF, toHMI := algGVL.GPA_DO_ToHMI.ZVOD2_OF, drv =>  algGVL.GPA_DO_DRV.ZVOD2_OF);
+//[БУ] [А3.21:5] [БУ:XDO1:4a,XDO1:4b] Открыть стопорный клапан.
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.SK_ON, fromHMI := algGVL.GPA_DO_FromHMI.SK_ON, toHMI := algGVL.GPA_DO_ToHMI.SK_ON, drv =>  algGVL.GPA_DO_DRV.SK_ON);
+//[БУ] [А3.21:6] [БУ:XDO1:5a,XDO1:5b] Закрыть стопорный клапан. (1-й канал)
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.SK_OF1, fromHMI := algGVL.GPA_DO_FromHMI.SK_OF1, toHMI := algGVL.GPA_DO_ToHMI.SK_OF1, drv =>  algGVL.GPA_DO_DRV.SK_OF1);
+//[БУ] [А3.21:7] [БУ:XDO1:6a,XDO1:6b] Закрыть стопорный клапан. (2-й канал)
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.SK_OF2, fromHMI := algGVL.GPA_DO_FromHMI.SK_OF2, toHMI := algGVL.GPA_DO_ToHMI.SK_OF2, drv =>  algGVL.GPA_DO_DRV.SK_OF2);
+//[БУ] [А3.21:8] [БУ:XDO1:7a,XDO1:7b] Открыть воздушную заслонку СтВ
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Vz_STV_ON, fromHMI := algGVL.GPA_DO_FromHMI.Vz_STV_ON, toHMI := algGVL.GPA_DO_ToHMI.Vz_STV_ON, drv =>  algGVL.GPA_DO_DRV.Vz_STV_ON);
+//[БУ] [А3.22:1] [БУ:XDO1:8a,XDO1:8b] Открыть перекрывную заслонку СтВ
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Cz_STV_ON, fromHMI := algGVL.GPA_DO_FromHMI.Cz_STV_ON, toHMI := algGVL.GPA_DO_ToHMI.Cz_STV_ON, drv =>  algGVL.GPA_DO_DRV.Cz_STV_ON);
+//[БУ] [А3.22:2] [БУ:XDO1:9a,XDO1:9b] Включить систему зажигания (1-й канал)
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.AZ1_ON, fromHMI := algGVL.GPA_DO_FromHMI.AZ1_ON, toHMI := algGVL.GPA_DO_ToHMI.AZ1_ON, drv =>  algGVL.GPA_DO_DRV.AZ1_ON);
+//[БУ] [А3.22:3] [БУ:XDO1:10a,XDO1:10b] Включить систему зажигания (2-й канал)
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.AZ2_ON, fromHMI := algGVL.GPA_DO_FromHMI.AZ2_ON, toHMI := algGVL.GPA_DO_ToHMI.AZ2_ON, drv =>  algGVL.GPA_DO_DRV.AZ2_ON);
+//[БУ] [А3.22:4] [БУ:XDO1:11a,XDO1:11b] Открыть КПГ
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KPVZ_ON, fromHMI := algGVL.GPA_DO_FromHMI.KPVZ_ON, toHMI := algGVL.GPA_DO_ToHMI.KPVZ_ON, drv =>  algGVL.GPA_DO_DRV.KPVZ_ON);
+//[БУ] [А3.22:5] [БУ:XDO1:12a,XDO1:12b] Открыть КПВ
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KPV_ON, fromHMI := algGVL.GPA_DO_FromHMI.KPV_ON, toHMI := algGVL.GPA_DO_ToHMI.KPV_ON, drv =>  algGVL.GPA_DO_DRV.KPV_ON);
+//[БУ] [А3.22:6] [БУ:XDO1:16a,XDO1:16b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv2, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv2, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv2, drv =>  algGVL.GPA_DO_DRV.DO_Reserv2);
+//[БУ] [А3.22:7] [БУ:XDO2:11a,XDO2:11b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv3, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv3, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv3, drv =>  algGVL.GPA_DO_DRV.DO_Reserv3);
+//[БУ] [А3.22:8] [БУ:XDO3:8a,XDO3:8b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv4, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv4, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv4, drv =>  algGVL.GPA_DO_DRV.DO_Reserv4);
+//[БУ] [А3.23:1] [БУ:,] Исправность ПЛК
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.PLC_OK, fromHMI := algGVL.GPA_DO_FromHMI.PLC_OK, toHMI := algGVL.GPA_DO_ToHMI.PLC_OK, drv =>  algGVL.GPA_DO_DRV.PLC_OK);
+//[БУ] [А3.23:2] [БУ:,] Включить звуковую ПС
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Sound_PS, fromHMI := algGVL.GPA_DO_FromHMI.Sound_PS, toHMI := algGVL.GPA_DO_ToHMI.Sound_PS, drv =>  algGVL.GPA_DO_DRV.Sound_PS);
+//[БУ] [А3.23:3] [БУ:,] Включить звуковую АС
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Sound_AS, fromHMI := algGVL.GPA_DO_FromHMI.Sound_AS, toHMI := algGVL.GPA_DO_ToHMI.Sound_AS, drv =>  algGVL.GPA_DO_DRV.Sound_AS);
+//[БУ] [А3.23:4] [БУ:,] Разрешение на управление ВНА
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Permit_VNA, fromHMI := algGVL.GPA_DO_FromHMI.Permit_VNA, toHMI := algGVL.GPA_DO_ToHMI.Permit_VNA, drv =>  algGVL.GPA_DO_DRV.Permit_VNA);
+//[БУ] [А3.23:5] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv5, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv5, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv5, drv =>  algGVL.GPA_DO_DRV.DO_Reserv5);
+//[БУ] [А3.23:6] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv6, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv6, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv6, drv =>  algGVL.GPA_DO_DRV.DO_Reserv6);
+//[БУ] [А3.23:7] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv7, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv7, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv7, drv =>  algGVL.GPA_DO_DRV.DO_Reserv7);
+//[БУ] [А3.23:8] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv8, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv8, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv8, drv =>  algGVL.GPA_DO_DRV.DO_Reserv8);
+//[БУ] [А4.6:1] [БУ:XDO1:13a,XDO1:13b] Направление вращения ДВШ.
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DVSH_fault, fromHMI := algGVL.GPA_DO_FromHMI.DVSH_fault, toHMI := algGVL.GPA_DO_ToHMI.DVSH_fault, drv =>  algGVL.GPA_DO_DRV.DVSH_fault);
+//[БУ] [А4.6:2] [БУ:XDO1:14a,XDO1:14b] Задание схемы коммутации обмоток ДВШ.
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DVSH_set_obm, fromHMI := algGVL.GPA_DO_FromHMI.DVSH_set_obm, toHMI := algGVL.GPA_DO_ToHMI.DVSH_set_obm, drv =>  algGVL.GPA_DO_DRV.DVSH_set_obm);
+//[БУ] [А4.6:3] [БУ:XDO1:15a,XDO1:15b] Скорость вращения ШД
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.SHD_speed, fromHMI := algGVL.GPA_DO_FromHMI.SHD_speed, toHMI := algGVL.GPA_DO_ToHMI.SHD_speed, drv =>  algGVL.GPA_DO_DRV.SHD_speed);
+//[БУ] [А4.6:4] [БУ:XDO1:17a,XDO1:17b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv9, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv9, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv9, drv =>  algGVL.GPA_DO_DRV.DO_Reserv9);
+//[БУ] [А4.6:5] [БУ:XDO1:18a,XDO1:18b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv10, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv10, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv10, drv =>  algGVL.GPA_DO_DRV.DO_Reserv10);
+//[БУ] [А4.6:6] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv11, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv11, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv11, drv =>  algGVL.GPA_DO_DRV.DO_Reserv11);
+//[БУ] [А4.6:7] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv12, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv12, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv12, drv =>  algGVL.GPA_DO_DRV.DO_Reserv12);
+//[БУ] [А4.6:8] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv13, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv13, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv13, drv =>  algGVL.GPA_DO_DRV.DO_Reserv13);
+//[БУ] [А4.6:9] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv14, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv14, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv14, drv =>  algGVL.GPA_DO_DRV.DO_Reserv14);
+//[БУ] [А4.6:10] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv15, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv15, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv15, drv =>  algGVL.GPA_DO_DRV.DO_Reserv15);
+//[БУ] [А4.6:11] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv16, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv16, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv16, drv =>  algGVL.GPA_DO_DRV.DO_Reserv16);
+//[БУ] [А4.6:12] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv17, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv17, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv17, drv =>  algGVL.GPA_DO_DRV.DO_Reserv17);
+//[БУ] [А4.6:13] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv18, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv18, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv18, drv =>  algGVL.GPA_DO_DRV.DO_Reserv18);
+//[БУ] [А4.6:14] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv19, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv19, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv19, drv =>  algGVL.GPA_DO_DRV.DO_Reserv19);
+//[БУ] [А4.6:15] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv20, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv20, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv20, drv =>  algGVL.GPA_DO_DRV.DO_Reserv20);
+//[БУ] [А4.6:16] [БУ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv21, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv21, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv21, drv =>  algGVL.GPA_DO_DRV.DO_Reserv21);
+//[ЭС] [А30.23:1] [ЭС:XDO7:1a,XDO7:1b] ВОД1 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VOD1_ON, fromHMI := algGVL.GPA_DO_FromHMI.VOD1_ON, toHMI := algGVL.GPA_DO_ToHMI.VOD1_ON, drv =>  algGVL.GPA_DO_DRV.VOD1_ON);
+//[ЭС] [А30.23:2] [ЭС:XDO7:2a,XDO7:2b] Щит управления АВОМ Н включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.AVOMN_ON, fromHMI := algGVL.GPA_DO_FromHMI.AVOMN_ON, toHMI := algGVL.GPA_DO_ToHMI.AVOMN_ON, drv =>  algGVL.GPA_DO_DRV.AVOMN_ON);
+//[ЭС] [А30.23:3] [ЭС:XDO7:3a,XDO7:3b] ВОТ № 1 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VOT1_ON, fromHMI := algGVL.GPA_DO_FromHMI.VOT1_ON, toHMI := algGVL.GPA_DO_ToHMI.VOT1_ON, drv =>  algGVL.GPA_DO_DRV.VOT1_ON);
+//[ЭС] [А30.23:4] [ЭС:XDO7:4a,XDO7:4b] ВВОт.Д № 1 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VVOTD1_ON, fromHMI := algGVL.GPA_DO_FromHMI.VVOTD1_ON, toHMI := algGVL.GPA_DO_ToHMI.VVOTD1_ON, drv =>  algGVL.GPA_DO_DRV.VVOTD1_ON);
+//[ЭС] [А30.23:5] [ЭС:XDO7:5a,XDO7:5b] ВВОт.Н № 1 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VVOTN1_ON, fromHMI := algGVL.GPA_DO_FromHMI.VVOTN1_ON, toHMI := algGVL.GPA_DO_ToHMI.VVOTN1_ON, drv =>  algGVL.GPA_DO_DRV.VVOTN1_ON);
+//[ЭС] [А30.23:6] [ЭС:XDO7:6a,XDO7:6b] Щит управления АВОМ Д включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.AVOMD_ON, fromHMI := algGVL.GPA_DO_FromHMI.AVOMD_ON, toHMI := algGVL.GPA_DO_ToHMI.AVOMD_ON, drv =>  algGVL.GPA_DO_DRV.AVOMD_ON);
+//[ЭС] [А30.23:7] [ЭС:XDO7:7a,XDO7:7b] Электрорадиатор отсека ГТУ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENGTU_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENGTU_ON, toHMI := algGVL.GPA_DO_ToHMI.ENGTU_ON, drv =>  algGVL.GPA_DO_DRV.ENGTU_ON);
+//[ЭС] [А30.23:8] [ЭС:XDO8:1a,XDO8:1b] Включение сирены перед пуском
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Sirena_ON, fromHMI := algGVL.GPA_DO_FromHMI.Sirena_ON, toHMI := algGVL.GPA_DO_ToHMI.Sirena_ON, drv =>  algGVL.GPA_DO_DRV.Sirena_ON);
+//[ЭС] [А30.23:9] [ЭС:XDO7:8a,XDO7:8b] Заслонку теплообменного блока УТО открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsT_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZsT_ON, toHMI := algGVL.GPA_DO_ToHMI.ZsT_ON, drv =>  algGVL.GPA_DO_DRV.ZsT_ON);
+//[ЭС] [А30.23:10] [ЭС:XDO7:9a,XDO7:9b] Заслонку теплообменного блока УТО закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsT_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZsT_OF, toHMI := algGVL.GPA_DO_ToHMI.ZsT_OF, drv =>  algGVL.GPA_DO_DRV.ZsT_OF);
+//[ЭС] [А30.23:11] [ЭС:XDO7:10a,XDO7:10b] Заслонку байпасного блока УТО открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsB_ON, fromHMI := algGVL.GPA_DO_FromHMI.ZsB_ON, toHMI := algGVL.GPA_DO_ToHMI.ZsB_ON, drv =>  algGVL.GPA_DO_DRV.ZsB_ON);
+//[ЭС] [А30.23:12] [ЭС:XDO7:11a,XDO7:11b] Заслонку байпасного блока УТО закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ZsB_OF, fromHMI := algGVL.GPA_DO_FromHMI.ZsB_OF, toHMI := algGVL.GPA_DO_ToHMI.ZsB_OF, drv =>  algGVL.GPA_DO_DRV.ZsB_OF);
+//[ЭС] [А30.23:13] [ЭС:XDO7:12a,XDO7:12b] ВОД2 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VOD2_ON, fromHMI := algGVL.GPA_DO_FromHMI.VOD2_ON, toHMI := algGVL.GPA_DO_ToHMI.VOD2_ON, drv =>  algGVL.GPA_DO_DRV.VOD2_ON);
+//[ЭС] [А30.23:14] [ЭС:XDO7:13a,XDO7:13b] Включить ВОт.МА
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VMA_ON, fromHMI := algGVL.GPA_DO_FromHMI.VMA_ON, toHMI := algGVL.GPA_DO_ToHMI.VMA_ON, drv =>  algGVL.GPA_DO_DRV.VMA_ON);
+//[ЭС] [А30.23:15] [ЭС:XDO7:14a,XDO7:14b] ВОТ № 2 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VOT2_ON, fromHMI := algGVL.GPA_DO_FromHMI.VOT2_ON, toHMI := algGVL.GPA_DO_ToHMI.VOT2_ON, drv =>  algGVL.GPA_DO_DRV.VOT2_ON);
+//[ЭС] [А30.23:16] [ЭС:XDO7:15a,XDO7:15b] ВВОт.Д № 2 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VVOTD2_ON, fromHMI := algGVL.GPA_DO_FromHMI.VVOTD2_ON, toHMI := algGVL.GPA_DO_ToHMI.VVOTD2_ON, drv =>  algGVL.GPA_DO_DRV.VVOTD2_ON);
+//[ЭС] [А30.24:9] [ЭС:XDO7:16a,XDO7:16b] ВВОт.Н № 2 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VVOTN2_ON, fromHMI := algGVL.GPA_DO_FromHMI.VVOTN2_ON, toHMI := algGVL.GPA_DO_ToHMI.VVOTN2_ON, drv =>  algGVL.GPA_DO_DRV.VVOTN2_ON);
+//[ЭС] [А30.24:10] [ЭС:XDO7:17a,XDO7:17b] Вытяжной вентилятор отсека ПТ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.VVOPT_ON, fromHMI := algGVL.GPA_DO_FromHMI.VVOPT_ON, toHMI := algGVL.GPA_DO_ToHMI.VVOPT_ON, drv =>  algGVL.GPA_DO_DRV.VVOPT_ON);
+//[ЭС] [А30.24:11] [ЭС:XDO7:18a,XDO7:18b] Электрорадиатор отсека Н  включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENN_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENN_ON, toHMI := algGVL.GPA_DO_ToHMI.ENN_ON, drv =>  algGVL.GPA_DO_DRV.ENN_ON);
+//[ЭС] [А30.24:12] [ЭС:XDO7:19a,XDO7:19b] Электрорадиатор  отсека МА включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENMA_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENMA_ON, toHMI := algGVL.GPA_DO_ToHMI.ENMA_ON, drv =>  algGVL.GPA_DO_DRV.ENMA_ON);
+//[ЭС] [А30.24:13] [ЭС:XDO7:20a,XDO7:20b] Электрорадиатор  в раме ГТУ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENRGTU_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENRGTU_ON, toHMI := algGVL.GPA_DO_ToHMI.ENRGTU_ON, drv =>  algGVL.GPA_DO_DRV.ENRGTU_ON);
+//[ЭС] [А30.24:14] [ЭС:XDO7:21a,XDO7:21b] ТЭН МБД - Включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.TEN_MBD_ON, fromHMI := algGVL.GPA_DO_FromHMI.TEN_MBD_ON, toHMI := algGVL.GPA_DO_ToHMI.TEN_MBD_ON, drv =>  algGVL.GPA_DO_DRV.TEN_MBD_ON);
+//[ЭС] [А30.24:15] [ЭС:XDO7:22a,XDO7:22b] ТЭНы МБН - Включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.TEN_MBN_ON, fromHMI := algGVL.GPA_DO_FromHMI.TEN_MBN_ON, toHMI := algGVL.GPA_DO_ToHMI.TEN_MBN_ON, drv =>  algGVL.GPA_DO_DRV.TEN_MBN_ON);
+//[ЭС] [А30.24:16] [ЭС:XDO7:23a,XDO7:23b] Электрорадиатор отсека ПТ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENPT_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENPT_ON, toHMI := algGVL.GPA_DO_ToHMI.ENPT_ON, drv =>  algGVL.GPA_DO_DRV.ENPT_ON);
+//[ЭС] [А30.25:9] [ЭС:XDO7:24a,XDO7:24b] Обогрев трубопроводов БИК-90ГП1 и БУК-90ГП1 включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENTR_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENTR_ON, toHMI := algGVL.GPA_DO_ToHMI.ENTR_ON, drv =>  algGVL.GPA_DO_DRV.ENTR_ON);
+//[ЭС] [А30.25:10] [ЭС:XDO7:25a,XDO7:25b] Электрорадиатор БУ включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.ENBU_ON, fromHMI := algGVL.GPA_DO_FromHMI.ENBU_ON, toHMI := algGVL.GPA_DO_ToHMI.ENBU_ON, drv =>  algGVL.GPA_DO_DRV.ENBU_ON);
+//[ЭС] [А30.25:11] [ЭС:XDO7:26a,XDO7:26b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv22, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv22, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv22, drv =>  algGVL.GPA_DO_DRV.DO_Reserv22);
+//[ЭС] [А30.25:12] [ЭС:XDO7:27a,XDO7:27b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv23, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv23, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv23, drv =>  algGVL.GPA_DO_DRV.DO_Reserv23);
+//[ЭС] [А30.25:13] [ЭС:XDO7:28a,XDO7:28b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv24, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv24, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv24, drv =>  algGVL.GPA_DO_DRV.DO_Reserv24);
+//[ЭС] [А30.25:14] [ЭС:XDO7:29a,XDO7:29b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv25, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv25, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv25, drv =>  algGVL.GPA_DO_DRV.DO_Reserv25);
+//[ЭС] [А30.25:15] [ЭС:XDO7:30a,XDO7:30b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv26, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv26, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv26, drv =>  algGVL.GPA_DO_DRV.DO_Reserv26);
+//[ЭС] [А30.25:16] [ЭС:XDO7:31a,XDO7:31b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv27, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv27, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv27, drv =>  algGVL.GPA_DO_DRV.DO_Reserv27);
+//[ЦБК] [А20.22:1] [ЦБК:XDO4:1a,XDO4:1b] Контроль аппаратуры вибрации Н
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Check_VN, fromHMI := algGVL.GPA_DO_FromHMI.Check_VN, toHMI := algGVL.GPA_DO_ToHMI.Check_VN, drv =>  algGVL.GPA_DO_DRV.Check_VN);
+//[ЦБК] [А20.22:2] [ЦБК:XDO4:2a,XDO4:2b] Контроль аппаратуры вибрации ИКЛЖ ЗО Н
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Check_VZON, fromHMI := algGVL.GPA_DO_FromHMI.Check_VZON, toHMI := algGVL.GPA_DO_ToHMI.Check_VZON, drv =>  algGVL.GPA_DO_DRV.Check_VZON);
+//[ЦБК] [А20.22:3] [ЦБК:XDO4:3a,XDO4:3b] Контроль аппаратуры вибрации ИКЛЖ ОС Н
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Check_VOSN, fromHMI := algGVL.GPA_DO_FromHMI.Check_VOSN, toHMI := algGVL.GPA_DO_ToHMI.Check_VOSN, drv =>  algGVL.GPA_DO_DRV.Check_VOSN);
+//[ЦБК] [А20.22:4] [ЦБК:XDO4:4a,XDO4:4b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv28, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv28, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv28, drv =>  algGVL.GPA_DO_DRV.DO_Reserv28);
+//[ЦБК] [А20.22:5] [ЦБК:XDO5:1a,XDO5:1b] Кран N1 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr1_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr1_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr1_OF, drv =>  algGVL.GPA_DO_DRV.Kr1_OF);
+//[ЦБК] [А20.22:6] [ЦБК:XDO5:2a,XDO5:2b] Кран N2 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr2_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr2_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr2_OF, drv =>  algGVL.GPA_DO_DRV.Kr2_OF);
+//[ЦБК] [А20.22:7] [ЦБК:XDO5:3a,XDO5:3b] Кран N4 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr4_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr4_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr4_OF, drv =>  algGVL.GPA_DO_DRV.Kr4_OF);
+//[ЦБК] [А20.22:8] [ЦБК:XDO5:4a,XDO5:4b] Кран N5 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr5_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr5_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr5_ON, drv =>  algGVL.GPA_DO_DRV.Kr5_ON);
+//[ЦБК] [А20.23:1] [ЦБК:XDO5:5a,XDO5:5b] Кран N6 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr6_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr6_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr6_OF, drv =>  algGVL.GPA_DO_DRV.Kr6_OF);
+//[ЦБК] [А20.23:2] [ЦБК:XDO5:6a,XDO5:6b] Кран N1 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr1_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr1_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr1_ON, drv =>  algGVL.GPA_DO_DRV.Kr1_ON);
+//[ЦБК] [А20.23:3] [ЦБК:XDO5:7a,XDO5:7b] Кран N2 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr2_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr2_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr2_ON, drv =>  algGVL.GPA_DO_DRV.Kr2_ON);
+//[ЦБК] [А20.23:4] [ЦБК:XDO5:8a,XDO5:8b] Кран N4 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr4_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr4_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr4_ON, drv =>  algGVL.GPA_DO_DRV.Kr4_ON);
+//[ЦБК] [А20.23:5] [ЦБК:XDO5:9a,XDO5:9b] Кран N5 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr5_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr5_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr5_OF, drv =>  algGVL.GPA_DO_DRV.Kr5_OF);
+//[ЦБК] [А20.23:6] [ЦБК:XDO5:10a,XDO5:10b] Кран N6 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr6_ON, fromHMI := algGVL.GPA_DO_FromHMI.Kr6_ON, toHMI := algGVL.GPA_DO_ToHMI.Kr6_ON, drv =>  algGVL.GPA_DO_DRV.Kr6_ON);
+//[ЦБК] [А20.23:7] [ЦБК:XDO5:11a,XDO5:11b] Кран N9 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.Kr9_OF, fromHMI := algGVL.GPA_DO_FromHMI.Kr9_OF, toHMI := algGVL.GPA_DO_ToHMI.Kr9_OF, drv =>  algGVL.GPA_DO_DRV.Kr9_OF);
+//[ЦБК] [А20.23:8] [ЦБК:XDO5:12a,XDO5:12b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv29, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv29, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv29, drv =>  algGVL.GPA_DO_DRV.DO_Reserv29);
+//[ЦБК] [А20.24:1] [ЦБК:XDO5:13a,XDO5:13b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv30, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv30, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv30, drv =>  algGVL.GPA_DO_DRV.DO_Reserv30);
+//[ЦБК] [А20.24:2] [ЦБК:XDO6:1a,XDO6:1b] ПНУ нагнетателя включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.PNU_ON, fromHMI := algGVL.GPA_DO_FromHMI.PNU_ON, toHMI := algGVL.GPA_DO_ToHMI.PNU_ON, drv =>  algGVL.GPA_DO_DRV.PNU_ON);
+//[ЦБК] [А20.24:3] [ЦБК:XDO6:2a,XDO6:2b] Насос перемешивания масла в БН включить
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.NPBN_ON, fromHMI := algGVL.GPA_DO_FromHMI.NPBN_ON, toHMI := algGVL.GPA_DO_ToHMI.NPBN_ON, drv =>  algGVL.GPA_DO_DRV.NPBN_ON);
+//[ЦБК] [А20.24:4] [ЦБК:XDO6:3a,XDO6:3b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv31, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv31, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv31, drv =>  algGVL.GPA_DO_DRV.DO_Reserv31);
+//[ЦБК] [А20.24:5] [ЦБК:XDO6:4a,XDO6:4b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv32, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv32, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv32, drv =>  algGVL.GPA_DO_DRV.DO_Reserv32);
+//[ЦБК] [А20.24:6] [ЦБК:XDO6:5a,XDO6:5b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv33, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv33, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv33, drv =>  algGVL.GPA_DO_DRV.DO_Reserv33);
+//[ЦБК] [А20.24:7] [ЦБК:XDO6:6a,XDO6:6b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv34, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv34, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv34, drv =>  algGVL.GPA_DO_DRV.DO_Reserv34);
+//[ЦБК] [А20.24:8] [ЦБК:XDO6:7a,XDO6:7b] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv35, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv35, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv35, drv =>  algGVL.GPA_DO_DRV.DO_Reserv35);
+//[АГМБ] [А40.13:1] [АГМБ:,] Включить нагреватель ЕК1
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK1_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK1_ON, toHMI := algGVL.GPA_DO_ToHMI.EK1_ON, drv =>  algGVL.GPA_DO_DRV.EK1_ON);
+//[АГМБ] [А40.13:2] [АГМБ:,] Включить нагреватель ЕК2
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK2_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK2_ON, toHMI := algGVL.GPA_DO_ToHMI.EK2_ON, drv =>  algGVL.GPA_DO_DRV.EK2_ON);
+//[АГМБ] [А40.13:3] [АГМБ:,] Включить нагреватель ЕК3
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK3_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK3_ON, toHMI := algGVL.GPA_DO_ToHMI.EK3_ON, drv =>  algGVL.GPA_DO_DRV.EK3_ON);
+//[АГМБ] [А40.13:4] [АГМБ:,] Включить нагреватель ЕК4
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK4_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK4_ON, toHMI := algGVL.GPA_DO_ToHMI.EK4_ON, drv =>  algGVL.GPA_DO_DRV.EK4_ON);
+//[АГМБ] [А40.13:5] [АГМБ:,] Включить нагреватель ЕК5
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK5_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK5_ON, toHMI := algGVL.GPA_DO_ToHMI.EK5_ON, drv =>  algGVL.GPA_DO_DRV.EK5_ON);
+//[АГМБ] [А40.13:6] [АГМБ:,] Включить нагреватель ЕК6
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.EK6_ON, fromHMI := algGVL.GPA_DO_FromHMI.EK6_ON, toHMI := algGVL.GPA_DO_ToHMI.EK6_ON, drv =>  algGVL.GPA_DO_DRV.EK6_ON);
+//[АГМБ] [А40.13:7] [АГМБ:,] Кран КР1 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR1_ON, fromHMI := algGVL.GPA_DO_FromHMI.KrKR1_ON, toHMI := algGVL.GPA_DO_ToHMI.KrKR1_ON, drv =>  algGVL.GPA_DO_DRV.KrKR1_ON);
+//[АГМБ] [А40.13:8] [АГМБ:,] Кран КР1 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR1_OF, fromHMI := algGVL.GPA_DO_FromHMI.KrKR1_OF, toHMI := algGVL.GPA_DO_ToHMI.KrKR1_OF, drv =>  algGVL.GPA_DO_DRV.KrKR1_OF);
+//[АГМБ] [А40.15:1] [АГМБ:,] Кран КР2 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR2_ON, fromHMI := algGVL.GPA_DO_FromHMI.KrKR2_ON, toHMI := algGVL.GPA_DO_ToHMI.KrKR2_ON, drv =>  algGVL.GPA_DO_DRV.KrKR2_ON);
+//[АГМБ] [А40.15:2] [АГМБ:,] Кран КР2 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR2_OF, fromHMI := algGVL.GPA_DO_FromHMI.KrKR2_OF, toHMI := algGVL.GPA_DO_ToHMI.KrKR2_OF, drv =>  algGVL.GPA_DO_DRV.KrKR2_OF);
+//[АГМБ] [А40.15:3] [АГМБ:,] Кран КР3 закрыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR3_ON, fromHMI := algGVL.GPA_DO_FromHMI.KrKR3_ON, toHMI := algGVL.GPA_DO_ToHMI.KrKR3_ON, drv =>  algGVL.GPA_DO_DRV.KrKR3_ON);
+//[АГМБ] [А40.15:4] [АГМБ:,] Кран КР3 открыть
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.KrKR3_OF, fromHMI := algGVL.GPA_DO_FromHMI.KrKR3_OF, toHMI := algGVL.GPA_DO_ToHMI.KrKR3_OF, drv =>  algGVL.GPA_DO_DRV.KrKR3_OF);
+//[АГМБ] [А40.15:5] [АГМБ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv36, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv36, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv36, drv =>  algGVL.GPA_DO_DRV.DO_Reserv36);
+//[АГМБ] [А40.15:6] [АГМБ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv37, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv37, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv37, drv =>  algGVL.GPA_DO_DRV.DO_Reserv37);
+//[АГМБ] [А40.15:7] [АГМБ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv38, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv38, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv38, drv =>  algGVL.GPA_DO_DRV.DO_Reserv38);
+//[АГМБ] [А40.15:8] [АГМБ:,] Резерв
+VGSig.fnDO_Processing(algOut := algGVL.GPA_DO.DO_Reserv39, fromHMI := algGVL.GPA_DO_FromHMI.DO_Reserv39, toHMI := algGVL.GPA_DO_ToHMI.DO_Reserv39, drv =>  algGVL.GPA_DO_DRV.DO_Reserv39);
+//Конец сгенерированного кода

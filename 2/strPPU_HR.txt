@@ -1,0 +1,32 @@
+TYPE strPPU_HR :
+STRUCT
+    HR_TR_notReady:BOOL; //ТР:нет статуса "Остановлен"
+    HR_Fire:BOOL; //Пожар ГПА
+    HR_Tm_MBD:BOOL; //Температура масла в МБД < 5 °С
+    HR_SK_OF:BOOL; //СК не закрыт
+    HR_Kr1_noOF:BOOL; //Кран 1 не закрыт
+    HR_KrAPK_noON:BOOL; //Кран 6р(АПК) не открыт
+    HR_MBD_Hmax:BOOL; //Максимальное количество масла в МБД
+    HR_Tm_MBN:BOOL; //Температура масла в МБН < 5 °С
+    HR_BK1_ON:BOOL; //БК 1 не закрыт
+    HR_BK2_ON:BOOL; //БК 2 не закрыт
+    HR_Tv_bayN:BOOL; //Температура воздуха в отсеке Н < 5 °С
+    HR_bayGTU:BOOL; //Температура воздуха в отсеке ГТУ < 5 °С
+    HR_Kr5_noON:BOOL; //Кран 5 не открыт
+    HR_MBN_levelOilMin:BOOL; //Минимальный уровень масла в МБН
+    HR_MBN_levelOilMax:BOOL; //Максимальный уровень масла в МБН
+    HR_Kr2_noOF:BOOL; //Кран 2 не закрыт
+    HR_Kr4_noOF:BOOL; //Кран 4 не закрыт
+    HR_Kr6_noOF:BOOL; //Кран 6 не закрыт
+    HR_Kr9_noON:BOOL; //Кран 9 не открыт
+    HR_Kr12_noOF:BOOL; //Кран 12 не закрыт
+    HR_Kr10_noON:BOOL; //Кран 10 не открыт
+    HR_Kr11_noOF:BOOL; //Кран 11 не закрыт
+    HR_ZsVS_ON:BOOL; //Заслонка ВС открыта
+    HR_ZsT_noOF:BOOL; //ЗсТУТ не закрыта
+    HR_ZsB_noON:BOOL; //ЗсБУТ не открыта
+    HR_ZPCV_noOF:BOOL; //ЗПЦВ не закрыта
+    HR_POS_noOF:BOOL; //ЗсПОС не закрыта
+    HR_ZOV7_noOF:BOOL; //ЗОВ7 не закрыта
+END_STRUCT
+END_TYPE

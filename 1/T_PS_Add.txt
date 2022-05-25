@@ -1,0 +1,621 @@
+
+<Data>
+    <CompositeFBType Name="T_PS_Add" Comment="Для создания дополнительных ПС" UUID="ACB75AA74AAFE17F2A6C428C8C84D74C">
+        <InterfaceList>
+            <InputVars>
+                <VarDeclaration Name="PrefAb" Type="STRING" InitialValue="&apos;&apos;" UUID="15CAEFA64E05F05E2E69EA9FFA392D2D" />
+                <VarDeclaration Name="NameRU" Type="STRING" InitialValue="&apos;&apos;" UUID="9F1E9D344B2923E08A507A8FFFF20C05" />
+            </InputVars>
+        </InterfaceList>
+        <FBNetwork>
+            <FB Name="Alarm_1_cntFlt_VOD_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="FD3068A03F9C4D3288A0CE0B38DB6EBF" X="0.0" Y="250">
+<VarValue Variable="Name" Value="&apos;Вентилятор 1 турбоблока. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VOD_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VOD_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_2_cntFlt_VOD_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="CC08B478C2CE4E5C893D8DF3BFE5D086" X="0.0" Y="500">
+<VarValue Variable="Name" Value="&apos;Вентилятор 2 турбоблока. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VOD_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VOD_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_3_cntFlt_VOD_3" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="DB32494E07BE4AD7A9D00EADA9030836" X="0.0" Y="750">
+<VarValue Variable="Name" Value="&apos;Вентилятор 3 турбоблока. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VOD_3_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VOD_3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_4_cntFlt_VOT_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="74AE49BEB2964EFDB060BB2585E6C22A" X="0.0" Y="1000">
+<VarValue Variable="Name" Value="&apos;Вентилятор кожуха трансмиссии 1. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VOT_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VOT_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_5_cntFlt_VOT_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="9C6ED82447D84FA987BFFE7AE5F1A83C" X="0.0" Y="1250">
+<VarValue Variable="Name" Value="&apos;Вентилятор кожуха трансмиссии 2. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VOT_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VOT_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_6_cntFlt_VDBV_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="B108C5524D44419EBB0D7E5503C38985" X="0.0" Y="1500">
+<VarValue Variable="Name" Value="&apos;Воздуходувка барьерного воздуха блока воздухоподготовки 1. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VDBV_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VDBV_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_7_cntFlt_VDBV_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="5BB63C38341E4F18BD2F39D4B6D61B07" X="0.0" Y="1750">
+<VarValue Variable="Name" Value="&apos;Воздуходувка барьерного воздуха блока воздухоподготовки 2. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VDBV_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VDBV_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_8_cntFlt_MNDE" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="60880B0A30A643E494C6C9D42A249E76" X="0.0" Y="2000">
+<VarValue Variable="Name" Value="&apos;Кран подачи масла в насос прокачки масляный (МНДЭ) ГТУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_MNDE_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_MNDE&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_9_cntFlt_NOM" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="8FA074E8350647529085406E7DEA340F" X="0.0" Y="2250">
+<VarValue Variable="Name" Value="&apos;Насос откачки масляный из силовой турбины. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NOM_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NOM&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_10_cntFlt_NPM" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="AF848344ABB44E82AB8EDB14D76655C6" X="0.0" Y="2500">
+<VarValue Variable="Name" Value="&apos;Насос прокачки масляный ГТУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NPM_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NPM&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_11_cntFlt_KrPV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="C12E1EF0DD14463C8D0E927638EAA837" X="0.0" Y="2750">
+<VarValue Variable="Name" Value="&apos;Кран подачи воздуха в опоры ГТД. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KrPV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KrPV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_12_cntFlt_OBV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="2A66D62EAD884234AA43A9294B5287E2" X="0.0" Y="3000">
+<VarValue Variable="Name" Value="&apos;Охладитель барьерного воздуха от ГТД. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_OBV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_OBV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_13_cntFlt_VAZ" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="84E29A34446E41D8B1721CB5E3A55B33" X="0.0" Y="3250">
+<VarValue Variable="Name" Value="&apos;Вентилятор загазованности ангара. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VAZ_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VAZ&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_14_cntFlt_OBV_BVP_main" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="3D926934561A4AED9E8006BC04A892EB" X="0.0" Y="3500">
+<VarValue Variable="Name" Value="&apos;Охладитель барьерного воздуха после воздуходувок БВП. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_OBV_BVP_main_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_OBV_BVP_main&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_15_cntFlt_OBV_BVP_reserv" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="4C400E2290BE42D8BC40C9732503FB94" X="0.0" Y="3750">
+<VarValue Variable="Name" Value="&apos;Охладитель барьерного воздуха после воздуходувок БВП. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_OBV_BVP_reserv_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_OBV_BVP_reserv&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_16_cntFlt_KOV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="82AABC220FF241DB8E67CA0A2D36EB73" X="0.0" Y="4000">
+<VarValue Variable="Name" Value="&apos;Кран отбора воздуха от ГТД на СГУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KOV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KOV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_17_cntFlt_BKU" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="146E7EF6526245B7806CB5D34202D014" X="0.0" Y="4250">
+<VarValue Variable="Name" Value="&apos;Бустерная компрессорная установка. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_BKU_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_BKU&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_18_cntFlt_KPV_GTU" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="A8A27DECEAB44FB5BBAC20D699DA4877" X="0.0" Y="4500">
+<VarValue Variable="Name" Value="&apos;Компрессор подачи воздуха охлаждения опор ГТУ при АО. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KPV_GTU_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KPV_GTU&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_19_cntFlt_TV_BKV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="08D8EEB006944760921E2B7655A6E521" X="0.0" Y="4750">
+<VarValue Variable="Name" Value="&apos;Тепловентилятор БКВ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_TV_BKV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_TV_BKV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_20_cntFlt_KUBV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="04646FD032C844219405C4EA3CC7BB4D" X="0.0" Y="5000">
+<VarValue Variable="Name" Value="&apos;Компрессорная установка блока воздухоподготовки. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KUBV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KUBV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_21_cntFlt_NTTG" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="878A810A1876408CB316F61ECF47AD2F" X="0.0" Y="5250">
+<VarValue Variable="Name" Value="&apos;Нагреватель трубопроводов топливного газа. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NTTG_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NTTG&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_22_cntFlt_KOPBG" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="0C4C8FCA1B024E33B34C9086AFAB075E" X="0.0" Y="5500">
+<VarValue Variable="Name" Value="&apos;Кабель обогрева подготовки буферного газа. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KOPBG_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KOPBG&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_23_cntFlt_VVA_main" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="2F48EA40C9CA40338C650E4A86AF0ABB" X="0.0" Y="5750">
+<VarValue Variable="Name" Value="&apos;Вентилятор ангара вытяжной (рабочий). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VVA_main_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VVA_main&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_24_cntFlt_VVA_reserv" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="496429F6D97047D582D42886672C18D8" X="0.0" Y="6000">
+<VarValue Variable="Name" Value="&apos;Вентилятор ангара вытяжной (резервный). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VVA_reserv_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VVA_reserv&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_25_cntFlt_VVAT" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="5DE434FE1E1E43FD9247396FD290366A" X="0.0" Y="6250">
+<VarValue Variable="Name" Value="&apos;Вентилятор ангара для работы в теплое время года. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VVAT_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VVAT&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_26_cntFlt_AZ_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="C592FAE8F95A43B9BC390595EAB7EA07" X="0.0" Y="6500">
+<VarValue Variable="Name" Value="&apos;Агрегат зажигания 1. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_AZ_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_AZ_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_27_cntFlt_AZ_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="67F6443ADA404F72992535445017BE2E" X="0.0" Y="6750">
+<VarValue Variable="Name" Value="&apos;Агрегат зажигания 2. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_AZ_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_AZ_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_28_cntFlt_NBG_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="CEB01B92F88E4DA9BF1A06742AD29EFC" X="0.0" Y="7000">
+<VarValue Variable="Name" Value="&apos;Нагреватель буферного газа (секция 1). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NBG_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NBG_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_29_cntFlt_NBG_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="7982825C83D8499A8F7F096FEFA285B6" X="0.0" Y="7250">
+<VarValue Variable="Name" Value="&apos;Нагреватель буферного газа (секция 2). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NBG_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NBG_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_30_cntFlt_NBG_3" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="2AAAA1C2AEEA4970BE1691459848E3A5" X="0.0" Y="7500">
+<VarValue Variable="Name" Value="&apos;Нагреватель буферного газа (секция 3). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NBG_3_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NBG_3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_31_cntFlt_NKA" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="19860F5EABDC471BA3AF27F13464CD74" X="0.0" Y="7750">
+<VarValue Variable="Name" Value="&apos;Нагреватель крыши ангара. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NKA_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NKA&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_32_cntFlt_NDT" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="B1A056C89B5A4F36ADE7F81A2F97A28B" X="0.0" Y="8000">
+<VarValue Variable="Name" Value="&apos;Нагреватель дренажного трубопровода. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NDT_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NDT&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_33_cntFlt_NBFTG" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="592A947450D24E56839B38FC09E1C9EF" X="0.0" Y="8250">
+<VarValue Variable="Name" Value="&apos;Нагреватель блока фильтров топливного газа. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NBFTG_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NBFTG&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_34_cntFlt_VBV_1" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="CF48405C223E47219828D9E1AC91B749" X="0.0" Y="8500">
+<VarValue Variable="Name" Value="&apos;Вентилятор 1 блока воздухоподготовки. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VBV_1_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VBV_1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_35_cntFlt_VBV_2" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="697ACBC06C8045EE8113C8D96ED81882" X="0.0" Y="8750">
+<VarValue Variable="Name" Value="&apos;Вентилятор 2 блока воздухоподготовки. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_VBV_2_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_VBV_2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_36_cntFlt_ZZA" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="CD58964A2D5C432599A5FB4930511C9A" X="0.0" Y="9000">
+<VarValue Variable="Name" Value="&apos;Заслонка защиты от авторотации. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_ZZA_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_ZZA&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_37_cntFlt_ZPSVOU" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="494AE7A46B1A4DF9AD81E6BBA9B53F90" X="0.0" Y="9250">
+<VarValue Variable="Name" Value="&apos;Заслонка противообледенительной системы ВОУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_ZPSVOU_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_ZPSVOU&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_38_cntFlt_KBTG" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="1D62C1F2964E475F96E8E7655BF4CF9F" X="0.0" Y="9500">
+<VarValue Variable="Name" Value="&apos;Кран байпаса теплообменника газомасляного. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KBTG_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KBTG&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_39_cntFlt_KPM" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="17607556F86E4399AC3E30A6B2D5774A" X="0.0" Y="9750">
+<VarValue Variable="Name" Value="&apos;Кран прокачки масла. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_KPM_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_KPM&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_40_cntFlt_Kr_Crk_MS" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="40D4CB4270B640FFBA83DB1503BA98DD" X="0.0" Y="10000">
+<VarValue Variable="Name" Value="&apos;Кран циркуляционный маслосистемы ГТУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_Kr_Crk_MS_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_Kr_Crk_MS&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_41_cntFlt_NSC" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="F35A3B1CE23C4F20AC279B5F5C1A8E42" X="0.0" Y="10250">
+<VarValue Variable="Name" Value="&apos;Насос смазки циркуляционный ГТД. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NSC_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NSC&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_42_cntFlt_NTM" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="8A7EC116C9FE43A18512A435A57D52B9" X="0.0" Y="10500">
+<VarValue Variable="Name" Value="&apos;Нагреватель трубопроводов маслосистемы ГТД (вне помещений). Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NTM_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NTM&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_43_cntFlt_NMB" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="DA780AFC652A40AD852D2162789BB64F" X="0.0" Y="10750">
+<VarValue Variable="Name" Value="&apos;Нагреватель маслобака ГТД. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NMB_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NMB&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_44_cntFlt_NKr6r" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="E572D9B6E8F64F2EAE8F7D1A7416E1B7" X="0.0" Y="11000">
+<VarValue Variable="Name" Value="&apos;Нагреватель клапана 6р. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NKr6r_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NKr6r&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_45_cntFlt_NKV" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="33CCAF28B472484D87A42AA0DBBCABCB" X="0.0" Y="11250">
+<VarValue Variable="Name" Value="&apos;Нагреватели клапанов вент. ТБ, БК ВОУ, ангара. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NKV_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NKV&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_46_cntFlt_SOG" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="3174DA5CA03046BF854E8536954E9BD2" X="0.0" Y="11500">
+<VarValue Variable="Name" Value="&apos;Стенд очистки жидкостей. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_SOG_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_SOG&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_47_cntFlt_OME" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="69E016028AE646DB9E55FA3109C32D90" X="0.0" Y="11750">
+<VarValue Variable="Name" Value="&apos;Очиститель масла электростатический ОМЭ01-03В. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_OME_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_OME&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_48_cntFlt_NVK" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="BDF66B7402524D99A4F4CDD3DE7BBF26" X="0.0" Y="12000">
+<VarValue Variable="Name" Value="&apos;Нагреватель выпуска канализации. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_NVK_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_NVK&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_49_cntFlt_EVVGPA" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="9E6ED7FCB6444E6F8BA180767E46F65D" X="0.0" Y="12250">
+<VarValue Variable="Name" Value="&apos;Электрообогрев ввода водопровода в укрытие ГПА. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_EVVGPA_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_EVVGPA&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_50_cntFlt_Kr_Pod_vzd_v_SGU" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="18BAF986D8404C59AE19684B7B079067" X="0.0" Y="12500">
+<VarValue Variable="Name" Value="&apos;Кран подачи воздуха в СГУ. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_Kr_Pod_vzd_v_SGU_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_Kr_Pod_vzd_v_SGU&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_51_cntFlt_Kr_Pod_vzd_ResNuj_cbn" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="D7323A3074724DF581B3A732E7A2C90D" X="0.0" Y="12750">
+<VarValue Variable="Name" Value="&apos;Кран подачи воздуха в ресивер для нужд ЦБН. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_Kr_Pod_vzd_ResNuj_cbn_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_Kr_Pod_vzd_ResNuj_cbn&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_52_cntFlt_Kr_Bp_Ohl_m" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="E61A4178BD704772AE3B9828152F8733" X="0.0" Y="13000">
+<VarValue Variable="Name" Value="&apos;Кран байпаса охладителя масла. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_Kr_Bp_Ohl_m_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_Kr_Bp_Ohl_m&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_53_cntFlt_TEN_vzd_dlja_opor_GTD" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="99580CF4C4BA457F85F301A1CF4CA8E6" X="0.0" Y="13250">
+<VarValue Variable="Name" Value="&apos;Нагреватель воздуха для опор ГТД. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_TEN_vzd_dlja_opor_GTD_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_TEN_vzd_dlja_opor_GTD&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_54_cntFlt_TEN_1_TB" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="ED2A4926DF1A4BA680183D89EEEBDAA4" X="0.0" Y="13500">
+<VarValue Variable="Name" Value="&apos;Нагреватель 1 турбоблока. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_TEN_1_TB_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_TEN_1_TB&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <FB Name="Alarm_55_cntFlt_TEN_2_TB" Type="TBaseAlarm" TypeUUID="FDF3516743AD251E202F19AC8317F746" UUID="63B8564A1D924241B3965BE5C606EFB1" X="0.0" Y="13750">
+<VarValue Variable="Name" Value="&apos;Нагреватель 2 турбоблока. Неисправность контактора&apos;" Type="STRING" />
+<VarValue Variable="Source" Value="&apos;ПС&apos;" Type="STRING" />
+<VarValue Variable="Category" Value="10100" Type="DINT" />
+<VarValue Variable="TagID" Value="&apos;cntFlt_TEN_2_TB_ID&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;cntFlt_TEN_2_TB&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;PS.&apos;" Type="STRING" />
+<VarValue Variable="TAG" Value="&apos;PS&apos;" Type="STRING" />
+</FB>
+            <DataConnections>
+<Connection Source="PrefAb" Destination="Alarm_1_cntFlt_VOD_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="FD3068A03F9C4D3288A0CE0B38DB6EBF.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_1_cntFlt_VOD_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="FD3068A03F9C4D3288A0CE0B38DB6EBF.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_2_cntFlt_VOD_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="CC08B478C2CE4E5C893D8DF3BFE5D086.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_2_cntFlt_VOD_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="CC08B478C2CE4E5C893D8DF3BFE5D086.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_3_cntFlt_VOD_3.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="DB32494E07BE4AD7A9D00EADA9030836.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_3_cntFlt_VOD_3.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="DB32494E07BE4AD7A9D00EADA9030836.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_4_cntFlt_VOT_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="74AE49BEB2964EFDB060BB2585E6C22A.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_4_cntFlt_VOT_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="74AE49BEB2964EFDB060BB2585E6C22A.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_5_cntFlt_VOT_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="9C6ED82447D84FA987BFFE7AE5F1A83C.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_5_cntFlt_VOT_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="9C6ED82447D84FA987BFFE7AE5F1A83C.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_6_cntFlt_VDBV_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="B108C5524D44419EBB0D7E5503C38985.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_6_cntFlt_VDBV_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="B108C5524D44419EBB0D7E5503C38985.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_7_cntFlt_VDBV_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="5BB63C38341E4F18BD2F39D4B6D61B07.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_7_cntFlt_VDBV_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="5BB63C38341E4F18BD2F39D4B6D61B07.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_8_cntFlt_MNDE.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="60880B0A30A643E494C6C9D42A249E76.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_8_cntFlt_MNDE.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="60880B0A30A643E494C6C9D42A249E76.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_9_cntFlt_NOM.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="8FA074E8350647529085406E7DEA340F.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_9_cntFlt_NOM.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="8FA074E8350647529085406E7DEA340F.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_10_cntFlt_NPM.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="AF848344ABB44E82AB8EDB14D76655C6.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_10_cntFlt_NPM.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="AF848344ABB44E82AB8EDB14D76655C6.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_11_cntFlt_KrPV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="C12E1EF0DD14463C8D0E927638EAA837.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_11_cntFlt_KrPV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="C12E1EF0DD14463C8D0E927638EAA837.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_12_cntFlt_OBV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="2A66D62EAD884234AA43A9294B5287E2.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_12_cntFlt_OBV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="2A66D62EAD884234AA43A9294B5287E2.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_13_cntFlt_VAZ.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="84E29A34446E41D8B1721CB5E3A55B33.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_13_cntFlt_VAZ.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="84E29A34446E41D8B1721CB5E3A55B33.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_14_cntFlt_OBV_BVP_main.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="3D926934561A4AED9E8006BC04A892EB.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_14_cntFlt_OBV_BVP_main.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="3D926934561A4AED9E8006BC04A892EB.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_15_cntFlt_OBV_BVP_reserv.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="4C400E2290BE42D8BC40C9732503FB94.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_15_cntFlt_OBV_BVP_reserv.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="4C400E2290BE42D8BC40C9732503FB94.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_16_cntFlt_KOV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="82AABC220FF241DB8E67CA0A2D36EB73.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_16_cntFlt_KOV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="82AABC220FF241DB8E67CA0A2D36EB73.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_17_cntFlt_BKU.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="146E7EF6526245B7806CB5D34202D014.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_17_cntFlt_BKU.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="146E7EF6526245B7806CB5D34202D014.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_18_cntFlt_KPV_GTU.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="A8A27DECEAB44FB5BBAC20D699DA4877.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_18_cntFlt_KPV_GTU.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="A8A27DECEAB44FB5BBAC20D699DA4877.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_19_cntFlt_TV_BKV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="08D8EEB006944760921E2B7655A6E521.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_19_cntFlt_TV_BKV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="08D8EEB006944760921E2B7655A6E521.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_20_cntFlt_KUBV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="04646FD032C844219405C4EA3CC7BB4D.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_20_cntFlt_KUBV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="04646FD032C844219405C4EA3CC7BB4D.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_21_cntFlt_NTTG.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="878A810A1876408CB316F61ECF47AD2F.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_21_cntFlt_NTTG.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="878A810A1876408CB316F61ECF47AD2F.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_22_cntFlt_KOPBG.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="0C4C8FCA1B024E33B34C9086AFAB075E.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_22_cntFlt_KOPBG.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="0C4C8FCA1B024E33B34C9086AFAB075E.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_23_cntFlt_VVA_main.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="2F48EA40C9CA40338C650E4A86AF0ABB.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_23_cntFlt_VVA_main.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="2F48EA40C9CA40338C650E4A86AF0ABB.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_24_cntFlt_VVA_reserv.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="496429F6D97047D582D42886672C18D8.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_24_cntFlt_VVA_reserv.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="496429F6D97047D582D42886672C18D8.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_25_cntFlt_VVAT.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="5DE434FE1E1E43FD9247396FD290366A.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_25_cntFlt_VVAT.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="5DE434FE1E1E43FD9247396FD290366A.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_26_cntFlt_AZ_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="C592FAE8F95A43B9BC390595EAB7EA07.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_26_cntFlt_AZ_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="C592FAE8F95A43B9BC390595EAB7EA07.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_27_cntFlt_AZ_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="67F6443ADA404F72992535445017BE2E.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_27_cntFlt_AZ_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="67F6443ADA404F72992535445017BE2E.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_28_cntFlt_NBG_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="CEB01B92F88E4DA9BF1A06742AD29EFC.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_28_cntFlt_NBG_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="CEB01B92F88E4DA9BF1A06742AD29EFC.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_29_cntFlt_NBG_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="7982825C83D8499A8F7F096FEFA285B6.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_29_cntFlt_NBG_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="7982825C83D8499A8F7F096FEFA285B6.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_30_cntFlt_NBG_3.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="2AAAA1C2AEEA4970BE1691459848E3A5.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_30_cntFlt_NBG_3.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="2AAAA1C2AEEA4970BE1691459848E3A5.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_31_cntFlt_NKA.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="19860F5EABDC471BA3AF27F13464CD74.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_31_cntFlt_NKA.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="19860F5EABDC471BA3AF27F13464CD74.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_32_cntFlt_NDT.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="B1A056C89B5A4F36ADE7F81A2F97A28B.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_32_cntFlt_NDT.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="B1A056C89B5A4F36ADE7F81A2F97A28B.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_33_cntFlt_NBFTG.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="592A947450D24E56839B38FC09E1C9EF.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_33_cntFlt_NBFTG.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="592A947450D24E56839B38FC09E1C9EF.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_34_cntFlt_VBV_1.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="CF48405C223E47219828D9E1AC91B749.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_34_cntFlt_VBV_1.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="CF48405C223E47219828D9E1AC91B749.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_35_cntFlt_VBV_2.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="697ACBC06C8045EE8113C8D96ED81882.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_35_cntFlt_VBV_2.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="697ACBC06C8045EE8113C8D96ED81882.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_36_cntFlt_ZZA.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="CD58964A2D5C432599A5FB4930511C9A.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_36_cntFlt_ZZA.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="CD58964A2D5C432599A5FB4930511C9A.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_37_cntFlt_ZPSVOU.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="494AE7A46B1A4DF9AD81E6BBA9B53F90.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_37_cntFlt_ZPSVOU.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="494AE7A46B1A4DF9AD81E6BBA9B53F90.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_38_cntFlt_KBTG.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="1D62C1F2964E475F96E8E7655BF4CF9F.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_38_cntFlt_KBTG.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="1D62C1F2964E475F96E8E7655BF4CF9F.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_39_cntFlt_KPM.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="17607556F86E4399AC3E30A6B2D5774A.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_39_cntFlt_KPM.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="17607556F86E4399AC3E30A6B2D5774A.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_40_cntFlt_Kr_Crk_MS.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="40D4CB4270B640FFBA83DB1503BA98DD.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_40_cntFlt_Kr_Crk_MS.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="40D4CB4270B640FFBA83DB1503BA98DD.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_41_cntFlt_NSC.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="F35A3B1CE23C4F20AC279B5F5C1A8E42.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_41_cntFlt_NSC.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="F35A3B1CE23C4F20AC279B5F5C1A8E42.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_42_cntFlt_NTM.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="8A7EC116C9FE43A18512A435A57D52B9.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_42_cntFlt_NTM.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="8A7EC116C9FE43A18512A435A57D52B9.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_43_cntFlt_NMB.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="DA780AFC652A40AD852D2162789BB64F.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_43_cntFlt_NMB.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="DA780AFC652A40AD852D2162789BB64F.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_44_cntFlt_NKr6r.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="E572D9B6E8F64F2EAE8F7D1A7416E1B7.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_44_cntFlt_NKr6r.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="E572D9B6E8F64F2EAE8F7D1A7416E1B7.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_45_cntFlt_NKV.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="33CCAF28B472484D87A42AA0DBBCABCB.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_45_cntFlt_NKV.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="33CCAF28B472484D87A42AA0DBBCABCB.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_46_cntFlt_SOG.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="3174DA5CA03046BF854E8536954E9BD2.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_46_cntFlt_SOG.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="3174DA5CA03046BF854E8536954E9BD2.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_47_cntFlt_OME.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="69E016028AE646DB9E55FA3109C32D90.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_47_cntFlt_OME.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="69E016028AE646DB9E55FA3109C32D90.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_48_cntFlt_NVK.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="BDF66B7402524D99A4F4CDD3DE7BBF26.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_48_cntFlt_NVK.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="BDF66B7402524D99A4F4CDD3DE7BBF26.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_49_cntFlt_EVVGPA.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="9E6ED7FCB6444E6F8BA180767E46F65D.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_49_cntFlt_EVVGPA.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="9E6ED7FCB6444E6F8BA180767E46F65D.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_50_cntFlt_Kr_Pod_vzd_v_SGU.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="18BAF986D8404C59AE19684B7B079067.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_50_cntFlt_Kr_Pod_vzd_v_SGU.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="18BAF986D8404C59AE19684B7B079067.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_51_cntFlt_Kr_Pod_vzd_ResNuj_cbn.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="D7323A3074724DF581B3A732E7A2C90D.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_51_cntFlt_Kr_Pod_vzd_ResNuj_cbn.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="D7323A3074724DF581B3A732E7A2C90D.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_52_cntFlt_Kr_Bp_Ohl_m.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="E61A4178BD704772AE3B9828152F8733.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_52_cntFlt_Kr_Bp_Ohl_m.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="E61A4178BD704772AE3B9828152F8733.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_53_cntFlt_TEN_vzd_dlja_opor_GTD.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="99580CF4C4BA457F85F301A1CF4CA8E6.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_53_cntFlt_TEN_vzd_dlja_opor_GTD.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="99580CF4C4BA457F85F301A1CF4CA8E6.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_54_cntFlt_TEN_1_TB.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="ED2A4926DF1A4BA680183D89EEEBDAA4.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_54_cntFlt_TEN_1_TB.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="ED2A4926DF1A4BA680183D89EEEBDAA4.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+<Connection Source="PrefAb" Destination="Alarm_55_cntFlt_TEN_2_TB.PrefAb" SourceUUID="15CAEFA64E05F05E2E69EA9FFA392D2D" DestinationUUID="63B8564A1D924241B3965BE5C606EFB1.BF006B714315657CEF6F149C7EA85201" />
+<Connection Source="NameRU" Destination="Alarm_55_cntFlt_TEN_2_TB.NameRU" SourceUUID="9F1E9D344B2923E08A507A8FFFF20C05" DestinationUUID="63B8564A1D924241B3965BE5C606EFB1.8ABFE2D44BF39DC62F090CAA97DA29C7" />
+
+            </DataConnections>
+        </FBNetwork>
+    </CompositeFBType>
+</Data>

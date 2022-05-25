@@ -1,0 +1,1676 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd">
+<html><head><meta charset="utf-8"  name="qrichtext" content="1" /><style type="text/css">
+p, li { white-space: pre-wrap; }
+</style></head><body style=" font-family:'Arial Narrow'; font-size:12pt; font-weight:400; font-style:normal;">
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">ООО "Газпром ПХГ"</span></p>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">Невское УПХГ</span></p>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">ГПА21  КЦ-2</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">	Дата:	</span> <span style=" font-family:'PT Sans'; text-decoration: ;  "><!--RPT DT:TODAY"%d.%m.%Y" --></span> </p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">	Время: </span>  <span style=" font-family:'PT Sans'; text-decoration: ;  "><!--RPT DT:NOW"%H.%M.%S" --></span> <span style=" font-size:14pt;">		</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><br /></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-size:14pt;">	</span><span style="font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">Текущие параметры</span></p>
+<p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style="font-family:'MS Shell Dlg 2'; font-size:14pt; font-weight:600;">		Сменный инженер	_______________________      Сменный машинист _______________________</span></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;"><br /></p>
+<table border="1" style=" margin-top:0px; margin-bottom:0px; margin-left:10px; margin-right:0px;" width="100%" cellspacing="1" cellpadding="1" bgcolor="#ffffff">
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Параметр</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Ед.изм.</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Значение</p></td>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нагрузка Д</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pow_Procent;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нагрузка Д</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pow_mBar;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Уставка нагрузки на двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.ScrCtrl_eng_set_load;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Активная мощность</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кВт</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pow;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Максимальная мощность при текущих оборотах</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кВт</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.MaxPow;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Шаг нагрузки ГК</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">шаг</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.stepLoad;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Уставка максимального шага нагрузки</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">шаг</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.ScrCtrl_eng_set_stepLoad;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Поток газа на ГК</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">м3/час</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Qg_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа на входе в нагнетатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pg_inN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура газа на входе в нагнетатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tg_inK;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа на выходе из 1-ой ступени нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pg_outSt1K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура газа на выходе из газоохладителя № 1</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tg_outAVOG1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа на выходе из 2-ой ступени нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pg_outSt2K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура газа на выходе из газоохладителя № 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tg_outAVOG2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа перед краном № 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pg_inKr2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа после крана № 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pg_outKr2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла на входе в модуль смазки</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Pmsm_N;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура масла на входе в модуль смазки</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tmsm_N;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура охлаждающей воды на входе в нагнетатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tow_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 1 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 2 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 3 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh3;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 4 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh4;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 5 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh5;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура подшипника № 6 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tpodsh6;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 1 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl1_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 2 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl2_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 3 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl3_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 4 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl4_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 5 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl5_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура цилиндра № 6 нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tcyl6_K;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление газа на входе в  камеру сгорания</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_GAS_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нормат. давление главного газа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.NormPtg;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нормат. длительность дозир. главного газа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мс</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.NornLongOT;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление топливного газа на входе в ГРУ</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Ptg_inKr16;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление топливного газа (контроль герметичности клапанов ГРУ)</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Ptg_outKr15;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура топливного газа на входе в ГРУ</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Ttg_inD;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Расход топливного газа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">м3/час</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Qtg;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А1</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А3</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A3;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А4</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A4;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А5</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A5;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А6</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A6;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А7</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A7;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А8</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A8;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр А9</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_A9;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B1</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B3</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B3;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B4</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B4;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B5</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B5;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B6</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B6;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B7</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B7;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B8</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B8;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура выхлопных газов цилиндр B9</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TC_B9;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Средняя температура выхлопных газов</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.TaveragExGas;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Обороты</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">об/мин</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.N;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Обороты турбины А</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">об/мин</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.NturbA;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Обороты турбины В</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">об/мин</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.NturbB;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 0</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_0;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 1</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 3</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_3;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 4</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_4;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 5</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_5;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 6</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_6;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 7</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_7;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 8</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_8;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 9</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_9;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура главного подшипника 10</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_TCMB_10;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Вибрация двигателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мм/с</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Vibr_D_1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Вибрация нагнетателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мм/с</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Vibr_K_1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Уровень масла в газоочистителе № 3 верхний</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мм</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.H_GO1_1;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Уровень масла в газоочистителе № 3 нижний</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мм</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.H_GO1_2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Перепад давлений газа на газоочистителе № 3</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.dP_GO3;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура нагретого воздуха на входе турбокомпрессора</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_AIR_IN_TC;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление атмосферного воздуха</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_I_KPA_16_2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление нагнетаемого воздуха</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_AIR_CYL_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура нагнетаемого воздуха в двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_AIR_IN_CYL;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Нормальное давление воздуха наддува</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.NormPnadduva;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Отклонение давления воздуха наддува</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">кПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.OffsetPnadduva;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Перепускная заслонка (выхлоп)</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.WastegateSet;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Степень открытия перепускной заслонки</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.StepOtkPerZas;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Перепускной клапан (воздух)</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.BypassPressureSet;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Степень открытия перепускного клапана</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.StepOtkPerKlap;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Упр. рег. клапаном подогревателя воздуха наддува</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">%</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.KrRegHeatAir;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура масла на входе в двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_OIL_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла на входе в двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_OIL_IN_PT201;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла на входе в двигатель 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_OIL_IN_PT201_2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла на входе в турбокомпрессор А</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_OIL_TURB_A;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла на входе в турбокомпрессор В</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_OIL_TURB_B;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Уровень масла в картере двигателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">мм</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_oilLevel;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление масла смазки на входе фильтра</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_OIL_FILTER_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление в картере двигателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_CASE;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление нагретой воды на входе в двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_WTR_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура нагретой воды на входе в двигатель</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_WTR_IN;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура нагретой воды на выходе из двигателя</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_WTR_OUT;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура нагретой воды на выходе из двигателя 2</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_WTR_OUT_2;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление охлаждающей воды на нагнетании насоса</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_WTR_OUT;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура охлаждающей воды на нагнетании насоса</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_T_WTR_PLNG;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Температура охлаждающей воды на входе в радиаторы охлаждения</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">°С</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.Tow_AVOG;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+<tr>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Давление пускового воздуха (впуск)</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">МПа</p></td>
+<td>
+<p align="center" style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;"><span style=" font-family:'PT Sans'; text-decoration: ;  "><!--lua do 
+local arc = Core(os.time()-3).AI_Trend.AI_P_AIR_START;
+if arc.res==0 then
+local s=string.format('%.2f', arc.val)
+print(s);
+else 
+print('НД');
+end;
+end;            --></span> </p></td>
+</tr>
+
+</table>
+<p align="center" style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:600;"><br /></p>
+<p style="-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:'MS Shell Dlg 2'; font-size:8pt;"><br /></p></body></html>

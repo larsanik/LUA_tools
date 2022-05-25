@@ -1,0 +1,99 @@
+//***************************************
+//*  Date: 03/03/2021 16:37:03
+//*  Place: SPB-ERSHOV
+//***************************************
+
+//Контроль ХР
+algGVL.alg.JumpToHR := algGVL.GPA_BTN.HR or algGVL.alg.JumpToHR and not (algGVL.GPA_Mode.HR or algGVL.GPA_BTN.Repair or algGVL.GPA_BTN.GR);
+algGVL.alg.Chk_HR := (algGVL.drm.KPK.complete or algGVL.drm.PZM.complete or algGVL.drm.Crank.complete or algGVL.drm.NOs.complete or algGVL.drm.NOb.complete or algGVL.alg.JumpToHR or algGVL.alg.PZ_end or algGVL.alg.Chk_HR) and not (algGVL.GPA_BTN.Repair or algGVL.GPA_BTN.GR or algGVL.GPA_BTN.Pusk or algGVL.tmo.OverTime_HR or algGVL.GPA_Mode.GR or algGVL.alg.flashRemont);
+algGVL.alg.HR_nRdy := FALSE;
+
+//--------------------------------------------------------------------------------
+//Поз. 34, ТР:нет статуса "Остановлен"
+algGVL.GPA_PPU_HR.HR_TR_notReady := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.alg.HR_TR_notReady; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_TR_notReady;
+//--------------------------------------------------------------------------------
+//Поз. 72, Пожар ГПА
+algGVL.GPA_PPU_HR.HR_Fire := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_DI.Fire; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Fire;
+//--------------------------------------------------------------------------------
+//Поз. 85, Температура масла в МБД < 5 °С
+algGVL.GPA_PPU_HR.HR_Tm_MBD := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_ANB.HR_Tm_MBD_n; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Tm_MBD;
+//--------------------------------------------------------------------------------
+//Поз. 172, СК не закрыт
+algGVL.GPA_PPU_HR.HR_SK_OF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.SK_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_SK_OF;
+//--------------------------------------------------------------------------------
+//Поз. 182, Кран 1 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr1_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr1_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr1_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 190, Кран 6р(АПК) не открыт
+algGVL.GPA_PPU_HR.HR_KrAPK_noON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.KrAPK_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_KrAPK_noON;
+//--------------------------------------------------------------------------------
+//Поз. 235, Максимальное количество масла в МБД
+algGVL.GPA_PPU_HR.HR_MBD_Hmax := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_DI.MBD_Hmax; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_MBD_Hmax;
+//--------------------------------------------------------------------------------
+//Поз. 247, Температура масла в МБН < 5 °С
+algGVL.GPA_PPU_HR.HR_Tm_MBN := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_ANB.HR_Tm_MBN_n; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Tm_MBN;
+//--------------------------------------------------------------------------------
+//Поз. 260, БК 1 не закрыт
+algGVL.GPA_PPU_HR.HR_BK1_ON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.BK1_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_BK1_ON;
+//--------------------------------------------------------------------------------
+//Поз. 262, БК 2 не закрыт
+algGVL.GPA_PPU_HR.HR_BK2_ON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.BK2_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_BK2_ON;
+//--------------------------------------------------------------------------------
+//Поз. 267, Температура воздуха в отсеке Н < 5 °С
+algGVL.GPA_PPU_HR.HR_Tv_bayN := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_ANB.HR_Tv_bayN_n; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Tv_bayN;
+//--------------------------------------------------------------------------------
+//Поз. 270, Температура воздуха в отсеке ГТУ < 5 °С
+algGVL.GPA_PPU_HR.HR_bayGTU := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_ANB.HR_bayGTU_n; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_bayGTU;
+//--------------------------------------------------------------------------------
+//Поз. 345, Кран 5 не открыт
+algGVL.GPA_PPU_HR.HR_Kr5_noON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr5_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr5_noON;
+//--------------------------------------------------------------------------------
+//Поз. 347, Минимальный уровень масла в МБН
+algGVL.GPA_PPU_HR.HR_MBN_levelOilMin := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_DI.MBN_levelOilMin; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_MBN_levelOilMin;
+//--------------------------------------------------------------------------------
+//Поз. 348, Максимальный уровень масла в МБН
+algGVL.GPA_PPU_HR.HR_MBN_levelOilMax := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_DI.MBN_levelOilMax; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_MBN_levelOilMax;
+//--------------------------------------------------------------------------------
+//Поз. 349, Кран 2 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr2_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr2_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr2_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 350, Кран 4 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr4_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr4_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr4_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 351, Кран 6 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr6_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr6_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr6_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 352, Кран 9 не открыт
+algGVL.GPA_PPU_HR.HR_Kr9_noON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr9_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr9_noON;
+//--------------------------------------------------------------------------------
+//Поз. 353, Кран 12 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr12_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr12_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr12_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 354, Кран 10 не открыт
+algGVL.GPA_PPU_HR.HR_Kr10_noON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr10_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr10_noON;
+//--------------------------------------------------------------------------------
+//Поз. 355, Кран 11 не закрыт
+algGVL.GPA_PPU_HR.HR_Kr11_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.Kr11_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_Kr11_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 356, Заслонка ВС открыта
+algGVL.GPA_PPU_HR.HR_ZsVS_ON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND algGVL.GPA_DI.StV_CV; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_ZsVS_ON;
+//--------------------------------------------------------------------------------
+//Поз. 357, ЗсТУТ не закрыта
+algGVL.GPA_PPU_HR.HR_ZsT_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.ZsT_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_ZsT_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 358, ЗсБУТ не открыта
+algGVL.GPA_PPU_HR.HR_ZsB_noON := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.ZsB_ON; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_ZsB_noON;
+//--------------------------------------------------------------------------------
+//Поз. 359, ЗПЦВ не закрыта
+algGVL.GPA_PPU_HR.HR_ZPCV_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.ZPCV_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_ZPCV_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 360, ЗсПОС не закрыта
+algGVL.GPA_PPU_HR.HR_POS_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.POS_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_POS_noOF;
+//--------------------------------------------------------------------------------
+//Поз. 361, ЗОВ7 не закрыта
+algGVL.GPA_PPU_HR.HR_ZOV7_noOF := (algGVL.alg.Chk_HR OR algGVL.alg.Chk_GR) AND NOT algGVL.GPA_DI.ZOV7_OF; algGVL.alg.HR_nRdy := algGVL.alg.HR_nRdy or algGVL.GPA_PPU_HR.HR_ZOV7_noOF;
+//--------------------------------------------------------------------------------
+
+IF algGVL.ImitOn THEN algGVL.alg.HR_nRdy :=  FALSE; END_IF;
+//---------------------------------------------------------------------
+algGVL.GPA_TS.HR_Rdy := NOT algGVL.alg.HR_nRdy;

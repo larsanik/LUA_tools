@@ -1,0 +1,30 @@
+#Version: 1.0.0.0
+ID;ObservationType;Details1;Details2;Details3;Details4;Details5;Details6;Deactivation;Class;Message;MinPendingTime;Latch1;Latch2;HigherPrioAlarm
+0;Digital;algGVL.GPA_PPU_HR.HR_TR_notReady;=;TRUE;;;;;Info;ТР:нет статуса "Остановлен";t#0s;;;
+1;Digital;algGVL.GPA_PPU_HR.HR_Fire;=;TRUE;;;;;Info;Пожар ГПА;t#0s;;;
+2;Digital;algGVL.GPA_PPU_HR.HR_Tm_MBD;=;TRUE;;;;;Info;Температура масла в МБД < 5 °С;t#0s;;;
+3;Digital;algGVL.GPA_PPU_HR.HR_SK_OF;=;TRUE;;;;;Info;СК не закрыт;t#0s;;;
+4;Digital;algGVL.GPA_PPU_HR.HR_Kr1_noOF;=;TRUE;;;;;Info;Кран 1 не закрыт;t#0s;;;
+5;Digital;algGVL.GPA_PPU_HR.HR_KrAPK_noON;=;TRUE;;;;;Info;Кран 6р(АПК) не открыт;t#0s;;;
+6;Digital;algGVL.GPA_PPU_HR.HR_MBD_Hmax;=;TRUE;;;;;Info;Максимальное количество масла в МБД;t#0s;;;
+7;Digital;algGVL.GPA_PPU_HR.HR_Tm_MBN;=;TRUE;;;;;Info;Температура масла в МБН < 5 °С;t#0s;;;
+8;Digital;algGVL.GPA_PPU_HR.HR_BK1_ON;=;TRUE;;;;;Info;БК 1 не закрыт;t#0s;;;
+9;Digital;algGVL.GPA_PPU_HR.HR_BK2_ON;=;TRUE;;;;;Info;БК 2 не закрыт;t#0s;;;
+10;Digital;algGVL.GPA_PPU_HR.HR_Tv_bayN;=;TRUE;;;;;Info;Температура воздуха в отсеке Н < 5 °С;t#0s;;;
+11;Digital;algGVL.GPA_PPU_HR.HR_bayGTU;=;TRUE;;;;;Info;Температура воздуха в отсеке ГТУ < 5 °С;t#0s;;;
+12;Digital;algGVL.GPA_PPU_HR.HR_Kr5_noON;=;TRUE;;;;;Info;Кран 5 не открыт;t#0s;;;
+13;Digital;algGVL.GPA_PPU_HR.HR_MBN_levelOilMin;=;TRUE;;;;;Info;Минимальный уровень масла в МБН;t#0s;;;
+14;Digital;algGVL.GPA_PPU_HR.HR_MBN_levelOilMax;=;TRUE;;;;;Info;Максимальный уровень масла в МБН;t#0s;;;
+15;Digital;algGVL.GPA_PPU_HR.HR_Kr2_noOF;=;TRUE;;;;;Info;Кран 2 не закрыт;t#0s;;;
+16;Digital;algGVL.GPA_PPU_HR.HR_Kr4_noOF;=;TRUE;;;;;Info;Кран 4 не закрыт;t#0s;;;
+17;Digital;algGVL.GPA_PPU_HR.HR_Kr6_noOF;=;TRUE;;;;;Info;Кран 6 не закрыт;t#0s;;;
+18;Digital;algGVL.GPA_PPU_HR.HR_Kr9_noON;=;TRUE;;;;;Info;Кран 9 не открыт;t#0s;;;
+19;Digital;algGVL.GPA_PPU_HR.HR_Kr12_noOF;=;TRUE;;;;;Info;Кран 12 не закрыт;t#0s;;;
+20;Digital;algGVL.GPA_PPU_HR.HR_Kr10_noON;=;TRUE;;;;;Info;Кран 10 не открыт;t#0s;;;
+21;Digital;algGVL.GPA_PPU_HR.HR_Kr11_noOF;=;TRUE;;;;;Info;Кран 11 не закрыт;t#0s;;;
+22;Digital;algGVL.GPA_PPU_HR.HR_ZsVS_ON;=;TRUE;;;;;Info;Заслонка ВС открыта;t#0s;;;
+23;Digital;algGVL.GPA_PPU_HR.HR_ZsT_noOF;=;TRUE;;;;;Info;ЗсТУТ не закрыта;t#0s;;;
+24;Digital;algGVL.GPA_PPU_HR.HR_ZsB_noON;=;TRUE;;;;;Info;ЗсБУТ не открыта;t#0s;;;
+25;Digital;algGVL.GPA_PPU_HR.HR_ZPCV_noOF;=;TRUE;;;;;Info;ЗПЦВ не закрыта;t#0s;;;
+26;Digital;algGVL.GPA_PPU_HR.HR_POS_noOF;=;TRUE;;;;;Info;ЗсПОС не закрыта;t#0s;;;
+27;Digital;algGVL.GPA_PPU_HR.HR_ZOV7_noOF;=;TRUE;;;;;Info;ЗОВ7 не закрыта;t#0s;;;

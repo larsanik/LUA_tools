@@ -1,0 +1,68 @@
+-- Характеристики объекта эксплуатации
+szPlace = 'Филиал ООО "Газпром трансгаз Ухта" - Новогрязовецкое ЛПУ МГ'
+szObject = 'КС "Новогрязовецкая"'
+szUnit = 'Сменная ведомость работы ГПА73  КЦ-7'
+
+--Смена 1
+szOutFile1 = 'Raport_Smena08-20.htm'
+szSmena1 = 'Смена 1	С 8:00 до 20:00'
+szTime1 = {8,10,12,14,16,18,20}
+
+--Смена 2
+szOutFile2 = 'Raport_Smena20-08.htm'
+szSmena2 = 'Смена 2	С 20:00 до 8:00'
+szTime2 = {-4,-2,0,2,4,6,8} -- (20 as -4), (22 as -2) 
+
+--Перечень параметров для сменной ведомости
+tbSVData = {
+{Name = 'Trend_AI.Ptg_in_SK', Type = 'AI', Comment = 'Давление газа перед СК',Mes='МПа'},
+{Name = 'Trend_AI.Ptg_in_DG', Type = 'AI', Comment = 'Давление газа перед ДГ',Mes='МПа'},
+{Name = 'Trend_AI.Pv_polost_KVD', Type = 'AI', Comment = 'Давление в разгрузочной полости КВД',Mes='кПа'},
+{Name = 'Trend_AI.Pv_polost_ST', Type = 'AI', Comment = 'Давление в разгрузочной полости СТ',Mes='МПа'},
+{Name = 'Trend_AI.Pv_ohl_TND', Type = 'AI', Comment = 'Давление воздуха охлаждения ТНД',Mes='МПа'},
+{Name = 'Trend_AI.Pv_out_BBT1', Type = 'AI', Comment = 'Давление воздуха после ВВТ1',Mes='МПа'},
+{Name = 'Trend_AI.Pm_in_D', Type = 'AI', Comment = 'Давление масла на входе в ГТД',Mes='МПа'},
+{Name = 'Trend_AI.Psufl', Type = 'AI', Comment = 'Давление суфлирования',Mes='кПа'},
+{Name = 'Trend_GT_AI.V_PPD', Type = 'AI', Comment = 'Виброскорость корпуса ГТД в зоне ПП',Mes='мм/с'},
+{Name = 'Trend_GT_AI.V_ZPD', Type = 'AI', Comment = 'Виброскорость корпуса ГТД в зоне ЗП',Mes='мм/с'},
+{Name = 'Trend_GT_AI.Pos_VNA', Type = 'AI', Comment = 'Положение ВНА',Mes='град.'},
+{Name = 'Trend_GT_AI.Pos_DG', Type = 'AI', Comment = 'Положение дозатора топливного газа',Mes='%'},
+{Name = 'Trend_UFG.Q_m', Type = 'AI', Comment = 'Расход топливного газа',Mes='кг/час'},
+{Name = 'Trend_AI.Tg_in_N', Type = 'AI', Comment = 'Температура газа на входе в ЦБК',Mes='°С'},
+{Name = 'Trend_AI.Tg_out_N', Type = 'AI', Comment = 'Температура газа на выходе ЦБК',Mes='°С'},
+{Name = 'Trend_AI.Pos_Kr6p', Type = 'AI', Comment = 'Положение клапана 6р',Mes='%'},
+{Name = 'Trend_AI.Patm', Type = 'AI', Comment = 'Давление наружного воздуха',Mes='кПа'},
+{Name = 'Trend_AI.Tv_Atm_new', Type = 'AI', Comment = 'Температура наружного воздуха',Mes='°С'},
+{Name = 'Trend_AI.Vlag', Type = 'AI', Comment = 'Влажность наружного воздуха',Mes='%'},
+{Name = 'Calc_AI.N_KVD', Type = 'AI', Comment = 'Частота вращения ротора КВД ',Mes='об/мин'},
+{Name = 'Calc_AI.N_KND', Type = 'AI', Comment = 'Частота вращения ротора КНД',Mes='об/мин'},
+{Name = 'Calc_AI.N_ST', Type = 'AI', Comment = 'Частота вращения ротора СТ',Mes='об/мин'},
+{Name = 'Trend_GT_AI.Tv_in_D', Type = 'AI', Comment = 'Температура воздуха на входе в ГТД',Mes='°С'},
+{Name = 'Calc_AI.T_out_TVD', Type = 'AI', Comment = 'Температура газа за ТВД',Mes='°С'},
+{Name = 'Calc_AI.T_out_ST', Type = 'AI', Comment = 'Температура газа за СТ',Mes='°С'},
+{Name = 'Trend_GT_AI.Ttg_in_DG', Type = 'AI', Comment = 'Температура топливного газа перед ДГ',Mes='°С'},
+{Name = 'Trend_AI.Tm_MBD', Type = 'AI', Comment = 'Температура масла в маслобаке',Mes='°С'},
+{Name = 'Trend_GT_AI.Tm_in_D', Type = 'AI', Comment = 'Температура масла на входе в ГТД',Mes='°С'},
+{Name = 'Trend_GT_AI.Tm_out_SHP_KVD', Type = 'AI', Comment = 'Температура масла на выходе из опоры ШП КВД',Mes='°С'},
+{Name = 'Trend_GT_AI.Tm_out_RP_TVD', Type = 'AI', Comment = 'Температура масла на выходе из опоры РП ТВД',Mes='°С'},
+{Name = 'Trend_GT_AI.Tm_out_RP_TND', Type = 'AI', Comment = 'Температура масла на выходе из опоры РП ТНД',Mes='°С'},
+{Name = 'Trend_GT_AI.Tm_out_ST', Type = 'AI', Comment = 'Температура масла на выходе из опор СТ',Mes='°С'},
+{Name = 'Trend_AI.Tv_out_BBT1', Type = 'AI', Comment = 'Температура воздуха после ВВТ1',Mes='°С'},
+{Name = 'Trend_GT_AI.dP_atm_Ppoln', Type = 'AI', Comment = 'Перепад давления между Pатм и Pполн воздуха на входе в КНД',Mes='кПа'},
+{Name = 'Trend_GT_AI.dP_atm_Pstat', Type = 'AI', Comment = 'Перепад давления между Pатм и Pстат воздуха на входе в КНД',Mes='кПа'},
+{Name = 'Trend_GT_AI.Ppoln_out_KND', Type = 'AI', Comment = 'Полное давление воздуха за КНД',Mes='кПа'},
+{Name = 'Trend_GT_AI.Pv_out_KVD', Type = 'AI', Comment = 'Давление воздуха за КВД',Mes='МПа'},
+{Name = 'Trend_GT_AI.Pg_out_TVD', Type = 'AI', Comment = 'Полное давление газа за ТВД',Mes='МПа'},
+{Name = 'Trend_GT_AI.Pg_out_TND', Type = 'AI', Comment = 'Полное давление газа за ТНД',Mes='МПа'},
+{Name = 'Trend_GT_AI.dP_atm_P_out_ST', Type = 'AI', Comment = 'Перепад давления между Pатм и Pполн газа за СТ',Mes='кПа'},
+{Name = 'Trend_DI.ZPV_KND1_ON', Type = 'DI', Comment = 'ЗПВ КНД 1 гр. открыты',Mes='0/1'},
+{Name = 'Trend_DI.ZPV_KND2_ON', Type = 'DI', Comment = 'ЗПВ КНД 2 гр. открыты',Mes='0/1'},
+{Name = 'Trend_DI.KPV_KVD_ON', Type = 'DI', Comment = 'КПВ КВД открыты',Mes='0/1'},
+{Name = 'Trend_DI.KPVZ_ON', Type = 'DI', Comment = 'КПВЗ открыт',Mes='0/1'},
+{Name = 'Trend_DI.POS_ON', Type = 'DI', Comment = 'ПОС включена',Mes='0/1'},
+{Name = 'Trend_DI.BK_VOU1_ON', Type = 'DI', Comment = 'Верхний байпасный клапан ВОУ открыт',Mes='0/1'},
+{Name = 'Trend_DI.BK_VOU2_ON', Type = 'DI', Comment = 'Нижний байпасный клапан ВОУ открыт',Mes='0/1'},
+{Name = 'Trend_DI.NMB_ON', Type = 'DI', Comment = 'Нагреватель маслобака ГТД включено',Mes='0/1'},
+{Name = 'us.K', Type = 'DI', Comment = 'Режим Кольцо',Mes='0/1'},
+{Name = 'us.M', Type = 'DI', Comment = 'Режим Магистраль',Mes='0/1'}
+}

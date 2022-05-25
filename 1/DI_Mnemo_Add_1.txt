@@ -1,0 +1,929 @@
+
+<Data>             
+    <GraphicsCompositeFBType Name="T_DI_Mnemo_Add" UUID="0F397E90489C820499255F95C09D4A1E">             
+        <InterfaceList>             
+            <EventOutputs>			  
+                <Event Name="mouseLBPress" Comment="mouse left button press event " UUID="299295AF47A6CCAC26009C964C5B47C5" />			  
+                <Event Name="mouseLBRelease" Comment="mouse left button release event" UUID="8DE6001343803CF639F332B16CC30079" />			  
+                <Event Name="mouseRBPress" Comment="mouse right button press event " UUID="5DE993F543E00267EF077D89D3D01B5B" />             
+                <Event Name="mouseRBRelease" Comment="mouse right button release event" UUID="0AB0718D41E90B02F75425B41E39C1F0" />             
+                <Event Name="mouseEnter" Comment="mouse enter event" UUID="AA1D53154C9D3E9C25B0ADA056F82B5D" />             
+                <Event Name="mouseLeave" Comment="mouse leave event" UUID="C21BC0A24A8E157AF50BC59A1635CD7B" />             
+                <Event Name="mouseLBDblClick" Comment="mouse double click event" UUID="1BD263D2412FA33DA367C5B3480C9F0A" />             
+            </EventOutputs>             
+            <InputVars>             
+                <VarDeclaration Name="pos" Type="TPos" Comment="position of the object" InitialValue="(x:=0,y:=0)" UUID="599604C246641AA6BA0E508C9ABF7EA4" />             
+                <VarDeclaration Name="angle" Type="LREAL" Comment="angle of rotation of the object" InitialValue="0" UUID="00FC1D804A2DE5A83DE85390D640AC3D" />             
+                <VarDeclaration Name="enabled" Type="BOOL" InitialValue="TRUE" UUID="15B097034B9BBE7CCD78E0A466A64239" />             
+                <VarDeclaration Name="moveable" Type="BOOL" InitialValue="FALSE" UUID="6D62810D46DF8C4B27E62DBEBA63194B" />             
+                <VarDeclaration Name="visible" Type="BOOL" Comment="visibility of the object" InitialValue="TRUE" UUID="EAC5288F431A370F7493EF98A2C613D5" />             
+                <VarDeclaration Name="zValue" Type="LREAL" Comment="z-level of the object" InitialValue="0" UUID="29E9E6AD475BD9B49E6F40B0328374A7" />             
+                <VarDeclaration Name="hint" Type="STRING" Comment="hint of the object" InitialValue="&apos;&apos;" UUID="9001F21244C66932FB81B7B021B085BA" />             
+                <VarDeclaration Name="size" Type="TSize" Comment="size of the rectangle" InitialValue="(width:=50,height:=50)" UUID="1555B4384D69683C33FCB4A79B1A0932" />             
+                <VarDeclaration Name="PrefAb" Type="STRING" InitialValue="&apos;&apos;" UUID="BC235C584A1EB6143114E781839D3DE1" />             
+                <VarDeclaration Name="NameRU" Type="STRING" InitialValue="&apos;&apos;" UUID="45D696EE4157CCC32B7D6D9E252868A5" />             
+            </InputVars>             
+        </InterfaceList>             
+        <FBNetwork>             
+<FB Name="DGI_1_Init_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="E73277D6D3C6454C966B43C0032FF1F7" X="0.0" Y="500">
+<VarValue Variable="pos" Value="(x:=60,y:=0)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Сбой инициализации цифрового регулятора, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Сбой инициализации цифрового регулятора&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Init_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Init_FaultСбой инициализации цифрового регулятора&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_2_Link_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="8C0A1C14E0A64ABC868708D3354C4154" X="0.0" Y="1000">
+<VarValue Variable="pos" Value="(x:=60,y:=23)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Сбой связи с цифровым регулятором, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Сбой связи с цифровым регулятором&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Link_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Link_FaultСбой связи с цифровым регулятором&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_3_T_EMP1_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="AE784A0ADB504E0F9CE175B3CE2B015A" X="0.0" Y="1500">
+<VarValue Variable="pos" Value="(x:=60,y:=46)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Высокая температура ЭМП1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Высокая температура ЭМП1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP1_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP1_PvВысокая температура ЭМП1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_4_T_EMP1_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="D7EA5FF2E7C44426B9BFC3F17FB96998" X="0.0" Y="2000">
+<VarValue Variable="pos" Value="(x:=60,y:=69)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недопустимая температура ЭМП1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недопустимая температура ЭМП1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP1_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP1_FaultНедопустимая температура ЭМП1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_5_T_EMP2_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="9C98B76CCC3C4C24A58271471591678A" X="0.0" Y="2500">
+<VarValue Variable="pos" Value="(x:=60,y:=92)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Высокая температура ЭМП2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Высокая температура ЭМП2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP2_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP2_PvВысокая температура ЭМП2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_6_T_EMP2_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="A93006061326425BB4EF4D3478421E6E" X="0.0" Y="3000">
+<VarValue Variable="pos" Value="(x:=60,y:=115)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недопустимая температура ЭМП2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недопустимая температура ЭМП2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP2_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP2_FaultНедопустимая температура ЭМП2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_7_T_EMP3_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="B2EAB722DF424C3EA3A4037C34786BCA" X="0.0" Y="3500">
+<VarValue Variable="pos" Value="(x:=60,y:=138)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Высокая температура ЭМП3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Высокая температура ЭМП3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP3_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP3_PvВысокая температура ЭМП3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_8_T_EMP3_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="F83ED00EECAA4DA98D638F1281A37842" X="0.0" Y="4000">
+<VarValue Variable="pos" Value="(x:=60,y:=161)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недопустимая температура ЭМП3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недопустимая температура ЭМП3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP3_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP3_FaultНедопустимая температура ЭМП3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_9_T_EMP4_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="74CA4C12F50C4D7FB5A2305AE8061104" X="0.0" Y="4500">
+<VarValue Variable="pos" Value="(x:=60,y:=184)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Высокая температура ЭМП4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Высокая температура ЭМП4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP4_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP4_PvВысокая температура ЭМП4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_10_T_EMP4_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="11121E32D7A04BBC9150DAD5D270375B" X="0.0" Y="5000">
+<VarValue Variable="pos" Value="(x:=60,y:=207)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недопустимая температура ЭМП4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недопустимая температура ЭМП4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_EMP4_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_EMP4_FaultНедопустимая температура ЭМП4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_11_T_Gain_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="B58273D0BE564BFD901AF91383D3F506" X="0.0" Y="5500">
+<VarValue Variable="pos" Value="(x:=60,y:=230)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Высокая температура усилителя, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Высокая температура усилителя&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_Gain_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_Gain_PvВысокая температура усилителя&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_12_T_Gain_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="419C88CE545C4FC2A655C9CB5A55C7C1" X="0.0" Y="6000">
+<VarValue Variable="pos" Value="(x:=60,y:=253)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Недопустимая температура усилителя, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Недопустимая температура усилителя&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;T_Gain_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;T_Gain_FaultНедопустимая температура усилителя&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_13_Pos_V13_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="582EE83A74104ED08E76D67124E18868" X="0.0" Y="6500">
+<VarValue Variable="pos" Value="(x:=60,y:=276)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси V13 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси V13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_V13_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_V13_PvПеремещение ротора по оси V13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_14_Pos_V13_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="C8B240BA58544334B6E44E5D1A48B49A" X="0.0" Y="7000">
+<VarValue Variable="pos" Value="(x:=60,y:=299)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси V13 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси V13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_V13_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_V13_AvПеремещение ротора по оси V13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_15_Pos_W13_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="264E848CED3E470496C8F49DD9BB144F" X="0.0" Y="7500">
+<VarValue Variable="pos" Value="(x:=60,y:=322)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси W13 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси W13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_W13_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_W13_PvПеремещение ротора по оси W13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_16_Pos_W13_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="893EEAA4DD2444D780C1ADA7375EF003" X="0.0" Y="8000">
+<VarValue Variable="pos" Value="(x:=60,y:=345)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси W13 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси W13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_W13_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_W13_AvПеремещение ротора по оси W13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_17_Pos_V24_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="E8E40B2A1A8A42038CE3BFE122A42775" X="0.0" Y="8500">
+<VarValue Variable="pos" Value="(x:=60,y:=368)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси V24 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси V24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_V24_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_V24_PvПеремещение ротора по оси V24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_18_Pos_V24_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="2A243C7E11404DE6B1FE508D7C797640" X="0.0" Y="9000">
+<VarValue Variable="pos" Value="(x:=60,y:=391)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси V24 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси V24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_V24_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_V24_AvПеремещение ротора по оси V24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_19_Pos_W24_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="59F6CA02AE1C4E26AA869823BF3A49D6" X="0.0" Y="9500">
+<VarValue Variable="pos" Value="(x:=60,y:=414)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси W24 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси W24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_W24_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_W24_PvПеремещение ротора по оси W24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_20_Pos_W24_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="03867A8C11B04617A5EB8BE06278809E" X="0.0" Y="10000">
+<VarValue Variable="pos" Value="(x:=60,y:=437)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси W24 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси W24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_W24_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_W24_AvПеремещение ротора по оси W24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_21_Pos_Z12_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="F3264FD098D445D29F7523EFC114F59C" X="0.0" Y="10500">
+<VarValue Variable="pos" Value="(x:=60,y:=460)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси Z12 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси Z12 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_Z12_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_Z12_PvПеремещение ротора по оси Z12 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_22_Pos_Z12_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="A6D8AC48E49C47E9843C8763AE664A84" X="0.0" Y="11000">
+<VarValue Variable="pos" Value="(x:=60,y:=483)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перемещение ротора по оси Z12 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перемещение ротора по оси Z12 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Pos_Z12_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Pos_Z12_AvПеремещение ротора по оси Z12 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_23_Nebal_V13_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="B0622D16AC664618BBEF67B0E255D844" X="0.0" Y="11500">
+<VarValue Variable="pos" Value="(x:=60,y:=506)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси V13 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси V13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_V13_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_V13_PvНебаланс ротора по оси V13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_24_Nebal_V13_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="0F869F6EB0EC4A0AAB9B217C89D0CF8A" X="0.0" Y="12000">
+<VarValue Variable="pos" Value="(x:=60,y:=529)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси V13 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси V13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_V13_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_V13_AvНебаланс ротора по оси V13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_25_Nebal_W13_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="3436B808BC7C441BACB140F6289AA09C" X="0.0" Y="12500">
+<VarValue Variable="pos" Value="(x:=60,y:=552)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси W13 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси W13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_W13_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_W13_PvНебаланс ротора по оси W13 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_26_Nebal_W13_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="BE68327A07EE49D686EB1BB7AA14C14E" X="0.0" Y="13000">
+<VarValue Variable="pos" Value="(x:=60,y:=575)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси W13 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси W13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_W13_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_W13_AvНебаланс ротора по оси W13 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_27_Nebal_V24_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="F5E41B68A7524179BB4629B412B0195B" X="0.0" Y="13500">
+<VarValue Variable="pos" Value="(x:=60,y:=598)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси V24 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси V24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_V24_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_V24_PvНебаланс ротора по оси V24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_28_Nebal_V24_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="4B088608A23648BFA8BA630F22FDA147" X="0.0" Y="14000">
+<VarValue Variable="pos" Value="(x:=60,y:=621)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси V24 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси V24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_V24_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_V24_AvНебаланс ротора по оси V24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_29_Nebal_W24_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="DFC2BC6060F84EC4B9910414D5B540E1" X="0.0" Y="14500">
+<VarValue Variable="pos" Value="(x:=60,y:=644)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси W24 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси W24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_W24_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_W24_PvНебаланс ротора по оси W24 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_30_Nebal_W24_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="71D03F2C518A4C40A937C14439B13F3A" X="0.0" Y="15000">
+<VarValue Variable="pos" Value="(x:=60,y:=667)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси W24 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси W24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_W24_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_W24_AvНебаланс ротора по оси W24 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_31_Nebal_Z12_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="A6E85C6812BA4CAB9C5F58693D455506" X="0.0" Y="15500">
+<VarValue Variable="pos" Value="(x:=60,y:=690)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси Z12 выше уровня предупреждения, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси Z12 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_Z12_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_Z12_PvНебаланс ротора по оси Z12 выше уровня предупреждения&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_32_Nebal_Z12_Av" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="771A93583E3A4029A60405406A24760C" X="0.0" Y="16000">
+<VarValue Variable="pos" Value="(x:=60,y:=713)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Небаланс ротора по оси Z12 выше уровня аварии, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Небаланс ротора по оси Z12 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Nebal_Z12_Av&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Nebal_Z12_AvНебаланс ротора по оси Z12 выше уровня аварии&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_33_Link_kab_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="CBD668623AC4439E83FBCE75DFD00420" X="0.0" Y="16500">
+<VarValue Variable="pos" Value="(x:=570,y:=0)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Ошибка в подключении кабелей подшипников, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Ошибка в подключении кабелей подшипников&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Link_kab_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Link_kab_FaultОшибка в подключении кабелей подшипников&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_34_DC_DC_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="FB4C08DAEE9E478E9C59CD820E5E35EE" X="0.0" Y="17000">
+<VarValue Variable="pos" Value="(x:=570,y:=23)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ DC-DC преобразователя напряжения 300 В, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ DC-DC преобразователя напряжения 300 В&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;DC_DC_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;DC_DC_FaultОтказ DC-DC преобразователя напряжения 300 В&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_35_Izol_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="3E0CC6D0168A47EAA08D6C7E77E08AA9" X="0.0" Y="17500">
+<VarValue Variable="pos" Value="(x:=570,y:=46)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Неисправность изоляции катушки подшипника, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Неисправность изоляции катушки подшипника&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Izol_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Izol_FaultНеисправность изоляции катушки подшипника&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_36_Gen_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="350E4D8234284B20B73C86CB1114C842" X="0.0" Y="18000">
+<VarValue Variable="pos" Value="(x:=570,y:=69)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ опорного генератора датчиков виброперемещений ротора, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ опорного генератора датчиков виброперемещений ротора&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Gen_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Gen_FaultОтказ опорного генератора датчиков виброперемещений ротора&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_37_Datch_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="AB324B5E251447DA816F85BBDD336D37" X="0.0" Y="18500">
+<VarValue Variable="pos" Value="(x:=570,y:=92)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ датчика скорости, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ датчика скорости&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Datch_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Datch_FaultОтказ датчика скорости&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_38_Rasshir_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="128EDF8A09B646CB986A6A2FC060302F" X="0.0" Y="19000">
+<VarValue Variable="pos" Value="(x:=570,y:=115)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Тепловое расширение ротора выше предельно допустимого, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Тепловое расширение ротора выше предельно допустимого&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Rasshir_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Rasshir_PvТепловое расширение ротора выше предельно допустимого&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_39_N_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="34D4DEB4D4A4443780277FE1D04510D9" X="0.0" Y="19500">
+<VarValue Variable="pos" Value="(x:=570,y:=138)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение предельно допустимой скорости, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение предельно допустимой скорости&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;N_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;N_PvПревышение предельно допустимой скорости&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_40_Ures_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="24082338D38E458BA9C1051413D9F2D2" X="0.0" Y="20000">
+<VarValue Variable="pos" Value="(x:=570,y:=161)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ резервного источника питания, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ резервного источника питания&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Ures_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Ures_FaultОтказ резервного источника питания&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_41_Reset_Uosn" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="3E4685B219EE43819FB89C904C684EE7" X="0.0" Y="20500">
+<VarValue Variable="pos" Value="(x:=570,y:=184)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Перегрузка основного источника питания, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Перегрузка основного источника питания&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Reset_Uosn&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Reset_UosnПерегрузка основного источника питания&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_42_Move_Ures" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="858C827469CA4BC890F565FC666C9A9D" X="0.0" Y="21000">
+<VarValue Variable="pos" Value="(x:=570,y:=207)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Переход на резервный источник питания, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Переход на резервный источник питания&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Move_Ures&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Move_UresПереход на резервный источник питания&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_43_Vip_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="DECEE40E5D464F81AC9A1DDF109D6F6D" X="0.0" Y="21500">
+<VarValue Variable="pos" Value="(x:=570,y:=230)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ выпрямителя, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ выпрямителя&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;Vip_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;Vip_FaultОтказ выпрямителя&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_44_EMP_V1_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="6708F9A4028E403785F4B404CCA02482" X="0.0" Y="22000">
+<VarValue Variable="pos" Value="(x:=570,y:=253)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП V1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП V1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_V1_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_V1_FaultОтказ усилителя мощности ЭМП V1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_45_EMP_V2_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="E28ABA8E7CE64D71B8EF2EE9EED1215C" X="0.0" Y="22500">
+<VarValue Variable="pos" Value="(x:=570,y:=276)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП V2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП V2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_V2_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_V2_FaultОтказ усилителя мощности ЭМП V2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_46_EMP_V3_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="6DCCA02A91BE4B3D8D0BAC3E2525E080" X="0.0" Y="23000">
+<VarValue Variable="pos" Value="(x:=570,y:=299)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП V3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП V3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_V3_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_V3_FaultОтказ усилителя мощности ЭМП V3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_47_EMP_V4_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="C73A59B839F4449789ABB96605296B0C" X="0.0" Y="23500">
+<VarValue Variable="pos" Value="(x:=570,y:=322)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП V4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП V4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_V4_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_V4_FaultОтказ усилителя мощности ЭМП V4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_48_EMP_W1_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="1B6AE8CCA8B04ECB88591B4ACC610D0B" X="0.0" Y="24000">
+<VarValue Variable="pos" Value="(x:=570,y:=345)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП W1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП W1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_W1_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_W1_FaultОтказ усилителя мощности ЭМП W1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_49_EMP_W2_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="68702E3EE02E406AA28EE504EFBDF020" X="0.0" Y="24500">
+<VarValue Variable="pos" Value="(x:=570,y:=368)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП W2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП W2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_W2_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_W2_FaultОтказ усилителя мощности ЭМП W2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_50_EMP_W3_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="CA26294668744F42B6EAF6126D7EE183" X="0.0" Y="25000">
+<VarValue Variable="pos" Value="(x:=570,y:=391)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП W3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП W3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_W3_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_W3_FaultОтказ усилителя мощности ЭМП W3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_51_EMP_W4_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="B9348D02F6E64B6BBDD0AABF89C88E1B" X="0.0" Y="25500">
+<VarValue Variable="pos" Value="(x:=570,y:=414)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП W4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП W4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_W4_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_W4_FaultОтказ усилителя мощности ЭМП W4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_52_EMP_Z1A_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="C7F20E7ED630426F93CF0BB46F269AFE" X="0.0" Y="26000">
+<VarValue Variable="pos" Value="(x:=570,y:=437)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП Z1A, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП Z1A&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_Z1A_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_Z1A_FaultОтказ усилителя мощности ЭМП Z1A&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_53_EMP_Z2A_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="97C6D8F6EC56499C85E4C09D5CBB6E6A" X="0.0" Y="26500">
+<VarValue Variable="pos" Value="(x:=570,y:=460)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП Z2A, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП Z2A&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_Z2A_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_Z2A_FaultОтказ усилителя мощности ЭМП Z2A&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_54_EMP_Z1B_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="C5109D82F14A46B7BDE0A7CD312D44DB" X="0.0" Y="27000">
+<VarValue Variable="pos" Value="(x:=570,y:=483)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП Z1В, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП Z1В&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_Z1B_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_Z1B_FaultОтказ усилителя мощности ЭМП Z1В&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_55_EMP_Z2B_Fault" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="1A5C25B492E44E10BA4C0E6CF453393B" X="0.0" Y="27500">
+<VarValue Variable="pos" Value="(x:=570,y:=506)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Отказ усилителя мощности ЭМП Z2В, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Отказ усилителя мощности ЭМП Z2В&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;EMP_Z2B_Fault&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;EMP_Z2B_FaultОтказ усилителя мощности ЭМП Z2В&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_56_I_EMP_V1_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="4C5ADFB86FB44B96B9D173C0D26A8338" X="0.0" Y="28000">
+<VarValue Variable="pos" Value="(x:=570,y:=529)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП V1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП V1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_V1_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_V1_PvПревышение максимального значения тока ЭМП V1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_57_I_EMP_V2_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="4AA4B612925E49409DA97677B085686B" X="0.0" Y="28500">
+<VarValue Variable="pos" Value="(x:=570,y:=552)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП V2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП V2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_V2_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_V2_PvПревышение максимального значения тока ЭМП V2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_58_I_EMP_V3_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="6F64FB761D2640138AA77338EDC7BAA5" X="0.0" Y="29000">
+<VarValue Variable="pos" Value="(x:=570,y:=575)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП V3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП V3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_V3_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_V3_PvПревышение максимального значения тока ЭМП V3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_59_I_EMP_V4_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="BFF646923DBA4F0AB8F18B900C5A853D" X="0.0" Y="29500">
+<VarValue Variable="pos" Value="(x:=570,y:=598)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП V4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП V4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_V4_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_V4_PvПревышение максимального значения тока ЭМП V4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_60_I_EMP_W1_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="5950E08CA6A4456D9F2AF30F0E67FEF5" X="0.0" Y="30000">
+<VarValue Variable="pos" Value="(x:=570,y:=621)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП W1, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП W1&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_W1_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_W1_PvПревышение максимального значения тока ЭМП W1&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_61_I_EMP_W2_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="86CC17E6307245BA9CFF8FAFFD323E89" X="0.0" Y="30500">
+<VarValue Variable="pos" Value="(x:=570,y:=644)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП W2, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП W2&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_W2_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_W2_PvПревышение максимального значения тока ЭМП W2&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_62_I_EMP_W3_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="37A67AAE3C04461986C8C96AACBEA802" X="0.0" Y="31000">
+<VarValue Variable="pos" Value="(x:=570,y:=667)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП W3, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП W3&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_W3_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_W3_PvПревышение максимального значения тока ЭМП W3&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_63_I_EMP_W4_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="E69E46704D164563AD315099334CF4AE" X="0.0" Y="31500">
+<VarValue Variable="pos" Value="(x:=570,y:=690)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП W4, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП W4&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_W4_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_W4_PvПревышение максимального значения тока ЭМП W4&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+<FB Name="DGI_64_I_EMP_Z1A_Pv" Type="TBase_DI_DO" TypeUUID="5298F3F94A79E35B818384B694BB561B" UUID="F9022A8A05EC457BA6FA68E364C44D3C" X="0.0" Y="32000">
+<VarValue Variable="pos" Value="(x:=570,y:=713)" Type="TPos" />
+<VarValue Variable="HINT" Value="&apos;СУМП S2M: Превышение максимального значения тока ЭМП Z1A, [Modbus]
+Mudbus adress&apos;" Type="STRING" />
+<VarValue Variable="FORCE_PERMIT" Value="TRUE" Type="BOOL" />
+<VarValue Variable="Name" Value="&apos;Превышение максимального значения тока ЭМП Z1A&apos;" Type="STRING" />
+<VarValue Variable="PrefStr" Value="&apos;S2M.&apos;" Type="STRING" />
+<VarValue Variable="SourseD" Value="&apos;д.вх.&apos;" Type="STRING" />
+<VarValue Variable="NameAlg" Value="&apos;I_EMP_Z1A_Pv&apos;" Type="STRING" />
+<VarValue Variable="TagID" Value="&apos;I_EMP_Z1A_PvПревышение максимального значения тока ЭМП Z1A&apos;" Type="STRING" />
+<VarValue Variable="VisibleD" Value="TRUE" Type="BOOL" />
+</FB>
+            <DataConnections>
+<Connection Source="PrefAb" Destination="DGI_1_Init_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="E73277D6D3C6454C966B43C0032FF1F7.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_1_Init_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="E73277D6D3C6454C966B43C0032FF1F7.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_2_Link_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="8C0A1C14E0A64ABC868708D3354C4154.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_2_Link_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="8C0A1C14E0A64ABC868708D3354C4154.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_3_T_EMP1_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="AE784A0ADB504E0F9CE175B3CE2B015A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_3_T_EMP1_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="AE784A0ADB504E0F9CE175B3CE2B015A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_4_T_EMP1_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="D7EA5FF2E7C44426B9BFC3F17FB96998.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_4_T_EMP1_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="D7EA5FF2E7C44426B9BFC3F17FB96998.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_5_T_EMP2_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="9C98B76CCC3C4C24A58271471591678A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_5_T_EMP2_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="9C98B76CCC3C4C24A58271471591678A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_6_T_EMP2_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="A93006061326425BB4EF4D3478421E6E.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_6_T_EMP2_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="A93006061326425BB4EF4D3478421E6E.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_7_T_EMP3_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="B2EAB722DF424C3EA3A4037C34786BCA.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_7_T_EMP3_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="B2EAB722DF424C3EA3A4037C34786BCA.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_8_T_EMP3_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="F83ED00EECAA4DA98D638F1281A37842.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_8_T_EMP3_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="F83ED00EECAA4DA98D638F1281A37842.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_9_T_EMP4_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="74CA4C12F50C4D7FB5A2305AE8061104.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_9_T_EMP4_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="74CA4C12F50C4D7FB5A2305AE8061104.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_10_T_EMP4_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="11121E32D7A04BBC9150DAD5D270375B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_10_T_EMP4_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="11121E32D7A04BBC9150DAD5D270375B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_11_T_Gain_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="B58273D0BE564BFD901AF91383D3F506.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_11_T_Gain_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="B58273D0BE564BFD901AF91383D3F506.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_12_T_Gain_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="419C88CE545C4FC2A655C9CB5A55C7C1.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_12_T_Gain_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="419C88CE545C4FC2A655C9CB5A55C7C1.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_13_Pos_V13_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="582EE83A74104ED08E76D67124E18868.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_13_Pos_V13_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="582EE83A74104ED08E76D67124E18868.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_14_Pos_V13_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="C8B240BA58544334B6E44E5D1A48B49A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_14_Pos_V13_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="C8B240BA58544334B6E44E5D1A48B49A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_15_Pos_W13_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="264E848CED3E470496C8F49DD9BB144F.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_15_Pos_W13_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="264E848CED3E470496C8F49DD9BB144F.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_16_Pos_W13_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="893EEAA4DD2444D780C1ADA7375EF003.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_16_Pos_W13_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="893EEAA4DD2444D780C1ADA7375EF003.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_17_Pos_V24_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="E8E40B2A1A8A42038CE3BFE122A42775.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_17_Pos_V24_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="E8E40B2A1A8A42038CE3BFE122A42775.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_18_Pos_V24_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="2A243C7E11404DE6B1FE508D7C797640.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_18_Pos_V24_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="2A243C7E11404DE6B1FE508D7C797640.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_19_Pos_W24_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="59F6CA02AE1C4E26AA869823BF3A49D6.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_19_Pos_W24_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="59F6CA02AE1C4E26AA869823BF3A49D6.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_20_Pos_W24_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="03867A8C11B04617A5EB8BE06278809E.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_20_Pos_W24_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="03867A8C11B04617A5EB8BE06278809E.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_21_Pos_Z12_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="F3264FD098D445D29F7523EFC114F59C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_21_Pos_Z12_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="F3264FD098D445D29F7523EFC114F59C.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_22_Pos_Z12_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="A6D8AC48E49C47E9843C8763AE664A84.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_22_Pos_Z12_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="A6D8AC48E49C47E9843C8763AE664A84.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_23_Nebal_V13_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="B0622D16AC664618BBEF67B0E255D844.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_23_Nebal_V13_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="B0622D16AC664618BBEF67B0E255D844.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_24_Nebal_V13_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="0F869F6EB0EC4A0AAB9B217C89D0CF8A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_24_Nebal_V13_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="0F869F6EB0EC4A0AAB9B217C89D0CF8A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_25_Nebal_W13_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="3436B808BC7C441BACB140F6289AA09C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_25_Nebal_W13_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="3436B808BC7C441BACB140F6289AA09C.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_26_Nebal_W13_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="BE68327A07EE49D686EB1BB7AA14C14E.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_26_Nebal_W13_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="BE68327A07EE49D686EB1BB7AA14C14E.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_27_Nebal_V24_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="F5E41B68A7524179BB4629B412B0195B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_27_Nebal_V24_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="F5E41B68A7524179BB4629B412B0195B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_28_Nebal_V24_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="4B088608A23648BFA8BA630F22FDA147.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_28_Nebal_V24_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="4B088608A23648BFA8BA630F22FDA147.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_29_Nebal_W24_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="DFC2BC6060F84EC4B9910414D5B540E1.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_29_Nebal_W24_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="DFC2BC6060F84EC4B9910414D5B540E1.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_30_Nebal_W24_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="71D03F2C518A4C40A937C14439B13F3A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_30_Nebal_W24_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="71D03F2C518A4C40A937C14439B13F3A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_31_Nebal_Z12_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="A6E85C6812BA4CAB9C5F58693D455506.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_31_Nebal_Z12_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="A6E85C6812BA4CAB9C5F58693D455506.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_32_Nebal_Z12_Av.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="771A93583E3A4029A60405406A24760C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_32_Nebal_Z12_Av.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="771A93583E3A4029A60405406A24760C.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_33_Link_kab_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="CBD668623AC4439E83FBCE75DFD00420.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_33_Link_kab_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="CBD668623AC4439E83FBCE75DFD00420.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_34_DC_DC_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="FB4C08DAEE9E478E9C59CD820E5E35EE.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_34_DC_DC_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="FB4C08DAEE9E478E9C59CD820E5E35EE.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_35_Izol_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="3E0CC6D0168A47EAA08D6C7E77E08AA9.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_35_Izol_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="3E0CC6D0168A47EAA08D6C7E77E08AA9.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_36_Gen_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="350E4D8234284B20B73C86CB1114C842.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_36_Gen_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="350E4D8234284B20B73C86CB1114C842.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_37_Datch_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="AB324B5E251447DA816F85BBDD336D37.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_37_Datch_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="AB324B5E251447DA816F85BBDD336D37.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_38_Rasshir_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="128EDF8A09B646CB986A6A2FC060302F.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_38_Rasshir_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="128EDF8A09B646CB986A6A2FC060302F.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_39_N_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="34D4DEB4D4A4443780277FE1D04510D9.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_39_N_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="34D4DEB4D4A4443780277FE1D04510D9.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_40_Ures_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="24082338D38E458BA9C1051413D9F2D2.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_40_Ures_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="24082338D38E458BA9C1051413D9F2D2.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_41_Reset_Uosn.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="3E4685B219EE43819FB89C904C684EE7.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_41_Reset_Uosn.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="3E4685B219EE43819FB89C904C684EE7.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_42_Move_Ures.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="858C827469CA4BC890F565FC666C9A9D.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_42_Move_Ures.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="858C827469CA4BC890F565FC666C9A9D.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_43_Vip_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="DECEE40E5D464F81AC9A1DDF109D6F6D.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_43_Vip_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="DECEE40E5D464F81AC9A1DDF109D6F6D.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_44_EMP_V1_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="6708F9A4028E403785F4B404CCA02482.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_44_EMP_V1_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="6708F9A4028E403785F4B404CCA02482.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_45_EMP_V2_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="E28ABA8E7CE64D71B8EF2EE9EED1215C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_45_EMP_V2_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="E28ABA8E7CE64D71B8EF2EE9EED1215C.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_46_EMP_V3_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="6DCCA02A91BE4B3D8D0BAC3E2525E080.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_46_EMP_V3_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="6DCCA02A91BE4B3D8D0BAC3E2525E080.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_47_EMP_V4_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="C73A59B839F4449789ABB96605296B0C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_47_EMP_V4_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="C73A59B839F4449789ABB96605296B0C.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_48_EMP_W1_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="1B6AE8CCA8B04ECB88591B4ACC610D0B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_48_EMP_W1_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="1B6AE8CCA8B04ECB88591B4ACC610D0B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_49_EMP_W2_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="68702E3EE02E406AA28EE504EFBDF020.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_49_EMP_W2_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="68702E3EE02E406AA28EE504EFBDF020.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_50_EMP_W3_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="CA26294668744F42B6EAF6126D7EE183.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_50_EMP_W3_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="CA26294668744F42B6EAF6126D7EE183.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_51_EMP_W4_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="B9348D02F6E64B6BBDD0AABF89C88E1B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_51_EMP_W4_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="B9348D02F6E64B6BBDD0AABF89C88E1B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_52_EMP_Z1A_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="C7F20E7ED630426F93CF0BB46F269AFE.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_52_EMP_Z1A_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="C7F20E7ED630426F93CF0BB46F269AFE.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_53_EMP_Z2A_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="97C6D8F6EC56499C85E4C09D5CBB6E6A.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_53_EMP_Z2A_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="97C6D8F6EC56499C85E4C09D5CBB6E6A.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_54_EMP_Z1B_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="C5109D82F14A46B7BDE0A7CD312D44DB.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_54_EMP_Z1B_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="C5109D82F14A46B7BDE0A7CD312D44DB.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_55_EMP_Z2B_Fault.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="1A5C25B492E44E10BA4C0E6CF453393B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_55_EMP_Z2B_Fault.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="1A5C25B492E44E10BA4C0E6CF453393B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_56_I_EMP_V1_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="4C5ADFB86FB44B96B9D173C0D26A8338.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_56_I_EMP_V1_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="4C5ADFB86FB44B96B9D173C0D26A8338.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_57_I_EMP_V2_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="4AA4B612925E49409DA97677B085686B.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_57_I_EMP_V2_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="4AA4B612925E49409DA97677B085686B.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_58_I_EMP_V3_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="6F64FB761D2640138AA77338EDC7BAA5.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_58_I_EMP_V3_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="6F64FB761D2640138AA77338EDC7BAA5.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_59_I_EMP_V4_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="BFF646923DBA4F0AB8F18B900C5A853D.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_59_I_EMP_V4_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="BFF646923DBA4F0AB8F18B900C5A853D.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_60_I_EMP_W1_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="5950E08CA6A4456D9F2AF30F0E67FEF5.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_60_I_EMP_W1_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="5950E08CA6A4456D9F2AF30F0E67FEF5.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_61_I_EMP_W2_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="86CC17E6307245BA9CFF8FAFFD323E89.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_61_I_EMP_W2_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="86CC17E6307245BA9CFF8FAFFD323E89.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_62_I_EMP_W3_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="37A67AAE3C04461986C8C96AACBEA802.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_62_I_EMP_W3_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="37A67AAE3C04461986C8C96AACBEA802.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_63_I_EMP_W4_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="E69E46704D164563AD315099334CF4AE.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_63_I_EMP_W4_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="E69E46704D164563AD315099334CF4AE.524F2EBB4524C97C16682CAD9668D4CC" />
+<Connection Source="PrefAb" Destination="DGI_64_I_EMP_Z1A_Pv.PrefAb" SourceUUID="BC235C584A1EB6143114E781839D3DE1" DestinationUUID="F9022A8A05EC457BA6FA68E364C44D3C.FB48BEA74A28EB85591DC0B68AA08A74" />
+<Connection Source="NameRU" Destination="DGI_64_I_EMP_Z1A_Pv.NameRU" SourceUUID="45D696EE4157CCC32B7D6D9E252868A5" DestinationUUID="F9022A8A05EC457BA6FA68E364C44D3C.524F2EBB4524C97C16682CAD9668D4CC" />
+
+            </DataConnections>		
+        </FBNetwork>		
+    </GraphicsCompositeFBType>		
+</Data>		

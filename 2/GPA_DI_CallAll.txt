@@ -1,0 +1,1332 @@
+//***************************************
+//*  Сгенерировано: 01/02/2021 12:10:23
+//*  Узел: все
+//***************************************
+
+repTime := 3600;
+IF NOT algGVL.init THEN
+ //------------------------------- аргументы функции инициализации --------------------------------
+ //                              максимальное время в ремонте, сек. Не может быть меньше или равно «0»
+ //                               |       задержка от дребезга
+ //                               |       |    признак инверсии
+ //                               |       |    |   номер по порядку
+ //DI_init(GPA_DI_Settings.BK_OF,repTime,0.0,false,0);
+ //-------------------------------------------------------------------------------------------
+ //Начало сгенерированного кода DI_init
+//[БУ] [А3.5:1] [БУ:] Контроль исправности ФУС
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.FUS_OK, repairTime :=repTime, del := 0.0, inv :=false, id := 1);
+//[БУ] [А3.5:2] [БУ:XT20:2a] Кнопка ЭАО (ПРУ)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_EAO_PRU, repairTime :=repTime, del := 0.0, inv :=false, id := 2);
+//[БУ] [А3.5:3] [БУ:] Кнопка ЭАО (ПРУ). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_EAO_PRU_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 3);
+//[БУ] [А3.5:4] [БУ:XT20:4a] Кнопка АО (ПРУ)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_AO_PRU, repairTime :=repTime, del := 0.0, inv :=false, id := 4);
+//[БУ] [А3.5:5] [БУ:] Кнопка АО (ПРУ). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_AO_PRU_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 5);
+//[БУ] [А3.5:6] [БУ:XT20:4b] Кнопка НО (ПРУ)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_NO_PRU, repairTime :=repTime, del := 0.0, inv :=false, id := 6);
+//[БУ] [А3.5:7] [БУ:] Кнопка НО (ПРУ). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_NO_PRU_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 7);
+//[БУ] [А3.5:8] [БУ:XT20:5b] Готовность БЭО
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BEO_ready, repairTime :=repTime, del := 0.0, inv :=false, id := 8);
+//[БУ] [А3.6:1] [БУ:] Готовность БЭО. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BEO_ready_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 9);
+//[БУ] [А3.6:2] [БУ:XT20:2b] БЭО работает
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BEO_work, repairTime :=repTime, del := 0.0, inv :=false, id := 10);
+//[БУ] [А3.6:3] [БУ:] БЭО работает. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BEO_work_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 11);
+//[БУ] [А3.6:4] [БУ:XT20:5a] Кнопка "Квитирование"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_Kvit, repairTime :=repTime, del := 0.0, inv :=false, id := 12);
+//[БУ] [А3.6:5] [БУ:] Кнопка "Квитирование". КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_Kvit_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 13);
+//[БУ] [А3.6:6] [БУ:XT20:7a] Кнопка РО выше
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_RO_Up, repairTime :=repTime, del := 0.0, inv :=false, id := 14);
+//[БУ] [А3.6:7] [БУ:] Кнопка РО выше. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_RO_Up_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 15);
+//[БУ] [А3.6:8] [БУ:XT20:7b] Кнопка РО ниже
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_RO_Down, repairTime :=repTime, del := 0.0, inv :=false, id := 16);
+//[БУ] [А3.7:1] [БУ:] Кнопка РО ниже. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Btn_RO_Down_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 17);
+//[БУ] [А3.7:2] [БУ:] Автомат питания DO включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.QF_DO_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 18);
+//[БУ] [А3.7:3] [БУ:] Исправность ИП БУ ГПА
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.IPBU_GPA_good, repairTime :=repTime, del := 0.0, inv :=false, id := 19);
+//[БУ] [А3.7:4] [БУ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_1, repairTime :=repTime, del := 0.0, inv :=false, id := 20);
+//[БУ] [А3.7:5] [БУ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_2, repairTime :=repTime, del := 0.0, inv :=false, id := 21);
+//[БУ] [А3.7:6] [БУ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_3, repairTime :=repTime, del := 0.0, inv :=false, id := 22);
+//[БУ] [А3.7:7] [БУ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_4, repairTime :=repTime, del := 0.0, inv :=false, id := 23);
+//[БУ] [А3.7:8] [БУ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_5, repairTime :=repTime, del := 0.0, inv :=false, id := 24);
+//[БУ] [А3.8:1] [БУ:XDI1:1a] АО (кнопка в БУ)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_btnBU, repairTime :=repTime, del := 0.0, inv :=false, id := 25);
+//[БУ] [А3.8:2] [БУ:] АО (кнопка в БУ). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_btnBU_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 26);
+//[БУ] [А3.8:3] [БУ:XDI1:2a] АО (САУ КЦ)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_SAUKC, repairTime :=repTime, del := 0.0, inv :=false, id := 27);
+//[БУ] [А3.8:4] [БУ:] АО (САУ КЦ). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_SAUKC_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 28);
+//[БУ] [А3.8:5] [БУ:XDI1:3a] АО (кнопка в ШТА)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_SHTA, repairTime :=repTime, del := 0.0, inv :=false, id := 29);
+//[БУ] [А3.8:6] [БУ:] АО (кнопка в ШТА). КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_SHTA_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 30);
+//[БУ] [А3.8:7] [БУ:XDI1:4a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_6, repairTime :=repTime, del := 0.0, inv :=false, id := 31);
+//[БУ] [А3.8:8] [БУ:] Резерв. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_7, repairTime :=repTime, del := 0.0, inv :=false, id := 32);
+//[БУ] [А3.9:1] [БУ:XDI1:5a] Кран №12 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 33);
+//[БУ] [А3.9:2] [БУ:] Кран №12 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 34);
+//[БУ] [А3.9:3] [БУ:XDI1:6a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_8, repairTime :=repTime, del := 0.0, inv :=false, id := 35);
+//[БУ] [А3.9:4] [БУ:XDI1:7a] Минимальное количество (уровень) масла в маслобаке Д
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.MBD_Hmin, repairTime :=repTime, del := 0.0, inv :=false, id := 36);
+//[БУ] [А3.9:5] [БУ:XDI1:8a] Вибрация корпуса двигателя - Опасная (A211)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Vibr_D_Av, repairTime :=repTime, del := 0.0, inv :=false, id := 37);
+//[БУ] [А3.9:6] [БУ:XDI1:9a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Reserv_DI_9, repairTime :=repTime, del := 0.0, inv :=false, id := 38);
+//[БУ] [А3.9:7] [БУ:XDI1:10a] АО по загазованности
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AO_gas, repairTime :=repTime, del := 0.0, inv :=false, id := 39);
+//[БУ] [А3.9:8] [БУ:XDI1:11a] Отказ аппаратуры контроля загазованности кожуха ГТУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Fault_AKZ_KShT, repairTime :=repTime, del := 0.0, inv :=false, id := 40);
+//[БУ] [А3.10:1] [БУ:XDI1:12a] Отказ аппаратуры контроля загазованности отсека ГТУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Fault_AKZ_bayN, repairTime :=repTime, del := 0.0, inv :=false, id := 41);
+//[БУ] [А3.10:2] [БУ:XDI1:13a] БУШ-96 включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BUSH_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 42);
+//[БУ] [А3.10:3] [БУ:XDI1:14a] Нет готовности УПС к пуску ГПА
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.UPS_noReady, repairTime :=repTime, del := 0.0, inv :=false, id := 43);
+//[БУ] [А3.10:4] [БУ:XDI1:15a] Отказ агрегатной УПС
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.UPS_fault, repairTime :=repTime, del := 0.0, inv :=false, id := 44);
+//[БУ] [А3.10:5] [БУ:XDI1:21a] Максимальное количество масла в МБД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.MBD_Hmax, repairTime :=repTime, del := 0.0, inv :=false, id := 45);
+//[БУ] [А3.10:6] [БУ:XDI1:22a] Повыш. перепад давл. пуск. газа на фильтре очистки
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dPg_FO, repairTime :=repTime, del := 0.0, inv :=false, id := 46);
+//[БУ] [А3.10:7] [БУ:XDI1:23a] Повышенный dP на блоке выносных МФ-84
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dP_BVMF84_high, repairTime :=repTime, del := 0.0, inv :=false, id := 47);
+//[БУ] [А3.10:8] [БУ:XDI1:24a] Повышенный dP масла на БФ (Ф3)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dP_F3_high, repairTime :=repTime, del := 0.0, inv :=false, id := 48);
+//[БУ] [А3.11:1] [БУ:XDI1:25a] Повышенный dP масла на БФ (Ф4)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dP_F4_high, repairTime :=repTime, del := 0.0, inv :=false, id := 49);
+//[БУ] [А3.11:2] [БУ:XDI1:26a] Повышенный dP на масляном фильтре МФС-94
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dP_MFS94_high, repairTime :=repTime, del := 0.0, inv :=false, id := 50);
+//[БУ] [А3.11:3] [БУ:XDI1:27a] Кран №5 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 51);
+//[БУ] [А3.11:4] [БУ:] Кран №5 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 52);
+//[БУ] [А3.11:5] [БУ:XDI1:28a] Кран №5 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 53);
+//[БУ] [А3.11:6] [БУ:] Кран №5 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 54);
+//[БУ] [А3.11:7] [БУ:XDI1:29a] Кран №9 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 55);
+//[БУ] [А3.11:8] [БУ:] Кран №9 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 56);
+//[БУ] [А3.12:1] [БУ:XDI1:30a] Кран №9 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 57);
+//[БУ] [А3.12:2] [БУ:] Кран №9 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 58);
+//[БУ] [А3.12:3] [БУ:XDI1:31a] Кран №10 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 59);
+//[БУ] [А3.12:4] [БУ:] Кран №10 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 60);
+//[БУ] [А3.12:5] [БУ:XDI1:32a] Кран №10 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 61);
+//[БУ] [А3.12:6] [БУ:] Кран №10 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 62);
+//[БУ] [А3.12:7] [БУ:XDI2:1a] Кран №11 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 63);
+//[БУ] [А3.12:8] [БУ:] Кран №11 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 64);
+//[БУ] [А3.13:1] [БУ:XDI2:2a] Кран №11 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 65);
+//[БУ] [А3.13:2] [БУ:] Кран №11 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 66);
+//[БУ] [А3.13:3] [БУ:XDI2:3a] Кран №12 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 67);
+//[БУ] [А3.13:4] [БУ:] Кран №12 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 68);
+//[БУ] [А3.13:5] [БУ:XDI2:4a] Насос для перемешивания масла в МБД включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.NPMD_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 69);
+//[БУ] [А3.13:6] [БУ:XDI2:5a] БК 1 ВОУ открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BK1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 70);
+//[БУ] [А3.13:7] [БУ:XDI2:6a] БК 2 ВОУ открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BK2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 71);
+//[БУ] [А3.13:8] [БУ:XDI2:7a] Дверь ВОУ открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Door_VOU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 72);
+//[БУ] [А3.14:1] [БУ:XDI2:8a] Задвижка подогрева циклового воздуха открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZPCV_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 73);
+//[БУ] [А3.14:2] [БУ:XDI2:9a] Задвижка подогрева циклового воздуха закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZPCV_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 74);
+//[БУ] [А3.14:3] [БУ:XDI2:10a] Задвижка отбора воздуха от 7 ст. компрессора Д открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZOV7_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 75);
+//[БУ] [А3.14:4] [БУ:XDI2:11a] Задвижка отбора воздуха от 7 ст. компрессора Д закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZOV7_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 76);
+//[БУ] [А3.14:5] [БУ:XDI2:12a] Заслонка на всасе системы ВОД1 открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 77);
+//[БУ] [А3.14:6] [БУ:XDI2:13a] Заслонка на всасе системы ВОД1 закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD1_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 78);
+//[БУ] [А3.14:7] [БУ:XDI2:14a] Заслонка на выхлопе системы Д и трансмиссии открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD3_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 79);
+//[БУ] [А3.14:8] [БУ:XDI2:15a] Заслонка на выхлопе системы Д и трансмиссии закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD3_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 80);
+//[БУ] [А3.15:1] [БУ:XDI2:16a] Вибрация корпуса двигателя - Повышенная
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Vibr_D_Pv, repairTime :=repTime, del := 0.0, inv :=false, id := 81);
+//[БУ] [А3.15:2] [БУ:XDI2:17a] Напряжжение в ЩУ АВОМ Д подано
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 82);
+//[БУ] [А3.15:3] [БУ:XDI2:18a] ЩУ АВОМ Д работает в режиме "Нагрев"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_heat, repairTime :=repTime, del := 0.0, inv :=false, id := 83);
+//[БУ] [А3.15:4] [БУ:XDI2:19a] АВОМ Д готов к пуску
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_ready, repairTime :=repTime, del := 0.0, inv :=false, id := 84);
+//[БУ] [А3.15:5] [БУ:XDI2:20a] ЩУ АВОМ Д работает в режиме "Охлаждение"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_cold, repairTime :=repTime, del := 0.0, inv :=false, id := 85);
+//[БУ] [А3.15:6] [БУ:XDI2:21a] Максимальная Тм на выходе АВОМ Д
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_TmOut_max, repairTime :=repTime, del := 0.0, inv :=false, id := 86);
+//[БУ] [А3.15:7] [БУ:XDI2:22a] Заслонка на всасе системы ВОД2 открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 87);
+//[БУ] [А3.15:8] [БУ:XDI2:23a] Заслонка на всасе системы ВОД2 закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD2_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 88);
+//[БУ] [А3.16:1] [БУ:XDI2:24a] ВОД2 включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOD2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 89);
+//[БУ] [А3.16:2] [БУ:XDI2:25a] КПВЗ и КПГ турбины газогенератора открыты
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KPVZ_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 90);
+//[БУ] [А3.16:3] [БУ:XDI2:26a] КПВ открыты, отбор на РЗТ закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KPV_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 91);
+//[БУ] [А3.16:4] [БУ:XDI2:27a] Стопорный клапан закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.SK_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 92);
+//[БУ] [А3.16:5] [БУ:XDI2:28a] Сигнал срабатывания ЦВ СтВ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.StV_CV, repairTime :=repTime, del := 0.0, inv :=false, id := 93);
+//[БУ] [А3.16:6] [БУ:XDI2:29a] Стружка в масле СтВ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_StV, repairTime :=repTime, del := 0.0, inv :=false, id := 94);
+//[БУ] [А3.16:7] [БУ:XDI2:30a] Питание БУШ-96
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BUSH_power, repairTime :=repTime, del := 0.0, inv :=false, id := 95);
+//[БУ] [А3.16:8] [БУ:-] Стружка в ФС
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_FS, repairTime :=repTime, del := 0.0, inv :=false, id := 96);
+//[БУ] [А3.17:1] [БУ:-] Стружка в масле в коробке приводов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_MKB, repairTime :=repTime, del := 0.0, inv :=false, id := 97);
+//[БУ] [А3.17:2] [БУ:-] Стружка в линии откачки масла от ШПК
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_ShPK, repairTime :=repTime, del := 0.0, inv :=false, id := 98);
+//[БУ] [А3.17:3] [БУ:-] Стружка в линии откачки масла от РПТ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_RPT, repairTime :=repTime, del := 0.0, inv :=false, id := 99);
+//[БУ] [А3.17:4] [БУ:-] Стружка в линии откачки от опор СТ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Shav_ST, repairTime :=repTime, del := 0.0, inv :=false, id := 100);
+//[БУ] [А3.17:5] [БУ:XDI3:1a] Отбор на ПОС ГТУ открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.POS_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 101);
+//[БУ] [А3.17:6] [БУ:XDI3:2a] Отбор на ПОС ГТУ закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.POS_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 102);
+//[БУ] [А3.17:7] [БУ:XDI3:3a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv1, repairTime :=repTime, del := 0.0, inv :=false, id := 103);
+//[БУ] [А3.17:8] [БУ:] Резерв. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv2, repairTime :=repTime, del := 0.0, inv :=false, id := 104);
+//[БУ] [А3.18:1] [БУ:XDI3:4a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv3, repairTime :=repTime, del := 0.0, inv :=false, id := 105);
+//[БУ] [А3.18:2] [БУ:] Резерв. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv4, repairTime :=repTime, del := 0.0, inv :=false, id := 106);
+//[БУ] [А3.18:3] [БУ:XDI3:5a] Частотный преобразователь АВОМ Д включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_PCh_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 107);
+//[БУ] [А3.18:4] [БУ:XDI3:6a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv5, repairTime :=repTime, del := 0.0, inv :=false, id := 108);
+//[БУ] [А3.18:5] [БУ:XDI3:7a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv6, repairTime :=repTime, del := 0.0, inv :=false, id := 109);
+//[БУ] [А3.18:6] [БУ:XDI3:8a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv7, repairTime :=repTime, del := 0.0, inv :=false, id := 110);
+//[БУ] [А3.18:7] [БУ:XDI3:9a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv8, repairTime :=repTime, del := 0.0, inv :=false, id := 111);
+//[БУ] [А3.18:8] [БУ:XDI3:10a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv9, repairTime :=repTime, del := 0.0, inv :=false, id := 112);
+//[БУ] [А3.2:1] [БУ:] Задвижку подогрева циклового воздуха открыть.КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZPCV_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 113);
+//[БУ] [А3.2:2] [БУ:] Задвижку подогрева циклового воздуха закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZPCV_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 114);
+//[БУ] [А3.2:3] [БУ:] Задв. отбора воздуха от 7 ступени ГТУ открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZOV7_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 115);
+//[БУ] [А3.2:4] [БУ:] Задв. отбора воздуха от 7 ступени ГТУ закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZOV7_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 116);
+//[БУ] [А3.2:5] [БУ:] Заслонку 1 системы обдува Д открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 117);
+//[БУ] [А3.2:6] [БУ:] Заслонку 1 системы обдува Д закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD1_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 118);
+//[БУ] [А3.2:7] [БУ:] Заслонку 3 на выхлопе сист. ВОД и трансмиссии открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD3_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 119);
+//[БУ] [А3.2:8] [БУ:] Заслонку 3 на выхлопе сист. ВОД и трансмиссии закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD3_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 120);
+//[БУ] [А3.3:1] [БУ:] Кран N9 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 121);
+//[БУ] [А3.3:2] [БУ:] Кран N10 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 122);
+//[БУ] [А3.3:3] [БУ:] Кран N11 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 123);
+//[БУ] [А3.3:4] [БУ:] Кран N12 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 124);
+//[БУ] [А3.3:5] [БУ:] Кран N10 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr10_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 125);
+//[БУ] [А3.3:6] [БУ:] Кран N11 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr11_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 126);
+//[БУ] [А3.3:7] [БУ:] Кран N12 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr12_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 127);
+//[БУ] [А3.3:8] [БУ:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv10, repairTime :=repTime, del := 0.0, inv :=false, id := 128);
+//[БУ] [А4.4:1] [БУ:] ПОС ГТУ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.POS_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 129);
+//[БУ] [А4.4:2] [БУ:] Заслонку 2 системы обдува Д открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 130);
+//[БУ] [А4.4:3] [БУ:] Заслонку 2 системы обдува Д закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsVOD2_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 131);
+//[БУ] [А4.4:4] [БУ:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv11, repairTime :=repTime, del := 0.0, inv :=false, id := 132);
+//[БУ] [А4.4:5] [БУ:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv12, repairTime :=repTime, del := 0.0, inv :=false, id := 133);
+//[БУ] [А4.4:6] [БУ:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv13, repairTime :=repTime, del := 0.0, inv :=false, id := 134);
+//[БУ] [А4.4:7] [БУ:] Сопротивление линий питания 24 В AI, DI и DO кранов в норме
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.R_BU_norm, repairTime :=repTime, del := 0.0, inv :=false, id := 135);
+//[БУ] [А4.4:8] [БУ:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv14, repairTime :=repTime, del := 0.0, inv :=false, id := 136);
+//[ЭС] [A30.18:1] [ЭС:XDI6:1a] ВОД1 включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOD1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 137);
+//[ЭС] [A30.18:2] [ЭС:XDI6:2a] ВОТ1 включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOT1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 138);
+//[ЭС] [A30.18:3] [ЭС:XDI6:3a] ВВ1 отсека ГТУ включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BB1D_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 139);
+//[ЭС] [A30.18:4] [ЭС:XDI6:4a] ВВ1 отсека Н включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BB1N_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 140);
+//[ЭС] [A30.18:5] [ЭС:XDI6:5a] Повыш. давл. газа на выходе СтВ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.StV_Pg_high, repairTime :=repTime, del := 0.0, inv :=false, id := 141);
+//[ЭС] [A30.18:6] [ЭС:XDI6:6a] Двери ГТУ открыты
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Door_GTU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 142);
+//[ЭС] [A30.18:7] [ЭС:XDI6:7a] Двери БУ открыты
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Door_BU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 143);
+//[ЭС] [A30.18:8] [ЭС:XDI6:8a] Двери КШТ открыты
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Door_KShT, repairTime :=repTime, del := 0.0, inv :=false, id := 144);
+//[ЭС] [A30.19:1] [ЭС:XDI6:9a] Концентрация метана под кожухом Д >0,5% (повышенная)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Gas_KShT_high, repairTime :=repTime, del := 0.0, inv :=false, id := 145);
+//[ЭС] [A30.19:2] [ЭС:XDI6:10a] Концентрация метана в отсеке ГТУ >0,5% (повышенная)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Gas_GTU_high, repairTime :=repTime, del := 0.0, inv :=false, id := 146);
+//[ЭС] [A30.19:3] [ЭС:XDI6:11a] Концентрация метана в отсеке Н >0,5% (повышенная)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Gas_N_high, repairTime :=repTime, del := 0.0, inv :=false, id := 147);
+//[ЭС] [A30.19:4] [ЭС:XDI6:12a] Повышенный dP масла на фильтре дозапрвки
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dP_MBDdozap_high, repairTime :=repTime, del := 0.0, inv :=false, id := 148);
+//[ЭС] [A30.19:5] [ЭС:XDI6:13a] Низкое Р воды на входе УТО
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.UTO_PvOut_low, repairTime :=repTime, del := 0.0, inv :=false, id := 149);
+//[ЭС] [A30.19:6] [ЭС:XDI6:14a] Кондиционер БУ включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AirCond_BU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 150);
+//[ЭС] [A30.19:7] [ЭС:XDI6:15a] Вентилятор отсека ПТ включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VPT_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 151);
+//[ЭС] [A30.19:8] [ЭС:XDI6:16a] Вентилятор отсека МА включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VMA_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 152);
+//[ЭС] [A30.20:1] [ЭС:XDI6:17a] Электрорадиаторы отсека ГТУ включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_bayGTU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 153);
+//[ЭС] [A30.20:2] [ЭС:XDI6:18a] Электрорадиаторы отсека Н включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_bayN_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 154);
+//[ЭС] [A30.20:3] [ЭС:XDI6:19a] Электрорадиаторы в раме ГТУ включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_rampGTU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 155);
+//[ЭС] [A30.20:4] [ЭС:XDI6:20a] Электрорадиаторы отсека МА включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_bayMA_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 156);
+//[ЭС] [A30.20:5] [ЭС:XDI7:1a] Электрорадиаторы отсека ПТ включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_bayPT_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 157);
+//[ЭС] [A30.20:6] [ЭС:XDI7:2a] Обогрев трубопроводов БИК-90ГП1 и БУК-90ГП1 включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_BikBuk_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 158);
+//[ЭС] [A30.20:7] [ЭС:XDI7:3a] Элетрорадиаторы БУ включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_BU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 159);
+//[ЭС] [A30.20:8] [ЭС:XDI7:4a] Высокое Р воды на выходе УТО
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.UTO_PvOut_high, repairTime :=repTime, del := 0.0, inv :=false, id := 160);
+//[ЭС] [A30.21:1] [ЭС:XDI7:5a] Наличие напряжения 380 В 50Гц линия 1
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U380_line1, repairTime :=repTime, del := 0.0, inv :=false, id := 161);
+//[ЭС] [A30.21:2] [ЭС:XDI7:6a] Наличие напряжения 380 В 50Гц линия 2
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U380_line2, repairTime :=repTime, del := 0.0, inv :=false, id := 162);
+//[ЭС] [A30.21:3] [ЭС:XDI7:7a] Включение системы АВР (аварийное включение резерва)
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVR_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 163);
+//[ЭС] [A30.21:4] [ЭС:XDI7:8a] Ручное упр. на ЩРУ вкл.
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ShRU_manual, repairTime :=repTime, del := 0.0, inv :=false, id := 164);
+//[ЭС] [A30.21:5] [ЭС:XDI7:9a] Напряжение =220В на ЭПУУ кранов подано
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U220_EPUU_Kr, repairTime :=repTime, del := 0.0, inv :=false, id := 165);
+//[ЭС] [A30.21:6] [ЭС:XDI7:10a] Заслонка теплообменного блока УТО открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsT_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 166);
+//[ЭС] [A30.21:7] [ЭС:XDI7:11a] Заслонка теплообменного блока УТО закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsT_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 167);
+//[ЭС] [A30.21:8] [ЭС:XDI7:12a] Заслонка байпасного блока УТО открыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsB_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 168);
+//[ЭС] [A30.22:1] [ЭС:XDI7:13a] Заслонка байпасного блока УТО закрыта
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsB_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 169);
+//[ЭС] [A30.22:2] [ЭС:XDI7:14a] ВВ2 отсека ГТУ включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BB2D_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 170);
+//[ЭС] [A30.22:3] [ЭС:XDI7:15a] ВВ2 отсека Н включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.BB2N_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 171);
+//[ЭС] [A30.22:4] [ЭС:XDI7:16a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv15, repairTime :=repTime, del := 0.0, inv :=false, id := 172);
+//[ЭС] [A30.22:5] [ЭС:XDI7:17a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv16, repairTime :=repTime, del := 0.0, inv :=false, id := 173);
+//[ЭС] [A30.22:6] [ЭС:XDI7:18a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv17, repairTime :=repTime, del := 0.0, inv :=false, id := 174);
+//[ЭС] [A30.22:7] [ЭС:XDI7:19a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv18, repairTime :=repTime, del := 0.0, inv :=false, id := 175);
+//[ЭС] [A30.22:8] [ЭС:XDI7:20a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv19, repairTime :=repTime, del := 0.0, inv :=false, id := 176);
+//[ЭС] [A30.10:1] [ЭС:] Контроль основного питания САУ ГПА ~220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_GPA_main, repairTime :=repTime, del := 0.0, inv :=false, id := 177);
+//[ЭС] [A30.10:2] [ЭС:] Контроль резервного питания САУ ГПА =220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_GPA_res, repairTime :=repTime, del := 0.0, inv :=false, id := 178);
+//[ЭС] [A30.10:3] [ЭС:] Контроль основного питания БЭАО  ~220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BEO_alterMain, repairTime :=repTime, del := 0.0, inv :=false, id := 179);
+//[ЭС] [A30.10:4] [ЭС:] Контроль резервного питания БЭАО  ~220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BEO_alterRes, repairTime :=repTime, del := 0.0, inv :=false, id := 180);
+//[ЭС] [A30.10:5] [ЭС:] Контроль основного питания сторонних потребителей ~220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Outside220_main, repairTime :=repTime, del := 0.0, inv :=false, id := 181);
+//[ЭС] [A30.10:6] [ЭС:] Контроль резервного питания сторонних потребителей =220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Outside220_res, repairTime :=repTime, del := 0.0, inv :=false, id := 182);
+//[ЭС] [A30.10:7] [ЭС:] Контроль питания БУШ-96 ~220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BUSH_alter, repairTime :=repTime, del := 0.0, inv :=false, id := 183);
+//[ЭС] [A30.10:8] [ЭС:] Контроль питания БУШ-96 =220 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BUSH_const, repairTime :=repTime, del := 0.0, inv :=false, id := 184);
+//[ЭС] [A30.11:1] [ЭС:] Исправность основного ИП БЭАО
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BEO_main, repairTime :=repTime, del := 0.0, inv :=false, id := 185);
+//[ЭС] [A30.11:2] [ЭС:] Исправность резервного ИП БЭАО
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_BEO_res, repairTime :=repTime, del := 0.0, inv :=false, id := 186);
+//[ЭС] [A30.11:3] [ЭС:] Исправность основного ИП =24 В ПЛК
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_PLC_main, repairTime :=repTime, del := 0.0, inv :=false, id := 187);
+//[ЭС] [A30.11:4] [ЭС:] Исправность резервного ИП =24 В ПЛК
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_PLC_res, repairTime :=repTime, del := 0.0, inv :=false, id := 188);
+//[ЭС] [A30.11:5] [ЭС:] Исправность основного ИП =24 В внутренних устройств
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Intern_main, repairTime :=repTime, del := 0.0, inv :=false, id := 189);
+//[ЭС] [A30.11:6] [ЭС:] Исправность резервного ИП =24 В внутренних устройств
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Intern_res, repairTime :=repTime, del := 0.0, inv :=false, id := 190);
+//[ЭС] [A30.11:7] [ЭС:] Исправность основного ИП =24 В аналоговых входов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_AI_main, repairTime :=repTime, del := 0.0, inv :=false, id := 191);
+//[ЭС] [A30.11:8] [ЭС:] Исправность резервного ИП =24 В аналоговых входов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_AI_res, repairTime :=repTime, del := 0.0, inv :=false, id := 192);
+//[ЭС] [A30.12:1] [ЭС:] Исправность основного ИП =24 В дискретных входов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_DI_main, repairTime :=repTime, del := 0.0, inv :=false, id := 193);
+//[ЭС] [A30.12:2] [ЭС:] Исправность резервного ИП =24 В дискретных входов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_DI_res, repairTime :=repTime, del := 0.0, inv :=false, id := 194);
+//[ЭС] [A30.12:3] [ЭС:] Исправность основного ИП =24 В дискретных выходов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_DO_main, repairTime :=repTime, del := 0.0, inv :=false, id := 195);
+//[ЭС] [A30.12:4] [ЭС:] Исправность резервного ИП =24 В дискретных выходов
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_DO_res, repairTime :=repTime, del := 0.0, inv :=false, id := 196);
+//[ЭС] [A30.12:5] [ЭС:] Исправность основного ИП =24 В питания ИМ =27 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_AM_main, repairTime :=repTime, del := 0.0, inv :=false, id := 197);
+//[ЭС] [A30.12:6] [ЭС:] Исправность резервного ИП =24 В питания ИМ =27 В
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_AM_res, repairTime :=repTime, del := 0.0, inv :=false, id := 198);
+//[ЭС] [A30.12:7] [ЭС:] Контроль исправности разрядников
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Arester, repairTime :=repTime, del := 0.0, inv :=false, id := 199);
+//[ЭС] [A30.12:8] [ЭС:] Исправность основного ИП =24 В сторонних потребителей
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Outside24_main, repairTime :=repTime, del := 0.0, inv :=false, id := 200);
+//[ЭС] [A30.13:1] [ЭС:] Исправность резервного ИП =24 В сторонних потребителей
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.U_Outside24_res, repairTime :=repTime, del := 0.0, inv :=false, id := 201);
+//[ЭС] [A30.13:2] [ЭС:] Сопротивление линий питания 24 В AI, DI в норме
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.R_ES_norm, repairTime :=repTime, del := 0.0, inv :=false, id := 202);
+//[ЭС] [A30.13:3] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv20, repairTime :=repTime, del := 0.0, inv :=false, id := 203);
+//[ЭС] [A30.13:4] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv21, repairTime :=repTime, del := 0.0, inv :=false, id := 204);
+//[ЭС] [A30.13:5] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv22, repairTime :=repTime, del := 0.0, inv :=false, id := 205);
+//[ЭС] [A30.13:6] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv23, repairTime :=repTime, del := 0.0, inv :=false, id := 206);
+//[ЭС] [A30.13:7] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv24, repairTime :=repTime, del := 0.0, inv :=false, id := 207);
+//[ЭС] [A30.13:8] [ЭС:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv25, repairTime :=repTime, del := 0.0, inv :=false, id := 208);
+//[ЭС] [A30.14:1] [ЭС:] ВОД1 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOD1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 209);
+//[ЭС] [A30.14:2] [ЭС:] Щит управления АВОМ Н включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 210);
+//[ЭС] [A30.14:3] [ЭС:] ВОТ № 1 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOT1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 211);
+//[ЭС] [A30.14:4] [ЭС:] ВВОт.Д № 1 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOTD1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 212);
+//[ЭС] [A30.14:5] [ЭС:] ВВОт.Н № 1 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOTN1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 213);
+//[ЭС] [A30.14:6] [ЭС:] Щит управления АВОМ Д включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMD_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 214);
+//[ЭС] [A30.14:7] [ЭС:] Электрорадиатор отсека ГТУ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENGTU_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 215);
+//[ЭС] [A30.14:8] [ЭС:] Включение сирены перед пуском. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Sirena_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 216);
+//[ЭС] [A30.15:1] [ЭС:] Заслонку теплообменного блока УТО открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsT_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 217);
+//[ЭС] [A30.15:2] [ЭС:] Заслонку теплообменного блока УТО закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsT_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 218);
+//[ЭС] [A30.15:3] [ЭС:] Заслонку байпасного блока УТО открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsB_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 219);
+//[ЭС] [A30.15:4] [ЭС:] Заслонку байпасного блока УТО закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ZsB_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 220);
+//[ЭС] [A30.15:5] [ЭС:] ВОД2 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOD2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 221);
+//[ЭС] [A30.15:6] [ЭС:] Включить ВОт.МА. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VMA_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 222);
+//[ЭС] [A30.15:7] [ЭС:] ВОТ № 2 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VOT2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 223);
+//[ЭС] [A30.15:8] [ЭС:] ВВОт.Д № 2 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOD2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 224);
+//[ЭС] [A30.16:1] [ЭС:] ВВНОт. № 2 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOTN2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 225);
+//[ЭС] [A30.16:2] [ЭС:] Вытяжной вентилятор отсека ПТ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOPT_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 226);
+//[ЭС] [A30.16:3] [ЭС:] Электрорадиатор отсека Н  включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENN_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 227);
+//[ЭС] [A30.16:4] [ЭС:] Электрорадиатор  отсека МА включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENMA_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 228);
+//[ЭС] [A30.16:5] [ЭС:] Электрорадиатор  в раме ГТУ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENRGTU_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 229);
+//[ЭС] [A30.16:6] [ЭС:] ТЭН МБД - Включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.TEN_MBD_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 230);
+//[ЭС] [A30.16:7] [ЭС:] ТЭНы МБН - Включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.TEN_MBN_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 231);
+//[ЭС] [A30.16:8] [ЭС:] Электрорадиатор отсека ПТ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENPT_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 232);
+//[ЭС] [A30.17:1] [ЭС:] Обогрев трубопроводов БИК-90ГП1 и БУК-90ГП1 включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENTR_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 233);
+//[ЭС] [A30.17:2] [ЭС:] Электрорадиатор БУ включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.ENBU_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 234);
+//[ЭС] [A30.17:3] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv26, repairTime :=repTime, del := 0.0, inv :=false, id := 235);
+//[ЭС] [A30.17:4] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv27, repairTime :=repTime, del := 0.0, inv :=false, id := 236);
+//[ЭС] [A30.17:5] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv28, repairTime :=repTime, del := 0.0, inv :=false, id := 237);
+//[ЭС] [A30.17:6] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv29, repairTime :=repTime, del := 0.0, inv :=false, id := 238);
+//[ЭС] [A30.17:7] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv30, repairTime :=repTime, del := 0.0, inv :=false, id := 239);
+//[ЭС] [A30.17:8] [ЭС:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv31, repairTime :=repTime, del := 0.0, inv :=false, id := 240);
+//[ЦБК] [A20.16:1] [ЦБК:XDI4:1a] Кран №1 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 241);
+//[ЦБК] [A20.16:2] [ЦБК:] Кран №1 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 242);
+//[ЦБК] [A20.16:3] [ЦБК:XDI4:2a] Кран №1 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 243);
+//[ЦБК] [A20.16:4] [ЦБК:] Кран №1 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 244);
+//[ЦБК] [A20.16:5] [ЦБК:XDI4:3a] Кран №2 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 245);
+//[ЦБК] [A20.16:6] [ЦБК:] Кран №2 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 246);
+//[ЦБК] [A20.16:7] [ЦБК:XDI4:4a] Кран №2 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 247);
+//[ЦБК] [A20.16:8] [ЦБК:] Кран №2 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 248);
+//[ЦБК] [A20.17:1] [ЦБК:XDI4:5a] Кран №4 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 249);
+//[ЦБК] [A20.17:2] [ЦБК:] Кран №4 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 250);
+//[ЦБК] [A20.17:3] [ЦБК:XDI4:6a] Кран №6 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 251);
+//[ЦБК] [A20.17:4] [ЦБК:] Кран №6 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 252);
+//[ЦБК] [A20.17:5] [ЦБК:XDI4:7a] Кран №6 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 253);
+//[ЦБК] [A20.17:6] [ЦБК:] Кран №6 закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 254);
+//[ЦБК] [A20.17:7] [ЦБК:XDI4:8a] Пожар ГПА
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Fire, repairTime :=repTime, del := 0.0, inv :=false, id := 255);
+//[ЦБК] [A20.17:8] [ЦБК:] Пожар ГПА. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Fire_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 256);
+//[ЦБК] [A20.18:1] [ЦБК:XDI4:9a] Минимальный уровень масла в МБН
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.MBN_levelOilMin, repairTime :=repTime, del := 0.0, inv :=false, id := 257);
+//[ЦБК] [A20.18:2] [ЦБК:] Минимальный уровень масла в МБН. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.MBN_levelOilMin_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 258);
+//[ЦБК] [A20.18:3] [ЦБК:XDI4:10a] Кран №4 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 259);
+//[ЦБК] [A20.18:4] [ЦБК:] Кран №4 открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 260);
+//[ЦБК] [A20.18:5] [ЦБК:XDI4:11a] Кран 6р открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrAPK_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 261);
+//[ЦБК] [A20.18:6] [ЦБК:] Кран 6р открыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrAPK_ON_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 262);
+//[ЦБК] [A20.18:7] [ЦБК:XDI4:12a] Кран 6р закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrAPK_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 263);
+//[ЦБК] [A20.18:8] [ЦБК:] Кран 6р закрыт. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrAPK_OF_KCD, repairTime :=repTime, del := 0.0, inv :=false, id := 264);
+//[ЦБК] [A20.19:1] [ЦБК:XDI4:13a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv32, repairTime :=repTime, del := 0.0, inv :=false, id := 265);
+//[ЦБК] [A20.19:2] [ЦБК:] Резерв. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv33, repairTime :=repTime, del := 0.0, inv :=false, id := 266);
+//[ЦБК] [A20.19:3] [ЦБК:XDI4:14a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv34, repairTime :=repTime, del := 0.0, inv :=false, id := 267);
+//[ЦБК] [A20.19:4] [ЦБК:] Резерв. КЦД
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv35, repairTime :=repTime, del := 0.0, inv :=false, id := 268);
+//[ЦБК] [A20.19:5] [ЦБК:XDI4:15a] Максимальный уровень масла в МБН
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.MBN_levelOilMax, repairTime :=repTime, del := 0.0, inv :=false, id := 269);
+//[ЦБК] [A20.19:6] [ЦБК:XDI4:16a] ПНУ нагнетателя включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.PNU_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 270);
+//[ЦБК] [A20.19:7] [ЦБК:XDI4:17a] Повышенный перепад dP газа на сетке перед Н
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dPg_protGridN, repairTime :=repTime, del := 0.0, inv :=false, id := 271);
+//[ЦБК] [A20.19:8] [ЦБК:XDI4:18a] Низкий dP на кране 1
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dPg_Kr1_low, repairTime :=repTime, del := 0.0, inv :=false, id := 272);
+//[ЦБК] [A20.20:1] [ЦБК:XDI4:19a] Низкий dP "Масло-Газ"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.dPmg_low, repairTime :=repTime, del := 0.0, inv :=false, id := 273);
+//[ЦБК] [A20.20:2] [ЦБК:XDI4:20a] Рм (высокого Р) системы уплотнений Н
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Pm_packingN_high, repairTime :=repTime, del := 0.0, inv :=false, id := 274);
+//[ЦБК] [A20.20:3] [ЦБК:XDI5:1a] Давление масла перед АВОМ Н - Низкое
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_PmFront_low, repairTime :=repTime, del := 0.0, inv :=false, id := 275);
+//[ЦБК] [A20.20:4] [ЦБК:XDI5:2a] Насос для перемешивания масла в МБН включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.NPMN_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 276);
+//[ЦБК] [A20.20:5] [ЦБК:XDI5:3a] Электронагреватель в МБД включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_MBD_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 277);
+//[ЦБК] [A20.20:6] [ЦБК:XDI5:4a] Электронагреватели в МБН включены
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.EN_MBN_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 278);
+//[ЦБК] [A20.20:7] [ЦБК:XDI5:5a] АВОМ  Н - Напряжение в ЩУ подано
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 279);
+//[ЦБК] [A20.20:8] [ЦБК:XDI5:6a] ЩУ АВОМ Н работает в режиме "Нагрев"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_heat, repairTime :=repTime, del := 0.0, inv :=false, id := 280);
+//[ЦБК] [A20.21:1] [ЦБК:XDI5:7a] АВОМ Н готов к пуску
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_ready, repairTime :=repTime, del := 0.0, inv :=false, id := 281);
+//[ЦБК] [A20.21:2] [ЦБК:XDI5:8a] ЩУ АВОМ Н работает в режиме "Охлаждение"
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_cold, repairTime :=repTime, del := 0.0, inv :=false, id := 282);
+//[ЦБК] [A20.21:3] [ЦБК:XDI5:9a] Частотный преобразователь АВОМ Н включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_PCh_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 283);
+//[ЦБК] [A20.21:4] [ЦБК:XDI5:10a] Максимальная Тм на выходе АВОМ Н
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.AVOMN_TmOut_max, repairTime :=repTime, del := 0.0, inv :=false, id := 284);
+//[ЦБК] [A20.21:5] [ЦБК:XDI5:11a] Обогреватель Крана 6р включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrAPK_heat_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 285);
+//[ЦБК] [A20.21:6] [ЦБК:XDI5:12a] ВОТ2 Н включен
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VVOTN2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 286);
+//[ЦБК] [A20.21:7] [ЦБК:XDI5:13a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv36, repairTime :=repTime, del := 0.0, inv :=false, id := 287);
+//[ЦБК] [A20.21:8] [ЦБК:XDI5:14a] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv37, repairTime :=repTime, del := 0.0, inv :=false, id := 288);
+//[ЦБК] [A20.14:1] [ЦБК:] Кран N1 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 289);
+//[ЦБК] [A20.14:2] [ЦБК:] Кран N2 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 290);
+//[ЦБК] [A20.14:3] [ЦБК:] Кран N4 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 291);
+//[ЦБК] [A20.14:4] [ЦБК:] Кран N5 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 292);
+//[ЦБК] [A20.14:5] [ЦБК:] Кран N6 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 293);
+//[ЦБК] [A20.14:6] [ЦБК:] Кран N1 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr1_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 294);
+//[ЦБК] [A20.14:7] [ЦБК:] Кран N2 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr2_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 295);
+//[ЦБК] [A20.14:8] [ЦБК:] Кран N4 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr4_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 296);
+//[ЦБК] [A20.15:1] [ЦБК:] Кран N5 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr5_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 297);
+//[ЦБК] [A20.15:2] [ЦБК:] Кран N6 открыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr6_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 298);
+//[ЦБК] [A20.15:3] [ЦБК:] Кран N9 закрыть. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.Kr9_OF_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 299);
+//[ЦБК] [A20.15:4] [ЦБК:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv38, repairTime :=repTime, del := 0.0, inv :=false, id := 300);
+//[ЦБК] [A20.15:5] [ЦБК:] Резерв. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv39, repairTime :=repTime, del := 0.0, inv :=false, id := 301);
+//[ЦБК] [A20.15:6] [ЦБК:] ПНУ нагнетателя включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.PNU_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 302);
+//[ЦБК] [A20.15:7] [ЦБК:] Насос перемешивания масла в БН включить. КЦУ
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.NPBN_ON_KCU, repairTime :=repTime, del := 0.0, inv :=false, id := 303);
+//[ЦБК] [A20.15:8] [ЦБК:] Сопротивление линий питания 24 В AI, DI и DO кранов в норме
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.R_CBK_norm, repairTime :=repTime, del := 0.0, inv :=false, id := 304);
+//[АМГБ] [A40.10:1] [АМГБ:ХDI1-1A] Наличие давления в буферной полости ГМТ Д
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.GMTD_P, repairTime :=repTime, del := 0.0, inv :=false, id := 305);
+//[АМГБ] [A40.10:2] [АМГБ:ХDI1-2A] Наличие давления в буферной полости ГМТ К
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.GMTN_N, repairTime :=repTime, del := 0.0, inv :=false, id := 306);
+//[АМГБ] [A40.10:3] [АМГБ:ХDI1-3A] Датчик разрыва предохранительной мембраны буферной полости ГМТ Д
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.GMTD_fuse, repairTime :=repTime, del := 0.0, inv :=false, id := 307);
+//[АМГБ] [A40.10:4] [АМГБ:ХDI1-4A] Датчик разрыва предохранительной мембраны буферной полости ГМТ К
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.GMTN_fuse, repairTime :=repTime, del := 0.0, inv :=false, id := 308);
+//[АМГБ] [A40.10:5] [АМГБ:ХDI1-5A] Кран КР1 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR1_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 309);
+//[АМГБ] [A40.10:6] [АМГБ:ХDI1-6A] Кран КР1 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR1_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 310);
+//[АМГБ] [A40.10:7] [АМГБ:ХDI1-7A] Тепловая защита привода КР1
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR1_protHeat, repairTime :=repTime, del := 0.0, inv :=false, id := 311);
+//[АМГБ] [A40.10:8] [АМГБ:ХDI1-8A] Кран КР2 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR2_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 312);
+//[АМГБ] [A40.11:1] [АМГБ:ХDI1-9A] Кран КР2 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR2_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 313);
+//[АМГБ] [A40.11:2] [АМГБ:ХDI1-10A] Тепловая защита привода КР2
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR2_protHeat, repairTime :=repTime, del := 0.0, inv :=false, id := 314);
+//[АМГБ] [A40.11:3] [АМГБ:ХDI1-11A] Кран КР3 открыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR3_ON, repairTime :=repTime, del := 0.0, inv :=false, id := 315);
+//[АМГБ] [A40.11:4] [АМГБ:ХDI1-12A] Кран КР3 закрыт
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR3_OF, repairTime :=repTime, del := 0.0, inv :=false, id := 316);
+//[АМГБ] [A40.11:5] [АМГБ:ХDI1-13A] Тепловая защита привода КР3
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.KrKR3_protHeat, repairTime :=repTime, del := 0.0, inv :=false, id := 317);
+//[АМГБ] [A40.11:6] [АМГБ:ХDI1-14A] Авария вентилятора В1
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VV1_fault, repairTime :=repTime, del := 0.0, inv :=false, id := 318);
+//[АМГБ] [A40.11:7] [АМГБ:ХDI1-15A] Авария вентилятора В2
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.VV2_fault, repairTime :=repTime, del := 0.0, inv :=false, id := 319);
+//[АМГБ] [A40.11:8] [АМГБ:ХDI1-16A] Неисправность газосигнализатора 
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.GasSignal_fault, repairTime :=repTime, del := 0.0, inv :=false, id := 320);
+//[АМГБ] [A40.12:1] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv40, repairTime :=repTime, del := 0.0, inv :=false, id := 321);
+//[АМГБ] [A40.12:2] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv41, repairTime :=repTime, del := 0.0, inv :=false, id := 322);
+//[АМГБ] [A40.12:3] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv42, repairTime :=repTime, del := 0.0, inv :=false, id := 323);
+//[АМГБ] [A40.12:4] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv43, repairTime :=repTime, del := 0.0, inv :=false, id := 324);
+//[АМГБ] [A40.12:5] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv44, repairTime :=repTime, del := 0.0, inv :=false, id := 325);
+//[АМГБ] [A40.12:6] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv45, repairTime :=repTime, del := 0.0, inv :=false, id := 326);
+//[АМГБ] [A40.12:7] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv46, repairTime :=repTime, del := 0.0, inv :=false, id := 327);
+//[АМГБ] [A40.12:8] [АМГБ:] Резерв
+ VGSig.fnDI_init(setStruct => algGVL.GPA_DI_Setting.DI_Reserv47, repairTime :=repTime, del := 0.0, inv :=false, id := 328);
+ //Конец сгенерированного кода
+END_IF;
+
+//Начало сгенерированного кода DI_Processing
+//[БУ] [А3.5:1] [БУ:] Контроль исправности ФУС
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.FUS_OK, externalFault := false, set := algGVL.GPA_DI_Setting.FUS_OK, FromHMI := algGVL.GPA_DI_FromHMI.FUS_OK, ToHMI := algGVL.GPA_DI_ToHMI.FUS_OK, my := algGVL.GPA_DI_Internal.FUS_OK, out :=  algGVL.GPA_DI.FUS_OK);
+//[БУ] [А3.5:2] [БУ:XT20:2a] Кнопка ЭАО (ПРУ)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_EAO_PRU, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_EAO_PRU, FromHMI := algGVL.GPA_DI_FromHMI.Btn_EAO_PRU, ToHMI := algGVL.GPA_DI_ToHMI.Btn_EAO_PRU, my := algGVL.GPA_DI_Internal.Btn_EAO_PRU, out :=  algGVL.GPA_DI.Btn_EAO_PRU);
+//[БУ] [А3.5:3] [БУ:] Кнопка ЭАО (ПРУ). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_EAO_PRU_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_EAO_PRU_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_EAO_PRU_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_EAO_PRU_KCD, my := algGVL.GPA_DI_Internal.Btn_EAO_PRU_KCD, out :=  algGVL.GPA_DI.Btn_EAO_PRU_KCD);
+//[БУ] [А3.5:4] [БУ:XT20:4a] Кнопка АО (ПРУ)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_AO_PRU, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_AO_PRU, FromHMI := algGVL.GPA_DI_FromHMI.Btn_AO_PRU, ToHMI := algGVL.GPA_DI_ToHMI.Btn_AO_PRU, my := algGVL.GPA_DI_Internal.Btn_AO_PRU, out :=  algGVL.GPA_DI.Btn_AO_PRU);
+//[БУ] [А3.5:5] [БУ:] Кнопка АО (ПРУ). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_AO_PRU_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_AO_PRU_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_AO_PRU_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_AO_PRU_KCD, my := algGVL.GPA_DI_Internal.Btn_AO_PRU_KCD, out :=  algGVL.GPA_DI.Btn_AO_PRU_KCD);
+//[БУ] [А3.5:6] [БУ:XT20:4b] Кнопка НО (ПРУ)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_NO_PRU, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_NO_PRU, FromHMI := algGVL.GPA_DI_FromHMI.Btn_NO_PRU, ToHMI := algGVL.GPA_DI_ToHMI.Btn_NO_PRU, my := algGVL.GPA_DI_Internal.Btn_NO_PRU, out :=  algGVL.GPA_DI.Btn_NO_PRU);
+//[БУ] [А3.5:7] [БУ:] Кнопка НО (ПРУ). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_NO_PRU_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_NO_PRU_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_NO_PRU_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_NO_PRU_KCD, my := algGVL.GPA_DI_Internal.Btn_NO_PRU_KCD, out :=  algGVL.GPA_DI.Btn_NO_PRU_KCD);
+//[БУ] [А3.5:8] [БУ:XT20:5b] Готовность БЭО
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BEO_ready, externalFault := false, set := algGVL.GPA_DI_Setting.BEO_ready, FromHMI := algGVL.GPA_DI_FromHMI.BEO_ready, ToHMI := algGVL.GPA_DI_ToHMI.BEO_ready, my := algGVL.GPA_DI_Internal.BEO_ready, out :=  algGVL.GPA_DI.BEO_ready);
+//[БУ] [А3.6:1] [БУ:] Готовность БЭО. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BEO_ready_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.BEO_ready_KCD, FromHMI := algGVL.GPA_DI_FromHMI.BEO_ready_KCD, ToHMI := algGVL.GPA_DI_ToHMI.BEO_ready_KCD, my := algGVL.GPA_DI_Internal.BEO_ready_KCD, out :=  algGVL.GPA_DI.BEO_ready_KCD);
+//[БУ] [А3.6:2] [БУ:XT20:2b] БЭО работает
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BEO_work, externalFault := false, set := algGVL.GPA_DI_Setting.BEO_work, FromHMI := algGVL.GPA_DI_FromHMI.BEO_work, ToHMI := algGVL.GPA_DI_ToHMI.BEO_work, my := algGVL.GPA_DI_Internal.BEO_work, out :=  algGVL.GPA_DI.BEO_work);
+//[БУ] [А3.6:3] [БУ:] БЭО работает. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BEO_work_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.BEO_work_KCD, FromHMI := algGVL.GPA_DI_FromHMI.BEO_work_KCD, ToHMI := algGVL.GPA_DI_ToHMI.BEO_work_KCD, my := algGVL.GPA_DI_Internal.BEO_work_KCD, out :=  algGVL.GPA_DI.BEO_work_KCD);
+//[БУ] [А3.6:4] [БУ:XT20:5a] Кнопка "Квитирование"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_Kvit, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_Kvit, FromHMI := algGVL.GPA_DI_FromHMI.Btn_Kvit, ToHMI := algGVL.GPA_DI_ToHMI.Btn_Kvit, my := algGVL.GPA_DI_Internal.Btn_Kvit, out :=  algGVL.GPA_DI.Btn_Kvit);
+//[БУ] [А3.6:5] [БУ:] Кнопка "Квитирование". КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_Kvit_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_Kvit_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_Kvit_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_Kvit_KCD, my := algGVL.GPA_DI_Internal.Btn_Kvit_KCD, out :=  algGVL.GPA_DI.Btn_Kvit_KCD);
+//[БУ] [А3.6:6] [БУ:XT20:7a] Кнопка РО выше
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_RO_Up, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_RO_Up, FromHMI := algGVL.GPA_DI_FromHMI.Btn_RO_Up, ToHMI := algGVL.GPA_DI_ToHMI.Btn_RO_Up, my := algGVL.GPA_DI_Internal.Btn_RO_Up, out :=  algGVL.GPA_DI.Btn_RO_Up);
+//[БУ] [А3.6:7] [БУ:] Кнопка РО выше. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_RO_Up_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_RO_Up_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_RO_Up_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_RO_Up_KCD, my := algGVL.GPA_DI_Internal.Btn_RO_Up_KCD, out :=  algGVL.GPA_DI.Btn_RO_Up_KCD);
+//[БУ] [А3.6:8] [БУ:XT20:7b] Кнопка РО ниже
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_RO_Down, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_RO_Down, FromHMI := algGVL.GPA_DI_FromHMI.Btn_RO_Down, ToHMI := algGVL.GPA_DI_ToHMI.Btn_RO_Down, my := algGVL.GPA_DI_Internal.Btn_RO_Down, out :=  algGVL.GPA_DI.Btn_RO_Down);
+//[БУ] [А3.7:1] [БУ:] Кнопка РО ниже. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Btn_RO_Down_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Btn_RO_Down_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Btn_RO_Down_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Btn_RO_Down_KCD, my := algGVL.GPA_DI_Internal.Btn_RO_Down_KCD, out :=  algGVL.GPA_DI.Btn_RO_Down_KCD);
+//[БУ] [А3.7:2] [БУ:] Автомат питания DO включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.QF_DO_ON, externalFault := false, set := algGVL.GPA_DI_Setting.QF_DO_ON, FromHMI := algGVL.GPA_DI_FromHMI.QF_DO_ON, ToHMI := algGVL.GPA_DI_ToHMI.QF_DO_ON, my := algGVL.GPA_DI_Internal.QF_DO_ON, out :=  algGVL.GPA_DI.QF_DO_ON);
+//[БУ] [А3.7:3] [БУ:] Исправность ИП БУ ГПА
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.IPBU_GPA_good, externalFault := false, set := algGVL.GPA_DI_Setting.IPBU_GPA_good, FromHMI := algGVL.GPA_DI_FromHMI.IPBU_GPA_good, ToHMI := algGVL.GPA_DI_ToHMI.IPBU_GPA_good, my := algGVL.GPA_DI_Internal.IPBU_GPA_good, out :=  algGVL.GPA_DI.IPBU_GPA_good);
+//[БУ] [А3.7:4] [БУ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_1, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_1, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_1, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_1, my := algGVL.GPA_DI_Internal.Reserv_DI_1, out :=  algGVL.GPA_DI.Reserv_DI_1);
+//[БУ] [А3.7:5] [БУ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_2, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_2, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_2, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_2, my := algGVL.GPA_DI_Internal.Reserv_DI_2, out :=  algGVL.GPA_DI.Reserv_DI_2);
+//[БУ] [А3.7:6] [БУ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_3, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_3, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_3, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_3, my := algGVL.GPA_DI_Internal.Reserv_DI_3, out :=  algGVL.GPA_DI.Reserv_DI_3);
+//[БУ] [А3.7:7] [БУ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_4, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_4, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_4, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_4, my := algGVL.GPA_DI_Internal.Reserv_DI_4, out :=  algGVL.GPA_DI.Reserv_DI_4);
+//[БУ] [А3.7:8] [БУ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_5, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_5, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_5, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_5, my := algGVL.GPA_DI_Internal.Reserv_DI_5, out :=  algGVL.GPA_DI.Reserv_DI_5);
+//[БУ] [А3.8:1] [БУ:XDI1:1a] АО (кнопка в БУ)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_btnBU, externalFault := false, set := algGVL.GPA_DI_Setting.AO_btnBU, FromHMI := algGVL.GPA_DI_FromHMI.AO_btnBU, ToHMI := algGVL.GPA_DI_ToHMI.AO_btnBU, my := algGVL.GPA_DI_Internal.AO_btnBU, out :=  algGVL.GPA_DI.AO_btnBU);
+//[БУ] [А3.8:2] [БУ:] АО (кнопка в БУ). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_btnBU_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.AO_btnBU_KCD, FromHMI := algGVL.GPA_DI_FromHMI.AO_btnBU_KCD, ToHMI := algGVL.GPA_DI_ToHMI.AO_btnBU_KCD, my := algGVL.GPA_DI_Internal.AO_btnBU_KCD, out :=  algGVL.GPA_DI.AO_btnBU_KCD);
+//[БУ] [А3.8:3] [БУ:XDI1:2a] АО (САУ КЦ)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_SAUKC, externalFault := false, set := algGVL.GPA_DI_Setting.AO_SAUKC, FromHMI := algGVL.GPA_DI_FromHMI.AO_SAUKC, ToHMI := algGVL.GPA_DI_ToHMI.AO_SAUKC, my := algGVL.GPA_DI_Internal.AO_SAUKC, out :=  algGVL.GPA_DI.AO_SAUKC);
+//[БУ] [А3.8:4] [БУ:] АО (САУ КЦ). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_SAUKC_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.AO_SAUKC_KCD, FromHMI := algGVL.GPA_DI_FromHMI.AO_SAUKC_KCD, ToHMI := algGVL.GPA_DI_ToHMI.AO_SAUKC_KCD, my := algGVL.GPA_DI_Internal.AO_SAUKC_KCD, out :=  algGVL.GPA_DI.AO_SAUKC_KCD);
+//[БУ] [А3.8:5] [БУ:XDI1:3a] АО (кнопка в ШТА)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_SHTA, externalFault := false, set := algGVL.GPA_DI_Setting.AO_SHTA, FromHMI := algGVL.GPA_DI_FromHMI.AO_SHTA, ToHMI := algGVL.GPA_DI_ToHMI.AO_SHTA, my := algGVL.GPA_DI_Internal.AO_SHTA, out :=  algGVL.GPA_DI.AO_SHTA);
+//[БУ] [А3.8:6] [БУ:] АО (кнопка в ШТА). КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_SHTA_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.AO_SHTA_KCD, FromHMI := algGVL.GPA_DI_FromHMI.AO_SHTA_KCD, ToHMI := algGVL.GPA_DI_ToHMI.AO_SHTA_KCD, my := algGVL.GPA_DI_Internal.AO_SHTA_KCD, out :=  algGVL.GPA_DI.AO_SHTA_KCD);
+//[БУ] [А3.8:7] [БУ:XDI1:4a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_6, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_6, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_6, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_6, my := algGVL.GPA_DI_Internal.Reserv_DI_6, out :=  algGVL.GPA_DI.Reserv_DI_6);
+//[БУ] [А3.8:8] [БУ:] Резерв. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_7, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_7, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_7, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_7, my := algGVL.GPA_DI_Internal.Reserv_DI_7, out :=  algGVL.GPA_DI.Reserv_DI_7);
+//[БУ] [А3.9:1] [БУ:XDI1:5a] Кран №12 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_OF, my := algGVL.GPA_DI_Internal.Kr12_OF, out :=  algGVL.GPA_DI.Kr12_OF);
+//[БУ] [А3.9:2] [БУ:] Кран №12 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_OF_KCD, my := algGVL.GPA_DI_Internal.Kr12_OF_KCD, out :=  algGVL.GPA_DI.Kr12_OF_KCD);
+//[БУ] [А3.9:3] [БУ:XDI1:6a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_8, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_8, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_8, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_8, my := algGVL.GPA_DI_Internal.Reserv_DI_8, out :=  algGVL.GPA_DI.Reserv_DI_8);
+//[БУ] [А3.9:4] [БУ:XDI1:7a] Минимальное количество (уровень) масла в маслобаке Д
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.MBD_Hmin, externalFault := false, set := algGVL.GPA_DI_Setting.MBD_Hmin, FromHMI := algGVL.GPA_DI_FromHMI.MBD_Hmin, ToHMI := algGVL.GPA_DI_ToHMI.MBD_Hmin, my := algGVL.GPA_DI_Internal.MBD_Hmin, out :=  algGVL.GPA_DI.MBD_Hmin);
+//[БУ] [А3.9:5] [БУ:XDI1:8a] Вибрация корпуса двигателя - Опасная (A211)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Vibr_D_Av, externalFault := false, set := algGVL.GPA_DI_Setting.Vibr_D_Av, FromHMI := algGVL.GPA_DI_FromHMI.Vibr_D_Av, ToHMI := algGVL.GPA_DI_ToHMI.Vibr_D_Av, my := algGVL.GPA_DI_Internal.Vibr_D_Av, out :=  algGVL.GPA_DI.Vibr_D_Av);
+//[БУ] [А3.9:6] [БУ:XDI1:9a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Reserv_DI_9, externalFault := false, set := algGVL.GPA_DI_Setting.Reserv_DI_9, FromHMI := algGVL.GPA_DI_FromHMI.Reserv_DI_9, ToHMI := algGVL.GPA_DI_ToHMI.Reserv_DI_9, my := algGVL.GPA_DI_Internal.Reserv_DI_9, out :=  algGVL.GPA_DI.Reserv_DI_9);
+//[БУ] [А3.9:7] [БУ:XDI1:10a] АО по загазованности
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AO_gas, externalFault := false, set := algGVL.GPA_DI_Setting.AO_gas, FromHMI := algGVL.GPA_DI_FromHMI.AO_gas, ToHMI := algGVL.GPA_DI_ToHMI.AO_gas, my := algGVL.GPA_DI_Internal.AO_gas, out :=  algGVL.GPA_DI.AO_gas);
+//[БУ] [А3.9:8] [БУ:XDI1:11a] Отказ аппаратуры контроля загазованности кожуха ГТУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Fault_AKZ_KShT, externalFault := false, set := algGVL.GPA_DI_Setting.Fault_AKZ_KShT, FromHMI := algGVL.GPA_DI_FromHMI.Fault_AKZ_KShT, ToHMI := algGVL.GPA_DI_ToHMI.Fault_AKZ_KShT, my := algGVL.GPA_DI_Internal.Fault_AKZ_KShT, out :=  algGVL.GPA_DI.Fault_AKZ_KShT);
+//[БУ] [А3.10:1] [БУ:XDI1:12a] Отказ аппаратуры контроля загазованности отсека ГТУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Fault_AKZ_bayN, externalFault := false, set := algGVL.GPA_DI_Setting.Fault_AKZ_bayN, FromHMI := algGVL.GPA_DI_FromHMI.Fault_AKZ_bayN, ToHMI := algGVL.GPA_DI_ToHMI.Fault_AKZ_bayN, my := algGVL.GPA_DI_Internal.Fault_AKZ_bayN, out :=  algGVL.GPA_DI.Fault_AKZ_bayN);
+//[БУ] [А3.10:2] [БУ:XDI1:13a] БУШ-96 включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BUSH_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BUSH_ON, FromHMI := algGVL.GPA_DI_FromHMI.BUSH_ON, ToHMI := algGVL.GPA_DI_ToHMI.BUSH_ON, my := algGVL.GPA_DI_Internal.BUSH_ON, out :=  algGVL.GPA_DI.BUSH_ON);
+//[БУ] [А3.10:3] [БУ:XDI1:14a] Нет готовности УПС к пуску ГПА
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.UPS_noReady, externalFault := false, set := algGVL.GPA_DI_Setting.UPS_noReady, FromHMI := algGVL.GPA_DI_FromHMI.UPS_noReady, ToHMI := algGVL.GPA_DI_ToHMI.UPS_noReady, my := algGVL.GPA_DI_Internal.UPS_noReady, out :=  algGVL.GPA_DI.UPS_noReady);
+//[БУ] [А3.10:4] [БУ:XDI1:15a] Отказ агрегатной УПС
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.UPS_fault, externalFault := false, set := algGVL.GPA_DI_Setting.UPS_fault, FromHMI := algGVL.GPA_DI_FromHMI.UPS_fault, ToHMI := algGVL.GPA_DI_ToHMI.UPS_fault, my := algGVL.GPA_DI_Internal.UPS_fault, out :=  algGVL.GPA_DI.UPS_fault);
+//[БУ] [А3.10:5] [БУ:XDI1:21a] Максимальное количество масла в МБД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.MBD_Hmax, externalFault := false, set := algGVL.GPA_DI_Setting.MBD_Hmax, FromHMI := algGVL.GPA_DI_FromHMI.MBD_Hmax, ToHMI := algGVL.GPA_DI_ToHMI.MBD_Hmax, my := algGVL.GPA_DI_Internal.MBD_Hmax, out :=  algGVL.GPA_DI.MBD_Hmax);
+//[БУ] [А3.10:6] [БУ:XDI1:22a] Повыш. перепад давл. пуск. газа на фильтре очистки
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dPg_FO, externalFault := false, set := algGVL.GPA_DI_Setting.dPg_FO, FromHMI := algGVL.GPA_DI_FromHMI.dPg_FO, ToHMI := algGVL.GPA_DI_ToHMI.dPg_FO, my := algGVL.GPA_DI_Internal.dPg_FO, out :=  algGVL.GPA_DI.dPg_FO);
+//[БУ] [А3.10:7] [БУ:XDI1:23a] Повышенный dP на блоке выносных МФ-84
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dP_BVMF84_high, externalFault := false, set := algGVL.GPA_DI_Setting.dP_BVMF84_high, FromHMI := algGVL.GPA_DI_FromHMI.dP_BVMF84_high, ToHMI := algGVL.GPA_DI_ToHMI.dP_BVMF84_high, my := algGVL.GPA_DI_Internal.dP_BVMF84_high, out :=  algGVL.GPA_DI.dP_BVMF84_high);
+//[БУ] [А3.10:8] [БУ:XDI1:24a] Повышенный dP масла на БФ (Ф3)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dP_F3_high, externalFault := false, set := algGVL.GPA_DI_Setting.dP_F3_high, FromHMI := algGVL.GPA_DI_FromHMI.dP_F3_high, ToHMI := algGVL.GPA_DI_ToHMI.dP_F3_high, my := algGVL.GPA_DI_Internal.dP_F3_high, out :=  algGVL.GPA_DI.dP_F3_high);
+//[БУ] [А3.11:1] [БУ:XDI1:25a] Повышенный dP масла на БФ (Ф4)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dP_F4_high, externalFault := false, set := algGVL.GPA_DI_Setting.dP_F4_high, FromHMI := algGVL.GPA_DI_FromHMI.dP_F4_high, ToHMI := algGVL.GPA_DI_ToHMI.dP_F4_high, my := algGVL.GPA_DI_Internal.dP_F4_high, out :=  algGVL.GPA_DI.dP_F4_high);
+//[БУ] [А3.11:2] [БУ:XDI1:26a] Повышенный dP на масляном фильтре МФС-94
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dP_MFS94_high, externalFault := false, set := algGVL.GPA_DI_Setting.dP_MFS94_high, FromHMI := algGVL.GPA_DI_FromHMI.dP_MFS94_high, ToHMI := algGVL.GPA_DI_ToHMI.dP_MFS94_high, my := algGVL.GPA_DI_Internal.dP_MFS94_high, out :=  algGVL.GPA_DI.dP_MFS94_high);
+//[БУ] [А3.11:3] [БУ:XDI1:27a] Кран №5 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_ON, my := algGVL.GPA_DI_Internal.Kr5_ON, out :=  algGVL.GPA_DI.Kr5_ON);
+//[БУ] [А3.11:4] [БУ:] Кран №5 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_ON_KCD, my := algGVL.GPA_DI_Internal.Kr5_ON_KCD, out :=  algGVL.GPA_DI.Kr5_ON_KCD);
+//[БУ] [А3.11:5] [БУ:XDI1:28a] Кран №5 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_OF, my := algGVL.GPA_DI_Internal.Kr5_OF, out :=  algGVL.GPA_DI.Kr5_OF);
+//[БУ] [А3.11:6] [БУ:] Кран №5 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_OF_KCD, my := algGVL.GPA_DI_Internal.Kr5_OF_KCD, out :=  algGVL.GPA_DI.Kr5_OF_KCD);
+//[БУ] [А3.11:7] [БУ:XDI1:29a] Кран №9 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_ON, my := algGVL.GPA_DI_Internal.Kr9_ON, out :=  algGVL.GPA_DI.Kr9_ON);
+//[БУ] [А3.11:8] [БУ:] Кран №9 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_ON_KCD, my := algGVL.GPA_DI_Internal.Kr9_ON_KCD, out :=  algGVL.GPA_DI.Kr9_ON_KCD);
+//[БУ] [А3.12:1] [БУ:XDI1:30a] Кран №9 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_OF, my := algGVL.GPA_DI_Internal.Kr9_OF, out :=  algGVL.GPA_DI.Kr9_OF);
+//[БУ] [А3.12:2] [БУ:] Кран №9 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_OF_KCD, my := algGVL.GPA_DI_Internal.Kr9_OF_KCD, out :=  algGVL.GPA_DI.Kr9_OF_KCD);
+//[БУ] [А3.12:3] [БУ:XDI1:31a] Кран №10 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_ON, my := algGVL.GPA_DI_Internal.Kr10_ON, out :=  algGVL.GPA_DI.Kr10_ON);
+//[БУ] [А3.12:4] [БУ:] Кран №10 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_ON_KCD, my := algGVL.GPA_DI_Internal.Kr10_ON_KCD, out :=  algGVL.GPA_DI.Kr10_ON_KCD);
+//[БУ] [А3.12:5] [БУ:XDI1:32a] Кран №10 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_OF, my := algGVL.GPA_DI_Internal.Kr10_OF, out :=  algGVL.GPA_DI.Kr10_OF);
+//[БУ] [А3.12:6] [БУ:] Кран №10 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_OF_KCD, my := algGVL.GPA_DI_Internal.Kr10_OF_KCD, out :=  algGVL.GPA_DI.Kr10_OF_KCD);
+//[БУ] [А3.12:7] [БУ:XDI2:1a] Кран №11 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_ON, my := algGVL.GPA_DI_Internal.Kr11_ON, out :=  algGVL.GPA_DI.Kr11_ON);
+//[БУ] [А3.12:8] [БУ:] Кран №11 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_ON_KCD, my := algGVL.GPA_DI_Internal.Kr11_ON_KCD, out :=  algGVL.GPA_DI.Kr11_ON_KCD);
+//[БУ] [А3.13:1] [БУ:XDI2:2a] Кран №11 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_OF, my := algGVL.GPA_DI_Internal.Kr11_OF, out :=  algGVL.GPA_DI.Kr11_OF);
+//[БУ] [А3.13:2] [БУ:] Кран №11 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_OF_KCD, my := algGVL.GPA_DI_Internal.Kr11_OF_KCD, out :=  algGVL.GPA_DI.Kr11_OF_KCD);
+//[БУ] [А3.13:3] [БУ:XDI2:3a] Кран №12 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_ON, my := algGVL.GPA_DI_Internal.Kr12_ON, out :=  algGVL.GPA_DI.Kr12_ON);
+//[БУ] [А3.13:4] [БУ:] Кран №12 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_ON_KCD, my := algGVL.GPA_DI_Internal.Kr12_ON_KCD, out :=  algGVL.GPA_DI.Kr12_ON_KCD);
+//[БУ] [А3.13:5] [БУ:XDI2:4a] Насос для перемешивания масла в МБД включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.NPMD_ON, externalFault := false, set := algGVL.GPA_DI_Setting.NPMD_ON, FromHMI := algGVL.GPA_DI_FromHMI.NPMD_ON, ToHMI := algGVL.GPA_DI_ToHMI.NPMD_ON, my := algGVL.GPA_DI_Internal.NPMD_ON, out :=  algGVL.GPA_DI.NPMD_ON);
+//[БУ] [А3.13:6] [БУ:XDI2:5a] БК 1 ВОУ открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BK1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BK1_ON, FromHMI := algGVL.GPA_DI_FromHMI.BK1_ON, ToHMI := algGVL.GPA_DI_ToHMI.BK1_ON, my := algGVL.GPA_DI_Internal.BK1_ON, out :=  algGVL.GPA_DI.BK1_ON);
+//[БУ] [А3.13:7] [БУ:XDI2:6a] БК 2 ВОУ открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BK2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BK2_ON, FromHMI := algGVL.GPA_DI_FromHMI.BK2_ON, ToHMI := algGVL.GPA_DI_ToHMI.BK2_ON, my := algGVL.GPA_DI_Internal.BK2_ON, out :=  algGVL.GPA_DI.BK2_ON);
+//[БУ] [А3.13:8] [БУ:XDI2:7a] Дверь ВОУ открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Door_VOU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Door_VOU_ON, FromHMI := algGVL.GPA_DI_FromHMI.Door_VOU_ON, ToHMI := algGVL.GPA_DI_ToHMI.Door_VOU_ON, my := algGVL.GPA_DI_Internal.Door_VOU_ON, out :=  algGVL.GPA_DI.Door_VOU_ON);
+//[БУ] [А3.14:1] [БУ:XDI2:8a] Задвижка подогрева циклового воздуха открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZPCV_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZPCV_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZPCV_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZPCV_ON, my := algGVL.GPA_DI_Internal.ZPCV_ON, out :=  algGVL.GPA_DI.ZPCV_ON);
+//[БУ] [А3.14:2] [БУ:XDI2:9a] Задвижка подогрева циклового воздуха закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZPCV_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZPCV_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZPCV_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZPCV_OF, my := algGVL.GPA_DI_Internal.ZPCV_OF, out :=  algGVL.GPA_DI.ZPCV_OF);
+//[БУ] [А3.14:3] [БУ:XDI2:10a] Задвижка отбора воздуха от 7 ст. компрессора Д открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZOV7_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZOV7_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZOV7_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZOV7_ON, my := algGVL.GPA_DI_Internal.ZOV7_ON, out :=  algGVL.GPA_DI.ZOV7_ON);
+//[БУ] [А3.14:4] [БУ:XDI2:11a] Задвижка отбора воздуха от 7 ст. компрессора Д закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZOV7_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZOV7_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZOV7_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZOV7_OF, my := algGVL.GPA_DI_Internal.ZOV7_OF, out :=  algGVL.GPA_DI.ZOV7_OF);
+//[БУ] [А3.14:5] [БУ:XDI2:12a] Заслонка на всасе системы ВОД1 открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD1_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD1_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD1_ON, my := algGVL.GPA_DI_Internal.ZsVOD1_ON, out :=  algGVL.GPA_DI.ZsVOD1_ON);
+//[БУ] [А3.14:6] [БУ:XDI2:13a] Заслонка на всасе системы ВОД1 закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD1_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD1_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD1_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD1_OF, my := algGVL.GPA_DI_Internal.ZsVOD1_OF, out :=  algGVL.GPA_DI.ZsVOD1_OF);
+//[БУ] [А3.14:7] [БУ:XDI2:14a] Заслонка на выхлопе системы Д и трансмиссии открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD3_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD3_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD3_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD3_ON, my := algGVL.GPA_DI_Internal.ZsVOD3_ON, out :=  algGVL.GPA_DI.ZsVOD3_ON);
+//[БУ] [А3.14:8] [БУ:XDI2:15a] Заслонка на выхлопе системы Д и трансмиссии закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD3_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD3_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD3_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD3_OF, my := algGVL.GPA_DI_Internal.ZsVOD3_OF, out :=  algGVL.GPA_DI.ZsVOD3_OF);
+//[БУ] [А3.15:1] [БУ:XDI2:16a] Вибрация корпуса двигателя - Повышенная
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Vibr_D_Pv, externalFault := false, set := algGVL.GPA_DI_Setting.Vibr_D_Pv, FromHMI := algGVL.GPA_DI_FromHMI.Vibr_D_Pv, ToHMI := algGVL.GPA_DI_ToHMI.Vibr_D_Pv, my := algGVL.GPA_DI_Internal.Vibr_D_Pv, out :=  algGVL.GPA_DI.Vibr_D_Pv);
+//[БУ] [А3.15:2] [БУ:XDI2:17a] Напряжжение в ЩУ АВОМ Д подано
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_ON, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_ON, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_ON, my := algGVL.GPA_DI_Internal.AVOMD_ON, out :=  algGVL.GPA_DI.AVOMD_ON);
+//[БУ] [А3.15:3] [БУ:XDI2:18a] ЩУ АВОМ Д работает в режиме "Нагрев"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_heat, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_heat, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_heat, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_heat, my := algGVL.GPA_DI_Internal.AVOMD_heat, out :=  algGVL.GPA_DI.AVOMD_heat);
+//[БУ] [А3.15:4] [БУ:XDI2:19a] АВОМ Д готов к пуску
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_ready, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_ready, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_ready, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_ready, my := algGVL.GPA_DI_Internal.AVOMD_ready, out :=  algGVL.GPA_DI.AVOMD_ready);
+//[БУ] [А3.15:5] [БУ:XDI2:20a] ЩУ АВОМ Д работает в режиме "Охлаждение"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_cold, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_cold, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_cold, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_cold, my := algGVL.GPA_DI_Internal.AVOMD_cold, out :=  algGVL.GPA_DI.AVOMD_cold);
+//[БУ] [А3.15:6] [БУ:XDI2:21a] Максимальная Тм на выходе АВОМ Д
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_TmOut_max, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_TmOut_max, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_TmOut_max, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_TmOut_max, my := algGVL.GPA_DI_Internal.AVOMD_TmOut_max, out :=  algGVL.GPA_DI.AVOMD_TmOut_max);
+//[БУ] [А3.15:7] [БУ:XDI2:22a] Заслонка на всасе системы ВОД2 открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD2_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD2_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD2_ON, my := algGVL.GPA_DI_Internal.ZsVOD2_ON, out :=  algGVL.GPA_DI.ZsVOD2_ON);
+//[БУ] [А3.15:8] [БУ:XDI2:23a] Заслонка на всасе системы ВОД2 закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD2_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD2_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD2_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD2_OF, my := algGVL.GPA_DI_Internal.ZsVOD2_OF, out :=  algGVL.GPA_DI.ZsVOD2_OF);
+//[БУ] [А3.16:1] [БУ:XDI2:24a] ВОД2 включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOD2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VOD2_ON, FromHMI := algGVL.GPA_DI_FromHMI.VOD2_ON, ToHMI := algGVL.GPA_DI_ToHMI.VOD2_ON, my := algGVL.GPA_DI_Internal.VOD2_ON, out :=  algGVL.GPA_DI.VOD2_ON);
+//[БУ] [А3.16:2] [БУ:XDI2:25a] КПВЗ и КПГ турбины газогенератора открыты
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KPVZ_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KPVZ_ON, FromHMI := algGVL.GPA_DI_FromHMI.KPVZ_ON, ToHMI := algGVL.GPA_DI_ToHMI.KPVZ_ON, my := algGVL.GPA_DI_Internal.KPVZ_ON, out :=  algGVL.GPA_DI.KPVZ_ON);
+//[БУ] [А3.16:3] [БУ:XDI2:26a] КПВ открыты, отбор на РЗТ закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KPV_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KPV_ON, FromHMI := algGVL.GPA_DI_FromHMI.KPV_ON, ToHMI := algGVL.GPA_DI_ToHMI.KPV_ON, my := algGVL.GPA_DI_Internal.KPV_ON, out :=  algGVL.GPA_DI.KPV_ON);
+//[БУ] [А3.16:4] [БУ:XDI2:27a] Стопорный клапан закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.SK_OF, externalFault := false, set := algGVL.GPA_DI_Setting.SK_OF, FromHMI := algGVL.GPA_DI_FromHMI.SK_OF, ToHMI := algGVL.GPA_DI_ToHMI.SK_OF, my := algGVL.GPA_DI_Internal.SK_OF, out :=  algGVL.GPA_DI.SK_OF);
+//[БУ] [А3.16:5] [БУ:XDI2:28a] Сигнал срабатывания ЦВ СтВ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.StV_CV, externalFault := false, set := algGVL.GPA_DI_Setting.StV_CV, FromHMI := algGVL.GPA_DI_FromHMI.StV_CV, ToHMI := algGVL.GPA_DI_ToHMI.StV_CV, my := algGVL.GPA_DI_Internal.StV_CV, out :=  algGVL.GPA_DI.StV_CV);
+//[БУ] [А3.16:6] [БУ:XDI2:29a] Стружка в масле СтВ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_StV, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_StV, FromHMI := algGVL.GPA_DI_FromHMI.Shav_StV, ToHMI := algGVL.GPA_DI_ToHMI.Shav_StV, my := algGVL.GPA_DI_Internal.Shav_StV, out :=  algGVL.GPA_DI.Shav_StV);
+//[БУ] [А3.16:7] [БУ:XDI2:30a] Питание БУШ-96
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BUSH_power, externalFault := false, set := algGVL.GPA_DI_Setting.BUSH_power, FromHMI := algGVL.GPA_DI_FromHMI.BUSH_power, ToHMI := algGVL.GPA_DI_ToHMI.BUSH_power, my := algGVL.GPA_DI_Internal.BUSH_power, out :=  algGVL.GPA_DI.BUSH_power);
+//[БУ] [А3.16:8] [БУ:-] Стружка в ФС
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_FS, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_FS, FromHMI := algGVL.GPA_DI_FromHMI.Shav_FS, ToHMI := algGVL.GPA_DI_ToHMI.Shav_FS, my := algGVL.GPA_DI_Internal.Shav_FS, out :=  algGVL.GPA_DI.Shav_FS);
+//[БУ] [А3.17:1] [БУ:-] Стружка в масле в коробке приводов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_MKB, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_MKB, FromHMI := algGVL.GPA_DI_FromHMI.Shav_MKB, ToHMI := algGVL.GPA_DI_ToHMI.Shav_MKB, my := algGVL.GPA_DI_Internal.Shav_MKB, out :=  algGVL.GPA_DI.Shav_MKB);
+//[БУ] [А3.17:2] [БУ:-] Стружка в линии откачки масла от ШПК
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_ShPK, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_ShPK, FromHMI := algGVL.GPA_DI_FromHMI.Shav_ShPK, ToHMI := algGVL.GPA_DI_ToHMI.Shav_ShPK, my := algGVL.GPA_DI_Internal.Shav_ShPK, out :=  algGVL.GPA_DI.Shav_ShPK);
+//[БУ] [А3.17:3] [БУ:-] Стружка в линии откачки масла от РПТ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_RPT, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_RPT, FromHMI := algGVL.GPA_DI_FromHMI.Shav_RPT, ToHMI := algGVL.GPA_DI_ToHMI.Shav_RPT, my := algGVL.GPA_DI_Internal.Shav_RPT, out :=  algGVL.GPA_DI.Shav_RPT);
+//[БУ] [А3.17:4] [БУ:-] Стружка в линии откачки от опор СТ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Shav_ST, externalFault := false, set := algGVL.GPA_DI_Setting.Shav_ST, FromHMI := algGVL.GPA_DI_FromHMI.Shav_ST, ToHMI := algGVL.GPA_DI_ToHMI.Shav_ST, my := algGVL.GPA_DI_Internal.Shav_ST, out :=  algGVL.GPA_DI.Shav_ST);
+//[БУ] [А3.17:5] [БУ:XDI3:1a] Отбор на ПОС ГТУ открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.POS_ON, externalFault := false, set := algGVL.GPA_DI_Setting.POS_ON, FromHMI := algGVL.GPA_DI_FromHMI.POS_ON, ToHMI := algGVL.GPA_DI_ToHMI.POS_ON, my := algGVL.GPA_DI_Internal.POS_ON, out :=  algGVL.GPA_DI.POS_ON);
+//[БУ] [А3.17:6] [БУ:XDI3:2a] Отбор на ПОС ГТУ закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.POS_OF, externalFault := false, set := algGVL.GPA_DI_Setting.POS_OF, FromHMI := algGVL.GPA_DI_FromHMI.POS_OF, ToHMI := algGVL.GPA_DI_ToHMI.POS_OF, my := algGVL.GPA_DI_Internal.POS_OF, out :=  algGVL.GPA_DI.POS_OF);
+//[БУ] [А3.17:7] [БУ:XDI3:3a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv1, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv1, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv1, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv1, my := algGVL.GPA_DI_Internal.DI_Reserv1, out :=  algGVL.GPA_DI.DI_Reserv1);
+//[БУ] [А3.17:8] [БУ:] Резерв. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv2, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv2, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv2, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv2, my := algGVL.GPA_DI_Internal.DI_Reserv2, out :=  algGVL.GPA_DI.DI_Reserv2);
+//[БУ] [А3.18:1] [БУ:XDI3:4a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv3, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv3, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv3, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv3, my := algGVL.GPA_DI_Internal.DI_Reserv3, out :=  algGVL.GPA_DI.DI_Reserv3);
+//[БУ] [А3.18:2] [БУ:] Резерв. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv4, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv4, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv4, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv4, my := algGVL.GPA_DI_Internal.DI_Reserv4, out :=  algGVL.GPA_DI.DI_Reserv4);
+//[БУ] [А3.18:3] [БУ:XDI3:5a] Частотный преобразователь АВОМ Д включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_PCh_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_PCh_ON, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_PCh_ON, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_PCh_ON, my := algGVL.GPA_DI_Internal.AVOMD_PCh_ON, out :=  algGVL.GPA_DI.AVOMD_PCh_ON);
+//[БУ] [А3.18:4] [БУ:XDI3:6a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv5, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv5, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv5, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv5, my := algGVL.GPA_DI_Internal.DI_Reserv5, out :=  algGVL.GPA_DI.DI_Reserv5);
+//[БУ] [А3.18:5] [БУ:XDI3:7a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv6, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv6, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv6, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv6, my := algGVL.GPA_DI_Internal.DI_Reserv6, out :=  algGVL.GPA_DI.DI_Reserv6);
+//[БУ] [А3.18:6] [БУ:XDI3:8a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv7, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv7, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv7, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv7, my := algGVL.GPA_DI_Internal.DI_Reserv7, out :=  algGVL.GPA_DI.DI_Reserv7);
+//[БУ] [А3.18:7] [БУ:XDI3:9a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv8, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv8, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv8, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv8, my := algGVL.GPA_DI_Internal.DI_Reserv8, out :=  algGVL.GPA_DI.DI_Reserv8);
+//[БУ] [А3.18:8] [БУ:XDI3:10a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv9, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv9, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv9, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv9, my := algGVL.GPA_DI_Internal.DI_Reserv9, out :=  algGVL.GPA_DI.DI_Reserv9);
+//[БУ] [А3.2:1] [БУ:] Задвижку подогрева циклового воздуха открыть.КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZPCV_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZPCV_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZPCV_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZPCV_ON_KCU, my := algGVL.GPA_DI_Internal.ZPCV_ON_KCU, out :=  algGVL.GPA_DI.ZPCV_ON_KCU);
+//[БУ] [А3.2:2] [БУ:] Задвижку подогрева циклового воздуха закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZPCV_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZPCV_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZPCV_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZPCV_OF_KCU, my := algGVL.GPA_DI_Internal.ZPCV_OF_KCU, out :=  algGVL.GPA_DI.ZPCV_OF_KCU);
+//[БУ] [А3.2:3] [БУ:] Задв. отбора воздуха от 7 ступени ГТУ открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZOV7_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZOV7_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZOV7_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZOV7_ON_KCU, my := algGVL.GPA_DI_Internal.ZOV7_ON_KCU, out :=  algGVL.GPA_DI.ZOV7_ON_KCU);
+//[БУ] [А3.2:4] [БУ:] Задв. отбора воздуха от 7 ступени ГТУ закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZOV7_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZOV7_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZOV7_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZOV7_OF_KCU, my := algGVL.GPA_DI_Internal.ZOV7_OF_KCU, out :=  algGVL.GPA_DI.ZOV7_OF_KCU);
+//[БУ] [А3.2:5] [БУ:] Заслонку 1 системы обдува Д открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD1_ON_KCU, my := algGVL.GPA_DI_Internal.ZsVOD1_ON_KCU, out :=  algGVL.GPA_DI.ZsVOD1_ON_KCU);
+//[БУ] [А3.2:6] [БУ:] Заслонку 1 системы обдува Д закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD1_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD1_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD1_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD1_OF_KCU, my := algGVL.GPA_DI_Internal.ZsVOD1_OF_KCU, out :=  algGVL.GPA_DI.ZsVOD1_OF_KCU);
+//[БУ] [А3.2:7] [БУ:] Заслонку 3 на выхлопе сист. ВОД и трансмиссии открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD3_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD3_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD3_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD3_ON_KCU, my := algGVL.GPA_DI_Internal.ZsVOD3_ON_KCU, out :=  algGVL.GPA_DI.ZsVOD3_ON_KCU);
+//[БУ] [А3.2:8] [БУ:] Заслонку 3 на выхлопе сист. ВОД и трансмиссии закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD3_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD3_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD3_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD3_OF_KCU, my := algGVL.GPA_DI_Internal.ZsVOD3_OF_KCU, out :=  algGVL.GPA_DI.ZsVOD3_OF_KCU);
+//[БУ] [А3.3:1] [БУ:] Кран N9 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_ON_KCU, my := algGVL.GPA_DI_Internal.Kr9_ON_KCU, out :=  algGVL.GPA_DI.Kr9_ON_KCU);
+//[БУ] [А3.3:2] [БУ:] Кран N10 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_ON_KCU, my := algGVL.GPA_DI_Internal.Kr10_ON_KCU, out :=  algGVL.GPA_DI.Kr10_ON_KCU);
+//[БУ] [А3.3:3] [БУ:] Кран N11 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_OF_KCU, my := algGVL.GPA_DI_Internal.Kr11_OF_KCU, out :=  algGVL.GPA_DI.Kr11_OF_KCU);
+//[БУ] [А3.3:4] [БУ:] Кран N12 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_OF_KCU, my := algGVL.GPA_DI_Internal.Kr12_OF_KCU, out :=  algGVL.GPA_DI.Kr12_OF_KCU);
+//[БУ] [А3.3:5] [БУ:] Кран N10 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr10_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr10_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr10_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr10_OF_KCU, my := algGVL.GPA_DI_Internal.Kr10_OF_KCU, out :=  algGVL.GPA_DI.Kr10_OF_KCU);
+//[БУ] [А3.3:6] [БУ:] Кран N11 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr11_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr11_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr11_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr11_ON_KCU, my := algGVL.GPA_DI_Internal.Kr11_ON_KCU, out :=  algGVL.GPA_DI.Kr11_ON_KCU);
+//[БУ] [А3.3:7] [БУ:] Кран N12 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr12_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr12_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr12_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr12_ON_KCU, my := algGVL.GPA_DI_Internal.Kr12_ON_KCU, out :=  algGVL.GPA_DI.Kr12_ON_KCU);
+//[БУ] [А3.3:8] [БУ:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv10, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv10, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv10, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv10, my := algGVL.GPA_DI_Internal.DI_Reserv10, out :=  algGVL.GPA_DI.DI_Reserv10);
+//[БУ] [А4.4:1] [БУ:] ПОС ГТУ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.POS_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.POS_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.POS_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.POS_ON_KCU, my := algGVL.GPA_DI_Internal.POS_ON_KCU, out :=  algGVL.GPA_DI.POS_ON_KCU);
+//[БУ] [А4.4:2] [БУ:] Заслонку 2 системы обдува Д открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD2_ON_KCU, my := algGVL.GPA_DI_Internal.ZsVOD2_ON_KCU, out :=  algGVL.GPA_DI.ZsVOD2_ON_KCU);
+//[БУ] [А4.4:3] [БУ:] Заслонку 2 системы обдува Д закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsVOD2_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsVOD2_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsVOD2_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsVOD2_OF_KCU, my := algGVL.GPA_DI_Internal.ZsVOD2_OF_KCU, out :=  algGVL.GPA_DI.ZsVOD2_OF_KCU);
+//[БУ] [А4.4:4] [БУ:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv11, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv11, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv11, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv11, my := algGVL.GPA_DI_Internal.DI_Reserv11, out :=  algGVL.GPA_DI.DI_Reserv11);
+//[БУ] [А4.4:5] [БУ:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv12, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv12, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv12, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv12, my := algGVL.GPA_DI_Internal.DI_Reserv12, out :=  algGVL.GPA_DI.DI_Reserv12);
+//[БУ] [А4.4:6] [БУ:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv13, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv13, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv13, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv13, my := algGVL.GPA_DI_Internal.DI_Reserv13, out :=  algGVL.GPA_DI.DI_Reserv13);
+//[БУ] [А4.4:7] [БУ:] Сопротивление линий питания 24 В AI, DI и DO кранов в норме
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.R_BU_norm, externalFault := false, set := algGVL.GPA_DI_Setting.R_BU_norm, FromHMI := algGVL.GPA_DI_FromHMI.R_BU_norm, ToHMI := algGVL.GPA_DI_ToHMI.R_BU_norm, my := algGVL.GPA_DI_Internal.R_BU_norm, out :=  algGVL.GPA_DI.R_BU_norm);
+//[БУ] [А4.4:8] [БУ:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv14, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv14, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv14, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv14, my := algGVL.GPA_DI_Internal.DI_Reserv14, out :=  algGVL.GPA_DI.DI_Reserv14);
+//[ЭС] [A30.18:1] [ЭС:XDI6:1a] ВОД1 включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOD1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VOD1_ON, FromHMI := algGVL.GPA_DI_FromHMI.VOD1_ON, ToHMI := algGVL.GPA_DI_ToHMI.VOD1_ON, my := algGVL.GPA_DI_Internal.VOD1_ON, out :=  algGVL.GPA_DI.VOD1_ON);
+//[ЭС] [A30.18:2] [ЭС:XDI6:2a] ВОТ1 включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOT1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VOT1_ON, FromHMI := algGVL.GPA_DI_FromHMI.VOT1_ON, ToHMI := algGVL.GPA_DI_ToHMI.VOT1_ON, my := algGVL.GPA_DI_Internal.VOT1_ON, out :=  algGVL.GPA_DI.VOT1_ON);
+//[ЭС] [A30.18:3] [ЭС:XDI6:3a] ВВ1 отсека ГТУ включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BB1D_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BB1D_ON, FromHMI := algGVL.GPA_DI_FromHMI.BB1D_ON, ToHMI := algGVL.GPA_DI_ToHMI.BB1D_ON, my := algGVL.GPA_DI_Internal.BB1D_ON, out :=  algGVL.GPA_DI.BB1D_ON);
+//[ЭС] [A30.18:4] [ЭС:XDI6:4a] ВВ1 отсека Н включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BB1N_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BB1N_ON, FromHMI := algGVL.GPA_DI_FromHMI.BB1N_ON, ToHMI := algGVL.GPA_DI_ToHMI.BB1N_ON, my := algGVL.GPA_DI_Internal.BB1N_ON, out :=  algGVL.GPA_DI.BB1N_ON);
+//[ЭС] [A30.18:5] [ЭС:XDI6:5a] Повыш. давл. газа на выходе СтВ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.StV_Pg_high, externalFault := false, set := algGVL.GPA_DI_Setting.StV_Pg_high, FromHMI := algGVL.GPA_DI_FromHMI.StV_Pg_high, ToHMI := algGVL.GPA_DI_ToHMI.StV_Pg_high, my := algGVL.GPA_DI_Internal.StV_Pg_high, out :=  algGVL.GPA_DI.StV_Pg_high);
+//[ЭС] [A30.18:6] [ЭС:XDI6:6a] Двери ГТУ открыты
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Door_GTU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Door_GTU_ON, FromHMI := algGVL.GPA_DI_FromHMI.Door_GTU_ON, ToHMI := algGVL.GPA_DI_ToHMI.Door_GTU_ON, my := algGVL.GPA_DI_Internal.Door_GTU_ON, out :=  algGVL.GPA_DI.Door_GTU_ON);
+//[ЭС] [A30.18:7] [ЭС:XDI6:7a] Двери БУ открыты
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Door_BU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Door_BU_ON, FromHMI := algGVL.GPA_DI_FromHMI.Door_BU_ON, ToHMI := algGVL.GPA_DI_ToHMI.Door_BU_ON, my := algGVL.GPA_DI_Internal.Door_BU_ON, out :=  algGVL.GPA_DI.Door_BU_ON);
+//[ЭС] [A30.18:8] [ЭС:XDI6:8a] Двери КШТ открыты
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Door_KShT, externalFault := false, set := algGVL.GPA_DI_Setting.Door_KShT, FromHMI := algGVL.GPA_DI_FromHMI.Door_KShT, ToHMI := algGVL.GPA_DI_ToHMI.Door_KShT, my := algGVL.GPA_DI_Internal.Door_KShT, out :=  algGVL.GPA_DI.Door_KShT);
+//[ЭС] [A30.19:1] [ЭС:XDI6:9a] Концентрация метана под кожухом Д >0,5% (повышенная)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Gas_KShT_high, externalFault := false, set := algGVL.GPA_DI_Setting.Gas_KShT_high, FromHMI := algGVL.GPA_DI_FromHMI.Gas_KShT_high, ToHMI := algGVL.GPA_DI_ToHMI.Gas_KShT_high, my := algGVL.GPA_DI_Internal.Gas_KShT_high, out :=  algGVL.GPA_DI.Gas_KShT_high);
+//[ЭС] [A30.19:2] [ЭС:XDI6:10a] Концентрация метана в отсеке ГТУ >0,5% (повышенная)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Gas_GTU_high, externalFault := false, set := algGVL.GPA_DI_Setting.Gas_GTU_high, FromHMI := algGVL.GPA_DI_FromHMI.Gas_GTU_high, ToHMI := algGVL.GPA_DI_ToHMI.Gas_GTU_high, my := algGVL.GPA_DI_Internal.Gas_GTU_high, out :=  algGVL.GPA_DI.Gas_GTU_high);
+//[ЭС] [A30.19:3] [ЭС:XDI6:11a] Концентрация метана в отсеке Н >0,5% (повышенная)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Gas_N_high, externalFault := false, set := algGVL.GPA_DI_Setting.Gas_N_high, FromHMI := algGVL.GPA_DI_FromHMI.Gas_N_high, ToHMI := algGVL.GPA_DI_ToHMI.Gas_N_high, my := algGVL.GPA_DI_Internal.Gas_N_high, out :=  algGVL.GPA_DI.Gas_N_high);
+//[ЭС] [A30.19:4] [ЭС:XDI6:12a] Повышенный dP масла на фильтре дозапрвки
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dP_MBDdozap_high, externalFault := false, set := algGVL.GPA_DI_Setting.dP_MBDdozap_high, FromHMI := algGVL.GPA_DI_FromHMI.dP_MBDdozap_high, ToHMI := algGVL.GPA_DI_ToHMI.dP_MBDdozap_high, my := algGVL.GPA_DI_Internal.dP_MBDdozap_high, out :=  algGVL.GPA_DI.dP_MBDdozap_high);
+//[ЭС] [A30.19:5] [ЭС:XDI6:13a] Низкое Р воды на входе УТО
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.UTO_PvOut_low, externalFault := false, set := algGVL.GPA_DI_Setting.UTO_PvOut_low, FromHMI := algGVL.GPA_DI_FromHMI.UTO_PvOut_low, ToHMI := algGVL.GPA_DI_ToHMI.UTO_PvOut_low, my := algGVL.GPA_DI_Internal.UTO_PvOut_low, out :=  algGVL.GPA_DI.UTO_PvOut_low);
+//[ЭС] [A30.19:6] [ЭС:XDI6:14a] Кондиционер БУ включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AirCond_BU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AirCond_BU_ON, FromHMI := algGVL.GPA_DI_FromHMI.AirCond_BU_ON, ToHMI := algGVL.GPA_DI_ToHMI.AirCond_BU_ON, my := algGVL.GPA_DI_Internal.AirCond_BU_ON, out :=  algGVL.GPA_DI.AirCond_BU_ON);
+//[ЭС] [A30.19:7] [ЭС:XDI6:15a] Вентилятор отсека ПТ включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VPT_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VPT_ON, FromHMI := algGVL.GPA_DI_FromHMI.VPT_ON, ToHMI := algGVL.GPA_DI_ToHMI.VPT_ON, my := algGVL.GPA_DI_Internal.VPT_ON, out :=  algGVL.GPA_DI.VPT_ON);
+//[ЭС] [A30.19:8] [ЭС:XDI6:16a] Вентилятор отсека МА включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VMA_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VMA_ON, FromHMI := algGVL.GPA_DI_FromHMI.VMA_ON, ToHMI := algGVL.GPA_DI_ToHMI.VMA_ON, my := algGVL.GPA_DI_Internal.VMA_ON, out :=  algGVL.GPA_DI.VMA_ON);
+//[ЭС] [A30.20:1] [ЭС:XDI6:17a] Электрорадиаторы отсека ГТУ включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_bayGTU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_bayGTU_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_bayGTU_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_bayGTU_ON, my := algGVL.GPA_DI_Internal.EN_bayGTU_ON, out :=  algGVL.GPA_DI.EN_bayGTU_ON);
+//[ЭС] [A30.20:2] [ЭС:XDI6:18a] Электрорадиаторы отсека Н включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_bayN_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_bayN_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_bayN_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_bayN_ON, my := algGVL.GPA_DI_Internal.EN_bayN_ON, out :=  algGVL.GPA_DI.EN_bayN_ON);
+//[ЭС] [A30.20:3] [ЭС:XDI6:19a] Электрорадиаторы в раме ГТУ включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_rampGTU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_rampGTU_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_rampGTU_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_rampGTU_ON, my := algGVL.GPA_DI_Internal.EN_rampGTU_ON, out :=  algGVL.GPA_DI.EN_rampGTU_ON);
+//[ЭС] [A30.20:4] [ЭС:XDI6:20a] Электрорадиаторы отсека МА включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_bayMA_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_bayMA_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_bayMA_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_bayMA_ON, my := algGVL.GPA_DI_Internal.EN_bayMA_ON, out :=  algGVL.GPA_DI.EN_bayMA_ON);
+//[ЭС] [A30.20:5] [ЭС:XDI7:1a] Электрорадиаторы отсека ПТ включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_bayPT_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_bayPT_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_bayPT_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_bayPT_ON, my := algGVL.GPA_DI_Internal.EN_bayPT_ON, out :=  algGVL.GPA_DI.EN_bayPT_ON);
+//[ЭС] [A30.20:6] [ЭС:XDI7:2a] Обогрев трубопроводов БИК-90ГП1 и БУК-90ГП1 включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_BikBuk_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_BikBuk_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_BikBuk_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_BikBuk_ON, my := algGVL.GPA_DI_Internal.EN_BikBuk_ON, out :=  algGVL.GPA_DI.EN_BikBuk_ON);
+//[ЭС] [A30.20:7] [ЭС:XDI7:3a] Элетрорадиаторы БУ включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_BU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_BU_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_BU_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_BU_ON, my := algGVL.GPA_DI_Internal.EN_BU_ON, out :=  algGVL.GPA_DI.EN_BU_ON);
+//[ЭС] [A30.20:8] [ЭС:XDI7:4a] Высокое Р воды на выходе УТО
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.UTO_PvOut_high, externalFault := false, set := algGVL.GPA_DI_Setting.UTO_PvOut_high, FromHMI := algGVL.GPA_DI_FromHMI.UTO_PvOut_high, ToHMI := algGVL.GPA_DI_ToHMI.UTO_PvOut_high, my := algGVL.GPA_DI_Internal.UTO_PvOut_high, out :=  algGVL.GPA_DI.UTO_PvOut_high);
+//[ЭС] [A30.21:1] [ЭС:XDI7:5a] Наличие напряжения 380 В 50Гц линия 1
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U380_line1, externalFault := false, set := algGVL.GPA_DI_Setting.U380_line1, FromHMI := algGVL.GPA_DI_FromHMI.U380_line1, ToHMI := algGVL.GPA_DI_ToHMI.U380_line1, my := algGVL.GPA_DI_Internal.U380_line1, out :=  algGVL.GPA_DI.U380_line1);
+//[ЭС] [A30.21:2] [ЭС:XDI7:6a] Наличие напряжения 380 В 50Гц линия 2
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U380_line2, externalFault := false, set := algGVL.GPA_DI_Setting.U380_line2, FromHMI := algGVL.GPA_DI_FromHMI.U380_line2, ToHMI := algGVL.GPA_DI_ToHMI.U380_line2, my := algGVL.GPA_DI_Internal.U380_line2, out :=  algGVL.GPA_DI.U380_line2);
+//[ЭС] [A30.21:3] [ЭС:XDI7:7a] Включение системы АВР (аварийное включение резерва)
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVR_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AVR_ON, FromHMI := algGVL.GPA_DI_FromHMI.AVR_ON, ToHMI := algGVL.GPA_DI_ToHMI.AVR_ON, my := algGVL.GPA_DI_Internal.AVR_ON, out :=  algGVL.GPA_DI.AVR_ON);
+//[ЭС] [A30.21:4] [ЭС:XDI7:8a] Ручное упр. на ЩРУ вкл.
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ShRU_manual, externalFault := false, set := algGVL.GPA_DI_Setting.ShRU_manual, FromHMI := algGVL.GPA_DI_FromHMI.ShRU_manual, ToHMI := algGVL.GPA_DI_ToHMI.ShRU_manual, my := algGVL.GPA_DI_Internal.ShRU_manual, out :=  algGVL.GPA_DI.ShRU_manual);
+//[ЭС] [A30.21:5] [ЭС:XDI7:9a] Напряжение =220В на ЭПУУ кранов подано
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U220_EPUU_Kr, externalFault := false, set := algGVL.GPA_DI_Setting.U220_EPUU_Kr, FromHMI := algGVL.GPA_DI_FromHMI.U220_EPUU_Kr, ToHMI := algGVL.GPA_DI_ToHMI.U220_EPUU_Kr, my := algGVL.GPA_DI_Internal.U220_EPUU_Kr, out :=  algGVL.GPA_DI.U220_EPUU_Kr);
+//[ЭС] [A30.21:6] [ЭС:XDI7:10a] Заслонка теплообменного блока УТО открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsT_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZsT_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZsT_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZsT_ON, my := algGVL.GPA_DI_Internal.ZsT_ON, out :=  algGVL.GPA_DI.ZsT_ON);
+//[ЭС] [A30.21:7] [ЭС:XDI7:11a] Заслонка теплообменного блока УТО закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsT_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZsT_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZsT_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZsT_OF, my := algGVL.GPA_DI_Internal.ZsT_OF, out :=  algGVL.GPA_DI.ZsT_OF);
+//[ЭС] [A30.21:8] [ЭС:XDI7:12a] Заслонка байпасного блока УТО открыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsB_ON, externalFault := false, set := algGVL.GPA_DI_Setting.ZsB_ON, FromHMI := algGVL.GPA_DI_FromHMI.ZsB_ON, ToHMI := algGVL.GPA_DI_ToHMI.ZsB_ON, my := algGVL.GPA_DI_Internal.ZsB_ON, out :=  algGVL.GPA_DI.ZsB_ON);
+//[ЭС] [A30.22:1] [ЭС:XDI7:13a] Заслонка байпасного блока УТО закрыта
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsB_OF, externalFault := false, set := algGVL.GPA_DI_Setting.ZsB_OF, FromHMI := algGVL.GPA_DI_FromHMI.ZsB_OF, ToHMI := algGVL.GPA_DI_ToHMI.ZsB_OF, my := algGVL.GPA_DI_Internal.ZsB_OF, out :=  algGVL.GPA_DI.ZsB_OF);
+//[ЭС] [A30.22:2] [ЭС:XDI7:14a] ВВ2 отсека ГТУ включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BB2D_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BB2D_ON, FromHMI := algGVL.GPA_DI_FromHMI.BB2D_ON, ToHMI := algGVL.GPA_DI_ToHMI.BB2D_ON, my := algGVL.GPA_DI_Internal.BB2D_ON, out :=  algGVL.GPA_DI.BB2D_ON);
+//[ЭС] [A30.22:3] [ЭС:XDI7:15a] ВВ2 отсека Н включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.BB2N_ON, externalFault := false, set := algGVL.GPA_DI_Setting.BB2N_ON, FromHMI := algGVL.GPA_DI_FromHMI.BB2N_ON, ToHMI := algGVL.GPA_DI_ToHMI.BB2N_ON, my := algGVL.GPA_DI_Internal.BB2N_ON, out :=  algGVL.GPA_DI.BB2N_ON);
+//[ЭС] [A30.22:4] [ЭС:XDI7:16a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv15, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv15, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv15, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv15, my := algGVL.GPA_DI_Internal.DI_Reserv15, out :=  algGVL.GPA_DI.DI_Reserv15);
+//[ЭС] [A30.22:5] [ЭС:XDI7:17a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv16, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv16, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv16, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv16, my := algGVL.GPA_DI_Internal.DI_Reserv16, out :=  algGVL.GPA_DI.DI_Reserv16);
+//[ЭС] [A30.22:6] [ЭС:XDI7:18a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv17, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv17, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv17, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv17, my := algGVL.GPA_DI_Internal.DI_Reserv17, out :=  algGVL.GPA_DI.DI_Reserv17);
+//[ЭС] [A30.22:7] [ЭС:XDI7:19a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv18, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv18, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv18, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv18, my := algGVL.GPA_DI_Internal.DI_Reserv18, out :=  algGVL.GPA_DI.DI_Reserv18);
+//[ЭС] [A30.22:8] [ЭС:XDI7:20a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv19, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv19, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv19, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv19, my := algGVL.GPA_DI_Internal.DI_Reserv19, out :=  algGVL.GPA_DI.DI_Reserv19);
+//[ЭС] [A30.10:1] [ЭС:] Контроль основного питания САУ ГПА ~220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_GPA_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_GPA_main, FromHMI := algGVL.GPA_DI_FromHMI.U_GPA_main, ToHMI := algGVL.GPA_DI_ToHMI.U_GPA_main, my := algGVL.GPA_DI_Internal.U_GPA_main, out :=  algGVL.GPA_DI.U_GPA_main);
+//[ЭС] [A30.10:2] [ЭС:] Контроль резервного питания САУ ГПА =220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_GPA_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_GPA_res, FromHMI := algGVL.GPA_DI_FromHMI.U_GPA_res, ToHMI := algGVL.GPA_DI_ToHMI.U_GPA_res, my := algGVL.GPA_DI_Internal.U_GPA_res, out :=  algGVL.GPA_DI.U_GPA_res);
+//[ЭС] [A30.10:3] [ЭС:] Контроль основного питания БЭАО  ~220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BEO_alterMain, externalFault := false, set := algGVL.GPA_DI_Setting.U_BEO_alterMain, FromHMI := algGVL.GPA_DI_FromHMI.U_BEO_alterMain, ToHMI := algGVL.GPA_DI_ToHMI.U_BEO_alterMain, my := algGVL.GPA_DI_Internal.U_BEO_alterMain, out :=  algGVL.GPA_DI.U_BEO_alterMain);
+//[ЭС] [A30.10:4] [ЭС:] Контроль резервного питания БЭАО  ~220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BEO_alterRes, externalFault := false, set := algGVL.GPA_DI_Setting.U_BEO_alterRes, FromHMI := algGVL.GPA_DI_FromHMI.U_BEO_alterRes, ToHMI := algGVL.GPA_DI_ToHMI.U_BEO_alterRes, my := algGVL.GPA_DI_Internal.U_BEO_alterRes, out :=  algGVL.GPA_DI.U_BEO_alterRes);
+//[ЭС] [A30.10:5] [ЭС:] Контроль основного питания сторонних потребителей ~220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Outside220_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_Outside220_main, FromHMI := algGVL.GPA_DI_FromHMI.U_Outside220_main, ToHMI := algGVL.GPA_DI_ToHMI.U_Outside220_main, my := algGVL.GPA_DI_Internal.U_Outside220_main, out :=  algGVL.GPA_DI.U_Outside220_main);
+//[ЭС] [A30.10:6] [ЭС:] Контроль резервного питания сторонних потребителей =220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Outside220_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_Outside220_res, FromHMI := algGVL.GPA_DI_FromHMI.U_Outside220_res, ToHMI := algGVL.GPA_DI_ToHMI.U_Outside220_res, my := algGVL.GPA_DI_Internal.U_Outside220_res, out :=  algGVL.GPA_DI.U_Outside220_res);
+//[ЭС] [A30.10:7] [ЭС:] Контроль питания БУШ-96 ~220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BUSH_alter, externalFault := false, set := algGVL.GPA_DI_Setting.U_BUSH_alter, FromHMI := algGVL.GPA_DI_FromHMI.U_BUSH_alter, ToHMI := algGVL.GPA_DI_ToHMI.U_BUSH_alter, my := algGVL.GPA_DI_Internal.U_BUSH_alter, out :=  algGVL.GPA_DI.U_BUSH_alter);
+//[ЭС] [A30.10:8] [ЭС:] Контроль питания БУШ-96 =220 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BUSH_const, externalFault := false, set := algGVL.GPA_DI_Setting.U_BUSH_const, FromHMI := algGVL.GPA_DI_FromHMI.U_BUSH_const, ToHMI := algGVL.GPA_DI_ToHMI.U_BUSH_const, my := algGVL.GPA_DI_Internal.U_BUSH_const, out :=  algGVL.GPA_DI.U_BUSH_const);
+//[ЭС] [A30.11:1] [ЭС:] Исправность основного ИП БЭАО
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BEO_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_BEO_main, FromHMI := algGVL.GPA_DI_FromHMI.U_BEO_main, ToHMI := algGVL.GPA_DI_ToHMI.U_BEO_main, my := algGVL.GPA_DI_Internal.U_BEO_main, out :=  algGVL.GPA_DI.U_BEO_main);
+//[ЭС] [A30.11:2] [ЭС:] Исправность резервного ИП БЭАО
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_BEO_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_BEO_res, FromHMI := algGVL.GPA_DI_FromHMI.U_BEO_res, ToHMI := algGVL.GPA_DI_ToHMI.U_BEO_res, my := algGVL.GPA_DI_Internal.U_BEO_res, out :=  algGVL.GPA_DI.U_BEO_res);
+//[ЭС] [A30.11:3] [ЭС:] Исправность основного ИП =24 В ПЛК
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_PLC_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_PLC_main, FromHMI := algGVL.GPA_DI_FromHMI.U_PLC_main, ToHMI := algGVL.GPA_DI_ToHMI.U_PLC_main, my := algGVL.GPA_DI_Internal.U_PLC_main, out :=  algGVL.GPA_DI.U_PLC_main);
+//[ЭС] [A30.11:4] [ЭС:] Исправность резервного ИП =24 В ПЛК
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_PLC_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_PLC_res, FromHMI := algGVL.GPA_DI_FromHMI.U_PLC_res, ToHMI := algGVL.GPA_DI_ToHMI.U_PLC_res, my := algGVL.GPA_DI_Internal.U_PLC_res, out :=  algGVL.GPA_DI.U_PLC_res);
+//[ЭС] [A30.11:5] [ЭС:] Исправность основного ИП =24 В внутренних устройств
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Intern_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_Intern_main, FromHMI := algGVL.GPA_DI_FromHMI.U_Intern_main, ToHMI := algGVL.GPA_DI_ToHMI.U_Intern_main, my := algGVL.GPA_DI_Internal.U_Intern_main, out :=  algGVL.GPA_DI.U_Intern_main);
+//[ЭС] [A30.11:6] [ЭС:] Исправность резервного ИП =24 В внутренних устройств
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Intern_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_Intern_res, FromHMI := algGVL.GPA_DI_FromHMI.U_Intern_res, ToHMI := algGVL.GPA_DI_ToHMI.U_Intern_res, my := algGVL.GPA_DI_Internal.U_Intern_res, out :=  algGVL.GPA_DI.U_Intern_res);
+//[ЭС] [A30.11:7] [ЭС:] Исправность основного ИП =24 В аналоговых входов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_AI_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_AI_main, FromHMI := algGVL.GPA_DI_FromHMI.U_AI_main, ToHMI := algGVL.GPA_DI_ToHMI.U_AI_main, my := algGVL.GPA_DI_Internal.U_AI_main, out :=  algGVL.GPA_DI.U_AI_main);
+//[ЭС] [A30.11:8] [ЭС:] Исправность резервного ИП =24 В аналоговых входов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_AI_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_AI_res, FromHMI := algGVL.GPA_DI_FromHMI.U_AI_res, ToHMI := algGVL.GPA_DI_ToHMI.U_AI_res, my := algGVL.GPA_DI_Internal.U_AI_res, out :=  algGVL.GPA_DI.U_AI_res);
+//[ЭС] [A30.12:1] [ЭС:] Исправность основного ИП =24 В дискретных входов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_DI_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_DI_main, FromHMI := algGVL.GPA_DI_FromHMI.U_DI_main, ToHMI := algGVL.GPA_DI_ToHMI.U_DI_main, my := algGVL.GPA_DI_Internal.U_DI_main, out :=  algGVL.GPA_DI.U_DI_main);
+//[ЭС] [A30.12:2] [ЭС:] Исправность резервного ИП =24 В дискретных входов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_DI_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_DI_res, FromHMI := algGVL.GPA_DI_FromHMI.U_DI_res, ToHMI := algGVL.GPA_DI_ToHMI.U_DI_res, my := algGVL.GPA_DI_Internal.U_DI_res, out :=  algGVL.GPA_DI.U_DI_res);
+//[ЭС] [A30.12:3] [ЭС:] Исправность основного ИП =24 В дискретных выходов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_DO_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_DO_main, FromHMI := algGVL.GPA_DI_FromHMI.U_DO_main, ToHMI := algGVL.GPA_DI_ToHMI.U_DO_main, my := algGVL.GPA_DI_Internal.U_DO_main, out :=  algGVL.GPA_DI.U_DO_main);
+//[ЭС] [A30.12:4] [ЭС:] Исправность резервного ИП =24 В дискретных выходов
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_DO_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_DO_res, FromHMI := algGVL.GPA_DI_FromHMI.U_DO_res, ToHMI := algGVL.GPA_DI_ToHMI.U_DO_res, my := algGVL.GPA_DI_Internal.U_DO_res, out :=  algGVL.GPA_DI.U_DO_res);
+//[ЭС] [A30.12:5] [ЭС:] Исправность основного ИП =24 В питания ИМ =27 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_AM_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_AM_main, FromHMI := algGVL.GPA_DI_FromHMI.U_AM_main, ToHMI := algGVL.GPA_DI_ToHMI.U_AM_main, my := algGVL.GPA_DI_Internal.U_AM_main, out :=  algGVL.GPA_DI.U_AM_main);
+//[ЭС] [A30.12:6] [ЭС:] Исправность резервного ИП =24 В питания ИМ =27 В
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_AM_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_AM_res, FromHMI := algGVL.GPA_DI_FromHMI.U_AM_res, ToHMI := algGVL.GPA_DI_ToHMI.U_AM_res, my := algGVL.GPA_DI_Internal.U_AM_res, out :=  algGVL.GPA_DI.U_AM_res);
+//[ЭС] [A30.12:7] [ЭС:] Контроль исправности разрядников
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Arester, externalFault := false, set := algGVL.GPA_DI_Setting.U_Arester, FromHMI := algGVL.GPA_DI_FromHMI.U_Arester, ToHMI := algGVL.GPA_DI_ToHMI.U_Arester, my := algGVL.GPA_DI_Internal.U_Arester, out :=  algGVL.GPA_DI.U_Arester);
+//[ЭС] [A30.12:8] [ЭС:] Исправность основного ИП =24 В сторонних потребителей
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Outside24_main, externalFault := false, set := algGVL.GPA_DI_Setting.U_Outside24_main, FromHMI := algGVL.GPA_DI_FromHMI.U_Outside24_main, ToHMI := algGVL.GPA_DI_ToHMI.U_Outside24_main, my := algGVL.GPA_DI_Internal.U_Outside24_main, out :=  algGVL.GPA_DI.U_Outside24_main);
+//[ЭС] [A30.13:1] [ЭС:] Исправность резервного ИП =24 В сторонних потребителей
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.U_Outside24_res, externalFault := false, set := algGVL.GPA_DI_Setting.U_Outside24_res, FromHMI := algGVL.GPA_DI_FromHMI.U_Outside24_res, ToHMI := algGVL.GPA_DI_ToHMI.U_Outside24_res, my := algGVL.GPA_DI_Internal.U_Outside24_res, out :=  algGVL.GPA_DI.U_Outside24_res);
+//[ЭС] [A30.13:2] [ЭС:] Сопротивление линий питания 24 В AI, DI в норме
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.R_ES_norm, externalFault := false, set := algGVL.GPA_DI_Setting.R_ES_norm, FromHMI := algGVL.GPA_DI_FromHMI.R_ES_norm, ToHMI := algGVL.GPA_DI_ToHMI.R_ES_norm, my := algGVL.GPA_DI_Internal.R_ES_norm, out :=  algGVL.GPA_DI.R_ES_norm);
+//[ЭС] [A30.13:3] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv20, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv20, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv20, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv20, my := algGVL.GPA_DI_Internal.DI_Reserv20, out :=  algGVL.GPA_DI.DI_Reserv20);
+//[ЭС] [A30.13:4] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv21, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv21, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv21, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv21, my := algGVL.GPA_DI_Internal.DI_Reserv21, out :=  algGVL.GPA_DI.DI_Reserv21);
+//[ЭС] [A30.13:5] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv22, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv22, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv22, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv22, my := algGVL.GPA_DI_Internal.DI_Reserv22, out :=  algGVL.GPA_DI.DI_Reserv22);
+//[ЭС] [A30.13:6] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv23, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv23, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv23, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv23, my := algGVL.GPA_DI_Internal.DI_Reserv23, out :=  algGVL.GPA_DI.DI_Reserv23);
+//[ЭС] [A30.13:7] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv24, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv24, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv24, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv24, my := algGVL.GPA_DI_Internal.DI_Reserv24, out :=  algGVL.GPA_DI.DI_Reserv24);
+//[ЭС] [A30.13:8] [ЭС:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv25, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv25, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv25, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv25, my := algGVL.GPA_DI_Internal.DI_Reserv25, out :=  algGVL.GPA_DI.DI_Reserv25);
+//[ЭС] [A30.14:1] [ЭС:] ВОД1 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOD1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VOD1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VOD1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VOD1_ON_KCU, my := algGVL.GPA_DI_Internal.VOD1_ON_KCU, out :=  algGVL.GPA_DI.VOD1_ON_KCU);
+//[ЭС] [A30.14:2] [ЭС:] Щит управления АВОМ Н включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_ON_KCU, my := algGVL.GPA_DI_Internal.AVOMN_ON_KCU, out :=  algGVL.GPA_DI.AVOMN_ON_KCU);
+//[ЭС] [A30.14:3] [ЭС:] ВОТ № 1 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOT1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VOT1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VOT1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VOT1_ON_KCU, my := algGVL.GPA_DI_Internal.VOT1_ON_KCU, out :=  algGVL.GPA_DI.VOT1_ON_KCU);
+//[ЭС] [A30.14:4] [ЭС:] ВВОт.Д № 1 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOTD1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VVOTD1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VVOTD1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VVOTD1_ON_KCU, my := algGVL.GPA_DI_Internal.VVOTD1_ON_KCU, out :=  algGVL.GPA_DI.VVOTD1_ON_KCU);
+//[ЭС] [A30.14:5] [ЭС:] ВВОт.Н № 1 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOTN1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VVOTN1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VVOTN1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VVOTN1_ON_KCU, my := algGVL.GPA_DI_Internal.VVOTN1_ON_KCU, out :=  algGVL.GPA_DI.VVOTN1_ON_KCU);
+//[ЭС] [A30.14:6] [ЭС:] Щит управления АВОМ Д включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMD_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMD_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.AVOMD_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.AVOMD_ON_KCU, my := algGVL.GPA_DI_Internal.AVOMD_ON_KCU, out :=  algGVL.GPA_DI.AVOMD_ON_KCU);
+//[ЭС] [A30.14:7] [ЭС:] Электрорадиатор отсека ГТУ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENGTU_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENGTU_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENGTU_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENGTU_ON_KCU, my := algGVL.GPA_DI_Internal.ENGTU_ON_KCU, out :=  algGVL.GPA_DI.ENGTU_ON_KCU);
+//[ЭС] [A30.14:8] [ЭС:] Включение сирены перед пуском. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Sirena_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Sirena_ON, FromHMI := algGVL.GPA_DI_FromHMI.Sirena_ON, ToHMI := algGVL.GPA_DI_ToHMI.Sirena_ON, my := algGVL.GPA_DI_Internal.Sirena_ON, out :=  algGVL.GPA_DI.Sirena_ON);
+//[ЭС] [A30.15:1] [ЭС:] Заслонку теплообменного блока УТО открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsT_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsT_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsT_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsT_ON_KCU, my := algGVL.GPA_DI_Internal.ZsT_ON_KCU, out :=  algGVL.GPA_DI.ZsT_ON_KCU);
+//[ЭС] [A30.15:2] [ЭС:] Заслонку теплообменного блока УТО закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsT_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsT_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsT_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsT_OF_KCU, my := algGVL.GPA_DI_Internal.ZsT_OF_KCU, out :=  algGVL.GPA_DI.ZsT_OF_KCU);
+//[ЭС] [A30.15:3] [ЭС:] Заслонку байпасного блока УТО открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsB_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsB_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsB_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsB_ON_KCU, my := algGVL.GPA_DI_Internal.ZsB_ON_KCU, out :=  algGVL.GPA_DI.ZsB_ON_KCU);
+//[ЭС] [A30.15:4] [ЭС:] Заслонку байпасного блока УТО закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ZsB_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ZsB_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ZsB_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ZsB_OF_KCU, my := algGVL.GPA_DI_Internal.ZsB_OF_KCU, out :=  algGVL.GPA_DI.ZsB_OF_KCU);
+//[ЭС] [A30.15:5] [ЭС:] ВОД2 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOD2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VOD2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VOD2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VOD2_ON_KCU, my := algGVL.GPA_DI_Internal.VOD2_ON_KCU, out :=  algGVL.GPA_DI.VOD2_ON_KCU);
+//[ЭС] [A30.15:6] [ЭС:] Включить ВОт.МА. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VMA_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VMA_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VMA_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VMA_ON_KCU, my := algGVL.GPA_DI_Internal.VMA_ON_KCU, out :=  algGVL.GPA_DI.VMA_ON_KCU);
+//[ЭС] [A30.15:7] [ЭС:] ВОТ № 2 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VOT2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VOT2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VOT2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VOT2_ON_KCU, my := algGVL.GPA_DI_Internal.VOT2_ON_KCU, out :=  algGVL.GPA_DI.VOT2_ON_KCU);
+//[ЭС] [A30.15:8] [ЭС:] ВВОт.Д № 2 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOD2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VVOD2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VVOD2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VVOD2_ON_KCU, my := algGVL.GPA_DI_Internal.VVOD2_ON_KCU, out :=  algGVL.GPA_DI.VVOD2_ON_KCU);
+//[ЭС] [A30.16:1] [ЭС:] ВВНОт. № 2 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOTN2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VVOTN2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VVOTN2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VVOTN2_ON_KCU, my := algGVL.GPA_DI_Internal.VVOTN2_ON_KCU, out :=  algGVL.GPA_DI.VVOTN2_ON_KCU);
+//[ЭС] [A30.16:2] [ЭС:] Вытяжной вентилятор отсека ПТ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOPT_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.VVOPT_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.VVOPT_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.VVOPT_ON_KCU, my := algGVL.GPA_DI_Internal.VVOPT_ON_KCU, out :=  algGVL.GPA_DI.VVOPT_ON_KCU);
+//[ЭС] [A30.16:3] [ЭС:] Электрорадиатор отсека Н  включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENN_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENN_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENN_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENN_ON_KCU, my := algGVL.GPA_DI_Internal.ENN_ON_KCU, out :=  algGVL.GPA_DI.ENN_ON_KCU);
+//[ЭС] [A30.16:4] [ЭС:] Электрорадиатор  отсека МА включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENMA_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENMA_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENMA_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENMA_ON_KCU, my := algGVL.GPA_DI_Internal.ENMA_ON_KCU, out :=  algGVL.GPA_DI.ENMA_ON_KCU);
+//[ЭС] [A30.16:5] [ЭС:] Электрорадиатор  в раме ГТУ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENRGTU_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENRGTU_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENRGTU_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENRGTU_ON_KCU, my := algGVL.GPA_DI_Internal.ENRGTU_ON_KCU, out :=  algGVL.GPA_DI.ENRGTU_ON_KCU);
+//[ЭС] [A30.16:6] [ЭС:] ТЭН МБД - Включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.TEN_MBD_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.TEN_MBD_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.TEN_MBD_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.TEN_MBD_ON_KCU, my := algGVL.GPA_DI_Internal.TEN_MBD_ON_KCU, out :=  algGVL.GPA_DI.TEN_MBD_ON_KCU);
+//[ЭС] [A30.16:7] [ЭС:] ТЭНы МБН - Включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.TEN_MBN_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.TEN_MBN_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.TEN_MBN_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.TEN_MBN_ON_KCU, my := algGVL.GPA_DI_Internal.TEN_MBN_ON_KCU, out :=  algGVL.GPA_DI.TEN_MBN_ON_KCU);
+//[ЭС] [A30.16:8] [ЭС:] Электрорадиатор отсека ПТ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENPT_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENPT_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENPT_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENPT_ON_KCU, my := algGVL.GPA_DI_Internal.ENPT_ON_KCU, out :=  algGVL.GPA_DI.ENPT_ON_KCU);
+//[ЭС] [A30.17:1] [ЭС:] Обогрев трубопроводов БИК-90ГП1 и БУК-90ГП1 включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENTR_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENTR_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENTR_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENTR_ON_KCU, my := algGVL.GPA_DI_Internal.ENTR_ON_KCU, out :=  algGVL.GPA_DI.ENTR_ON_KCU);
+//[ЭС] [A30.17:2] [ЭС:] Электрорадиатор БУ включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.ENBU_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.ENBU_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.ENBU_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.ENBU_ON_KCU, my := algGVL.GPA_DI_Internal.ENBU_ON_KCU, out :=  algGVL.GPA_DI.ENBU_ON_KCU);
+//[ЭС] [A30.17:3] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv26, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv26, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv26, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv26, my := algGVL.GPA_DI_Internal.DI_Reserv26, out :=  algGVL.GPA_DI.DI_Reserv26);
+//[ЭС] [A30.17:4] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv27, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv27, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv27, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv27, my := algGVL.GPA_DI_Internal.DI_Reserv27, out :=  algGVL.GPA_DI.DI_Reserv27);
+//[ЭС] [A30.17:5] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv28, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv28, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv28, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv28, my := algGVL.GPA_DI_Internal.DI_Reserv28, out :=  algGVL.GPA_DI.DI_Reserv28);
+//[ЭС] [A30.17:6] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv29, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv29, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv29, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv29, my := algGVL.GPA_DI_Internal.DI_Reserv29, out :=  algGVL.GPA_DI.DI_Reserv29);
+//[ЭС] [A30.17:7] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv30, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv30, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv30, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv30, my := algGVL.GPA_DI_Internal.DI_Reserv30, out :=  algGVL.GPA_DI.DI_Reserv30);
+//[ЭС] [A30.17:8] [ЭС:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv31, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv31, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv31, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv31, my := algGVL.GPA_DI_Internal.DI_Reserv31, out :=  algGVL.GPA_DI.DI_Reserv31);
+//[ЦБК] [A20.16:1] [ЦБК:XDI4:1a] Кран №1 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_ON, my := algGVL.GPA_DI_Internal.Kr1_ON, out :=  algGVL.GPA_DI.Kr1_ON);
+//[ЦБК] [A20.16:2] [ЦБК:] Кран №1 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_ON_KCD, my := algGVL.GPA_DI_Internal.Kr1_ON_KCD, out :=  algGVL.GPA_DI.Kr1_ON_KCD);
+//[ЦБК] [A20.16:3] [ЦБК:XDI4:2a] Кран №1 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_OF, my := algGVL.GPA_DI_Internal.Kr1_OF, out :=  algGVL.GPA_DI.Kr1_OF);
+//[ЦБК] [A20.16:4] [ЦБК:] Кран №1 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_OF_KCD, my := algGVL.GPA_DI_Internal.Kr1_OF_KCD, out :=  algGVL.GPA_DI.Kr1_OF_KCD);
+//[ЦБК] [A20.16:5] [ЦБК:XDI4:3a] Кран №2 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_ON, my := algGVL.GPA_DI_Internal.Kr2_ON, out :=  algGVL.GPA_DI.Kr2_ON);
+//[ЦБК] [A20.16:6] [ЦБК:] Кран №2 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_ON_KCD, my := algGVL.GPA_DI_Internal.Kr2_ON_KCD, out :=  algGVL.GPA_DI.Kr2_ON_KCD);
+//[ЦБК] [A20.16:7] [ЦБК:XDI4:4a] Кран №2 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_OF, my := algGVL.GPA_DI_Internal.Kr2_OF, out :=  algGVL.GPA_DI.Kr2_OF);
+//[ЦБК] [A20.16:8] [ЦБК:] Кран №2 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_OF_KCD, my := algGVL.GPA_DI_Internal.Kr2_OF_KCD, out :=  algGVL.GPA_DI.Kr2_OF_KCD);
+//[ЦБК] [A20.17:1] [ЦБК:XDI4:5a] Кран №4 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_ON, my := algGVL.GPA_DI_Internal.Kr4_ON, out :=  algGVL.GPA_DI.Kr4_ON);
+//[ЦБК] [A20.17:2] [ЦБК:] Кран №4 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_ON_KCD, my := algGVL.GPA_DI_Internal.Kr4_ON_KCD, out :=  algGVL.GPA_DI.Kr4_ON_KCD);
+//[ЦБК] [A20.17:3] [ЦБК:XDI4:6a] Кран №6 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_ON, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_ON, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_ON, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_ON, my := algGVL.GPA_DI_Internal.Kr6_ON, out :=  algGVL.GPA_DI.Kr6_ON);
+//[ЦБК] [A20.17:4] [ЦБК:] Кран №6 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_ON_KCD, my := algGVL.GPA_DI_Internal.Kr6_ON_KCD, out :=  algGVL.GPA_DI.Kr6_ON_KCD);
+//[ЦБК] [A20.17:5] [ЦБК:XDI4:7a] Кран №6 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_OF, my := algGVL.GPA_DI_Internal.Kr6_OF, out :=  algGVL.GPA_DI.Kr6_OF);
+//[ЦБК] [A20.17:6] [ЦБК:] Кран №6 закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_OF_KCD, my := algGVL.GPA_DI_Internal.Kr6_OF_KCD, out :=  algGVL.GPA_DI.Kr6_OF_KCD);
+//[ЦБК] [A20.17:7] [ЦБК:XDI4:8a] Пожар ГПА
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Fire, externalFault := false, set := algGVL.GPA_DI_Setting.Fire, FromHMI := algGVL.GPA_DI_FromHMI.Fire, ToHMI := algGVL.GPA_DI_ToHMI.Fire, my := algGVL.GPA_DI_Internal.Fire, out :=  algGVL.GPA_DI.Fire);
+//[ЦБК] [A20.17:8] [ЦБК:] Пожар ГПА. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Fire_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Fire_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Fire_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Fire_KCD, my := algGVL.GPA_DI_Internal.Fire_KCD, out :=  algGVL.GPA_DI.Fire_KCD);
+//[ЦБК] [A20.18:1] [ЦБК:XDI4:9a] Минимальный уровень масла в МБН
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.MBN_levelOilMin, externalFault := false, set := algGVL.GPA_DI_Setting.MBN_levelOilMin, FromHMI := algGVL.GPA_DI_FromHMI.MBN_levelOilMin, ToHMI := algGVL.GPA_DI_ToHMI.MBN_levelOilMin, my := algGVL.GPA_DI_Internal.MBN_levelOilMin, out :=  algGVL.GPA_DI.MBN_levelOilMin);
+//[ЦБК] [A20.18:2] [ЦБК:] Минимальный уровень масла в МБН. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.MBN_levelOilMin_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.MBN_levelOilMin_KCD, FromHMI := algGVL.GPA_DI_FromHMI.MBN_levelOilMin_KCD, ToHMI := algGVL.GPA_DI_ToHMI.MBN_levelOilMin_KCD, my := algGVL.GPA_DI_Internal.MBN_levelOilMin_KCD, out :=  algGVL.GPA_DI.MBN_levelOilMin_KCD);
+//[ЦБК] [A20.18:3] [ЦБК:XDI4:10a] Кран №4 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_OF, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_OF, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_OF, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_OF, my := algGVL.GPA_DI_Internal.Kr4_OF, out :=  algGVL.GPA_DI.Kr4_OF);
+//[ЦБК] [A20.18:4] [ЦБК:] Кран №4 открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_OF_KCD, my := algGVL.GPA_DI_Internal.Kr4_OF_KCD, out :=  algGVL.GPA_DI.Kr4_OF_KCD);
+//[ЦБК] [A20.18:5] [ЦБК:XDI4:11a] Кран 6р открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrAPK_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KrAPK_ON, FromHMI := algGVL.GPA_DI_FromHMI.KrAPK_ON, ToHMI := algGVL.GPA_DI_ToHMI.KrAPK_ON, my := algGVL.GPA_DI_Internal.KrAPK_ON, out :=  algGVL.GPA_DI.KrAPK_ON);
+//[ЦБК] [A20.18:6] [ЦБК:] Кран 6р открыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrAPK_ON_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.KrAPK_ON_KCD, FromHMI := algGVL.GPA_DI_FromHMI.KrAPK_ON_KCD, ToHMI := algGVL.GPA_DI_ToHMI.KrAPK_ON_KCD, my := algGVL.GPA_DI_Internal.KrAPK_ON_KCD, out :=  algGVL.GPA_DI.KrAPK_ON_KCD);
+//[ЦБК] [A20.18:7] [ЦБК:XDI4:12a] Кран 6р закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrAPK_OF, externalFault := false, set := algGVL.GPA_DI_Setting.KrAPK_OF, FromHMI := algGVL.GPA_DI_FromHMI.KrAPK_OF, ToHMI := algGVL.GPA_DI_ToHMI.KrAPK_OF, my := algGVL.GPA_DI_Internal.KrAPK_OF, out :=  algGVL.GPA_DI.KrAPK_OF);
+//[ЦБК] [A20.18:8] [ЦБК:] Кран 6р закрыт. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrAPK_OF_KCD, externalFault := false, set := algGVL.GPA_DI_Setting.KrAPK_OF_KCD, FromHMI := algGVL.GPA_DI_FromHMI.KrAPK_OF_KCD, ToHMI := algGVL.GPA_DI_ToHMI.KrAPK_OF_KCD, my := algGVL.GPA_DI_Internal.KrAPK_OF_KCD, out :=  algGVL.GPA_DI.KrAPK_OF_KCD);
+//[ЦБК] [A20.19:1] [ЦБК:XDI4:13a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv32, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv32, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv32, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv32, my := algGVL.GPA_DI_Internal.DI_Reserv32, out :=  algGVL.GPA_DI.DI_Reserv32);
+//[ЦБК] [A20.19:2] [ЦБК:] Резерв. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv33, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv33, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv33, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv33, my := algGVL.GPA_DI_Internal.DI_Reserv33, out :=  algGVL.GPA_DI.DI_Reserv33);
+//[ЦБК] [A20.19:3] [ЦБК:XDI4:14a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv34, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv34, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv34, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv34, my := algGVL.GPA_DI_Internal.DI_Reserv34, out :=  algGVL.GPA_DI.DI_Reserv34);
+//[ЦБК] [A20.19:4] [ЦБК:] Резерв. КЦД
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv35, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv35, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv35, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv35, my := algGVL.GPA_DI_Internal.DI_Reserv35, out :=  algGVL.GPA_DI.DI_Reserv35);
+//[ЦБК] [A20.19:5] [ЦБК:XDI4:15a] Максимальный уровень масла в МБН
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.MBN_levelOilMax, externalFault := false, set := algGVL.GPA_DI_Setting.MBN_levelOilMax, FromHMI := algGVL.GPA_DI_FromHMI.MBN_levelOilMax, ToHMI := algGVL.GPA_DI_ToHMI.MBN_levelOilMax, my := algGVL.GPA_DI_Internal.MBN_levelOilMax, out :=  algGVL.GPA_DI.MBN_levelOilMax);
+//[ЦБК] [A20.19:6] [ЦБК:XDI4:16a] ПНУ нагнетателя включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.PNU_ON, externalFault := false, set := algGVL.GPA_DI_Setting.PNU_ON, FromHMI := algGVL.GPA_DI_FromHMI.PNU_ON, ToHMI := algGVL.GPA_DI_ToHMI.PNU_ON, my := algGVL.GPA_DI_Internal.PNU_ON, out :=  algGVL.GPA_DI.PNU_ON);
+//[ЦБК] [A20.19:7] [ЦБК:XDI4:17a] Повышенный перепад dP газа на сетке перед Н
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dPg_protGridN, externalFault := false, set := algGVL.GPA_DI_Setting.dPg_protGridN, FromHMI := algGVL.GPA_DI_FromHMI.dPg_protGridN, ToHMI := algGVL.GPA_DI_ToHMI.dPg_protGridN, my := algGVL.GPA_DI_Internal.dPg_protGridN, out :=  algGVL.GPA_DI.dPg_protGridN);
+//[ЦБК] [A20.19:8] [ЦБК:XDI4:18a] Низкий dP на кране 1
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dPg_Kr1_low, externalFault := false, set := algGVL.GPA_DI_Setting.dPg_Kr1_low, FromHMI := algGVL.GPA_DI_FromHMI.dPg_Kr1_low, ToHMI := algGVL.GPA_DI_ToHMI.dPg_Kr1_low, my := algGVL.GPA_DI_Internal.dPg_Kr1_low, out :=  algGVL.GPA_DI.dPg_Kr1_low);
+//[ЦБК] [A20.20:1] [ЦБК:XDI4:19a] Низкий dP "Масло-Газ"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.dPmg_low, externalFault := false, set := algGVL.GPA_DI_Setting.dPmg_low, FromHMI := algGVL.GPA_DI_FromHMI.dPmg_low, ToHMI := algGVL.GPA_DI_ToHMI.dPmg_low, my := algGVL.GPA_DI_Internal.dPmg_low, out :=  algGVL.GPA_DI.dPmg_low);
+//[ЦБК] [A20.20:2] [ЦБК:XDI4:20a] Рм (высокого Р) системы уплотнений Н
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Pm_packingN_high, externalFault := false, set := algGVL.GPA_DI_Setting.Pm_packingN_high, FromHMI := algGVL.GPA_DI_FromHMI.Pm_packingN_high, ToHMI := algGVL.GPA_DI_ToHMI.Pm_packingN_high, my := algGVL.GPA_DI_Internal.Pm_packingN_high, out :=  algGVL.GPA_DI.Pm_packingN_high);
+//[ЦБК] [A20.20:3] [ЦБК:XDI5:1a] Давление масла перед АВОМ Н - Низкое
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_PmFront_low, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_PmFront_low, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_PmFront_low, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_PmFront_low, my := algGVL.GPA_DI_Internal.AVOMN_PmFront_low, out :=  algGVL.GPA_DI.AVOMN_PmFront_low);
+//[ЦБК] [A20.20:4] [ЦБК:XDI5:2a] Насос для перемешивания масла в МБН включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.NPMN_ON, externalFault := false, set := algGVL.GPA_DI_Setting.NPMN_ON, FromHMI := algGVL.GPA_DI_FromHMI.NPMN_ON, ToHMI := algGVL.GPA_DI_ToHMI.NPMN_ON, my := algGVL.GPA_DI_Internal.NPMN_ON, out :=  algGVL.GPA_DI.NPMN_ON);
+//[ЦБК] [A20.20:5] [ЦБК:XDI5:3a] Электронагреватель в МБД включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_MBD_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_MBD_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_MBD_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_MBD_ON, my := algGVL.GPA_DI_Internal.EN_MBD_ON, out :=  algGVL.GPA_DI.EN_MBD_ON);
+//[ЦБК] [A20.20:6] [ЦБК:XDI5:4a] Электронагреватели в МБН включены
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.EN_MBN_ON, externalFault := false, set := algGVL.GPA_DI_Setting.EN_MBN_ON, FromHMI := algGVL.GPA_DI_FromHMI.EN_MBN_ON, ToHMI := algGVL.GPA_DI_ToHMI.EN_MBN_ON, my := algGVL.GPA_DI_Internal.EN_MBN_ON, out :=  algGVL.GPA_DI.EN_MBN_ON);
+//[ЦБК] [A20.20:7] [ЦБК:XDI5:5a] АВОМ  Н - Напряжение в ЩУ подано
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_ON, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_ON, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_ON, my := algGVL.GPA_DI_Internal.AVOMN_ON, out :=  algGVL.GPA_DI.AVOMN_ON);
+//[ЦБК] [A20.20:8] [ЦБК:XDI5:6a] ЩУ АВОМ Н работает в режиме "Нагрев"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_heat, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_heat, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_heat, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_heat, my := algGVL.GPA_DI_Internal.AVOMN_heat, out :=  algGVL.GPA_DI.AVOMN_heat);
+//[ЦБК] [A20.21:1] [ЦБК:XDI5:7a] АВОМ Н готов к пуску
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_ready, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_ready, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_ready, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_ready, my := algGVL.GPA_DI_Internal.AVOMN_ready, out :=  algGVL.GPA_DI.AVOMN_ready);
+//[ЦБК] [A20.21:2] [ЦБК:XDI5:8a] ЩУ АВОМ Н работает в режиме "Охлаждение"
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_cold, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_cold, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_cold, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_cold, my := algGVL.GPA_DI_Internal.AVOMN_cold, out :=  algGVL.GPA_DI.AVOMN_cold);
+//[ЦБК] [A20.21:3] [ЦБК:XDI5:9a] Частотный преобразователь АВОМ Н включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_PCh_ON, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_PCh_ON, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_PCh_ON, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_PCh_ON, my := algGVL.GPA_DI_Internal.AVOMN_PCh_ON, out :=  algGVL.GPA_DI.AVOMN_PCh_ON);
+//[ЦБК] [A20.21:4] [ЦБК:XDI5:10a] Максимальная Тм на выходе АВОМ Н
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.AVOMN_TmOut_max, externalFault := false, set := algGVL.GPA_DI_Setting.AVOMN_TmOut_max, FromHMI := algGVL.GPA_DI_FromHMI.AVOMN_TmOut_max, ToHMI := algGVL.GPA_DI_ToHMI.AVOMN_TmOut_max, my := algGVL.GPA_DI_Internal.AVOMN_TmOut_max, out :=  algGVL.GPA_DI.AVOMN_TmOut_max);
+//[ЦБК] [A20.21:5] [ЦБК:XDI5:11a] Обогреватель Крана 6р включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrAPK_heat_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KrAPK_heat_ON, FromHMI := algGVL.GPA_DI_FromHMI.KrAPK_heat_ON, ToHMI := algGVL.GPA_DI_ToHMI.KrAPK_heat_ON, my := algGVL.GPA_DI_Internal.KrAPK_heat_ON, out :=  algGVL.GPA_DI.KrAPK_heat_ON);
+//[ЦБК] [A20.21:6] [ЦБК:XDI5:12a] ВОТ2 Н включен
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VVOTN2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.VVOTN2_ON, FromHMI := algGVL.GPA_DI_FromHMI.VVOTN2_ON, ToHMI := algGVL.GPA_DI_ToHMI.VVOTN2_ON, my := algGVL.GPA_DI_Internal.VVOTN2_ON, out :=  algGVL.GPA_DI.VVOTN2_ON);
+//[ЦБК] [A20.21:7] [ЦБК:XDI5:13a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv36, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv36, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv36, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv36, my := algGVL.GPA_DI_Internal.DI_Reserv36, out :=  algGVL.GPA_DI.DI_Reserv36);
+//[ЦБК] [A20.21:8] [ЦБК:XDI5:14a] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv37, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv37, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv37, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv37, my := algGVL.GPA_DI_Internal.DI_Reserv37, out :=  algGVL.GPA_DI.DI_Reserv37);
+//[ЦБК] [A20.14:1] [ЦБК:] Кран N1 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_OF_KCU, my := algGVL.GPA_DI_Internal.Kr1_OF_KCU, out :=  algGVL.GPA_DI.Kr1_OF_KCU);
+//[ЦБК] [A20.14:2] [ЦБК:] Кран N2 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_OF_KCU, my := algGVL.GPA_DI_Internal.Kr2_OF_KCU, out :=  algGVL.GPA_DI.Kr2_OF_KCU);
+//[ЦБК] [A20.14:3] [ЦБК:] Кран N4 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_OF_KCU, my := algGVL.GPA_DI_Internal.Kr4_OF_KCU, out :=  algGVL.GPA_DI.Kr4_OF_KCU);
+//[ЦБК] [A20.14:4] [ЦБК:] Кран N5 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_ON_KCU, my := algGVL.GPA_DI_Internal.Kr5_ON_KCU, out :=  algGVL.GPA_DI.Kr5_ON_KCU);
+//[ЦБК] [A20.14:5] [ЦБК:] Кран N6 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_OF_KCU, my := algGVL.GPA_DI_Internal.Kr6_OF_KCU, out :=  algGVL.GPA_DI.Kr6_OF_KCU);
+//[ЦБК] [A20.14:6] [ЦБК:] Кран N1 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr1_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr1_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr1_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr1_ON_KCU, my := algGVL.GPA_DI_Internal.Kr1_ON_KCU, out :=  algGVL.GPA_DI.Kr1_ON_KCU);
+//[ЦБК] [A20.14:7] [ЦБК:] Кран N2 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr2_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr2_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr2_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr2_ON_KCU, my := algGVL.GPA_DI_Internal.Kr2_ON_KCU, out :=  algGVL.GPA_DI.Kr2_ON_KCU);
+//[ЦБК] [A20.14:8] [ЦБК:] Кран N4 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr4_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr4_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr4_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr4_ON_KCU, my := algGVL.GPA_DI_Internal.Kr4_ON_KCU, out :=  algGVL.GPA_DI.Kr4_ON_KCU);
+//[ЦБК] [A20.15:1] [ЦБК:] Кран N5 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr5_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr5_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr5_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr5_OF_KCU, my := algGVL.GPA_DI_Internal.Kr5_OF_KCU, out :=  algGVL.GPA_DI.Kr5_OF_KCU);
+//[ЦБК] [A20.15:2] [ЦБК:] Кран N6 открыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr6_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr6_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr6_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr6_ON_KCU, my := algGVL.GPA_DI_Internal.Kr6_ON_KCU, out :=  algGVL.GPA_DI.Kr6_ON_KCU);
+//[ЦБК] [A20.15:3] [ЦБК:] Кран N9 закрыть. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.Kr9_OF_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.Kr9_OF_KCU, FromHMI := algGVL.GPA_DI_FromHMI.Kr9_OF_KCU, ToHMI := algGVL.GPA_DI_ToHMI.Kr9_OF_KCU, my := algGVL.GPA_DI_Internal.Kr9_OF_KCU, out :=  algGVL.GPA_DI.Kr9_OF_KCU);
+//[ЦБК] [A20.15:4] [ЦБК:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv38, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv38, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv38, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv38, my := algGVL.GPA_DI_Internal.DI_Reserv38, out :=  algGVL.GPA_DI.DI_Reserv38);
+//[ЦБК] [A20.15:5] [ЦБК:] Резерв. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv39, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv39, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv39, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv39, my := algGVL.GPA_DI_Internal.DI_Reserv39, out :=  algGVL.GPA_DI.DI_Reserv39);
+//[ЦБК] [A20.15:6] [ЦБК:] ПНУ нагнетателя включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.PNU_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.PNU_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.PNU_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.PNU_ON_KCU, my := algGVL.GPA_DI_Internal.PNU_ON_KCU, out :=  algGVL.GPA_DI.PNU_ON_KCU);
+//[ЦБК] [A20.15:7] [ЦБК:] Насос перемешивания масла в БН включить. КЦУ
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.NPBN_ON_KCU, externalFault := false, set := algGVL.GPA_DI_Setting.NPBN_ON_KCU, FromHMI := algGVL.GPA_DI_FromHMI.NPBN_ON_KCU, ToHMI := algGVL.GPA_DI_ToHMI.NPBN_ON_KCU, my := algGVL.GPA_DI_Internal.NPBN_ON_KCU, out :=  algGVL.GPA_DI.NPBN_ON_KCU);
+//[ЦБК] [A20.15:8] [ЦБК:] Сопротивление линий питания 24 В AI, DI и DO кранов в норме
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.R_CBK_norm, externalFault := false, set := algGVL.GPA_DI_Setting.R_CBK_norm, FromHMI := algGVL.GPA_DI_FromHMI.R_CBK_norm, ToHMI := algGVL.GPA_DI_ToHMI.R_CBK_norm, my := algGVL.GPA_DI_Internal.R_CBK_norm, out :=  algGVL.GPA_DI.R_CBK_norm);
+//[АМГБ] [A40.10:1] [АМГБ:ХDI1-1A] Наличие давления в буферной полости ГМТ Д
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.GMTD_P, externalFault := false, set := algGVL.GPA_DI_Setting.GMTD_P, FromHMI := algGVL.GPA_DI_FromHMI.GMTD_P, ToHMI := algGVL.GPA_DI_ToHMI.GMTD_P, my := algGVL.GPA_DI_Internal.GMTD_P, out :=  algGVL.GPA_DI.GMTD_P);
+//[АМГБ] [A40.10:2] [АМГБ:ХDI1-2A] Наличие давления в буферной полости ГМТ К
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.GMTN_N, externalFault := false, set := algGVL.GPA_DI_Setting.GMTN_N, FromHMI := algGVL.GPA_DI_FromHMI.GMTN_N, ToHMI := algGVL.GPA_DI_ToHMI.GMTN_N, my := algGVL.GPA_DI_Internal.GMTN_N, out :=  algGVL.GPA_DI.GMTN_N);
+//[АМГБ] [A40.10:3] [АМГБ:ХDI1-3A] Датчик разрыва предохранительной мембраны буферной полости ГМТ Д
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.GMTD_fuse, externalFault := false, set := algGVL.GPA_DI_Setting.GMTD_fuse, FromHMI := algGVL.GPA_DI_FromHMI.GMTD_fuse, ToHMI := algGVL.GPA_DI_ToHMI.GMTD_fuse, my := algGVL.GPA_DI_Internal.GMTD_fuse, out :=  algGVL.GPA_DI.GMTD_fuse);
+//[АМГБ] [A40.10:4] [АМГБ:ХDI1-4A] Датчик разрыва предохранительной мембраны буферной полости ГМТ К
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.GMTN_fuse, externalFault := false, set := algGVL.GPA_DI_Setting.GMTN_fuse, FromHMI := algGVL.GPA_DI_FromHMI.GMTN_fuse, ToHMI := algGVL.GPA_DI_ToHMI.GMTN_fuse, my := algGVL.GPA_DI_Internal.GMTN_fuse, out :=  algGVL.GPA_DI.GMTN_fuse);
+//[АМГБ] [A40.10:5] [АМГБ:ХDI1-5A] Кран КР1 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR1_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR1_ON, FromHMI := algGVL.GPA_DI_FromHMI.KrKR1_ON, ToHMI := algGVL.GPA_DI_ToHMI.KrKR1_ON, my := algGVL.GPA_DI_Internal.KrKR1_ON, out :=  algGVL.GPA_DI.KrKR1_ON);
+//[АМГБ] [A40.10:6] [АМГБ:ХDI1-6A] Кран КР1 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR1_OF, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR1_OF, FromHMI := algGVL.GPA_DI_FromHMI.KrKR1_OF, ToHMI := algGVL.GPA_DI_ToHMI.KrKR1_OF, my := algGVL.GPA_DI_Internal.KrKR1_OF, out :=  algGVL.GPA_DI.KrKR1_OF);
+//[АМГБ] [A40.10:7] [АМГБ:ХDI1-7A] Тепловая защита привода КР1
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR1_protHeat, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR1_protHeat, FromHMI := algGVL.GPA_DI_FromHMI.KrKR1_protHeat, ToHMI := algGVL.GPA_DI_ToHMI.KrKR1_protHeat, my := algGVL.GPA_DI_Internal.KrKR1_protHeat, out :=  algGVL.GPA_DI.KrKR1_protHeat);
+//[АМГБ] [A40.10:8] [АМГБ:ХDI1-8A] Кран КР2 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR2_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR2_ON, FromHMI := algGVL.GPA_DI_FromHMI.KrKR2_ON, ToHMI := algGVL.GPA_DI_ToHMI.KrKR2_ON, my := algGVL.GPA_DI_Internal.KrKR2_ON, out :=  algGVL.GPA_DI.KrKR2_ON);
+//[АМГБ] [A40.11:1] [АМГБ:ХDI1-9A] Кран КР2 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR2_OF, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR2_OF, FromHMI := algGVL.GPA_DI_FromHMI.KrKR2_OF, ToHMI := algGVL.GPA_DI_ToHMI.KrKR2_OF, my := algGVL.GPA_DI_Internal.KrKR2_OF, out :=  algGVL.GPA_DI.KrKR2_OF);
+//[АМГБ] [A40.11:2] [АМГБ:ХDI1-10A] Тепловая защита привода КР2
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR2_protHeat, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR2_protHeat, FromHMI := algGVL.GPA_DI_FromHMI.KrKR2_protHeat, ToHMI := algGVL.GPA_DI_ToHMI.KrKR2_protHeat, my := algGVL.GPA_DI_Internal.KrKR2_protHeat, out :=  algGVL.GPA_DI.KrKR2_protHeat);
+//[АМГБ] [A40.11:3] [АМГБ:ХDI1-11A] Кран КР3 открыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR3_ON, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR3_ON, FromHMI := algGVL.GPA_DI_FromHMI.KrKR3_ON, ToHMI := algGVL.GPA_DI_ToHMI.KrKR3_ON, my := algGVL.GPA_DI_Internal.KrKR3_ON, out :=  algGVL.GPA_DI.KrKR3_ON);
+//[АМГБ] [A40.11:4] [АМГБ:ХDI1-12A] Кран КР3 закрыт
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR3_OF, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR3_OF, FromHMI := algGVL.GPA_DI_FromHMI.KrKR3_OF, ToHMI := algGVL.GPA_DI_ToHMI.KrKR3_OF, my := algGVL.GPA_DI_Internal.KrKR3_OF, out :=  algGVL.GPA_DI.KrKR3_OF);
+//[АМГБ] [A40.11:5] [АМГБ:ХDI1-13A] Тепловая защита привода КР3
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.KrKR3_protHeat, externalFault := false, set := algGVL.GPA_DI_Setting.KrKR3_protHeat, FromHMI := algGVL.GPA_DI_FromHMI.KrKR3_protHeat, ToHMI := algGVL.GPA_DI_ToHMI.KrKR3_protHeat, my := algGVL.GPA_DI_Internal.KrKR3_protHeat, out :=  algGVL.GPA_DI.KrKR3_protHeat);
+//[АМГБ] [A40.11:6] [АМГБ:ХDI1-14A] Авария вентилятора В1
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VV1_fault, externalFault := false, set := algGVL.GPA_DI_Setting.VV1_fault, FromHMI := algGVL.GPA_DI_FromHMI.VV1_fault, ToHMI := algGVL.GPA_DI_ToHMI.VV1_fault, my := algGVL.GPA_DI_Internal.VV1_fault, out :=  algGVL.GPA_DI.VV1_fault);
+//[АМГБ] [A40.11:7] [АМГБ:ХDI1-15A] Авария вентилятора В2
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.VV2_fault, externalFault := false, set := algGVL.GPA_DI_Setting.VV2_fault, FromHMI := algGVL.GPA_DI_FromHMI.VV2_fault, ToHMI := algGVL.GPA_DI_ToHMI.VV2_fault, my := algGVL.GPA_DI_Internal.VV2_fault, out :=  algGVL.GPA_DI.VV2_fault);
+//[АМГБ] [A40.11:8] [АМГБ:ХDI1-16A] Неисправность газосигнализатора 
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.GasSignal_fault, externalFault := false, set := algGVL.GPA_DI_Setting.GasSignal_fault, FromHMI := algGVL.GPA_DI_FromHMI.GasSignal_fault, ToHMI := algGVL.GPA_DI_ToHMI.GasSignal_fault, my := algGVL.GPA_DI_Internal.GasSignal_fault, out :=  algGVL.GPA_DI.GasSignal_fault);
+//[АМГБ] [A40.12:1] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv40, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv40, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv40, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv40, my := algGVL.GPA_DI_Internal.DI_Reserv40, out :=  algGVL.GPA_DI.DI_Reserv40);
+//[АМГБ] [A40.12:2] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv41, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv41, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv41, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv41, my := algGVL.GPA_DI_Internal.DI_Reserv41, out :=  algGVL.GPA_DI.DI_Reserv41);
+//[АМГБ] [A40.12:3] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv42, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv42, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv42, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv42, my := algGVL.GPA_DI_Internal.DI_Reserv42, out :=  algGVL.GPA_DI.DI_Reserv42);
+//[АМГБ] [A40.12:4] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv43, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv43, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv43, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv43, my := algGVL.GPA_DI_Internal.DI_Reserv43, out :=  algGVL.GPA_DI.DI_Reserv43);
+//[АМГБ] [A40.12:5] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv44, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv44, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv44, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv44, my := algGVL.GPA_DI_Internal.DI_Reserv44, out :=  algGVL.GPA_DI.DI_Reserv44);
+//[АМГБ] [A40.12:6] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv45, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv45, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv45, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv45, my := algGVL.GPA_DI_Internal.DI_Reserv45, out :=  algGVL.GPA_DI.DI_Reserv45);
+//[АМГБ] [A40.12:7] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv46, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv46, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv46, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv46, my := algGVL.GPA_DI_Internal.DI_Reserv46, out :=  algGVL.GPA_DI.DI_Reserv46);
+//[АМГБ] [A40.12:8] [АМГБ:] Резерв
+VGSig.fnDI_Processing(IN := algGVL.GPA_DI_DRV.DI_Reserv47, externalFault := false, set := algGVL.GPA_DI_Setting.DI_Reserv47, FromHMI := algGVL.GPA_DI_FromHMI.DI_Reserv47, ToHMI := algGVL.GPA_DI_ToHMI.DI_Reserv47, my := algGVL.GPA_DI_Internal.DI_Reserv47, out :=  algGVL.GPA_DI.DI_Reserv47);
+//Конец сгенерированного кода
